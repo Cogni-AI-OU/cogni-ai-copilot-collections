@@ -89,8 +89,9 @@ mindmap
 - Do not pass both run ID and job ID to `gh run view`; the CLI warns and
   ignores the run ID.
 - Treat `gh run view ... --log` as environment-sensitive. If it returns
-  empty output, do not loop on it; switch to metadata, artifacts, or another
-  supported log source.
+  empty output (which often happens with older runs, cached pipelines, or canceled overarching matrix runs), do not loop on it.
+  **Alternative Workaround for Empty Job Logs**:
+  See the `gh-api` skill for instructions on downloading the full run logs zip via the API to bypass console streaming limitations.
 - Probe one run or one job first before launching parallel diagnostics.
 
 ## Structured Query Patterns
