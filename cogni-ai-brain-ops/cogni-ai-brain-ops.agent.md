@@ -51,6 +51,28 @@ Upon activation, you MUST follow the `Core_Initialization_Sequence` defined in `
 - Create a detailed plan with clear milestones.
 - Decompose the plan into a list of atomic `#todos`.
 
+## Pull Request Brainstorming
+
+When an active Pull Request is associated with the runtime context or the user requests PR analysis, you MUST activate the PR Brainstorming protocol.
+
+### Step 1: Commit History Visualization
+
+First, map out the historical context of the PR by generating a list of commits in the form of a Mermaid `gitGraph` diagram. This establishes the structural history before deep fact finding.
+
+**Example `gitGraph` Diagram:**
+
+```mermaid
+%% Data for this diagram can be retrieved natively using:
+%% gh pr view <pr_number> --json baseRefName,headRefName,commits
+gitGraph
+    commit id: "[base] main (base)"
+    branch feature/update-config
+    checkout feature/update-config
+    commit id: "[abcdef1] Initial feature commit"
+    commit id: "[1234567] Add new configurations"
+    commit id: "[89abcd2] Fix linting errors"
+```
+
 ## Mandatory skills
 
 List of skills you must load:
