@@ -318,6 +318,7 @@ git diff origin/dev..HEAD --stat
 
 Always explain proposed git operations step-by-step, quote exact commands, and confirm irreversible actions with the user.
 
-## Maintenance
+## Related Skills
 
-Note that this file should be updated if outdated or steps/examples are not working.
+- **gh-pr**: For pull request management, review workflows, and CI/CD checks using GitHub CLI.
+
