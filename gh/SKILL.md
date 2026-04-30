@@ -358,27 +358,6 @@ mindmap
 6. If the same normalized command shape fails twice with the same warning,
    error, or empty result, pivot strategy instead of retrying.
 
-## API Parameter Handling
-
-When using `gh api` (including `gh api graphql`), choose the correct flag for parameters:
-
-- Use `-F` (`--field`) for **magic type conversion**:
-  - **File expansion**: `-F body=@path/to/file.md` (reads file content).
-  - **Typed values**: `-F is_public=true`, `-F count=42`, `-F parent=null`.
-  - **Placeholders**: `-F repo={repo}`, `-F owner={owner}`.
-- Use `-f` (`--raw-field`) for **static strings**:
-  - Use this when you want the literal value.
-  - **CAUTION**: `-f` DOES NOT expand `@`. Using `-f body=@file` posts the literal string "@file".
-  - For GraphQL, `query` is usually passed with `-f` to avoid accidental expansion or type conversion of the query string itself.
-
-**Large Bodies & Files**:
-
-- Prefer `-F body=@path/to/file.md` for large content.
-- **Process Substitution**: Avoid `-F body=@<(...)` in `gh api`; it is brittle across shells. Write to a temporary file first, then use `-F body=@tempfile`.
-
-**GraphQL Variables**:
-For `gh api graphql`, all fields other than `query` and `operationName` are automatically passed as GraphQL variables.
-Example: `gh api graphql -f query='mutation($title: String!) { ... }' -F title=@title.txt`
 ## Structured Query Patterns
 
 - Use `gh pr view <number> --json headRefName,baseRefName,commits` to extract PR commit history
@@ -390,45 +369,6 @@ Example: `gh api graphql -f query='mutation($title: String!) { ... }' -F title=@
 - Use `gh api` for objects that native subcommands do not expose cleanly (load `gh-api` skill for details).
 - Use `--jq` or `--template` before external filters.
 
-## Discussion Patterns (via GraphQL)
-
-Since `gh` often lacks a native `discussion` subcommand, use `gh api graphql`. Avoid process substitution for the body; use a temporary file.
-
-- **Get repositoryId and categoryId**:
-
-  ```bash
-  gh api graphql -f query='query {
-    repository(owner: "OWNER", name: "REPO") {
-      id
-      discussionCategories(first: 10) {
-        nodes { id name }
-      }
-    }
-  }'
-  ```
-
-- **Create Discussion**:
-
-  ```bash
-  gh api graphql -F repositoryId="$REPO_ID" -F categoryId="$CAT_ID" \
-    -F title="Title" -F body=@body.md \
-    -f query='mutation($repositoryId:ID!, $categoryId:ID!, $title:String!, $body:String!){
-      createDiscussion(input:{repositoryId:$repositoryId,categoryId:$categoryId,title:$title,body:$body}){
-        discussion{url}
-      }
-    }'
-  ```
-
-- **Comment on Discussion**:
-
-  ```bash
-  gh api graphql -F discussionId="$DISCUSSION_ID" -F body=@comment.md \
-    -f query='mutation($discussionId:ID!, $body:String!){
-      addDiscussionComment(input:{discussionId:$discussionId,body:$body}){
-        comment{url}
-      }
-    }'
-  ```
 ## Preferred Patterns
 
 - Comment directly without touching workspace files:

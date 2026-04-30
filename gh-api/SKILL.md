@@ -54,7 +54,7 @@ When using `gh api` (including `gh api graphql`), choose the correct flag for pa
 - Use `-F` (`--field`) for **magic type conversion**:
   - **File expansion**: `-F body=@path/to/file.md` (reads file content).
   - **Typed values**: `-F is_public=true`, `-F count=42`, `-F parent=null`.
-  - **Placeholders**: `-F repo=<repo>`, `-F owner=<owner>`.
+  - **Placeholders**: `-F repo={repo}`, `-F owner={owner}` (or `<repo>`, `<owner>`).
 - Use `-f` (`--raw-field`) for **static strings**:
   - Use this when you want the literal value.
   - **CAUTION**: `-f` DOES NOT expand `@`. Using `-f body=@file` posts the literal string "@file".
