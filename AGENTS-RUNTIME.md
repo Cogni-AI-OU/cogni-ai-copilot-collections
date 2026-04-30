@@ -14,7 +14,9 @@ and planned work into the current context:
 - **[gh](gh/SKILL.md)**: GitHub CLI (`gh`) operations for issues, PRs, workflows, and API
 - **[gh-api](gh-api/SKILL.md)**: GitHub CLI (`gh api`) operations for authenticated REST and GraphQL API requests
 - **[gh-models](gh-models/SKILL.md)**: GitHub CLI models (`gh models`) operations for running and evaluating AI models
-- **[gh-run](gh-run/SKILL.md)**: GitHub CLI (`gh run` and `gh workflow`) operations for workflow runs, jobs, logs, and attempts
+- **[gh-pr](gh-pr/SKILL.md)**: GitHub CLI (`gh pr`) operations for creating, viewing, and managing pull requests
+- **[gh-run](gh-run/SKILL.md)**: GitHub CLI (`gh run` and `gh workflow`) operations for workflow runs,
+  jobs, logs, and attempts
 - **[git](git/SKILL.md)**: Guide for using git with non-interactive, safe operations
 - **[git-expert](git-expert/SKILL.md)**: Advanced Git operations including interactive rebasing, reflog recovery,
   bisecting, complex conflict resolution, and history manipulation
@@ -27,10 +29,12 @@ and planned work into the current context:
 - **[molecule](molecule/SKILL.md)**: Molecule testing workflows for Ansible roles
 - **[pdf](pdf/SKILL.md)**: PDF file inspection, object-level editing, and lossless size reduction
 - **[pre-commit](pre-commit/SKILL.md)**: Using pre-commit to validate code formatting, linting, and security checks
-- **[robust-commands](robust-commands/SKILL.md)**: Resilient command execution with automatic fallbacks and error recovery
+- **[robust-commands](robust-commands/SKILL.md)**: Resilient command execution with automatic
+  fallbacks and error recovery
 - **[shell](shell/SKILL.md)**: Efficient shell command execution with timing, timeouts, and best practices
 - **[skill-writer](skill-writer/SKILL.md)**: Generate or update SKILL.md files for GitHub Copilot coding agents
-- **[vim-ex](vim-ex/SKILL.md)**: Non-interactive file editing with Vim Ex mode (in favor of sed, shell or Python editing)
+- **[vim-ex](vim-ex/SKILL.md)**: Non-interactive file editing with Vim Ex mode (in favor of sed, shell
+  or Python editing)
 
 Note: **Path Resolution**: For GitHub runtime within runner when triggered by `cogni-ai-agent-action`, these
 instructions may be loaded from a temporary directory (e.g., `${{ runner.temp }}/.skills/`). When reading a skill

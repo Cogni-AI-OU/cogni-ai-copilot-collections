@@ -101,7 +101,8 @@ operations (or methods), and the relationships among objects.
 - Use `classDiagram` to model object-oriented structures, including classes, interfaces, and their relationships.
 - Define class members with visibility modifiers (`+` public, `-` private, `#` protected, `~` package/internal).
 - Use relationships like inheritance (`<|--`), composition (`*--`), aggregation (`o--`), and dependency (`<..`).
-- Include multiplicity (e.g., `"1"` to `"*"`) and annotations (e.g., `<<interface>>`, `<<abstract>>`) for detailed modeling.
+- Include multiplicity (e.g., `"1"` to `"*"`) and annotations
+  (e.g., `<<interface>>`, `<<abstract>>`) for detailed modeling.
 
 Example with Relationships and Multiplicity:
 
@@ -335,9 +336,11 @@ Use CLI tools to generate commit entries from real commit history instead of rew
 - **With Git (`git`)**:
   `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
 
-These commands provide a linear list of commits and can help seed `commit id: "..."` entries, but they do **not** reconstruct full branch and merge topology for a Mermaid `gitGraph`.
+These commands provide a linear list of commits and can help seed `commit id: "..."` entries, but they do **not**
+reconstruct full branch and merge topology for a Mermaid `gitGraph`.
 
-*(Note: Escape inner quotes in commit subjects so the output remains valid Mermaid syntax. For example, use `sed 's/"/\\"/g'` to escape double quotes in a shell pipeline.)*
+*(Note: Escape inner quotes in commit subjects so the output remains valid Mermaid syntax. For example, use
+`sed 's/"/\\"/g'` to escape double quotes in a shell pipeline.)*
 
 Example:
 
