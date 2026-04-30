@@ -326,6 +326,28 @@ gitGraph
     merge develop tag: "v1.0.0"
 ```
 
+**Pro-tip for accurate real-world GitGraphs**:
+
+Extract commit topologies directly using CLI tools
+to avoid manually altering the original branch logic:
+
+- **With GitHub CLI (`gh`)**:
+  `gh pr view <number> --json headRefName,baseRefName,commits`
+- **With Git (`git`)**:
+  `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
+  *(Note: Escape inner quotes in the output to ensure valid Mermaid bounds).*
+
+Example:
+
+```mermaid
+gitGraph
+    branch "feature/awesome-feature"
+    checkout "feature/awesome-feature"
+    commit id: "Add feature A"
+    commit id: "Revert \"Add feature A\"" type: REVERSE
+    commit id: "Clean-up"
+```
+
 Docs: <https://mermaid.js.org/syntax/gitgraph.html>
 
 ### Kanban Diagram
