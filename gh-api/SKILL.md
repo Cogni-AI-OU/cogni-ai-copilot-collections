@@ -196,6 +196,21 @@ Use these when standard `gh` commands (like `gh pr view` or `gh issue view`) do 
   gh api repos/{owner}/{repo}/issues/{number}/comments
   ```
 
+- **Resolve a PR Review Thread by ID (GraphQL)**:
+  ```bash
+  gh api graphql -f query='
+  mutation($threadId:ID!) {
+    resolveReviewThread(input:{threadId:$threadId}) {
+      thread {
+        id
+        isResolved
+      }
+    }
+  }' -F threadId={thread_id}
+  ```
+
+Notes:
+
 - **Filter with jq**: Prefer `--jq` or `--template` for parsing results before using external filters.
 
 ## What to Avoid
