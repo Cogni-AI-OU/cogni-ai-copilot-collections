@@ -412,6 +412,8 @@ Example: `gh api graphql -f query='mutation($title: String!) { ... }' -F title=@
 
 ## Structured Query Patterns
 
+- Use `gh pr view <number> --json headRefName,baseRefName,commits` to extract PR commit history
+  (e.g. for visualization to generate topology data like `mermaid` `gitGraph` diagrams without cloning explicitly)
 - Prefer native JSON first:
   - `gh issue view <number> --json comments,number,title,state,author,url`
   - `gh pr view <number> --json number,title,state,reviewDecision,url`
