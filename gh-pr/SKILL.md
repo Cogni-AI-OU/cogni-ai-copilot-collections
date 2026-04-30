@@ -6,7 +6,8 @@ description: >-
 ---
 # gh-pr Skill
 
-Use `gh pr` to natively interact with GitHub Pull Requests. Prefer native fields and explicit routing over brittle shell post-processing.
+Use `gh pr` to natively interact with GitHub Pull Requests. Prefer native
+fields and explicit routing over brittle shell post-processing.
 
 ## Mindmap of Commands
 
@@ -62,25 +63,30 @@ mindmap
 
 - **PR Creation with Metadata**:
   Always prefer non-interactive creation in automated environments:
+
   ```bash
   gh pr create --title "feature: add new component" --body-file description.md --label "enhancement" --assignee "@me"
   ```
 
 - **Inspecting PR Checks and Logs**:
   To see exactly why a PR is failing:
+
   ```bash
   gh pr checks <number> --watch
   ```
+
   If checks fail, use `gh-run` skill to diagnose specific workflow failures.
 
 - **Reviewing Changes**:
   For quick review of changes without leaving the terminal:
+
   ```bash
   gh pr diff <number> --color always | less -R
   ```
 
 - **Merging Strategies**:
   Be explicit about the merge method:
+
   ```bash
   gh pr merge <number> --merge  # Create a merge commit
   gh pr merge <number> --squash # Squash and merge
@@ -90,15 +96,22 @@ mindmap
 ## Pull Request Diagnostics & Checks
 
 - **Checking Runs for a Pull Request**:
-  - Instead of parsing commit hashes or wrestling with `gh run list --branch <branch_name>`, use the native tool mapping directly to the PR's HEAD commit:
+  - Instead of parsing commit hashes or wrestling with
+    `gh run list --branch <branch_name>`, use the native tool mapping
+    directly to the PR's HEAD commit:
+
     ```bash
     gh pr checks <pr_number> --repo <owner>/<repo>
     ```
-  - This elegantly outputs all CI/CD checks (successes, failures, skips) and provides direct URLs to the workflow jobs.
+
+  - This elegantly outputs all CI/CD checks (successes, failures,
+    skips) and provides direct URLs to the workflow jobs.
 
 ### Visualizing PR Checks
 
-When you need to visualize the results of `gh pr checks`, you can generate an architectural flowchart (using Mermaid) that categorizes checks logically (e.g., CI Formatting vs Tests vs Molecule).
+When you need to visualize the results of `gh pr checks`, you can
+generate an architectural flowchart (using Mermaid) that categorizes
+checks logically (e.g., CI Formatting vs Tests vs Molecule).
 
 Example:
 
@@ -143,10 +156,13 @@ flowchart LR
   `gh pr view <number> --json number,title,state,reviewDecision,url`
 
 - **Listing PRs for a Specific Author**:
+
   ```bash
   gh pr list --author "@me" --state open
   ```
+
 - **Checking Mergeability**:
+
   ```bash
   gh pr view <number> --json mergeable,mergeStateStatus
   ```
@@ -183,13 +199,14 @@ When executing autonomously within a GitHub Actions environment, adhere strictly
 - **Symmetric Routing**: ALWAYS reply via the exact originating channel. NEVER cross threads.
 - Parse `github.event.comment.id` and `in_reply_to_id` to maintain thread continuity.
 
-
 ## Branch Sync Policy (No Rebase During Runtime)
 
-When the prompt asks to "pull" or "sync with base" in GitHub Actions runtime, the agent MUST integrate remote changes with a merge commit workflow.
+When the prompt asks to "pull" or "sync with base" in GitHub Actions runtime, the agent MUST integrate remote changes
+with a merge commit workflow.
 
 - **MUST NOT** run any rebase-based update command during runtime.
-- **FORBIDDEN**: `gh pr update-branch --rebase`, `git pull --rebase`, `git rebase`, or any history rewrite that changes commit SHAs.
+- **FORBIDDEN**: `gh pr update-branch --rebase`, `git pull --rebase`, `git rebase`, or any history rewrite that
+  changes commit SHAs.
 - **MUST** use pull-with-merge semantics: `git pull --no-rebase`.
 - **MUST** preserve remote branch compatibility for post-run auto PR/push logic.
 
@@ -212,12 +229,15 @@ When the prompt asks to "pull" or "sync with base" in GitHub Actions runtime, th
 
 - **"Draft PRs cannot be merged"**: Use `gh pr ready <number>` first.
 - **"Permission denied"**: Check `gh auth status`. You may need to request additional scopes.
-- **"PR already exists"**: If creating a PR fails because one exists for the branch, use `gh pr list --head <branch>` to find it and `gh pr edit` if updates are needed.
+- **"PR already exists"**: If creating a PR fails because one exists for the branch, use
+  `gh pr list --head <branch>` to find it and `gh pr edit` if updates are needed.
 
 ## What to Avoid
 
-- Avoid using `git push` then `gh pr create` separately if you can use `gh pr create --fill` or `--head` to do it in one flow.
-- Do not use `gh api` for PR operations that have native `gh pr` subcommands unless you need raw JSON fields not exposed by `--json`.
+- Avoid using `git push` then `gh pr create` separately if you can use `gh pr create --fill` or `--head` to do it in
+  one flow.
+- Do not use `gh api` for PR operations that have native `gh pr` subcommands unless you need raw JSON fields not
+  exposed by `--json`.
 
 ## Related Skills
 
