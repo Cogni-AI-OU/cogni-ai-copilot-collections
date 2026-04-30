@@ -388,7 +388,17 @@ Example visualizing GitHub PR review threads (generated via API):
 %% gh api graphql -F owner="<owner>" -F repo="<repo>" -F number=<number> ... (query)
 kanban
   Active
-```,oldString:
+
+  Outdated
+
+  Resolved
+    [Summary of thread]
+      bodyText: In Mermaid node labels, the #job_id placeholder is likely to be parsed as inl...
+      id: PRRT_kwD123
+      assigned: current-user
+      authorAssociation: CONTRIBUTOR
+      path: path/to/file.md
+```
 
 Notes:
 
