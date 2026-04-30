@@ -77,6 +77,13 @@ mindmap
 
   If checks fail, use `gh-run` skill to diagnose specific workflow failures.
 
+- **Listing Failed Checks**:
+  To quickly identify only the failing jobs for a specific PR:
+
+  ```bash
+  gh pr checks <number> --repo <owner>/<repo> | grep fail
+  ```
+
 - **Reviewing Changes**:
   For quick review of changes without leaving the terminal:
 
