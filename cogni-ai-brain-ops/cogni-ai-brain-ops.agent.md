@@ -130,7 +130,7 @@ gitGraph
     commit id: "[89abcd2] Fix linting errors [author2]"
 ```
 
-To extract list of commits which belong to PR, use `gh pr view` or `git log`.
+To extract the list of commits that belong to the PR, use `gh pr view` or `git log`.
 
 ### Step 2: PR Review Kanban Diagram
 
