@@ -156,6 +156,7 @@ Use these when standard `gh` commands (like `gh pr view` or `gh issue view`) do 
       pullRequest(number:$number) {
         reviewThreads(first:100) {
           nodes {
+            id
             isResolved
             isOutdated
             path
@@ -170,7 +171,14 @@ Use these when standard `gh` commands (like `gh pr view` or `gh issue view`) do 
         }
       }
     }
-  }' -F owner={owner} -F repo={repo} -F number={number} --jq '.data.repository.pullRequest.reviewThreads.nodes[] | select(.isResolved == false) | {path, outdated: .isOutdated, comments: [.comments.nodes[] | {author: .author.login, url, body}]}'
+  }' -F owner={owner} -F repo={repo} -F number={number} \
+  --jq '.data.repository.pullRequest.reviewThreads.nodes[]
+        | select(.isResolved == false)
+        | {
+            id, path,
+            outdated: .isOutdated,
+            comments: [.comments.nodes[] | {author: .author.login, url, body}]
+          }'
   ```
 
 - **List PR Comments (REST)**:
