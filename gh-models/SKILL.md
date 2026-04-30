@@ -15,6 +15,23 @@ license: MIT
 Run, evaluate, and auto-generate tests for AI prompts directly from the terminal. Ideal for CLI-centric
 agentic workflows on issues, PRs, repo events, and prompt engineering at scale.
 
+## Mindmap of Commands
+
+```mermaid
+mindmap
+  root((gh models))
+    eval
+      Evaluate prompts
+    generate
+      Generate tests
+    list
+      List models
+    run
+      Run inference
+    view
+      View details
+```
+
 ## When to Activate
 
 - Agentic workflows require automated prompt engineering, scoring, or regression testing for LLMs.
@@ -114,6 +131,12 @@ Store prompts anywhere in repo (e.g. `.github/prompts/`). Structure enables:
 - Never use `run` without corresponding eval harness.
 - Always version the exact model ID + parameters + prompt hash.
 - On any regression: root-cause via single-variable delta (change one test case or param), re-generate, re-eval.
+
+## Related Skills
+
+- **gh**: For general GitHub CLI usage (issues, PRs, and REST API).
+- **gh-pr**: For detailed pull request creation, management, and review workflows.
+- **gh-run**: For interacting with GitHub Actions workflows and checking run/job status.
 
 ## Maintenance
 
