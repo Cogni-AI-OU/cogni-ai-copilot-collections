@@ -157,9 +157,9 @@ Avoid process substitution for the body; use a temporary file.
 
 ## Fetching PR Workflow Runs via API
 
-Due to `gh pr checks` limitation to the current HEAD commit which frequently misses manually
-triggered (`workflow_dispatch`) or comment-triggered (`issue_comment`) runs, the most robust
-way to list all workflow runs associated with a Pull Request is via the REST API.
+Due to `gh pr checks`' limitation of only evaluating the current HEAD commit, it frequently
+misses manually triggered (`workflow_dispatch`) or comment-triggered (`issue_comment`) runs.
+The most robust way to list all workflow runs associated with a Pull Request is via the REST API.
 
 You can query the `/actions/runs` endpoint filtering by both the PR branch name and the PR title
 (since PR comment triggers map the PR title to `display_title`):
