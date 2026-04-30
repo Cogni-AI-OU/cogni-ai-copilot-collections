@@ -278,6 +278,16 @@ Use these when standard `gh` commands (like `gh pr view` or `gh issue view`) do 
   gh api repos/<owner>/<repo>/issues/<number>/comments
   ```
 
+- **List Workflow Runs with Filters (REST)**:
+
+  ```bash
+  gh api -X GET "repos/<owner>/<repo>/actions/runs" \
+    -f branch="<branch>" \
+    -f event="pull_request" \
+    -f per_page=10 \
+    --jq '.workflow_runs[] | {id, head_branch, name, event, status, conclusion, created_at, html_url}'
+  ```
+
 - **Resolve a PR Review Thread by ID (GraphQL)**:
 
   ```bash
