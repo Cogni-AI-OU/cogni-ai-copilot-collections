@@ -17,6 +17,9 @@ license: MIT
 **render compatibility** (GitHub, VS Code, Mermaid Live Editor, Markdown), **minimalism**, and **Easy-To-Change (ETC)**
 design so diagrams remain maintainable as systems evolve.
 
+> [!IMPORTANT]
+> If you have only read the first 100 lines of this file and your task involves creating a diagram type not covered in those lines (such as ER, Gantt, GitGraph, Kanban, Mindmap, Pie, Quadrant, Requirement, Sequence, State, Timeline, or User Journey), you **MUST** read the rest of the file to access the relevant expert guidance and examples.
+
 ## When to Activate
 
 - Agent must explain complex logic, system architecture, or requirements via diagrams.
