@@ -6,12 +6,12 @@ description: >-
   Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
-<!-- markdownlint-disable MD003 MD013 MD022 MD023 MD026 MD031 MD032 MD041 -->
+
 # Robust Command Execution Skill
 
-This skill provides patterns for executing commands with automatic error recovery,
-fallback mechanisms, and installation of missing dependencies. Never give up when
-a command fails - try alternatives!
+This skill provides patterns for executing commands with automatic error
+recovery, fallback mechanisms, and installation of missing dependencies.
+Never give up when a command fails - try alternatives!
 
 ## When to Activate
 
@@ -169,7 +169,8 @@ fi
 # Or with Python as final fallback
 curl -s https://example.com 2>/dev/null || \
 wget -q -O - https://example.com 2>/dev/null || \
-python3 -c "import urllib.request; print(urllib.request.urlopen('https://example.com').read().decode())"
+python3 -c "import urllib.request; \
+  print(urllib.request.urlopen('https://example.com').read().decode())"
 ```
 
 ### Text Processing
@@ -183,7 +184,8 @@ awk 'END {print NR}' file.txt
 # Grep alternatives
 grep "pattern" file.txt 2>/dev/null || \
 awk '/pattern/' file.txt 2>/dev/null || \
-python3 -c "import sys; [print(line, end='') for line in open('file.txt') if 'pattern' in line]"
+python3 -c "import sys; \
+  [print(line, end='') for line in open('file.txt') if 'pattern' in line]"
 ```
 
 ## Permission Handling
@@ -463,7 +465,8 @@ fi
 
 ```bash
 # Read file
-cat file.txt || head -n 99999 file.txt || python3 -c "print(open('file.txt').read())"
+cat file.txt || head -n 99999 file.txt || \
+  python3 -c "print(open('file.txt').read())"
 
 # Write file
 echo "data" > file.txt || python3 -c "open('file.txt', 'w').write('data')"
@@ -476,10 +479,12 @@ echo "data" >> file.txt || python3 -c "open('file.txt', 'a').write('data\n')"
 
 ```bash
 # Download file
-curl -O url || wget url || python3 -c "import urllib.request; urllib.request.urlretrieve('url', 'file')"
+curl -O url || wget url || \
+  python3 -c "import urllib.request; urllib.request.urlretrieve('url', 'file')"
 
 # Check if URL is reachable
-curl -I url || wget --spider url || python3 -c "import urllib.request; urllib.request.urlopen('url')"
+curl -I url || wget --spider url || \
+  python3 -c "import urllib.request; urllib.request.urlopen('url')"
 ```
 
 ### Archive Operations
