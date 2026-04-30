@@ -9,6 +9,13 @@ description: >-
 Use `gh pr` to natively interact with GitHub Pull Requests. Prefer native
 fields and explicit routing over brittle shell post-processing.
 
+## When to Activate
+
+- User asks to manage, review, or inspect a pull request using the GitHub CLI (`gh pr`).
+- Task involves querying PR CI/CD checks (`gh pr checks`), logs, mergeability, or PR metadata.
+- Need to perform branch synchronizations, merges, or PR updates inside a GitHub Actions runtime.
+- Extracting PR context, reviewing diffs, or commenting on specific PR threads.
+
 ## Mindmap of Commands
 
 ```mermaid
@@ -51,13 +58,6 @@ mindmap
     view
       View PR details, description, and comments
 ```
-
-## When to Activate
-
-- User asks to manage, review, or inspect a pull request using the GitHub CLI (`gh pr`).
-- Task involves querying PR CI/CD checks (`gh pr checks`), logs, mergeability, or PR metadata.
-- Need to perform branch synchronizations, merges, or PR updates inside a GitHub Actions runtime.
-- Extracting PR context, reviewing diffs, or commenting on specific PR threads.
 
 ## Advanced PR Workflows
 
