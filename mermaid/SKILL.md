@@ -326,6 +326,30 @@ gitGraph
     merge develop tag: "v1.0.0"
 ```
 
+**Pro-tip for accurate real-world GitGraphs**:
+
+Use CLI tools to generate commit entries from real commit history instead of rewriting commit subjects by hand:
+
+- **With GitHub CLI (`gh`)**:
+  `gh pr view <number> --json headRefName,baseRefName,commits`
+- **With Git (`git`)**:
+  `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
+
+These commands provide a linear list of commits and can help seed `commit id: "..."` entries, but they do **not** reconstruct full branch and merge topology for a Mermaid `gitGraph`.
+
+*(Note: Escape inner quotes in commit subjects so the output remains valid Mermaid syntax. For example, use `sed 's/"/\\"/g'` to escape double quotes in a shell pipeline.)*
+
+Example:
+
+```mermaid
+gitGraph
+    branch "feature/awesome-feature"
+    checkout "feature/awesome-feature"
+    commit id: "Add feature A"
+    commit id: "Revert \"Add feature A\"" type: REVERSE
+    commit id: "Clean-up"
+```
+
 Docs: <https://mermaid.js.org/syntax/gitgraph.html>
 
 ### Kanban Diagram

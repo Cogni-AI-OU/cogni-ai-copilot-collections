@@ -16,38 +16,6 @@ and bounded fallbacks over brittle shell post-processing.
 ```mermaid
 mindmap
   root((gh))
-    actions
-      cache
-        delete
-          Delete GitHub Actions caches
-        list
-          List GitHub Actions caches
-      run
-        cancel
-          Cancel a workflow run
-        delete
-          Delete a workflow run
-        download
-          Download artifacts
-        list
-          List recent workflow runs
-        rerun
-          Rerun a run
-        view
-          View summary of a run
-        watch
-          Watch progress
-      workflow
-        disable
-          Disable a workflow
-        enable
-          Enable a workflow
-        list
-          List workflows
-        run
-          Run a workflow
-        view
-          View summary of a workflow
     agent-task
       create
         Create an agent task
@@ -90,6 +58,11 @@ mindmap
         Print the authentication token
     browse
       Open repositories, issues, PRs in browser
+    cache
+      delete
+        Delete GitHub Actions caches
+      list
+        List GitHub Actions caches
     codespace
       code
         Open in VS Code
@@ -208,7 +181,7 @@ mindmap
       list
         List labels
     models
-      (Load gh-models skill for full list)
+      (Load gh-models skill if required)
     org
       list
         List organizations
@@ -349,6 +322,8 @@ mindmap
         List rulesets
       view
         View information
+    run
+      (Load gh-run skill if required)
     search
       code
         Search within code
@@ -385,6 +360,8 @@ mindmap
         List variables
       set
         Create or update variables
+    workflow
+      (Load gh-run skill if required)
 ```
 
 ## When to Activate
@@ -399,15 +376,12 @@ mindmap
 2. Choose the narrowest native `gh` surface before reaching for `gh api`:
    - `gh issue view/comment` for issues
    - `gh pr view/comment/review` for pull requests and reviews
-   - `gh run list/view` for workflow runs
    - `gh api` only when native subcommands do not expose the needed field
 3. Prefer structured output over shell filtering:
    - use `--json`, `--jq`, or `--template` instead of `grep`/`rg`
    - use `gh api` for metadata, not ad hoc HTML scraping
 4. Query the smallest object that answers the question:
    - issue or PR metadata before comments
-   - run metadata before logs
-   - job metadata before job logs
 5. After each command, verify progress explicitly:
    - non-empty stdout or expected JSON field
    - no warning that changes command semantics
@@ -438,12 +412,12 @@ Example: `gh api graphql -f query='mutation($title: String!) { ... }' -F title=@
 
 ## Structured Query Patterns
 
+- Use `gh pr view <number> --json headRefName,baseRefName,commits` to extract PR commit history
+  (e.g. for visualization to generate topology data like `mermaid` `gitGraph` diagrams without cloning explicitly)
 - Prefer native JSON first:
   - `gh issue view <number> --json comments,number,title,state,author,url`
   - `gh pr view <number> --json number,title,state,reviewDecision,url`
-  - `gh run list --limit 20 --json databaseId,name,workflowName,status,conclusion,url`
 - Use `gh api` for objects that native subcommands do not expose cleanly:
-  - `gh api repos/<owner>/<repo>/actions/jobs/<job_id>`
   - `gh api repos/<owner>/<repo>/issues/<number>/comments`
 - Use `--jq` or `--template` before external filters.
 
@@ -498,27 +472,6 @@ Since `gh` often lacks a native `discussion` subcommand, use `gh api graphql`. A
 - For GraphQL mutations with large bodies from files:
   `gh api graphql -f query='mutation($body: String!) { ... }' -F body=@file.md`
 - For non-code-change tasks, verify workspace cleanliness after posting.
-
-## Workflow Run Diagnostics
-
-- `gh run view <run_id> --log-failed` is only reliable when the relevant job
-  or run concluded with failure.
-- Prefer structured inspection with
-  `gh run view <run_id> --json databaseId,status,conclusion,jobs,url` or
-  `gh run view <run_id>` metadata. Only use external filters like `rg` if shell
-  policy explicitly permits them.
-- Jobs can conclude `success` while still containing pathological agent
-  behavior; inspect run/job metadata before assuming failed-only logs are
-  sufficient.
-- Do not pass both run ID and job ID to `gh run view`; the CLI warns and
-  ignores the run ID.
-- Treat `gh run view ... --log` as environment-sensitive. If it returns
-  empty output, do not loop on it; switch to metadata, artifacts, or another
-  supported log source.
-- Treat `gh api .../logs` as a special case. The endpoint may redirect to a
-  signed blob URL that does not behave like normal JSON API calls and can
-  return `403` when replayed incorrectly.
-- Probe one run or one job first before launching parallel diagnostics.
 
 ## GitHub Actions Runtime
 
@@ -591,15 +544,9 @@ agent MUST integrate remote changes with a merge commit workflow.
 
 ## Failure Signatures
 
-- Warning like `both run and job IDs specified; ignoring run ID` means the
-  command did not execute the way you intended; fix arguments before
-  continuing.
 - Empty stdout from a supposedly successful `gh` query is a signal, not a
   success. Check whether the subcommand supports the requested mode in this
   environment.
-- Repeated `403` from `gh api` on log/archive endpoints usually indicates
-  redirect or signed-URL handling issues, not missing repository access.
-  Classify as `LOG_ACCESS_UNSUPPORTED` and pivot to metadata or artifacts.
 - If a shell policy blocks a `gh`-adjacent command shape, classify it as
   `POLICY_DENIED` and pivot immediately.
 
@@ -610,8 +557,6 @@ agent MUST integrate remote changes with a merge commit workflow.
 - Do not build `gh ... | grep ... | grep ...` chains as the default diagnostic
   path.
 - Do not retry the same `gh` command shape after semantic warnings.
-- Do not assume Actions log retrieval is uniform across public pages, API
-  endpoints, and CLI subcommands.
 - Do not create temp files for comments or analysis when direct `gh`
   subcommands are available.
 
@@ -619,3 +564,8 @@ agent MUST integrate remote changes with a merge commit workflow.
 
 Update this skill when new `gh` failure signatures, routing patterns, or
 reliable structured-query workflows are discovered.
+
+## Related Skills
+
+- **gh-run**: For interacting with GitHub Actions workflows and checking run/job status.
+- **gh-models**: For running and evaluating AI models via GitHub Models CLI.
