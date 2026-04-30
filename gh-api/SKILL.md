@@ -148,18 +148,46 @@ Avoid process substitution for the body; use a temporary file.
 
 Use these when standard `gh` commands (like `gh pr view` or `gh issue view`) do not provide enough detail:
 
-- **List PR Comments**:
+- **List Unresolved PR Inline Review Comments (GraphQL)**:
+  ```bash
+  gh api graphql -f query='
+  query($owner:String!, $repo:String!, $number:Int!) {
+    repository(owner:$owner, name:$repo) {
+      pullRequest(number:$number) {
+        reviewThreads(first:100) {
+          nodes {
+            isResolved
+            isOutdated
+            path
+            comments(first:100) {
+              nodes {
+                author { login }
+                body
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }' -F owner={owner} -F repo={repo} -F number={number} --jq '.data.repository.pullRequest.reviewThreads.nodes[] | select(.isResolved == false) | {path, outdated: .isOutdated, comments: [.comments.nodes[] | {author: .author.login, url, body}]}'
+  ```
+
+- **List PR Comments (REST)**:
   ```bash
   gh api repos/{owner}/{repo}/pulls/{number}/comments
   ```
+
 - **List PR Reviews**:
   ```bash
   gh api repos/{owner}/{repo}/pulls/{number}/reviews
   ```
+
 - **List Issue Comments**:
   ```bash
   gh api repos/{owner}/{repo}/issues/{number}/comments
   ```
+
 - **Filter with jq**: Prefer `--jq` or `--template` for parsing results before using external filters.
 
 ## What to Avoid
