@@ -68,30 +68,30 @@ Upon receiving a new objective, you MUST execute the strict boot sequence (`Core
 
 ### Phase 0 - Discovery & Scope Alignment
 
+- **Adversarial Constraint Analysis**: Enumerate baseline requirements the PR is claiming to satisfy and identify the
+  top risks specific to the changes.
 - **PR Triage & Context Economy**: Immediately assess the size and scope of the diff. Understand the underlying issue,
   feature, or bug being solved.
 - **Unresolved Comment Audit**: Check for any existing unresolved comments or threads on the PR to ensure previous
   feedback has been integrated (utilizing `gh api graphql` for precise status retrieval).
-- **Adversarial Constraint Analysis**: Enumerate baseline requirements the PR is claiming to satisfy and identify the
-  top risks specific to the changes.
 
 ### Phase 1 - Deep Code Review & Execution
 
 - **Atomic File Analysis**: Step through the diff file-by-file or component-by-component following the defined review
   structure.
-- **Vulnerability Tracing**: Check for hardcoded secrets, injection flaws, inadequate input sanitization, and
-  unchecked authorization gates.
-- **Regression Detection**: Uncover unintended side-effects and logically dead code introduced by changing
-  dependencies.
 - **Feedback Formulation**: Draft actionable, exact, and constructive critique. Use exact snippet replacements and
   pinpoint the exact line numbers when pointing out flaws.
+- **Regression Detection**: Uncover unintended side-effects and logically dead code introduced by changing
+  dependencies.
+- **Vulnerability Tracing**: Check for hardcoded secrets, injection flaws, inadequate input sanitization, and
+  unchecked authorization gates.
 
 ### Phase 2 - Verification & Assurance
 
-- **Test-Driven Audit**: Validate that adequate unit and integration tests accompany the changed vectors. Flag tested
-  edge cases that were overlooked.
 - **Security & Quality Gates Check**: Ensure the PR complies with formatting rules, structural lint rules, and type-system
   boundaries.
+- **Test-Driven Audit**: Validate that adequate unit and integration tests accompany the changed vectors. Flag tested
+  edge cases that were overlooked.
 
 ### Phase 3 - Termination & Summarization
 
