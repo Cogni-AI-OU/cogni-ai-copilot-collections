@@ -278,6 +278,18 @@ Use these when standard `gh` commands (like `gh pr view` or `gh issue view`) do 
   gh api repos/<owner>/<repo>/issues/<number>/comments
   ```
 
+- **List Workflow Runs for a specific branch and event (REST + jq)**:
+  ```bash
+  gh api -X GET "repos/{owner}/{repo}/actions/runs" \
+    -f branch="{branch_name}" \
+    -f event="pull_request" \
+    -f per_page=10 \
+    --jq '.workflow_runs[] | {id, head_branch, name, event, status, conclusion, created_at, html_url}'
+  ```
+
+  Note: Using `-f` implicitly changes the underlying request to POST.
+  You must specify `-X GET` explicitly or encode parameters directly into the URL like `...?branch={branch_name}&event=pull_request`.*
+
 - **List Workflow Runs with Filters (REST)**:
 
   ```bash
