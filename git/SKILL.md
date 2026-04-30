@@ -78,10 +78,12 @@ GitHub Actions and other CI environments often check out repositories as shallow
 
 ## Useful Diagnostic Commands
 
-- Verify identity: `git config user.name && git config user.email`
-- Remote tracking status: `git status -sb`
 - Commit template check: `git config commit.template`
+- Export git log commits formatted and generative diagram output natively for Mermaid's `gitGraph` using:
+  `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
+- Remote tracking status: `git status -sb`
 - Signed commit verification: `git log --show-signature -1`
+- Verify identity: `git config user.name && git config user.email`
 
 ## Resolving Merge Conflicts with Minimal Changes
 
