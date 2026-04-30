@@ -136,13 +136,13 @@ pip install pyyaml requests black pylint
 ```bash
 # Try jq first, fallback to python
 if command -v jq &> /dev/null; then
-  jq . /tmp/file.json
+  jq . file.json
 else
-  python3 -m json.tool < /tmp/file.json
+  python3 -m json.tool < file.json
 fi
 
 # Or one-liner with ||
-jq . /tmp/file.json 2>/dev/null || python3 -m json.tool < /tmp/file.json
+jq . file.json 2>/dev/null || python3 -m json.tool < file.json
 ```
 
 ### YAML Processing
@@ -150,9 +150,9 @@ jq . /tmp/file.json 2>/dev/null || python3 -m json.tool < /tmp/file.json
 ```bash
 # Try yq, fallback to python
 if command -v yq &> /dev/null; then
-  yq eval /tmp/file.yaml
+  yq eval file.yaml
 else
-  python3 -c "import yaml, sys; print(yaml.safe_load(open('/tmp/file.yaml')))"
+  python3 -c "import yaml, sys; print(yaml.safe_load(open('file.yaml')))"
 fi
 ```
 
@@ -176,14 +176,14 @@ python3 -c "import urllib.request; print(urllib.request.urlopen('https://example
 
 ```bash
 # Line counting alternatives
-wc -l /tmp/file.txt 2>/dev/null || \
-cat /tmp/file.txt | wc -l 2>/dev/null || \
-awk 'END {print NR}' /tmp/file.txt
+wc -l file.txt 2>/dev/null || \
+cat file.txt | wc -l 2>/dev/null || \
+awk 'END {print NR}' file.txt
 
 # Grep alternatives
-grep "pattern" /tmp/file.txt 2>/dev/null || \
-awk '/pattern/' /tmp/file.txt 2>/dev/null || \
-python3 -c "import sys; [print(line, end='') for line in open('/tmp/file.txt') if 'pattern' in line]"
+grep "pattern" file.txt 2>/dev/null || \
+awk '/pattern/' file.txt 2>/dev/null || \
+python3 -c "import sys; [print(line, end='') for line in open('file.txt') if 'pattern' in line]"
 ```
 
 ## Permission Handling
@@ -192,30 +192,43 @@ python3 -c "import sys; [print(line, end='') for line in open('/tmp/file.txt') i
 
 ```bash
 # Check if file is readable
-if [ -r /tmp/file.txt ]; then
-  cat /tmp/file.txt
+if [ -r file.txt ]; then
+  cat file.txt
 else
   echo "File not readable"
 fi
-```
 
+# Check if file is writable
+if [ -w /tmp/file.txt ]; then
+  echo "data" > /tmp/file.txt
+else
+  echo "File not writable"
+fi
+
+# Check if file is executable
+if [ -x script.sh ]; then
+  ./script.sh
+else
+  echo "File not executable"
+fi
+```
 
 ### Fix Permissions
 
 ```bash
 # Make file readable
-chmod +r /tmp/file.txt
+chmod +r file.txt
 
 # Make file writable
-chmod +w /tmp/file.txt
+chmod +w file.txt
 
 # Make file executable
-chmod +x /tmp/script.sh
+chmod +x script.sh
 
 # Common permission patterns
-chmod 644 /tmp/file.txt    # rw-r--r--
-chmod 755 /tmp/script.sh   # rwxr-xr-x
-chmod 600 /tmp/secret.key  # rw-------
+chmod 644 file.txt    # rw-r--r--
+chmod 755 script.sh   # rwxr-xr-x
+chmod 600 secret.key  # rw-------
 ```
 
 ### Handle Permission Denied
@@ -238,11 +251,20 @@ fi
 
 ```bash
 # Check file exists
-if [ -f /tmp/file.txt ]; then
+if [ -f file.txt ]; then
   echo "File exists"
 fi
-```
 
+# Check directory exists
+if [ -d /path/to/dir ]; then
+  echo "Directory exists"
+fi
+
+# Check path exists (file or directory)
+if [ -e /path/to/something ]; then
+  echo "Path exists"
+fi
+```
 
 ### Create Missing Paths
 
@@ -251,7 +273,7 @@ fi
 mkdir -p /path/to/dir
 
 # Create file if missing
-touch /tmp/file.txt
+touch file.txt
 
 # Create with error handling
 if [ ! -d /path/to/dir ]; then
@@ -308,7 +330,7 @@ run_robust() {
 }
 
 # Usage
-run_robust jq . /tmp/file.json
+run_robust jq . file.json
 ```
 
 ## Error Recovery Strategies
@@ -447,7 +469,7 @@ cat file.txt || head -n 99999 file.txt || python3 -c "print(open('file.txt').rea
 echo "data" > /tmp/file.txt || python3 -c "open('/tmp/file.txt', 'w').write('data')"
 
 # Append to file
-echo "data" >> /tmp/file.txt || python3 -c "open('/tmp/file.txt', 'a').write('data\n')"
+echo "data" >> file.txt || python3 -c "open('file.txt', 'a').write('data\n')"
 ```
 
 ### Network Operations

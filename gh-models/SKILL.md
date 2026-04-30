@@ -52,7 +52,7 @@ gh models list  # verify + list available model IDs (e.g. openai/gpt-4.1, openai
 - **Piped repo content** (issues/PRs/events):
 
   ```bash
-  cat /tmp/issue_body.txt | gh models run --file summarize.prompt.yml > /tmp/summary.txt
+  cat issue_body.txt | gh models run --file summarize.prompt.yml > /tmp/summary.txt
   gh issue view 123 --json body | jq -r .body | gh models run openai/gpt-4.1 "Extract action items and risks"
   ```
 
@@ -108,11 +108,10 @@ Store prompts anywhere in repo (e.g. `.github/prompts/`). Structure enables:
 - **Generate-first**: On any prompt edit, run `gh models generate --effort high` then `eval` before use
   (catches 80%+ failure modes early).
 - **JSON everywhere for agents**: `--json` + `jq` for pass/fail, metrics extraction, automated rollback.
-- **Model selection discipline**: Use `gh models list`; prefer cheap/fast
-  (gpt-4o-mini) for high-volume triage; reserve high-intelligence models
-  for complex reasoning.
-- **Piping + context injection**: Always pipe exact repo event payload
-  (issue body, PR diff, commit message) — avoid hard-coded examples.
+- **Model selection discipline**: Use `gh models list`; prefer cheap/fast (gpt-4o-mini) for high-volume triage;
+  reserve high-intelligence models for complex reasoning.
+- **Piping + context injection**: Always pipe exact repo event payload (issue body, PR diff, commit message) —
+  avoid hard-coded examples.
 - **Rate-limit & cost awareness**: Monitor via GitHub token; use `--max-tokens` + low temp for deterministic
   tasks; batch via multiple short runs.
 - **REPL for exploration**: Use interactive `gh models run` for rapid prototyping before freezing

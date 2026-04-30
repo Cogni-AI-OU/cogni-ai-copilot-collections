@@ -37,30 +37,29 @@ Never blindly dump large resources into your context. Always:
 
 ```bash
 # Fast line count
-wc -l /tmp/filename.txt
+wc -l filename.txt
 
-# Alternative: use redirection to avoid filename in output
-wc -l < /tmp/filename.txt
+# Line count without filename
+wc -l < filename.txt
 
-# Combined: check line count and file size
-wc -l /tmp/filename.txt && ls -lh /tmp/filename.txt
-
+# Line count with human-readable file size
+wc -l filename.txt && ls -lh filename.txt
 ```
 
 ### Check File Size
 
 ```bash
 # Human-readable size
-ls -lh /tmp/filename.txt
+ls -lh filename.txt
 
 # Size in bytes (Linux)
-stat -c%s /tmp/filename.txt
+stat -c%s filename.txt
 
 # Size in bytes (macOS)
-stat -f%z /tmp/filename.txt
+stat -f%z filename.txt
 
 # Quick check if file is large
-[ $(wc -l < /tmp/filename.txt) -gt 500 ] && echo "Large file" || echo "Small file"
+[ $(wc -l < filename.txt) -gt 500 ] && echo "Large file" || echo "Small file"
 ```
 
 ## Filtered File Reading
@@ -69,42 +68,42 @@ stat -f%z /tmp/filename.txt
 
 ```bash
 # First 50 lines
-head -n 50 /tmp/filename.txt
+head -n 50 filename.txt
 
 # Last 50 lines
-tail -n 50 /tmp/filename.txt
+tail -n 50 filename.txt
 
 # Both ends with separator
-head -n 30 /tmp/filename.txt && echo "..." && tail -n 30 /tmp/filename.txt
+head -n 30 filename.txt && echo "..." && tail -n 30 filename.txt
 ```
 
 ### Read Specific Ranges
 
 ```bash
 # Lines 100-200
-sed -n '100,200p' /tmp/filename.txt
+sed -n '100,200p' filename.txt
 
 # Around a specific line (line 150 ± 25 lines)
-sed -n '125,175p' /tmp/filename.txt
+sed -n '125,175p' filename.txt
 
 # Skip first N lines, show next M
-tail -n +100 /tmp/filename.txt | head -n 50
+tail -n +100 filename.txt | head -n 50
 ```
 
 ### Search-Based Reading
 
 ```bash
 # Find and show context
-grep -n "pattern" /tmp/filename.txt
+grep -n "pattern" filename.txt
 
 # Show matching lines with 5 lines of context
-grep -C 5 "pattern" /tmp/filename.txt
+grep -C 5 "pattern" filename.txt
 
 # Show matching lines with line numbers
-grep -n "pattern" /tmp/filename.txt | head -20
+grep -n "pattern" filename.txt | head -20
 
 # Count matches without showing content
-grep -c "pattern" /tmp/filename.txt
+grep -c "pattern" filename.txt
 ```
 
 ## Command Output Filtering
@@ -312,7 +311,7 @@ find . -name "*.log" -exec grep -l "ERROR" {} \; | head -10
 grep -rh "pattern" . | sort -u | head -20
 
 # Complex filtering in stages
-cat /tmp/large.txt | \
+cat large.txt | \
   grep -i "keyword" | \
   grep -v "noise" | \
   sort -u | \
@@ -323,11 +322,11 @@ cat /tmp/large.txt | \
 
 ```bash
 # Find approximate location of pattern
-total_lines=$(wc -l < /tmp/large.txt)
+total_lines=$(wc -l < large.txt)
 middle=$((total_lines / 2))
 
 # Check first half
-head -n $middle /tmp/large.txt | grep -q "pattern" && echo "In first half" || echo "In second half"
+head -n $middle large.txt | grep -q "pattern" && echo "In first half" || echo "In second half"
 
 # Then narrow down further
 ```
@@ -338,14 +337,14 @@ head -n $middle /tmp/large.txt | grep -q "pattern" && echo "In first half" || ec
 # Read file in chunks
 chunk_size=100
 current=0
-total=$(wc -l < /tmp/file.txt)
+total=$(wc -l < file.txt)
 
 # Read first chunk
-sed -n "1,${chunk_size}p" /tmp/file.txt
+sed -n "1,${chunk_size}p" file.txt
 
 # If needed, read next chunk
 current=$((current + chunk_size))
-sed -n "${current},$((current + chunk_size))p" /tmp/file.txt
+sed -n "${current},$((current + chunk_size))p" file.txt
 ```
 
 ## Common Pitfalls to Avoid
@@ -368,7 +367,7 @@ sed -n "${current},$((current + chunk_size))p" /tmp/file.txt
 ## Remember
 
 - **Size matters**: Always check before you dump
-- **Filter first**: Use `grep`, `head`, `tail`, `sed`, `awk`
+- **Filter first**: Use grep, head, tail, sed, awk
 - **Focus**: Only show what's relevant to the current task
 - **Summarize**: When in doubt, show a summary rather than everything
 - **Iterate**: You can always come back for more details if needed

@@ -8,39 +8,29 @@ description: >-
 ---
 # File Editing with Ex Mode
 
-`ex` is the line-editor mode of Vim, which is useful for non-interactive
-file editing in shell scripts or agent-executed terminal commands.
+`ex` is the line-editor mode of Vim, which is useful for non-interactive file editing in shell scripts
+or agent-executed terminal commands.
 
-Unlike tools such as `sed` or `awk` which are *stream editors* designed to
-process data sequentially line-by-line—`ex` is a true *file editor*. It
-loads the entire file into a buffer, allowing you to freely navigate
-forwards and backwards, execute complex multi-line modifications, and
-utilize powerful normal-mode commands. Furthermore, while `sed -i` merely
-mimics in-place editing by secretly using temporary files (which leads to
-notoriously frustrating syntax incompatibilities between GNU/Linux and
-macOS), `ex` safely and natively edits the file directly in-place.
+Unlike tools such as `sed` or `awk` which are *stream editors* designed to process data sequentially line-by-line—`ex`
+is a true *file editor*. It loads the entire file into a buffer, allowing you to freely navigate forwards and backwards,
+execute complex multi-line modifications, and utilize powerful normal-mode commands. Furthermore, while `sed -i` merely
+mimics in-place editing by secretly using temporary files (which leads to notoriously frustrating syntax
+incompatibilities between GNU/Linux and macOS), `ex` safely and natively edits the file directly in-place.
 
 ## When to Activate
 
 You should prefer using `ex` over standard shell utilities (`sed`, `awk`, `grep`) in the following scenarios:
 
-- **Batch editing multiple files:** When modifying multiple files at once,
-  especially for small identical changes, making `ex` (via `find -exec` or
-  `argdo`) far more efficient and flexible than generating and applying
-  patch tooling.
-- **Complex structured parsing:** When editing unstructured or multi-line
-  formats (HTML, XML) where strict line-by-line stream processing is too
-  fragile.
-- **Multi-line manipulation:** When your edits require moving around a file
-  (e.g., finding a specific pattern, moving up a few lines, and applying a
-  change).
-- **Native in-place editing:** To avoid the GNU/BSD syntax nightmare of
-  `sed -i` across different operating systems.
-- **Script reliability:** When writing bash heredocs (`<< EOF`) for complex
-  configuration file patching.
-- **Vim power from the shell:** Whenever you want to leverage Vim's normal
-  mode commands (like `gqq` for formatting or `norm! vitd` for text object
-  deletion) non-interactively.
+- **Batch editing multiple files:** When modifying multiple files at once, especially for small identical changes,
+  making `ex` (via `find -exec` or `argdo`) far more efficient and flexible than generating and applying patch tooling.
+- **Complex structured parsing:** When editing unstructured or multi-line formats (HTML, XML) where strict line-by-line
+  stream processing is too fragile.
+- **Multi-line manipulation:** When your edits require moving around a file (e.g., finding a specific pattern, moving up
+  a few lines, and applying a change).
+- **Native in-place editing:** To avoid the GNU/BSD syntax nightmare of `sed -i` across different operating systems.
+- **Script reliability:** When writing bash heredocs (`<< EOF`) for complex configuration file patching.
+- **Vim power from the shell:** Whenever you want to leverage Vim's normal mode commands (like `gqq` for formatting or
+  `norm! vitd` for text object deletion) non-interactively.
 
 ## Basic Usage
 
@@ -63,10 +53,10 @@ ex -s -c 'set tw=120' -c '%normal gqq' -c 'wq' README.md
 ex -s -c 'set tw=120' -c '19,23normal gqq' -c 'wq' README.md
 
 # Sort a specific range of lines alphabetically (e.g., lines 10 to 20)
-ex -s -c '10,20sort' -c 'wq' /tmp/list.txt
+ex -s -c '10,20sort' -c 'wq' list.txt
 
 # Reverse sort the entire file
-ex -s -c '%sort!' -c 'wq' /tmp/list.txt
+ex -s -c '%sort!' -c 'wq' list.txt
 ```
 
 ## Using Heredocs

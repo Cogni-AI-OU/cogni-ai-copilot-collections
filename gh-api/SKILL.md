@@ -97,9 +97,8 @@ Notes:
 
 ## Downloading Workflow Logs via API
 
-When `gh run view --log` fails to retrieve logs (often returning empty
-strings for canceled matrix jobs or cached runs), you can download the full
-artifact zip via the REST API, bypassing CLI streaming limits.
+When `gh run view --log` fails to retrieve logs (often returning empty strings for canceled matrix jobs or cached runs),
+you can download the full artifact zip via the REST API, bypassing CLI streaming limits.
 
 ```bash
 gh api -H "Accept: application/vnd.github+json" /repos/<owner>/<repo>/actions/runs/<run_id>/logs > /tmp/run_logs.zip
@@ -158,10 +157,9 @@ Avoid process substitution for the body; use a temporary file.
 
 ## Fetching PR Workflow Runs via API
 
-Due to `gh pr checks`' limitation of only evaluating the current HEAD
-commit, it frequently misses manually triggered (`workflow_dispatch`) or
-comment-triggered (`issue_comment`) runs. The most robust way to list all
-workflow runs associated with a Pull Request is via the REST API.
+Due to `gh pr checks`' limitation of only evaluating the current HEAD commit, it frequently
+misses manually triggered (`workflow_dispatch`) or comment-triggered (`issue_comment`) runs.
+The most robust way to list all workflow runs associated with a Pull Request is via the REST API.
 
 You can query the `/actions/runs` endpoint filtering by both the PR branch name and the PR title
 (since PR comment triggers map the PR title to `display_title`):
@@ -170,8 +168,8 @@ You can query the `/actions/runs` endpoint filtering by both the PR branch name 
 branch_name=$(gh pr view <pr_number> --repo <owner>/<repo> --json headRefName -q .headRefName)
 pr_title=$(gh pr view <pr_number> --repo <owner>/<repo> --json title -q .title)
 
-gh api repos/<owner>/<repo>/actions/runs --paginate --arg branch "$branch_name" --arg title "$pr_title" \
-  -q ".workflow_runs[] | select((.head_branch == \$branch or .display_title == \$title)) | {id: .id, name: .name, status: .status, conclusion: .conclusion, event: .event}"
+gh api repos/<owner>/<repo>/actions/runs --paginate \
+  -q ".workflow_runs[] | select((.head_branch == \"$branch_name\" or .display_title == \"$pr_title\")) | {id: .id, name: .name, status: .status, conclusion: .conclusion, event: .event}"
 ```
 
 ## Pagination & Robustness
