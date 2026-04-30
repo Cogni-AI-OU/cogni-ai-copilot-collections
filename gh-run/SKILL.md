@@ -51,7 +51,10 @@ mindmap
     gh api /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_num}/logs > logs.zip
     unzip logs.zip
     ```
-    This produces a directory structure where each directory matches the *Job Name*. Concatenating the text files within these folders reliably provides the full job execution logs regardless of progress state.
+    This produces a structure where logs are either:
+    1. In a directory matching the *Job Name* (e.g. `Job Name/1_Set up job.txt`).
+    2. A single raw `.txt` file at the root level prefixed with a number but suffixed with the job name (e.g. `0_copilot.txt`) for monolithic/agent runs.
+    Check both locations and concatenate the `.txt` files to reliably provide the full job execution logs regardless of progress state.
 
 - `gh run view <run_id> --log-failed` is only reliable when the relevant job
   or run concluded with failure.
