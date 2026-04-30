@@ -12,6 +12,7 @@ and planned work into the current context:
 - **[fact-writer](fact-writer/SKILL.md)**: Guidance for writing, structuring, and maintaining verifiable project
   fact files without contradictions
 - **[gh](gh/SKILL.md)**: GitHub CLI (`gh`) operations for issues, PRs, workflows, and API
+- **[gh-api](gh-api/SKILL.md)**: GitHub CLI (`gh api`) operations for authenticated REST and GraphQL API requests
 - **[gh-models](gh-models/SKILL.md)**: GitHub CLI models (`gh models`) operations for running and evaluating AI models
 - **[gh-pr](gh-pr/SKILL.md)**: GitHub CLI (`gh pr`) operations for creating, viewing, and managing pull requests
 - **[gh-run](gh-run/SKILL.md)**: GitHub CLI (`gh run` and `gh workflow`) operations for workflow runs,

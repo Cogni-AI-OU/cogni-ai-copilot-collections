@@ -31,10 +31,6 @@ you **MUST** read the rest of the file to access the relevant expert guidance an
 - User requests visualization of processes, architecture, sequences, data flows,
   timelines, or user journeys.
 
-## Related Skills
-
-- **mermaid-beta**: Guide for experimental and beta Mermaid.js diagram types.
-
 ## Related Instructions
 
 - **mermaid.instructions.md**: Formatting standards, best
@@ -302,13 +298,6 @@ Docs: <https://mermaid.js.org/syntax/gantt.html>
 A GitGraph diagram visualizes Git repository structures, including branches,
 commit histories, and merge strategies.
 
-- Use `gitGraph` to layout the repository history diagram.
-- Add commits to the active branch using the `commit` command. Customize
-  its appearance or metadata with `id`, `tag`, or `type` (e.g., `HIGHLIGHT`).
-- Create branches using `branch <name>`.
-- Switch between existing branches using `checkout <name>`.
-- Merge a branch into the current one using `merge <branch_name>`.
-
 Example with Branches, Commits, and Merges:
 
 ```mermaid
@@ -327,31 +316,40 @@ gitGraph
     merge develop tag: "v1.0.0"
 ```
 
-**Pro-tip for accurate real-world GitGraphs**:
+Use CLI tools to generate real-world commit entries from real commit history instead of rewriting commit subjects by hand:
 
-Use CLI tools to generate commit entries from real commit history instead of rewriting commit subjects by hand:
-
-- **With GitHub CLI (`gh`)**:
-  `gh pr view <number> --json headRefName,baseRefName,commits`
 - **With Git (`git`)**:
   `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
+- **With GitHub API (`gh api`)**:
+  `gh api repos/<owner>/<repo>/pulls/<number>/commits`
+- **With GitHub CLI (`gh`)**:
+  `gh pr view <number> --json headRefName,baseRefName,commits`
+- For more context, load relevant skill files when working with this type of diagrams.
 
 These commands provide a linear list of commits and can help seed `commit id: "..."` entries, but they do **not**
 reconstruct full branch and merge topology for a Mermaid `gitGraph`.
 
-*(Note: Escape inner quotes in commit subjects so the output remains valid Mermaid syntax. For example, use
-`sed 's/"/\\"/g'` to escape double quotes in a shell pipeline.)*
-
 Example:
 
 ```mermaid
+%% Commits for PR #<number>
 gitGraph
     branch "feature/awesome-feature"
     checkout "feature/awesome-feature"
-    commit id: "Add feature A"
-    commit id: "Revert \"Add feature A\"" type: REVERSE
-    commit id: "Clean-up"
+    commit id: "[HASH] Add feature A"
+    commit id: "[HASH] Revert \"Add feature A\"" type: REVERSE
+    commit id: "[HASH] Proper fix"
 ```
+
+Notes:
+
+- Add commits to the active branch using the `commit` command. Customize
+  its appearance or metadata with `id`, `tag`, or `type` (e.g., `HIGHLIGHT`).
+- Create branches using `branch <name>`.
+- Escape inner quotes in commit subjects so the output remains valid Mermaid syntax.
+- Merge a branch into the current one using `merge <branch_name>`.
+- Switch between existing branches using `checkout <name>`.
+- Use `gitGraph` to layout the repository history diagram.
 
 Docs: <https://mermaid.js.org/syntax/gitgraph.html>
 
@@ -383,6 +381,30 @@ kanban
   Done
     [Fix initial bugs]
 ```
+
+Example visualizing GitHub PR review threads (generated via API):
+
+```mermaid
+%% gh api graphql -F owner="<owner>" -F repo="<repo>" -F number=<number> ... (query)
+kanban
+  Active
+
+  Outdated
+
+  Resolved
+    [Summary of thread]
+      bodyText: In Mermaid node labels, the #job_id placeholder is likely to be parsed as inl...
+      id: PRRT_kwD123
+      assigned: current-user
+      authorAssociation: CONTRIBUTOR
+      path: path/to/file.md
+```
+
+Notes:
+
+- When manipulating text outputs for Mermaid Kanban diagrams,
+  **DO NOT** leave characters like `()`, `{}`, `[]`, `<`, or `>` in node labels or property values (like `bodyText`).
+  These characters trigger structural syntax errors in the Mermaid parser. Strip or replace them natively via `jq`.
 
 Docs: <https://mermaid.js.org/syntax/kanban.html>
 
@@ -737,3 +759,8 @@ mindmap
 
 Note that this file should be updated if Mermaid syntax changes or new stable features land.
 Separate `mermaid-beta/SKILL.md` is maintained for experimental diagrams.
+
+## Related Skills
+
+- **gh-api**: For retrieving repository data (commits, PR reviews, etc.) to generate Mermaid diagrams via GitHub CLI.
+- **mermaid-beta**: Guide for experimental and beta Mermaid.js diagram types.

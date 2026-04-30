@@ -101,7 +101,7 @@ mindmap
     directly to the PR's HEAD commit:
 
     ```bash
-    gh pr checks <pr_number> --repo <owner>/<repo>
+    gh pr checks <number> --repo <owner>/<repo>
     ```
 
   - This elegantly outputs all CI/CD checks (successes, failures,
@@ -118,26 +118,26 @@ Example:
 ```mermaid
 %% This flowchart visualizes the topology and statuses of CI/CD checks for a PR.
 %% Data for this diagram can be retrieved natively using:
-%% gh pr checks <pr_number> --repo <owner>/<repo>
+%% gh pr checks <number> --repo <owner>/<repo>
 flowchart LR
-    pr(["PR #<pr_number>: <pr_title>"])
+    pr(["PR {number}: {title}"])
 
     subgraph Checks ["CI Format & Linting"]
         direction TB
-        c3["actionlint"]:::pass
-        c1["link-checker"]:::pass
-        c2["pre-commit"]:::pass
+        c3["actionlint<br>{job_id}"]:::pass
+        c1["link-checker<br>{job_id}"]:::pass
+        c2["pre-commit<br>{job_id}"]:::pass
     end
 
     subgraph Tests ["Tests"]
         direction TB
-        t1["test-on-debian-latest"]:::pass
+        t1["test-on-debian-latest<br>{job_id}"]:::pass
     end
 
     subgraph Molecule ["Scenarios"]
         direction TB
-        m1["default / ubuntu-latest"]:::fail
-        m2["default / ubuntu-noble"]:::fail
+        m1["default / ubuntu-latest<br>{job_id}"]:::fail
+        m2["default / ubuntu-noble<br>{job_id}"]:::fail
     end
 
     pr --> Checks
@@ -151,7 +151,15 @@ flowchart LR
 
 ## Structured Query Patterns
 
-- Use `gh pr view <number> --json headRefName,baseRefName,commits` to extract PR commit history.
+- Extract PR commit history for Mermaid `gitGraph`:
+  - **With Git (`git`)**:
+    `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
+  - For more context, load relevant skill files when working with this type of diagrams.
+  - **With GitHub API (`gh api`)**:
+    `gh api repos/<owner>/<repo>/pulls/<number>/commits \`
+    `--jq '.[] | "commit id: \"[\(.sha[0:7])] \(.commit.message | split("\n")[0] | gsub("\""; "'\''"))\""'`
+  - **With GitHub CLI (`gh`)**:
+    `gh pr view <number> --json headRefName,baseRefName,commits`
 - **Detailed JSON Retrieval (Comments & Reviews)**:
   - `gh pr view <number> --repo <owner>/<repo> --json comments`
   - `gh pr view <number> --repo <owner>/<repo> --json reviews`
@@ -195,7 +203,7 @@ When executing autonomously within a GitHub Actions environment, adhere strictly
   - Condition: `if: ${{ !github.event.issue.pull_request }}`
   - Reply Method: `gh issue comment`
 - **Inline code review** (`pull_request_review_comment`):
-  - Reply Method: `gh api repos/{owner}/{repo}/pulls/{pr}/comments/{comment_id}/replies -f body="..."`
+  - Reply Method: `gh api repos/<owner>/<repo>/pulls/<pr>/comments/<comment_id>/replies -f body="..."`
 
 **Routing Invariants**:
 

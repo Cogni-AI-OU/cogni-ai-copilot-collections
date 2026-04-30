@@ -79,9 +79,15 @@ GitHub Actions and other CI environments often check out repositories as shallow
 ## Useful Diagnostic Commands
 
 - Commit template check: `git config commit.template`
-- Generate Mermaid `gitGraph` commit lines from `git log` using:
-  `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
-  *(Note: if commit subjects contain `"` characters, escape them so Mermaid string parsing stays valid—see the GitGraph guidance in `mermaid/SKILL.md`.)*
+- Generate Mermaid `gitGraph` commit lines:
+  - **With Git (`git`)**:
+    `git log origin/main..HEAD --reverse --format='commit id: "%s"'`
+    *(Note: if commit subjects contain `"` characters, escape them so Mermaid string parsing stays valid—see the GitGraph guidance in `mermaid/SKILL.md`.)*
+  - **With GitHub API (`gh api`)**:
+    `gh api repos/<owner>/<repo>/pulls/<number>/commits --jq '.[] | "commit id: \"[\(.sha[0:7])] \(.commit.message | split("\n")[0] | gsub("\""; "'\''"))\""'`
+  - **With GitHub CLI (`gh`)**:
+    `gh pr view <number> --json headRefName,baseRefName,commits`
+  - For more context, load relevant skill files when working with this type of diagrams.
 - Remote tracking status: `git status -sb`
 - Signed commit verification: `git log --show-signature -1`
 - Verify identity: `git config user.name && git config user.email`
@@ -321,4 +327,3 @@ Always explain proposed git operations step-by-step, quote exact commands, and c
 ## Related Skills
 
 - **gh-pr**: For pull request management, review workflows, and CI/CD checks using GitHub CLI.
-
