@@ -101,7 +101,8 @@ operations (or methods), and the relationships among objects.
 - Use `classDiagram` to model object-oriented structures, including classes, interfaces, and their relationships.
 - Define class members with visibility modifiers (`+` public, `-` private, `#` protected, `~` package/internal).
 - Use relationships like inheritance (`<|--`), composition (`*--`), aggregation (`o--`), and dependency (`<..`).
-- Include multiplicity (e.g., `"1"` to `"*"`) and annotations (e.g., `<<interface>>`, `<<abstract>>`) for detailed modeling.
+- Include multiplicity (e.g., `"1"` to `"*"`) and annotations
+  (e.g., `<<interface>>`, `<<abstract>>`) for detailed modeling.
 
 Example with Relationships and Multiplicity:
 

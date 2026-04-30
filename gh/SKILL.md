@@ -385,8 +385,7 @@ Example: `gh api graphql -f query='mutation($title: String!) { ... }' -F title=@
   (e.g. for visualization to generate topology data like `mermaid` `gitGraph` diagrams without cloning explicitly)
 - Prefer native JSON first:
   - `gh issue view <number> --json comments,number,title,state,author,url`
-
-- Use `gh-pr` for PR-specific JSON and query patterns.
+  - Use `gh-pr` for PR-specific JSON and query patterns.
 - Use `gh api` for objects that native subcommands do not expose cleanly:
   - `gh api repos/<owner>/<repo>/issues/<number>/comments`
 - Use `--jq` or `--template` before external filters.

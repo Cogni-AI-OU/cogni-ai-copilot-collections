@@ -33,3 +33,7 @@ and you need to retrieve the diff or patch content for processing.
 ### References
 
 - [GitHub Docs: About comparing branches in pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests)
+
+## Related Skills
+
+- **gh-pr**: For detailed pull request creation, management, and review workflows using GitHub CLI.
