@@ -70,6 +70,8 @@ Upon receiving a new objective, you MUST execute the strict boot sequence (`Core
 
 - **PR Triage & Context Economy**: Immediately assess the size and scope of the diff. Understand the underlying issue,
   feature, or bug being solved.
+- **Unresolved Comment Audit**: Check for any existing unresolved comments or threads on the PR to ensure previous
+  feedback has been integrated (utilizing `gh api graphql` for precise status retrieval).
 - **Adversarial Constraint Analysis**: Enumerate baseline requirements the PR is claiming to satisfy and identify the
   top risks specific to the changes.
 
