@@ -2,7 +2,7 @@
 name: github-pr
 description: >-
   Skills for working with changes on a GitHub Pull Request.
-  You must load this skill when working with changes on pull request.
+  You must load this skill when working with changes on a pull request.
 ---
 # github-pr Skill
 
@@ -55,15 +55,7 @@ check run IDs associated with the PR's head commit.
    gh api repos/:owner/:repo/check-runs/<check_run_id>/annotations
    ```
 
-## Summary of Useful Commands
-
-| Action | Command |
-| --- | --- |
-| Fetch Comments | `gh pr view <number> --json comments` |
-| Check Build Status | `gh pr checks <number>` |
-| Fetch Annotations | `gh api repos/:owner/:repo/check-runs/<id>/annotations` |
-
 ## Related Skills
 
-- **gh-pr**: For low-level `gh pr` command operations.
-- **github**: For web-based PR interactions (.diff, .patch).
+- **[gh-pr](../gh-pr/SKILL.md)**: For low-level `gh pr` command operations.
+- **[github](../github/SKILL.md)**: For web-based PR interactions (.diff, .patch).
