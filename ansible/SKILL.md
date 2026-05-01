@@ -1,7 +1,7 @@
 ---
 name: ansible
 description: >-
-  How to run and manage Ansible operations safely and prevent hangs.
+  How to run and manage Ansible operations.
   You must load this skill when working with the `ansible` command.
 license: MIT
 ---
