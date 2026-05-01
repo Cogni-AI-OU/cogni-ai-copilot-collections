@@ -29,7 +29,7 @@ flowchart TD
 
         Phase0 --> P0a[Task Triage and Context Economy]
         P0a --> P0b["Adversarial Constraint Analysis: Top-10 Risks"]
-        P0b --> P0c["Adversarial Self-Inquiry: Devil's Advocate Pass"]
+        P0b --> P0c["Adversarial Self-Inquiry: Devils Advocate Pass"]
         P0c --> P0d["Tracer-Bullet Planning"]
         P0d --> P0e[Visual Architecture Charting: Mermaid]
 
@@ -40,8 +40,8 @@ flowchart TD
         P1c --> P1d["Post: Chain-of-Verification"]
 
         P1d --> Cognitive{Cognitive Checkpoint}
-        Cognitive -->|Per Batch (Max 8 Steps)| MiniCP[Mini-Checkpoint: Verify Invariants]
-        Cognitive -->|At 5 Steps (Threshold)| HardCP[Hard Checkpoint: Re-Serialize State]
+        Cognitive -->|Per Batch Max 8 Steps| MiniCP[Mini-Checkpoint: Verify Invariants]
+        Cognitive -->|At 5 Steps Threshold| HardCP[Hard Checkpoint: Re-Serialize State]
         MiniCP --> Contradiction{Contradiction Detected?}
         HardCP --> Contradiction
 
