@@ -65,7 +65,7 @@ mindmap
   Always prefer non-interactive creation in automated environments:
 
   ```bash
-  gh pr create --title "feature: add new component" --body-file description.md --label "enhancement" --assignee "@me"
+  gh pr create --title "feature: add new component" --body-file /tmp/description.md --label "enhancement" --assignee "@me"
   ```
 
 - **Inspecting PR Checks and Logs**:
@@ -76,6 +76,13 @@ mindmap
   ```
 
   If checks fail, use `gh-run` skill to diagnose specific workflow failures.
+
+- **Listing Failed Checks**:
+  To quickly identify only the failing jobs for a specific PR:
+
+  ```bash
+  gh pr checks <number> --repo <owner>/<repo> | grep fail
+  ```
 
 - **Reviewing Changes**:
   For quick review of changes without leaving the terminal:
@@ -96,16 +103,13 @@ mindmap
 ## Pull Request Diagnostics & Checks
 
 - **Checking Runs for a Pull Request**:
-  - Instead of parsing commit hashes or wrestling with
-    `gh run list --branch <branch_name>`, use the native tool mapping
-    directly to the PR's HEAD commit:
-
-    ```bash
-    gh pr checks <number> --repo <owner>/<repo>
-    ```
-
-  - This elegantly outputs all CI/CD checks (successes, failures,
-    skips) and provides direct URLs to the workflow jobs.
+  - `gh pr checks <number> --repo <owner>/<repo>` is the quickest way to map checks directly to the PR's HEAD commit.
+    This outputs standard CI/CD checks (successes, failures, skips) and provides direct URLs to the workflow jobs.
+  - **Limitation**: `gh pr checks` *only* evaluates the HEAD commit.
+    It completely misses manually triggered (`workflow_dispatch`) or comment-triggered (`issue_comment`) agent runs.
+  - **Workaround**: To comprehensively fetch *all* workflow runs associated with
+    a PR (including custom actions and agentic runs),
+    refer to the `gh-api` skill for instructions on using `gh api` to query by branch and display title.
 
 ### Visualizing PR Checks
 

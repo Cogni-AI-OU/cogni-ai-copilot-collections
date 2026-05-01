@@ -41,9 +41,9 @@ pdfinfo input.pdf
 pdf-parser.py -a input.pdf
 
 # Export full object graph as JSON; find largest streams
-qpdf --json --json-stream-data=file input.pdf > analysis.json
+qpdf --json --json-stream-data=file input.pdf > /tmp/analysis.json
 jq '[.qpdf[1] | to_entries[] | select(.value.stream) | {obj: .key, length: .value.stream.length}]
-  | sort_by(-.length) | .[:20]' analysis.json
+  | sort_by(-.length) | .[:20]' /tmp/analysis.json
 ```
 
 ## Lossless Size Reduction

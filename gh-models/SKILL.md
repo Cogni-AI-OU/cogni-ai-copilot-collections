@@ -57,7 +57,7 @@ gh models list  # verify + list available model IDs (e.g. openai/gpt-4.1, openai
 - **Piped repo content** (issues/PRs/events):
 
   ```bash
-  cat issue_body.txt | gh models run --file summarize.prompt.yml > summary.txt
+  cat issue_body.txt | gh models run --file summarize.prompt.yml > /tmp/summary.txt
   gh issue view 123 --json body | jq -r .body | gh models run openai/gpt-4.1 "Extract action items and risks"
   ```
 
@@ -67,7 +67,7 @@ gh models list  # verify + list available model IDs (e.g. openai/gpt-4.1, openai
 
 ```bash
 gh models eval my_prompt.prompt.yml                    # human-readable summary + scores
-gh models eval my_prompt.prompt.yml --json > results.json  # parseable (test cases, outputs, scores, pass/fail)
+gh models eval my_prompt.prompt.yml --json > /tmp/results.json  # parseable (test cases, outputs, scores, pass/fail)
 ```
 
 - Uses same evaluators as GitHub Models UI (string match, similarity, LLM-as-judge, custom rules).

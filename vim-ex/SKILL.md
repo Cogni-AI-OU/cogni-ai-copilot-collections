@@ -244,7 +244,7 @@ Create a new HTML structure by downloading HTML of Example site
 and replacing its body by an auto-generated 20x20 table with random numbers in it (streamed to standard out):
 
 ```bash
-ex -s <(curl -s https://example.com) << 'VIMEOF' > generated_table.html
+ex -s <(curl -s https://example.com) << 'VIMEOF' > /tmp/generated_table.html
 let @t='<table>'.repeat('<tr>'.repeat('<td>_</td>',20).'</tr>',20).'</table>'
 %s!<body>.*</body>!\='<body>'.@t.'</body>'!g
 %s!_!\=trim(system('echo $RANDOM'))!g

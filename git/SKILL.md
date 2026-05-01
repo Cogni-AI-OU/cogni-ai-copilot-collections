@@ -91,6 +91,7 @@ GitHub Actions and other CI environments often check out repositories as shallow
 - Remote tracking status: `git status -sb`
 - Signed commit verification: `git log --show-signature -1`
 - Verify identity: `git config user.name && git config user.email`
+- View commits on a branch: `git log --oneline origin/main..origin/feature/branch` (alternative to `gh pr view`)
 
 ## Resolving Merge Conflicts with Minimal Changes
 

@@ -95,6 +95,16 @@ Notes:
   It uses native GitHub CLI auth, avoiding 401s for internal repositories.
 - Especially useful when `curl` is not available or restricted.
 
+## Downloading Workflow Logs via API
+
+When `gh run view --log` fails to retrieve logs (often returning empty strings for canceled matrix jobs or cached runs),
+you can download the full artifact zip via the REST API, bypassing CLI streaming limits.
+
+```bash
+gh api -H "Accept: application/vnd.github+json" /repos/<owner>/<repo>/actions/runs/<run_id>/logs > /tmp/run_logs.zip
+unzip -d /tmp/run_logs /tmp/run_logs.zip
+```
+
 ## Discussion Patterns (via GraphQL)
 
 Since `gh` often lacks a native `discussion` subcommand, use `gh api graphql`.
@@ -117,7 +127,7 @@ Avoid process substitution for the body; use a temporary file.
 
   ```bash
   gh api graphql -F repositoryId="$REPO_ID" -F categoryId="$CAT_ID" \
-    -F title="Title" -F body=@body.md \
+    -F title="Title" -F body=@/tmp/body.md \
     -f query='mutation($repositoryId:ID!, $categoryId:ID!, $title:String!, $body:String!){
       createDiscussion(input:{repositoryId:$repositoryId,categoryId:$categoryId,title:$title,body:$body}){
         discussion{url}
@@ -128,7 +138,7 @@ Avoid process substitution for the body; use a temporary file.
 - **Comment on Discussion**:
 
   ```bash
-  gh api graphql -F discussionId="$DISCUSSION_ID" -F body=@comment.md \
+  gh api graphql -F discussionId="$DISCUSSION_ID" -F body=@/tmp/comment.md \
     -f query='mutation($discussionId:ID!, $body:String!){
       addDiscussionComment(input:{discussionId:$discussionId,body:$body}){
         comment{url}
@@ -144,6 +154,25 @@ Avoid process substitution for the body; use a temporary file.
   with specific permissions.
 - In GitHub Actions, `secrets.GITHUB_TOKEN` is available by default but may have restricted permissions
   (e.g., no access to private repositories in other orgs).
+
+## Fetching PR Workflow Runs via API
+
+Due to `gh pr checks`' limitation of only evaluating the current HEAD commit, it frequently
+misses manually triggered (`workflow_dispatch`) or comment-triggered (`issue_comment`) runs.
+The most robust way to list all workflow runs associated with a Pull Request is via the REST API.
+
+You can query the `/actions/runs` endpoint filtering by both the PR branch name and the PR title
+(since PR comment triggers map the PR title to `display_title`):
+
+```bash
+branch_name=$(gh pr view <pr_number> --repo <owner>/<repo> --json headRefName -q .headRefName)
+pr_title=$(gh pr view <pr_number> --repo <owner>/<repo> --json title -q .title)
+
+gh api repos/<owner>/<repo>/actions/runs --paginate \
+  -q ".workflow_runs[] | \
+     select((.head_branch == \"$branch_name\" or .display_title == \"$pr_title\")) | \
+     {id: .id, name: .name, status: .status, conclusion: .conclusion, event: .event}"
+```
 
 ## Pagination & Robustness
 

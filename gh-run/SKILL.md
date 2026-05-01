@@ -45,16 +45,21 @@ mindmap
 
 ## Workflow Run Diagnostics
 
-- **Checking Runs for a Pull Request**:
-  - Instead of parsing commit hashes or wrestling with `gh run list --branch <branch_name>`
-    (which lacks branch filtering in newer versions or gets complicated),
-    use the native tool mapping directly to the PR's HEAD commit:
+- **Checking Latest Runs for a Pull Request**:
+  - Use the native tool mapping directly to the PR's HEAD commit to elegantly
+    output standard CI/CD checks (successes, failures, skips) and obtain direct
+    URLs to workflow jobs:
 
     ```bash
     gh pr checks <number> --repo <owner>/<repo>
     ```
 
-    This outputs all CI/CD checks (successes, failures, skips) and provides direct URLs to the workflow jobs.
+  - **Limitation**: `gh pr checks` is fast but only evaluates the *latest* runs on the HEAD commit.
+    It completely misses manually triggered (`workflow_dispatch`) or comment-triggered (`issue_comment`) agent runs.
+  - **Workaround**: To find **all** workflow runs robustly associated with a PR
+    (including custom actions and agent triggers), you must match the PR's
+    `headRefName` OR `title` via the API. Refer to the `gh-api` skill for
+    exactly how to query the `/actions/runs` endpoint robustly for this purpose.
 
 - **Fetching Logs for In-Progress Runs or Multiple Attempts**:
   - `gh run view --log` only fetches logs for the *latest completed* attempt and often fails on in-progress runs
@@ -65,8 +70,8 @@ mindmap
     even if the run is still in progress:
 
     ```bash
-    gh api /repos/<owner>/<repo>/actions/runs/<run_id>/attempts/<attempt_num>/logs > logs.zip
-    unzip logs.zip
+    gh api /repos/<owner>/<repo>/actions/runs/<run_id>/attempts/<attempt_num>/logs > /tmp/logs.zip
+    unzip /tmp/logs.zip -d /tmp/logs
     ```
 
     *(Note: This requires `unzip` and shell redirection to be available in the environment.)*
@@ -89,8 +94,10 @@ mindmap
 - Do not pass both run ID and job ID to `gh run view`; the CLI warns and
   ignores the run ID.
 - Treat `gh run view ... --log` as environment-sensitive. If it returns
-  empty output, do not loop on it; switch to metadata, artifacts, or another
-  supported log source.
+  empty output (which often happens with older runs, cached pipelines, or
+  canceled overarching matrix runs), do not loop on it.
+  **Alternative Workaround for Empty Job Logs**:
+  See the `gh-api` skill for instructions on downloading the full run logs zip via the API to bypass console streaming limitations.
 - Probe one run or one job first before launching parallel diagnostics.
 
 ## Structured Query Patterns
