@@ -2,8 +2,6 @@
 name: minizinc
 description: >-
   Expert MiniZinc modeling for constraint satisfaction and combinatorial problems.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->

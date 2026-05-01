@@ -4,8 +4,6 @@ description: >-
   GitHub CLI (`gh`) operations for issues, pull requests, workflow runs,
   reviews, or API queries, especially in restricted shells where structured
   output and fallback choice matter.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->

@@ -2,8 +2,6 @@
 name: github-actions
 description: >-
   Diagnose GitHub Actions workflow failures by retrieving run statuses and logs using MCP tools or gh CLI.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 

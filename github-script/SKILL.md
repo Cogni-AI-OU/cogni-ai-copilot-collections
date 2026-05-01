@@ -2,8 +2,6 @@
 name: github-script
 description: >-
   Advanced use cases and examples for using actions/github-script.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 

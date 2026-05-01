@@ -5,8 +5,6 @@ description: >-
   Covers C4, Class, Entity Relationship, Flowchart (with v11.3+ shapes/icons/images), Gantt, GitGraph, Kanban,
   Mindmap, Pie, Quadrant, Requirement, Sequence, State, Timeline, User Journey.
   Emphasizes clarity, render-portability, and Doc-Rot prevention.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 

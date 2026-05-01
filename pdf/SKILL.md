@@ -3,8 +3,6 @@ name: pdf
 description: >-
   PDF file inspection, object-level editing, and lossless size reduction using
   qpdf, pdf-parser.py, pdfsizeopt, and Ghostscript.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 
 ---

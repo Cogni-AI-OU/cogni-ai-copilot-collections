@@ -2,8 +2,6 @@
 name: gh-models
 description: >-
   GitHub CLI models (`gh models`) operations for running and evaluating AI models.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->

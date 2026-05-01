@@ -3,8 +3,6 @@ name: fact-writer
 description: >-
   Strict guidelines for creating, writing, and maintaining verifiable project fact files
   (e.g., FACTS.md or FACTS.mmd) without contradictions, ensuring state compression and lexical ordering.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 ---
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->

@@ -2,8 +2,6 @@
 name: shell
 description: >-
   Efficient shell command handling.
-
-  Maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agent-skills>
 license: MIT
 
 ---
