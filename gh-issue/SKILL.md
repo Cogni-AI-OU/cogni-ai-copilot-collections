@@ -134,6 +134,6 @@ If the runtime did not involve intended modification of files:
 - **gh**:
   Must be loaded when working with `gh` command.
 - **github-issue**:
-  Must be loaded when working with issues or when runtime was triggered by an issue comment.
+  Must be loaded when working with issues or when the runtime was triggered by an issue comment.
 - **gh-pr**:
   Must be loaded when working with `gh pr` command.

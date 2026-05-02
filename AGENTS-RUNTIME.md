@@ -37,16 +37,16 @@ and planned work into the current context:
 - **[git-expert](git-expert/SKILL.md)**: Advanced Git operations including interactive rebasing, reflog recovery,
   bisecting, complex conflict resolution, and history manipulation.
   You must load this skill when performing advanced git operations or repository recovery.
-- **[github](github/SKILL.md)**: GitHub specific features and collaborative practices.
+- **[github](github/SKILL.md)**: GitHub-specific features and collaborative practices.
   You must load this skill when working with GitHub-specific features or PR view modes.
 - **[github-actions](github-actions/SKILL.md)**: Diagnosing and debugging failing GitHub Actions workflows.
   You must load this skill when diagnosing or debugging GitHub Actions workflow failures.
 - **[github-issue](github-issue/SKILL.md)**: Skills for working with GitHub Issues.
-  You must load this skill when working with issues or when runtime was triggered by an issue comment.
+  You must load this skill when working with issues or when the runtime was triggered by an issue comment.
   Load this before any gh skills.
 - **[github-pr](github-pr/SKILL.md)**: Skills for working with changes on a GitHub Pull Request.
-  You must load this skill when working with changes on a pull request
-  or when runtime was triggered by a PR comment.
+  You must load this skill when working with changes associated with a pull request
+  or when the runtime was triggered by a PR comment.
   Load this before any gh skills.
 - **[github-script](github-script/SKILL.md)**: Advanced use cases and examples for using actions/github-script.
   You must load this skill when using actions/github-script in workflows.

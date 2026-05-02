@@ -43,7 +43,7 @@ Cogni AI capabilities loaded into the `.github/` directory.
 - **[git](git/SKILL.md)**: Guide for using git with non-interactive, safe operations
 - **[git-expert](git-expert/SKILL.md)**: Advanced Git operations including interactive rebasing, reflog recovery,
   bisecting, complex conflict resolution, and history manipulation
-- **[github](github/SKILL.md)**: GitHub specific features and collaborative practices
+- **[github](github/SKILL.md)**: GitHub-specific features and collaborative practices
 - **[github-actions](github-actions/SKILL.md)**: Diagnosing and debugging failing GitHub Actions workflows
 - **[github-issue](github-issue/SKILL.md)**: Guidance for issue context routing, response routing, and workspace invariants
 - **[github-pr](github-pr/SKILL.md)**: Guidance for PR context routing, branch sync policies, and workspace invariants

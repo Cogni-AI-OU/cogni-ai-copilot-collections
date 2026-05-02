@@ -377,4 +377,4 @@ Notes:
 - **gh-pr**:
   Must be loaded when working with `gh pr` command.
 - **gh-run**:
-  Must be loaded when working with `gh run` command.
+  Must be loaded when working with `gh run` and `gh workflow` commands.

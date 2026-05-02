@@ -402,10 +402,10 @@ in GitHub Actions, refer to the **github-issue** and **github-pr** skills.
 - **gh-pr**:
   Must be loaded when working with `gh pr` command.
 - **gh-run**:
-  Must be loaded when working with `gh run` command.
+  Must be loaded when working with `gh run` and `gh workflow` commands.
 - **gh-models**:
   Must be loaded when working with `gh models` command.
 - **github-issue**:
   Must be loaded when working with issues or when the runtime was triggered by an issue comment.
 - **github-pr**:
-  Must be loaded when working with changes associated with a pull request.
+  Must be loaded when working with changes associated with a pull request or when the runtime was triggered by a PR comment.
