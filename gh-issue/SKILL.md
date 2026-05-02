@@ -8,7 +8,9 @@ license: MIT
 
 # gh-issue Skill
 
-Use `gh issue` to natively interact with GitHub Issues. Prefer native fields and explicit routing over brittle shell post-processing.
+Use `gh issue` to natively interact with GitHub Issues.
+Prefer native fields and explicit routing over brittle shell
+post-processing.
 
 ## When to Activate
 
