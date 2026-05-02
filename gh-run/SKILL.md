@@ -100,12 +100,60 @@ mindmap
   See the `gh-api` skill for instructions on downloading the full run logs zip via the API to bypass console streaming limitations.
 - Probe one run or one job first before launching parallel diagnostics.
 
+- **Job and Attempt Diagnostics**:
+  - View summary or logs for a specific job ID (useful when you have a direct job URL):
+
+    ```bash
+    gh run view --job <job_id> --repo <owner>/<repo>
+    gh run view --job <job_id> --repo <owner>/<repo> --log
+    ```
+
+  - Inspect a specific run attempt (defaults to latest if not specified):
+
+    ```bash
+    gh run view <run_id> --attempt <number> --repo <owner>/<repo>
+    ```
+
+  - List job steps and annotations for a run in the terminal:
+
+    ```bash
+    gh run view <run_id> --verbose --repo <owner>/<repo>
+    ```
+
+## Triggering Workflows
+
+- **Manually Triggering a Workflow**:
+  - Use `gh workflow run` to trigger a `workflow_dispatch` event. This requires the
+    workflow to have a `workflow_dispatch` trigger.
+
+    ```bash
+    gh workflow run <workflow_id_or_filename> --ref <branch_or_tag> --repo <owner>/<repo>
+    ```
+
+- **Passing Input Parameters**:
+  - Use the `-f` or `--field` flag to pass inputs defined in the workflow's
+    `workflow_dispatch` configuration:
+
+    ```bash
+    gh workflow run deploy.yml --ref main -f environment=production -f version=v1.2.3
+    ```
+
+- **Execution and Tracking**:
+  - Triggering a workflow does not return the run ID. To find the triggered run,
+    list the most recent runs for that workflow:
+
+    ```bash
+    gh run list --workflow <workflow_id_or_filename> --limit 1
+    ```
+
 ## Structured Query Patterns
 
 - `gh run list --json databaseId,name,workflowName,status,conclusion,url --limit 20`
 - `gh run list --json databaseId,headBranch,name,event,status,conclusion,createdAt,url \`
   `-q '.[] | select(.headBranch == "<branch_name>")' --repo <owner>/<repo> --limit 10`
 - `gh run list --repo <owner>/<repo>`
+- `gh run list --workflow <workflow_id_or_filename> --limit 5`
+- `gh run view --job <job_id> --json steps,conclusion`
 
 ## Failure Signatures
 

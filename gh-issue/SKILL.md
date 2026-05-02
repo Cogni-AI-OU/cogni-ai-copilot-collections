@@ -73,7 +73,8 @@ mindmap
 ## Interaction & Comments
 
 - For issue thread interactions, use `gh issue comment`.
-- For long comments, avoid heredocs as they can cause shell hangs if truncated. Write the comment to a temporary file first, then use `--body-file`:
+- For long comments, avoid heredocs as they can cause shell hangs if truncated.
+  Write the comment to a temporary file first, then use `--body-file`:
 
   ```bash
   # Use your file-writing tools to write the comment to /tmp/comment.md, then:
