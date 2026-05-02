@@ -70,7 +70,17 @@ mindmap
 
 ## Interaction & Comments
 
-For issue thread interactions, response routing, and workspace invariants in GitHub Actions,
+- For issue thread interactions, use `gh issue comment`.
+- For long comments, use a HEREDOC body:
+
+  ```bash
+  gh issue comment <number> --body "$(cat <<'INNER_EOF'
+  [your comment text here]
+  INNER_EOF
+  )"
+  ```
+
+For high-level issue thread interactions, response routing, and workspace invariants in GitHub Actions,
 refer to the **github-issue** skill.
 
 ## Related Skills

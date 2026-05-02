@@ -186,6 +186,15 @@ flowchart LR
 ## Interaction & Comments
 
 - For PR thread interactions, use `gh pr comment` or `gh api`.
+- For long comments, use a HEREDOC body:
+
+  ```bash
+  gh pr comment <number> --body "$(cat <<'INNER_EOF'
+  [your comment text here]
+  INNER_EOF
+  )"
+  ```
+
 - **Note**: `gh pr review` is often restricted in automated environments (e.g., OpenCode); prefer `gh pr comment`.
 - **Dynamic PR Targeting**: ALWAYS target the explicitly provided **Base Branch** when creating/updating PRs.
 
