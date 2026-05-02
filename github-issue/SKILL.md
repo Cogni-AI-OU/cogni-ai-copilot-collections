@@ -80,6 +80,19 @@ Check `github.event_name` and payload to identify trigger source:
 gh issue view <number> --json comments
 ```
 
+## 5. Pre-Completion
+
+Before finishing your session, you MUST ensure the workspace is in a valid state.
+
+### Workspace Cleanliness (Non-Modifying Tasks)
+
+If the runtime did not involve intended modification of files:
+
+1. **Verify**: Run `git status` to confirm the workspace is clean.
+2. **Clean**: If untracked or modified files exist (e.g., temporary analysis artifacts), run `git clean -fd` and
+   `git checkout -- .`.
+3. **Assert**: Ensure no PR or commit is triggered for purely informational tasks.
+
 ## Related Skills
 
 - `gh`: For low-level `gh` command operations.

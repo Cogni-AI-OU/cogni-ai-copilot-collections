@@ -116,6 +116,19 @@ Check `github.event_name` and payload to identify trigger source:
 - Avoid using `gh api` for issue operations that have native `gh issue` subcommands.
 - Do not use `gh issue comment` to provide large code blocks if they can be committed to a branch instead.
 
+## Pre-Completion
+
+Before finishing your session, you MUST ensure the workspace is in a valid state.
+
+### Workspace Cleanliness (Non-Modifying Tasks)
+
+If the runtime did not involve intended modification of files:
+
+1. **Verify**: Run `git status` to confirm the workspace is clean.
+2. **Clean**: If untracked or modified files exist (e.g., temporary analysis artifacts), run `git clean -fd` and
+   `git checkout -- .`.
+3. **Assert**: Ensure no PR or commit is triggered for purely informational tasks.
+
 ## Related Skills
 
 - **gh**: For general GitHub CLI usage (auth, extensions, API).

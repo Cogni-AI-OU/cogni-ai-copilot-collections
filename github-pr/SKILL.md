@@ -110,6 +110,15 @@ Before finishing your session, you **MUST** pull and integrate the latest upstre
 5. Reply to inline thread comments that have been fixed or outdated.
 6. Mark outdated threads as resolved (e.g. via `gh api`).
 
+### 3.4 Workspace Cleanliness (Non-Modifying Tasks)
+
+If the runtime did not involve intended modification of files:
+
+1. **Verify**: Run `git status` to confirm the workspace is clean.
+2. **Clean**: If untracked or modified files exist (e.g., temporary analysis artifacts), run `git clean -fd` and
+   `git checkout -- .`.
+3. **Assert**: Ensure no PR or commit is triggered for purely informational tasks.
+
 ## 4. Review & Feedback Management
 
 - **Batching PR Feedback**: You SHOULD use `gh pr review` (if available) to batch broad feedback, resolve threads,

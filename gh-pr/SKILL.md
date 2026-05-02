@@ -253,6 +253,19 @@ with a merge commit workflow.
 
 For high-level pull request routing guidance, refer to the **github-pr** skill.
 
+## Pre-Completion
+
+Before finishing your session, you MUST ensure the workspace is in a valid state.
+
+### Workspace Cleanliness (Non-Modifying Tasks)
+
+If the runtime did not involve intended modification of files:
+
+1. **Verify**: Run `git status` to confirm the workspace is clean.
+2. **Clean**: If untracked or modified files exist (e.g., temporary analysis artifacts), run `git clean -fd` and
+   `git checkout -- .`.
+3. **Assert**: Ensure no PR or commit is triggered for purely informational tasks.
+
 ## Failure Signatures
 
 - **"Draft PRs cannot be merged"**: Use `gh pr ready <number>` first.
