@@ -141,36 +141,7 @@ mindmap
       list
         List GPG keys
     issue
-      close
-        Close issue
-      comment
-        Add a comment
-      create
-        Create a new issue
-      delete
-        Delete issue
-      develop
-        Manage linked branches
-      edit
-        Edit issues
-      list
-        List issues
-      lock
-        Lock conversation
-      pin
-        Pin an issue
-      reopen
-        Reopen issue
-      status
-        Show status
-      transfer
-        Transfer issue
-      unlock
-        Unlock conversation
-      unpin
-        Unpin an issue
-      view
-        View an issue
+      (Load gh-issue skill if required)
     label
       clone
         Clone labels
@@ -341,9 +312,10 @@ mindmap
 
 1. Verify availability and auth first: `gh --version`, then `gh auth status`.
 2. Choose the narrowest native `gh` surface before reaching for `gh api`:
-   - `gh issue view/comment` for issues
-   - `gh pr view/comment/review` for pull requests; see the `gh-pr` skill
-     for PR-specific guidance
+   - `gh issue view/comment` for issues; see the `gh-issue` and `github-issue` skills
+     for issue-specific guidance and runtime routing
+   - `gh pr view/comment/review` for pull requests; see the `gh-pr` and `github-pr` skills
+     for PR-specific guidance and runtime routing
    - `gh api` only when native subcommands do not expose the needed field
 3. Prefer structured output over shell filtering:
    - use `--json`, `--jq`, or `--template` instead of `grep`/`rg`
@@ -373,8 +345,8 @@ mindmap
 - Comment directly without touching workspace files:
   `gh issue comment <number> --body "..."`
 - Reply through the originating GitHub surface:
-  - issue thread -> `gh issue comment`
-  - pull request comment/review thread -> see `gh-pr` for PR routing
+  - issue thread -> `gh issue comment`; see `gh-issue` or `github-issue` for routing
+  - pull request comment/review thread -> see `gh-pr` or `github-pr` for PR routing
   - inline review thread -> `gh api .../replies`
 - For long comments, use a HEREDOC body:
   `gh issue comment <number> --body "$(cat <<'EOF'
@@ -387,7 +359,8 @@ mindmap
 
 ## GitHub Actions Runtime
 
-When executing autonomously within a GitHub Actions environment, adhere strictly to these interaction constraints:
+For high-level routing guidance, response detection, workspace invariants, and branch sync policies
+in GitHub Actions, refer to the **github-issue** and **github-pr** skills.
 
 ### GitHub Runtime Decision Policy
 
@@ -426,5 +399,9 @@ When executing autonomously within a GitHub Actions environment, adhere strictly
 ## Related Skills
 
 - **gh-api**: For authenticated REST and GraphQL API requests.
+- **gh-issue**: For issue management and metadata.
+- **gh-pr**: For pull request tracking and management.
 - **gh-run**: For interacting with GitHub Actions workflows and checking run/job status.
 - **gh-models**: For running and evaluating AI models via GitHub Models CLI.
+- **github-issue**: For high-level issue routing in GitHub Actions.
+- **github-pr**: For high-level pull request routing in GitHub Actions.

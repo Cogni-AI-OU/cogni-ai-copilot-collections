@@ -185,7 +185,17 @@ flowchart LR
 
 ## Interaction & Comments
 
-- For PR thread interactions, use `gh pr comment` or `gh pr review`.
+- For PR thread interactions, use `gh pr comment` or `gh api`.
+- For long comments, use a HEREDOC body:
+
+  ```bash
+  gh pr comment <number> --body "$(cat <<'INNER_EOF'
+  [your comment text here]
+  INNER_EOF
+  )"
+  ```
+
+- **Note**: `gh pr review` is often restricted in automated environments (e.g., OpenCode); prefer `gh pr comment`.
 - **Dynamic PR Targeting**: ALWAYS target the explicitly provided **Base Branch** when creating/updating PRs.
 
 ## GitHub Actions Runtime
@@ -241,6 +251,21 @@ with a merge commit workflow.
 - Confirm `git log --oneline --graph -n 10` shows merge topology (no rewritten linearized history from rebase).
 - Proceed with normal `git push` only after these checks pass.
 
+For high-level pull request routing guidance, refer to the **github-pr** skill.
+
+## Pre-Completion
+
+Before finishing your session, you MUST ensure the workspace is in a valid state.
+
+### Workspace Cleanliness (Non-Modifying Tasks)
+
+If the runtime did not involve intended modification of files:
+
+1. **Verify**: Run `git status` to confirm the workspace is clean.
+2. **Clean**: If untracked or modified files exist (e.g., temporary analysis artifacts), run `git clean -fd` and
+   `git checkout -- .`.
+3. **Assert**: Ensure no PR or commit is triggered for purely informational tasks.
+
 ## Failure Signatures
 
 - **"Draft PRs cannot be merged"**: Use `gh pr ready <number>` first.
@@ -260,3 +285,4 @@ with a merge commit workflow.
 - **gh**: For general GitHub CLI usage (issues, auth, extensions, API).
 - **gh-run**: For workflow runs, jobs, logs, and diagnostic tools.
 - **git**: For low-level branch and commit management.
+- **github-pr**: For high-level pull request routing in GitHub Actions.

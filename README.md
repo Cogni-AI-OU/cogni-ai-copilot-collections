@@ -36,6 +36,7 @@ Cogni AI capabilities loaded into the `.github/` directory.
   fact files without contradictions
 - **[gh](gh/SKILL.md)**: GitHub CLI (`gh`) operations for issues, pull requests, workflow runs, reviews, and API
 - **[gh-api](gh-api/SKILL.md)**: Advanced GitHub CLI (`gh api`) queries and mutations via REST or GraphQL
+- **[gh-issue](gh-issue/SKILL.md)**: GitHub CLI (`gh issue`) operations for managing, viewing, and editing issues
 - **[gh-models](gh-models/SKILL.md)**: GitHub CLI models (`gh models`) operations for running and evaluating AI models
 - **[gh-pr](gh-pr/SKILL.md)**: GitHub CLI (`gh pr`) operations for pull requests, reviews, PR checks, and PR branches
 - **[gh-run](gh-run/SKILL.md)**: GitHub CLI (`gh run` and `gh workflow`) operations for workflow runs, jobs, logs, and attempts
@@ -44,6 +45,8 @@ Cogni AI capabilities loaded into the `.github/` directory.
   bisecting, complex conflict resolution, and history manipulation
 - **[github](github/SKILL.md)**: GitHub specific features and collaborative practices
 - **[github-actions](github-actions/SKILL.md)**: Diagnosing and debugging failing GitHub Actions workflows
+- **[github-issue](github-issue/SKILL.md)**: Guidance for issue context routing, response routing, and workspace invariants
+- **[github-pr](github-pr/SKILL.md)**: Guidance for PR context routing, branch sync policies, and workspace invariants
 - **[github-script](github-script/SKILL.md)**: Advanced use cases and examples for using actions/github-script
 - **[mermaid](mermaid/SKILL.md)**: Guide for creating and maintaining stable Mermaid.js diagrams
 - **[mermaid-beta](mermaid-beta/SKILL.md)**: Guide for creating and maintaining experimental Mermaid.js beta diagrams
