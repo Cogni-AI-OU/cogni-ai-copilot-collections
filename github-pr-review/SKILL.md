@@ -18,18 +18,18 @@ Elite autonomous PR review workflow for ensuring structural integrity, metadata 
 
 Execute these checks systematically using `gh` and `git` tools:
 
-1. **Branch State**: Verify if the PR branch is up-to-date with the base branch.
-2. **Comments Resolution**: Ensure all conversation threads and review comments are marked as resolved or addressed.
-3. **Metadata Accuracy**:
-    - Validate that the **PR Title** follows project conventions (e.g., Conventional Commits).
-    - Ensure the **PR Description** accurately reflects the cumulative changes of all commits.
-4. **Code Hygiene**:
-    - Scan for temporary/debug statements (e.g., `console.log`, `print`, `TODO`, `FIXME`, debugger breakpoints).
-    - Identify unintended files (e.g., `.env`, temporary logs, IDE config, build artifacts).
-5. **Merge Readiness**:
-    - Check mergeability status (conflicts).
-    - Verify that all CI/CD checks (status checks) are passing.
-6. **Impact Assessment**: Evaluate if changes introduce regressions or break existing workflows/APIs.
+- **Branch State**: Verify if the PR branch is up-to-date with the base branch.
+- **Comments Resolution**: Ensure all conversation threads and review comments are marked as resolved or addressed.
+- **Metadata Accuracy**:
+  - Validate that the **PR Title** follows project conventions (e.g., Conventional Commits).
+  - Ensure the **PR Description** accurately reflects the cumulative changes of all commits.
+- **Code Hygiene**:
+  - Scan for temporary/debug statements (e.g., `console.log`, `print`, `TODO`, `FIXME`, debugger breakpoints).
+  - Identify unintended files (e.g., `.env`, temporary logs, IDE config, build artifacts).
+- **Merge Readiness**:
+  - Check mergeability status (conflicts).
+  - Verify that all CI/CD checks (status checks) are passing.
+- **Impact Assessment**: Evaluate if changes introduce regressions or break existing workflows/APIs.
 
 ## Workflow Execution
 
