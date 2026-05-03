@@ -18,6 +18,7 @@ This skill helps with work on pull requests.
 Upon receiving a new objective, you should focus on the user request first.
 Identify the trigger source first to understand context and avoid ambiguity. A comment like 'fix it' could refer
 to an inline thread comment, a specific line, the whole file, a previous comment, quote, or build failures.
+Ensure appropriate todos are created before starting work, so the session can be continued upon restart.
 
 ### Context & Response Routing
 
