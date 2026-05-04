@@ -63,6 +63,12 @@ Read and merge these when operating inside corresponding sub-directories or repo
 Autonomous agents operating in this repository MUST adhere to the core loading protocols
 and execution logic defined in [AGENTS-RUNTIME.md](AGENTS-RUNTIME.md).
 
+## Multi-Repository Architecture & Git Isolation
+
+- **Directory Boundaries**: `.github/agents/`, `.github/skills/`, and `.github/instructions/` are cloned into this project as separate external repositories or git submodules, they are NOT standard native subdirectories of the root `cogni-ai-agents` repository.
+- **Git Context Switching**: When an agent performs modifications inside the root repository `cogni-ai-agents`, and simultaneously modifies files inside one of these `.github/*` directories, they must be aware that they are touching separate `.git` instances.
+- **Strict Prohibition**: NEVER attempt to run `git add`, `git commit`, or `git mv` from the root workspace to track changes in these subdirectories, as that will fail or corrupt the repository boundaries. All git operations must be correctly scoped (e.g. `cd .github/skills && git ...`) or entirely omitted (delegated to the user based on the interactive-editor protocol in `copilot-instructions.md`).
+
 ## Subagent Delegation
 
 - **Spawning Sub-agents**:
