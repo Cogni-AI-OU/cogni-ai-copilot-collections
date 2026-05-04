@@ -302,12 +302,6 @@ mindmap
       (Load gh-run skill if required)
 ```
 
-## When to Activate
-
-- User asks to use `gh`, GitHub CLI, or to query GitHub from shell.
-- Task involves issues, PRs, reviews, workflow runs, jobs, discussions, or GitHub REST endpoints.
-- Execution is inside CI, Codespaces, or another restricted shell.
-
 ## Core Process
 
 1. Verify availability and auth first: `gh --version`, then `gh auth status`.

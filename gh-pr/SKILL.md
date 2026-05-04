@@ -10,13 +10,6 @@ description: >-
 Use `gh pr` to natively interact with GitHub Pull Requests. Prefer native
 fields and explicit routing over brittle shell post-processing.
 
-## When to Activate
-
-- User asks to manage, review, or inspect a pull request using the GitHub CLI (`gh pr`).
-- Task involves querying PR CI/CD checks (`gh pr checks`), logs, mergeability, or PR metadata.
-- Need to perform branch synchronizations, merges, or PR updates inside a GitHub Actions runtime.
-- Extracting PR context, reviewing diffs, or commenting on specific PR threads.
-
 ## Mindmap of Commands
 
 ```mermaid
@@ -206,6 +199,7 @@ When executing autonomously within a GitHub Actions environment, adhere strictly
 **Context & Targeting Invariants**:
 
 - **Extract Context**: Parse the `## Pull Request Context` block containing `**Base Branch:**` dynamically.
+
 - **Dynamic PR Targeting**: ALWAYS target this explicitly provided **Base Branch** when creating/updating PRs.
 
 **Response Detection & Routing**: Check `github.event_name` and payload to identify trigger source:
@@ -238,6 +232,7 @@ with a merge commit workflow.
 **Execution Steps (strict order)**:
 
 1. Determine PR base/head from context (`## Pull Request Context`, `gh pr view`).
+
 2. Ensure work is on the PR head branch (not detached HEAD).
 3. Sync head branch from remote with merge semantics: `git pull --no-rebase origin <head-branch>`.
 4. If base changes must be integrated into head, merge base explicitly:

@@ -7,93 +7,64 @@ description: >-
   You must load this skill when creating or updating GitHub Copilot skill files.
 license: MIT
 ---
-<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
 # Skill Writer
+
+<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
 Generate or update SKILL.md files for GitHub Copilot coding agents, ensuring
 precise activation, concise expert-level guidance, and full compliance with
 repository standards.
 
-## When to Activate
-
-- Capture Agent Insights: When the agent struggles with a recurring task,
-  encounters repeated failures, or discovers an effective new solution/workaround
-  not already documented, update the relevant existing skill (or create a new
-  one) to incorporate the insight, ensuring future activations handle the case
-  more efficiently.
-- User explicitly asks to create or update a skill for a specific issue, topic
-  or task.
-- User provides new rules, examples, or feedback intended to guide skill
-  authoring.
-- User requests to update, improve, or refactor an existing SKILL.md.
-
 ## Core Process
 
-1. Infer a unique, descriptive `name` in lowercase-hyphenated format that will
-   exactly match the intended folder name.
+1. **Infer Name & Context**: Determine a unique, descriptive `name` in lowercase-hyphenated format that will exactly match the folder name.
+2. **Draft the Description**: Write a single, highly precise `description` sentence capturing exact activation triggers without overlap.
+3. **Structure the File**: Follow the exact layout specified in `Skill Structure & Formatting`.
+4. **Enforce Style**: Write dense, imperative, expert-level instructions assuming ninja proficiency; skip basics, favor one-liners.
+5. **Output**: Output ONLY the complete, ready-to-commit SKILL.md content without conversational wrappers. Do not explain the changes unless requested.
 
-2. Write a single, highly precise `description` sentence that captures exact
-   activation triggers without overlap.
+## Core Principles
 
-3. Validate that the YAML frontmatter follows all repository-defined schema,
-   linting, and validation rules (e.g., required fields, no extra keys, correct
-   formatting).
+- **Autonomous Execution Focus**: Write for non-interactive agent flow: self-contained loops, built-in error recovery, verification steps, and no user confirmation prompts except for safety-critical actions.
+- **YAML Frontmatter is Mandatory**: Begin every SKILL.md with required fields `name` (lowercase-hyphenated, exactly matching folder name) and `description` (one precise, activation-triggering sentence). Include `license` only if needed. YAML must pass all repository validation rules.
+- **Description Precision**: Write the `description` as a single, highly specific sentence that matches user intent patterns without overlap—poor phrasing causes missed or false activations.
+- **Avoid Hardcoding**: Never embed specific values, file paths, repository names, user details, or tool versions; instead, use clear placeholders (e.g., `<repository-name>`, `<file-path>`, `<version>`).
+- **Pure Markdown Body**: Use only Markdown in the body; never include extraneous files, scripts, or resources unless explicitly required for the skill.
 
-4. Structure the file exactly as:
-   - YAML frontmatter block
-   - Pure Markdown body with minimal, value-adding sections only
+## Skill Structure & Formatting
 
-5. Write dense, imperative, expert-level instructions assuming ninja
-   proficiency; skip basics, favor one-liners, pack maximum depth.
+Structure the file exactly as:
 
-6. Design for fully autonomous agent execution: include self-contained loops,
-   error recovery, verification steps; avoid any user confirmation except
-   safety-critical cases.
+1. **YAML frontmatter block**
+2. **Title (`# Skill Name`)**
+3. **Markdownlint overrides** (e.g., `<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->`)
+4. **Brief Intro** (1-2 sentences)
+5. **Section Discipline**: Use standard sections in a logical progression:
+   - `## Core Process` (if a step-by-step flow is needed)
+   - `## Core Principles`
+   - `## Commands / Usage Patterns`
+   - `## Diagnostics and Troubleshooting`
+   - `## What to Avoid`
+   - `## Limitations`
+   - `## Related Skills`
 
-7. Keep total length to minimum.
+## Writing Style & Philosophy
 
-8. Section Discipline: Use sections sparingly and only when they clearly improve
-   readability or organization; always follow a logical progression
-   (e.g., Brief Intro → When to Activate → Core Process → Diagnostics
-   → Patterns → What to Avoid → Limitations → Safety).
+- Write dense, imperative, expert-level instructions assuming ninja proficiency.
+- Skip basics, favor one-liners, pack maximum depth.
+- **Example Discipline**: Use fewer, shorter examples. Include only essential examples that demonstrate key patterns. Prefer single-line examples over multi-line blocks. Quality over quantity.
+- **Command-Line Tool Examples**: When the skill involves command-line tools, derive their usage dynamically via read/glob operations to maximize skill generality. Provide concise examples of key commands—focus on complex, multi-flag, piped, or non-standard operations.
+- **Skill Length Management**: Keep skills concise and focused. If a skill approaches 300 lines, or if content becomes unfocused, split it into multiple specialized skills with narrow, non-overlapping activation descriptions.
 
-9. Output only the complete, ready-to-commit SKILL.md content.
+## What to Avoid
 
-## Guidance on Creating or Updating Skills
+- Overly broad `description` fields that might trigger the skill when not needed.
+- Using interactive command examples (e.g., `git rebase -i`) without explicitly warning against them or providing non-interactive alternatives.
+- Creating excessively long files with redundant examples.
+- Explaining basic concepts that a proficient developer or AI agent would already know.
+- Outputting conversational filler. ONLY output the file content.
 
-When creating or updating a skill file, ensure the following format:
+## Limitations
 
-- **Autonomous Execution Focus**: Write for non-interactive agent flow:
-  self-contained loops, built-in error recovery, verification steps, and no user
-  confirmation prompts except for safety-critical actions.
-- **Avoid Hardcoding**: Never embed specific values, file paths, repository
-  names, user details, or tool versions; instead, use clear placeholders (e.g.,
-  `<repository-name>`, `<file-path>`, `<version>`).
-- **Command-Line Tool Examples**: When the skill involves command-line tools,
-  derive them dynamically via tools/read operations to maximize skill generality
-  and cross-project reusability. Provide concise examples of key commands—focus
-  on complex, multi-flag, piped, or non-standard operations that require precise
-  reproduction. Avoid repetitive or overly specific examples.
-- **Description Precision**: Write the `description` as a single, highly
-  specific sentence that matches user intent patterns without overlap—poor
-  phrasing causes missed or false activations.
-- **Example Discipline**: Use fewer, shorter examples. Include only essential
-  examples that demonstrate key patterns—avoid multiple variations of the same
-  concept. Prefer single-line examples over multi-line blocks when possible.
-  Quality over quantity: each example must add distinct value.
-- **Pure Markdown Body**: Use only Markdown in the body; never include
-  extraneous files, scripts, or resources unless explicitly required for the
-  skill.
-- **Section Discipline**: Use sections sparingly and only when they add clear
-  value; prioritize logical flow (e.g., Core Process → Diagnostics → Patterns →
-  Limitations → Safety).
-- **Skill Length Management**: Keep skills concise and focused, ideally under 100
-  lines. If a skill exceeds or approaches 400 lines, or if content becomes
-  unfocused, split it into multiple specialized skills with narrow,
-  non-overlapping activation descriptions to maintain conciseness, precise
-  triggering, and efficient token usage.
-- **YAML Frontmatter is Mandatory**: Begin every SKILL.md with required fields
-  `name` (lowercase-hyphenated, exactly matching folder name) and `description`
-  (one precise, activation-triggering sentence explaining exactly what the skill
-  does and when Copilot should load it). Include `license` only if needed. YAML
-  must pass all repository validation and linting rules.
+- The skill writer cannot test the activation triggers of the new skill in real-time; it relies on following the description precision rule to ensure proper loading.

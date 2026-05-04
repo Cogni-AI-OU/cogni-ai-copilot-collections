@@ -21,15 +21,6 @@ design so diagrams remain maintainable as systems evolve.
 If you have only read part of this skill file and your task involves creating a diagram type not covered in those lines,
 you **MUST** read the rest of the file to access the relevant expert guidance and examples.
 
-## When to Activate
-
-- Agent must explain complex logic, system architecture, or requirements via diagrams.
-- Generating diagrams that must render correctly in GitHub, Obsidian, Notion,
-  or production docs.
-- Updating or troubleshooting existing Mermaid code blocks in Markdown.
-- User requests visualization of processes, architecture, sequences, data flows,
-  timelines, or user journeys.
-
 ## Related Instructions
 
 - **mermaid.instructions.md**: Formatting standards, best

@@ -8,19 +8,6 @@ description: >-
 
 Use `gh api` and `gh api graphql` when standard `gh` subcommands do not expose the required functionality or metadata.
 
-## When to Activate
-
-- User specifically asks to hit GitHub API endpoints via `gh api`.
-- Task requires fetching data unavailable in native commands (`gh pr view`, `gh issue view`).
-- Task involves GitHub Discussions (requires GraphQL).
-- Task involves reading file contents directly from the API when `curl` is missing or disallowed.
-- Need to perform precise, authenticated curl-like interactions with GitHub.
-- Task requires interacting with GitHub resources not supported by native `gh` subcommands
-  (e.g., repository variables, environment secrets, discussions).
-- Task requires complex GraphQL queries or mutations.
-- Task to resolve outdated PR comments.
-- User specifically asks for `gh api` or `gh api graphql` usage.
-
 ## Mindmap of Commands
 
 ```mermaid

@@ -13,15 +13,6 @@ license: MIT
 
 Expert-level guidance for executing complex Git operations safely and effectively.
 
-## When to Activate
-
-- User has lost commits or needs to recover state using `git reflog`.
-- User needs to find a regression using `git bisect`.
-- User is managing Git submodules or advanced worktrees.
-- Local repository corruption requires recovery (e.g., empty objects, bad object refs, `git fsck` failures).
-- Commit history rewriting is required (e.g., squashing, reordering, editing).
-- User requires assistance with complex merge conflicts or tree manipulations.
-
 ## Interactive Rebasing (`git rebase -i`)
 
 - **Objective**: Clean up local commit history before pushing.

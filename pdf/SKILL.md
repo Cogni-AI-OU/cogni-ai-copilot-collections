@@ -11,13 +11,6 @@ license: MIT
 
 Analyze, edit, and shrink PDF files at the object level without losing content.
 
-## When to Activate
-
-- Reducing PDF file size (lossless or lossy)
-- Inspecting PDF internals (objects, streams, fonts, metadata)
-- Editing or removing specific PDF objects (fonts, images, metadata)
-- Diagnosing PDF bloat (duplicate fonts, embedded attachments, large streams)
-
 ## Tool Selection
 
 | Tool | Install (Ubuntu) | Strength |
