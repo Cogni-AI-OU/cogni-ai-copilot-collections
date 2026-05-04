@@ -1,0 +1,151 @@
+flowchart TD
+    Start([Activation]) --> Boot[Initialization Sequence]
+
+    subgraph GLOBAL_AGENTS_md [AGENTS.md: Global Contract]
+        direction TB
+        B1["1- Agent Contract Alignment"] --> B2
+        B2["2- Skill & Instruction Loading"]
+        B3{"3- Submodules Initialized?"}
+        B3 -->|No| B3a["git submodule update --init"]
+        B3a --> B2
+        B2 --> FL1
+        FL6 --> CL1
+        CL6 --> IL1
+        IL6 --> SL1
+        SL8 --> B3
+    end
+
+    Boot --> GLOBAL_AGENTS_md
+    GLOBAL_AGENTS_md --> B4
+
+    subgraph LOCAL_CONTRACT [tester.agent.md: Local Framework]
+        B4["4- Context Verification"]
+        B5["5- Emit Boot Report"]
+        B5 --> Idle
+        Idle{"6- Await Testing Target"}
+
+        Idle -->|Code/Feature Input| Phase0[Phase 0: Pre-Execution Audit]
+
+        Phase0 --> T_Audit["Adversarial Testability Review"]
+        T_Audit -->|Fail| RefactorReq["Reject: Code Not Testable"]
+        T_Audit -->|Pass| Phase1[Phase 1: Test-Driven Lifecycle]
+
+        RefactorReq --> Phase3
+
+        Phase1 --> TDD_Red["1. Assert the Gap (Write Failing Test)"]
+        TDD_Red --> TDD_Dim["2. Dimensional Scaling (Scale Boundaries/Errors)"]
+        TDD_Dim --> TDD_Exec{"Execute Test Suite"}
+
+        TDD_Exec -->|Passes Intentionally| TDD_Green["3. Resolve the Gap (Green)"]
+        TDD_Exec -->|Fails/Flaky| Signal["Signal Extraction & Flakiness Eradication"]
+        Signal --> TDD_Exec
+
+        TDD_Green --> Phase2[Phase 2: Quality & Security Gates]
+
+        Phase2 --> Q_Mock["Boundary Mocking Verification"]
+        Q_Mock --> Q_Iso["Non-Destructive Isolation Check"]
+        Q_Iso --> Q_Cov["Behavior vs Coverage Check"]
+
+        Q_Cov --> Phase3[Phase 3: Output & Closure]
+        Phase3 --> Finalize["Format Trace & Summarize Permutations"]
+        Finalize --> Output["Finalize Test Engineering Action"]
+    end
+
+    subgraph GLOBAL_FLOWS_mmd [FLOWS.mmd: Shared Protocols]
+        direction TB
+        TL{Traffic Light Classification}
+
+        subgraph Mandatory_Facts_Loading_Protocol
+            FL1[Locate FACTS.mmd in Repo] --> FL2{FACTS.mmd Exists?}
+            FL2 -->|Yes| FL3[Parse Project Facts & Invariants]
+            FL3 --> FL4[Inject Core Context into Working Memory]
+            FL2 -->|No| FL5[Proceed Without Canonical Facts]
+            FL4 --> FL6[Align Strategy with Project Facts]
+            FL5 --> FL6
+        end
+
+        subgraph Mandatory_Constraints_Loading_Protocol
+            CL1[Locate CONSTRAINTS.mzn in Repo] --> CL2{CONSTRAINTS.mzn Exists?}
+            CL2 -->|Yes| CL3[Parse Project Constraints & Invariants]
+            CL3 --> CL4[Inject Core Logic Context into Working Memory]
+            CL2 -->|No| CL5[Proceed Without Constraint Bounds]
+            CL4 --> CL6[Align Execution Bounds with Restrictions]
+            CL5 --> CL6
+        end
+
+        subgraph Mandatory_Instructions_Loading_Protocol
+            IL1[Scan Context for .instructions.md] --> IL2{Instructions Found?}
+            IL2 -->|Yes| IL3[Match Context to Instruction Scope]
+            IL3 --> IL4[Read Relevant .instructions.md Files]
+            IL2 -->|No| IL5[Proceed Without Domain Instructions]
+            IL4 --> IL6[Apply Instruction Rules to Execution]
+            IL5 --> IL6
+        end
+
+        subgraph Mandatory_Skill_Loading_Protocol
+            SL1[Check .github/skills/AGENTS.md] --> SL2{Skills Found?}
+            SL2 -->|Yes| SL3[Route Intent: Match Skill Name/Alias/Keyword]
+            SL2 -->|No| SL6[Proceed Without Skill]
+            SL3 --> SL4{Multiple Matches?}
+            SL4 -->|Yes| SL5[Load Non-Overlapping or Most Specific]
+            SL4 -->|No| SL5
+            SL5 --> SL7[Read Best-Matching SKILL.md Files]
+            SL7 --> SL8[Proceed with Execution]
+            SL6 --> SL8
+        end
+
+        subgraph Extrinsic_Escalation_Protocol [Extrinsic Escalation Protocol: 10-Point Gate]
+            direction TB
+            EE_Trig{Trigger Extrinsic Escalation}
+            EE_Trig -->|Missing API/Auth| EE1[Credential Lock]
+            EE_Trig -->|Structural Obj Complete| EE2[Milestone Validation]
+            EE_Trig -->|Quota/Hardware/Perms| EE3[Environment Hard-Block]
+            EE_Trig -->|Logical Impossibility| EE4[Requirement Contradiction]
+            EE_Trig -->|Exhausted Clarification| EE5[Irresolvable Ambiguity]
+            EE_Trig -->|All Avenues Failed| EE6[Vector Exhaustion]
+            EE_Trig -->|Deep Architectural Fork| EE7[High-Stakes Trade-Off]
+            EE_Trig -->|Force-Push/Data Mutation| EE8[Destructive Confirmation]
+            EE_Trig -->|Intractable Critical Bug| EE9[Persistent Regression]
+            EE_Trig -->|Restrictive Egress Block| EE10[Network/Firewall Isolation]
+        end
+
+        EE1 & EE2 & EE3 & EE4 & EE5 & EE6 & EE7 & EE8 & EE9 & EE10 --> Escalate[Extrinsic Escalation: 10-Point Gate]
+    end
+
+    Output --> End([Objective Complete])
+
+    Phase1 --> TL
+    TL -->|Green: Autonomous| Phase2
+    TL -->|Yellow: Collaborative| EscalateGate{Escalation Required?}
+    EscalateGate -->|Yes| EE_Trig
+    Escalate -->|User Input Received| Phase1
+    EscalateGate -->|No| Phase2
+
+    subgraph Invariants ["Testing Invariants"]
+        direction TB
+        I1["Genuine Falsifiability (Tests Must Fail First)"]
+        I2["Behavior Over Implementation"]
+        I3["Boundary Mocking Constraint"]
+        I4["Realistic Data Modeling"]
+        I5["Non-Destructive Execution"]
+    end
+
+    TDD_Red -.->|governed by| I1
+    Q_Cov -.->|governed by| I2
+    Q_Mock -.->|governed by| I3
+    TDD_Dim -.->|governed by| I4
+    Q_Iso -.->|governed by| I5
+
+    classDef phaseNode fill:#1e3a5f,stroke:#4a90e2,stroke-width:2px,color:#fff
+    classDef gateNode fill:#5f1e1e,stroke:#e24a4a,stroke-width:2px,color:#fff
+    classDef checkNode fill:#5f4a1e,stroke:#e2a04a,stroke-width:2px,color:#fff
+    classDef endNode fill:#1e5f3a,stroke:#4ae290,stroke-width:2px,color:#fff
+    classDef guardNode fill:#3a2a4a,stroke:#a070c0,stroke-width:1px,color:#eee
+
+    class FL1,FL3,FL4,FL5,FL6,CL1,CL3,CL4,CL5,CL6,IL1,IL3,IL4,IL5,IL6,SL1,SL3,SL5,SL6,SL7,SL8,B1,B2,B3a phaseNode
+    class FL2,CL2,IL2,SL2,SL4,B3 gateNode
+    class Boot,Phase0,Phase1,Phase2,Phase3,Finalize,B4,B5 phaseNode
+    class Idle,T_Audit,TDD_Exec,TL,EscalateGate gateNode
+    class TDD_Red,TDD_Dim,TDD_Green,Signal,Q_Mock,Q_Iso,Q_Cov,RefactorReq,Escalate checkNode
+    class Start,End,Output endNode
+    class I1,I2,I3,I4,I5 guardNode
