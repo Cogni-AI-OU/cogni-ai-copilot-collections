@@ -88,6 +88,11 @@ GitHub Actions and other CI environments often check out repositories as shallow
 - **Reflog for recovery**: Reference `git reflog` before history-rewriting operations to enable rollback.
 - **Backup before destructive ops**: Create temp tag: `git tag backup/pre-op-$(date +%s)`
 - **Force push only when required** (e.g., after approved history rewrite): `git push --force-with-lease origin <branch>`
+- **Conflict Marker Prevention**: Before running `git commit`, verify that there are no unresolved merge conflict markers. Use `git diff --cached` to ensure no markers (e.g., `<<<<<<<`, `=======`, `>>>>>>>`) are being committed. NEVER commit a file containing unresolved merge conflicts.
+- **Reverting Commits**:
+  - For simple reverts, use `git revert <commit-sha> --no-edit`.
+  - If a revert results in conflicts, it will pause. DO NOT blindly commit. You MUST resolve the conflicts in the files, ensuring all `<<<<<<<`, `=======`, and `>>>>>>>` markers are removed.
+  - Once resolved, stage the files and use `GIT_EDITOR=true git revert --continue`.
 
 ## Useful Diagnostic Commands
 
