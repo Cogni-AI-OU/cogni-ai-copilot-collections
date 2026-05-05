@@ -190,8 +190,11 @@ gh pr checks <number> --json name,status,conclusion,url
    ```bash
    gh pr view <number> --json headRefOid
    # Then use the OID to get check runs
-   gh api repos/:owner/:repo/commits/<headRefOid>/check-runs --jq '.check_runs[] | {id, name, status, conclusion}'
-   ```
+    gh api repos/:owner/:repo/commits/<headRefOid>/check-runs --jq '.check_runs[] | {id, name, status, conclusion}'
+    ```
+
+    Note: For GitHub Actions jobs, the `output.summary` field in these check runs is usually `null`.
+    Job Summaries from `$GITHUB_STEP_SUMMARY` are not accessible here.
 
 2. Fetch annotations for a specific check run ID:
 

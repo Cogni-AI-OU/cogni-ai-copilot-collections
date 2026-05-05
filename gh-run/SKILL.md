@@ -108,6 +108,14 @@ mindmap
     gh run view --job <job_id> --repo <owner>/<repo> --log
     ```
 
+  - **Retrieving Job Summaries**:
+    Job Summaries (Markdown content written to `$GITHUB_STEP_SUMMARY`) are **NOT** available via the REST API or
+    standard `gh run view` JSON output. They are intended for the web UI.
+    If you need to retrieve a summary programmatically:
+    - Check if the action also prints the summary to the **logs**.
+    - Check for **Check Run Annotations** which might contain brief messages.
+    - Check if the summary was posted as a **PR or Issue comment**.
+
   - Inspect a specific run attempt (defaults to latest if not specified):
 
     ```bash
