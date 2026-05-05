@@ -213,11 +213,9 @@ Generate a Mermaid `treeView-beta` diagram visualizing the hierarchy of files an
 
 ```mermaid
 treeView-beta
-    "docs"
-        "build"
-        "make.bat"
-        "Makefile"
-        "out"
-        "source"
+    "AGENTS.md"
+    ".github"
+        "workflows"
+          "check.yml"
 ```
 
