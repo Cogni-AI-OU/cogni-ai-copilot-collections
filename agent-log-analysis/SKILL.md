@@ -31,33 +31,54 @@ Do not invent new structures or deviate from these templates.
 ### 2.1 Text Report (Markdown)
 
 ```markdown
+#### Brief
+
 The agent session for **github.run_id [Run ID] (attempt [Attempt Number])** was
 [successful / unsuccessful / partially successful] and [followed / deviated from]
 established protocols. Operating as the `[Agent Persona]`, the agent completed
 the task of [Brief Task Description] while maintaining strict adherence to the
 project's initialization and verification workflows.
 
+#### Prompt Summary
+
+* **Trigger Source:** [e.g., GitHub issue comment, manual workflow run]
+* **Prompt Summary:** [Brief summary of the input prompt/trigger.]
+
 #### Session Summary
+
 * **Primary Task:** [What was the agent explicitly instructed to do?]
 * **Workflow Compliance:** [Did the agent load the necessary constraints, flows, and instructions?]
 * **Conclusion:** [What was the final state?]
 
 #### Key Actions & Decisions
+
 * **Context Gathering:** [How did the agent acquire necessary information?]
+* **Agent Interactions:** [List any sub-agents called and their purpose (e.g., Architect -> Brain Ops).]
 * **Task/Workflow Management:** [How did it track progress?]
 * **Execution / Tracing:** [What were the core actions taken?]
 * **Self-Verification:** [Did it verify the environment state?]
 
+#### Session Telemetry
+
+* **Execution Time:** [Total time taken]
+* **Steps Taken:** [Number of steps]
+* **Tool Calls:** [Total number of tool calls]
+* **Tokens Used:** [Optional: total tokens if available]
+
 #### Root Cause Identified (If Applicable)
+
 The agent discovered a **[brief description of the core issue]**:
 1. **[Step 1]**: [Description]
 
 #### Issues Encountered
+
 * **[Issue / None]:** [Describe any tool failures or explicitly state "None".]
 
 #### Recommendation Provided (Optional)
 [Summarize any recommendations]
 ```
+
+Note: Don't include code block for above.
 
 ### 2.2 Comprehensive Visual Audit Suite (Mermaid & Data)
 
@@ -76,8 +97,25 @@ radar-beta
 
 Generate a Mermaid `sequenceDiagram` visualizing chronological actions.
 
-- **Participants**: `Workflow`, `Agent`, `Tools`, `FileSystem`, `GitHub`
-- **Focus**: Initialization, Context Gathering, Execution, Verification.
+- **Participants**: `Workflow`, `Agent`, `[Sub-Agent]`, `Tools`, `FileSystem`, `GitHub`
+- **Focus**: Initialization, Context Gathering, Agent Interactions (e.g., Task/delegation calls), Execution, Verification.
+
+Example showing sub-agent interaction:
+
+```mermaid
+sequenceDiagram
+    participant W as Workflow
+    participant A as Architect
+    participant B as BrainOps
+    participant T as Tools
+
+    W->>A: Start Task
+    A->>T: Search Context
+    T-->>A: Results
+    A->>B: Delegate Architecture Plan
+    B-->>A: Proposed Plan
+    A->>T: Implement Plan
+```
 
 #### C. Agent Cognitive & Execution Loop (State Diagram)
 
@@ -140,7 +178,75 @@ If failures or bugs hit the agent, you MUST generate:
        service auth(server)[Auth Service] in api
        service db(database)[Session DB] in api
 
-       service user(user)[Agent Session]
-       user:R -- L:auth
-       auth:R -- L:db
-   ```
+        service user(user)[Agent Session]
+        user:R -- L:auth
+        auth:R -- L:db
+    ```
+
+#### G. Agent Tool Usage Mindmap
+
+Generate a Mermaid `mindmap` visualizing the hierarchy of tools
+and their key parameters or sub-commands executed during the session.
+
+```mermaid
+mindmap
+  root((Tools))
+    Glob
+      pattern
+    Read
+      filePath
+    Shell
+      command
+        gh
+        grep
+    Skill
+      gh-run
+      git
+    Task
+      subagent_type
+        brain-ops
+    Todo
+```
+
+#### H. Agent File Access Hierarchy
+
+Generate a Mermaid `treeView-beta` diagram visualizing the hierarchy of files and directories accessed by the agent.
+
+```mermaid
+treeView-beta
+    "AGENTS.md"
+    ".github"
+        "workflows"
+            "check.yml"
+```
+
+#### I. Agent Task Board (Kanban)
+
+Generate a Mermaid `kanban` diagram to visualize the task board and tracking state.
+Column headers SHOULD include status metadata. To avoid breaking Mermaid syntax, DO NOT use structural characters like
+`{}`, `[]`, `()`, `<`, or `>` in labels.
+
+```mermaid
+kanban
+  Todo - Status: completed
+    [Create Documentation]
+    docs[Create Blog about the new diagram]
+  In Progress - Status: in_progress
+    id6[Create renderer for all cases]
+  Ready for Deploy - Status: pending
+    id8[Design grammar]@{ assigned: 'agent' }
+```
+
+#### J. Agent Tool Utilization (Pie Chart)
+
+Generate a Mermaid `pie` diagram to visualize the relative frequency of tool calls.
+
+```mermaid
+pie title "Tool Call Distribution"
+    "Glob" : 1
+    "Read" : 2
+    "Shell" : 3
+    "Skill" : 4
+    "Task" : 5
+    "Todo" : 1
+```
