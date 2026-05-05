@@ -78,22 +78,54 @@ The agent discovered a **[brief description of the core issue]**:
 [Summarize any recommendations]
 ```
 
-Note: Don't include code block for above.
+Note: The Text Report must be output as direct Markdown; do not wrap the resulting report in an outer code block.
 
 ### 2.2 Comprehensive Visual Audit Suite (Mermaid & Data)
 
-#### A. Agent Radar Analysis
+#### A. Agent Tool Utilization (Pie Chart)
 
-Generate a `radar-beta` diagram to score the agent from 1 to 10 on core competencies:
+Generate a Mermaid `pie` diagram to visualize the relative frequency of tool calls.
+
+**Tool Utilization Pie Chart**
 
 ```mermaid
-radar-beta
-    title "Agent Performance Alignment"
-    axis Task_Completion, Protocol_Compliance, Tool_Proficiency, Self_Verification, Analytical_Depth, Execution_Efficiency
-    curve Agent {8, 9, 7, 8, 9, 7}
+pie title Tool Call Distribution
+    "Glob" : 1
+    "Read" : 2
+    "Shell" : 3
+    "Skill" : 4
+    "Task" : 5
+    "Todo" : 1
 ```
 
-#### B. Agent Execution Flow (Sequence Diagram)
+#### B. Agent Tool Usage Mindmap
+
+Generate a Mermaid `mindmap` visualizing the hierarchy of tools
+and their key parameters or sub-commands executed during the session.
+
+**Tool Usage Mindmap**
+
+```mermaid
+mindmap
+  root((Tools))
+    Glob
+      pattern
+    Read
+      filePath
+    Shell
+      command
+        gh
+        grep
+    Skill
+      gh-run
+      git
+    Task
+      subagent_type
+        brain-ops
+    Todo
+```
+
+#### C. Agent Execution Flow (Sequence Diagram)
 
 Generate a Mermaid `sequenceDiagram` visualizing chronological actions.
 
@@ -101,6 +133,8 @@ Generate a Mermaid `sequenceDiagram` visualizing chronological actions.
 - **Focus**: Initialization, Context Gathering, Agent Interactions (e.g., Task/delegation calls), Execution, Verification.
 
 Example showing sub-agent interaction:
+
+**Agent Execution Flow**
 
 ```mermaid
 sequenceDiagram
@@ -117,13 +151,6 @@ sequenceDiagram
     A->>T: Implement Plan
 ```
 
-#### C. Agent Cognitive & Execution Loop (State Diagram)
-
-Generate a Mermaid `stateDiagram-v2` modeling the internal state machine.
-
-- **States**: `Initializing`, `ContextGathering`, `Executing`, `ErrorRecovery`, `Verifying`.
-- **Transitions**: Explain *why* the agent moved states (e.g., "Syntax Error Detected").
-
 #### D. Agent Execution Journey (Friction & Success Map)
 
 Generate a Mermaid `journey` diagram of problem-solving friction.
@@ -138,15 +165,15 @@ Generate a Mermaid `venn-beta` diagram visualizing action alignment. Ensure stri
 
 ```mermaid
 venn-beta
-    title "Action Alignment"
-    set Intent["User Request"]
-    set Actions["Agent Tool Calls"]
-    set Rules["System Protocols"]
+    title Action Alignment
+    set Intent["Request"]
+    set Actions["Actions"]
+    set Rules["Protocols"]
 
-    union Intent,Actions["Targeted Actions"]
-    union Intent,Rules["Expected Protocol"]
-    union Actions,Rules["Compliant Actions"]
-    union Intent,Actions,Rules["Perfect Execution"]
+    union Intent,Actions["Targeted"]
+    union Intent,Rules["Expected"]
+    union Actions,Rules["Compliant"]
+    union Intent,Actions,Rules["Execution"]
 ```
 
 #### F. Root Cause & System Architecture (If Errors Occurred)
@@ -183,34 +210,11 @@ If failures or bugs hit the agent, you MUST generate:
         auth:R -- L:db
     ```
 
-#### G. Agent Tool Usage Mindmap
-
-Generate a Mermaid `mindmap` visualizing the hierarchy of tools
-and their key parameters or sub-commands executed during the session.
-
-```mermaid
-mindmap
-  root((Tools))
-    Glob
-      pattern
-    Read
-      filePath
-    Shell
-      command
-        gh
-        grep
-    Skill
-      gh-run
-      git
-    Task
-      subagent_type
-        brain-ops
-    Todo
-```
-
-#### H. Agent File Access Hierarchy
+#### G. Agent File Access Hierarchy
 
 Generate a Mermaid `treeView-beta` diagram visualizing the hierarchy of files and directories accessed by the agent.
+
+**Accessed Files Tree**
 
 ```mermaid
 treeView-beta
@@ -220,7 +224,7 @@ treeView-beta
             "check.yml"
 ```
 
-#### I. Agent Task Board (Kanban)
+#### H. Agent Task Board (Kanban)
 
 Generate a Mermaid `kanban` diagram to visualize the task board and tracking state.
 Column headers SHOULD include status metadata. To avoid breaking Mermaid syntax, DO NOT use structural characters like
@@ -237,16 +241,20 @@ kanban
     id8[Design grammar]@{ assigned: 'agent' }
 ```
 
-#### J. Agent Tool Utilization (Pie Chart)
+#### I. Agent Cognitive & Execution Loop (State Diagram)
 
-Generate a Mermaid `pie` diagram to visualize the relative frequency of tool calls.
+Generate a Mermaid `stateDiagram-v2` modeling the internal state machine.
+
+- **States**: `Initializing`, `ContextGathering`, `Executing`, `ErrorRecovery`, `Verifying`.
+- **Transitions**: Explain *why* the agent moved states (e.g., "Syntax Error Detected").
+
+#### J. Agent Radar Analysis
+
+Generate a `radar-beta` diagram to score the agent from 1 to 10 on core competencies:
 
 ```mermaid
-pie title "Tool Call Distribution"
-    "Glob" : 1
-    "Read" : 2
-    "Shell" : 3
-    "Skill" : 4
-    "Task" : 5
-    "Todo" : 1
+radar-beta
+    title Agent Performance Alignment
+    axis Completion, Compliance, Proficiency, Verification, Depth, Efficiency
+    curve Agent {1, 1, 1, 1, 1, 1}
 ```
