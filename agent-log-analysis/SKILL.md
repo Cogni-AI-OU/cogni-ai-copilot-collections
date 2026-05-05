@@ -78,7 +78,7 @@ The agent discovered a **[brief description of the core issue]**:
 [Summarize any recommendations]
 ```
 
-Note: Don't include code block for above.
+Note: The Text Report must be output as direct Markdown; do not wrap the resulting report in an outer code block.
 
 ### 2.2 Comprehensive Visual Audit Suite (Mermaid & Data)
 
@@ -255,6 +255,6 @@ Generate a `radar-beta` diagram to score the agent from 1 to 10 on core competen
 ```mermaid
 radar-beta
     title Agent Performance Alignment
-    axis Task_Completion, Protocol_Compliance, Tool_Proficiency, Self_Verification, Analytical_Depth, Execution_Efficiency
+    axis Completion, Compliance, Proficiency, Verification, Depth, Efficiency
     curve Agent {8, 9, 7, 8, 9, 7}
 ```
