@@ -47,52 +47,88 @@ Do not invent new structures or deviate from these templates.
 ```markdown
 #### Brief
 
-The agent session for **github.run_id [Run ID] (attempt [Attempt Number])** was
-[successful / unsuccessful / partially successful] and [followed / deviated from]
-established protocols. Operating as the `[Agent Persona]`, the agent completed
-the task of [Brief Task Description] while maintaining strict adherence to the
-project's initialization and verification workflows.
+The agent session for **github.run_id [Run ID] (attempt [Attempt Number])** was [successful / unsuccessful / partially successful]
+and [followed / deviated from] established protocols.
+Operating as the `[Agent Persona]`, the agent completed the task of [Brief Task Description]
+while maintaining strict adherence to the project's initialization and verification workflows.
 
 #### Prompt Summary
 
-* **Trigger Source:** [e.g., GitHub issue comment, manual workflow run]
-* **Prompt Summary:** [Brief summary of the input prompt/trigger.]
+* **Prompt Summary:**
+  [Brief summary of the input prompt/trigger.]
 
-#### Session Summary
+* **Trigger Source:**
+  [e.g., GitHub issue comment, manual workflow run]
 
-* **Primary Task:** [What was the agent explicitly instructed to do?]
-* **Workflow Compliance:** [Did the agent load the necessary constraints, flows, and instructions?]
-* **Conclusion:** [What was the final state?]
+#### Key Actions & Decisions
+
+* **Agent Interactions:**
+  [List any sub-agents called and their purpose (e.g., Architect -> Brain Ops)]
+
+* **Context Gathering:**
+  [How did the agent acquire necessary information?]
+
+* **Execution / Tracing:**
+  [What were the core actions taken?]
+
+* **Self-Verification:**
+  [Did it verify the environment state?]
+
+* **Task/Workflow Management:**
+  [How did it track progress?]
+
+#### Root Cause Identified (If Applicable)
+
+The agent discovered a **[brief description of the core issue]**:
+
+1. **[Step 1]**: [Description]
 
 #### Produced Artifacts
 
 * **[Artifact Type]:** [Link/Reference, e.g., Pull Request #179, Issue #42, or commit `deadbeef`]
 
-#### Key Actions & Decisions
+#### Session Summary
 
-* **Skill Loading:** [List the skills loaded and their relevance to the task.]
-* **Context Gathering:** [How did the agent acquire necessary information?]
-* **Agent Interactions:** [List any sub-agents called and their purpose (e.g., Architect -> Brain Ops).]
-* **Task/Workflow Management:** [How did it track progress?]
-* **Execution / Tracing:** [What were the core actions taken?]
-* **Self-Verification:** [Did it verify the environment state?]
+* **Conclusion:**
+  [What was the final state?]
+
+* **Primary Task:**
+  [What was the agent explicitly instructed to do?]
+
+* **Workflow Compliance:**
+  [Did the agent load the necessary constraints, flows, and instructions?]
 
 #### Session Telemetry
 
-* **Execution Time:** [Total time taken]
-* **Steps Taken:** [Number of steps]
-* **Total Tasks:** [Total number of tasks (from todos)]
-* **Tool Calls:** [Total number of tool calls] ([Tool1]: [N], [Tool2]: [M], ...)
-* **Tokens Used:** [Optional: total tokens if available]
+* **Execution Time:**
+  [Total time taken]
 
-#### Root Cause Identified (If Applicable)
+* **Steps Taken:**
+  [Number of steps]
 
-The agent discovered a **[brief description of the core issue]**:
-1. **[Step 1]**: [Description]
+* **Total Skills:**
+  [Number of skills loaded] ([List of skills loaded])
 
-#### Issues Encountered
+* **Total Tasks:**
+  [Total number of tasks (from todos)]
 
-* **[Issue / None]:** [Describe any tool failures or explicitly state "None".]
+* **Tool Calls:**
+  [Total number of tool calls] ([Tool1]: [N], [Tool2]: [M], ...)
+
+* **Tokens Used:**
+  [Optional: total tokens if available]
+
+#### Issues/Limitations Encountered
+
+* **[Issue / None]:**
+  [Describe any tool failures or explicitly state "None"]
+  [Include any syntax errors, command hungs or other unexpected activity]
+
+* **[Limitation / None]:**
+  [Describe any failures due to access or environment limitations]
+
+* **[Performance / None]:**
+  [Describe any performance concerns such as sloweness, hungs]
 
 #### Recommendation Provided (Optional)
 
@@ -105,7 +141,7 @@ Note: The Text Report must be output as direct Markdown; do not wrap the resulti
 
 #### A. Agent Tool Utilization (Pie Chart)
 
-Generate a Mermaid `pie` diagram to visualize the relative frequency of tool calls.
+Generate the following Mermaid `pie` diagrams to visualize the relative frequency of tool and command calls.
 
 **Tool Utilization Pie Chart**
 
@@ -117,7 +153,11 @@ pie title Tool Call Distribution
     "Skill" : 4
     "Task" : 5
     "Todo" : 1
+    "Webfetch": 1
+    "Write": 1
 ```
+
+Note: Include only high-level tool names without actual commands.
 
 **Command Utilization Pie Chart**
 
@@ -127,6 +167,8 @@ pie title Command Call Distribution
     "gh" : 2
     "ls" : 3
 ```
+
+Note: Include only actual bash tool commands.
 
 #### B. Agent Tool Usage Mindmap
 
@@ -153,6 +195,8 @@ mindmap
       subagent_type
         brain-ops
     Todo
+    Webfetch
+      url
 ```
 
 #### C. Agent Execution Flow (Sequence Diagram)
@@ -160,7 +204,8 @@ mindmap
 Generate a Mermaid `sequenceDiagram` visualizing chronological actions.
 
 - **Participants**: `Workflow`, `Agent`, `[Sub-Agent]`, `Tools`, `FileSystem`, `GitHub`
-- **Focus**: Initialization, Skill Loading, Context Gathering, Agent Interactions (e.g., Task/delegation calls), Execution, Verification.
+- **Focus**: Initialization, Skill Loading, Context Gathering, Agent Interactions
+  (e.g., Task/delegation calls), Execution, Verification.
 
 Example showing sub-agent interaction:
 
@@ -168,18 +213,26 @@ Example showing sub-agent interaction:
 
 ```mermaid
 sequenceDiagram
-    participant W as Workflow
-    participant A as Architect
-    participant B as BrainOps
+    participant A as Agent
+    participant B as Bash Shell
+    participant D as DevOps
+    participant R as Runtime
+    participant S as Skills
     participant T as Tools
+    participant W as Webfetch
 
-    W->>A: Start Task
-    A->>T: Load Skills
-    A->>T: Search Context
-    T-->>A: Results
-    A->>B: Delegate Architecture Plan
-    B-->>A: Proposed Plan
-    A->>T: Implement Plan
+    R->>A: Start Session (Trigger)
+    A->>T: Load relevant Skills
+    T->>S: Read SKILL.md files
+    S-->>A: Context Injected
+    A->>T: Context Gathering
+    T->>W: Fetch external docs
+    W-->>A: Markdown results
+    A->>D: Delegate sub-task (Task tool)
+    D-->>A: Sub-agent results
+    A->>T: Execute implementation
+    T->>B: Run git/gh commands
+    B-->>A: CLI response
 ```
 
 #### D. Agent Execution Journey (Friction & Success Map)
@@ -291,7 +344,27 @@ Generate a Mermaid `stateDiagram-v2` modeling the internal state machine.
 - **States**: `Initializing`, `ContextGathering`, `Executing`, `ErrorRecovery`, `Verifying`.
 - **Transitions**: Explain *why* the agent moved states (e.g., "Syntax Error Detected").
 
-#### J. Agent Radar Analysis
+#### J. Agent Performance Quadrant
+
+Generate a `quadrantChart` to visualize agent performance across tasks:
+
+```mermaid
+quadrantChart
+    title Agent Task Analysis
+    x-axis Low Efficiency --> High Efficiency
+    y-axis Low Accuracy --> High Accuracy
+    quadrant-1 Elite
+    quadrant-2 Methodical
+    quadrant-3 Struggling
+    quadrant-4 Careless
+    "Refactor": [0.3, 0.8]
+    "Bug Fix": [0.6, 0.9]
+    "Doc Update": [0.9, 0.7]
+    "Feature": [0.2, 0.4]
+    "Test": [0.8, 0.2]
+```
+
+#### K. Agent Radar Analysis
 
 Generate a `radar-beta` diagram to score the agent from 1 to 10 on core competencies:
 
