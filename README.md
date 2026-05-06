@@ -76,6 +76,8 @@ Cogni AI capabilities loaded into the `.github/` directory.
 - **[subagent-task](subagent-task/SKILL.md)**: Guidance and protocols for spawning sub-agents via the task tool.
 - **[tdd](tdd/SKILL.md)**: Commands, step-by-step procedures, and mechanical execution for test engineering,
   testability audits, and the TDD lifecycle.
+- **[tester](tester/SKILL.md)**: Elite autonomous test engineering kernel focused on proving software correctness,
+  preventing regressions, and designing refactor-resilient behavioral tests.
 - **[vim-ex](vim-ex/SKILL.md)**: Non-interactive file editing with Vim Ex mode (in favor of sed, shell
   or Python editing)
 

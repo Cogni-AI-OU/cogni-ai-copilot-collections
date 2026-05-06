@@ -27,7 +27,8 @@ and planned work into the current context.
   You must load this skill when working with the `ansible` command.
 - **[cat](cat/SKILL.md)**: Guidelines for safely using `cat` and avoiding shell hangs with heredocs.
   You must load this skill before running `cat` command (especially with `EOF`).
-- **[code-review](code-review/SKILL.md)**: Cognitive framework for expert-level code inspection to identify logical flaws, hygiene issues, and architectural drift.
+- **[code-review](code-review/SKILL.md)**: Cognitive framework for expert-level code inspection to identify logical
+  flaws, hygiene issues, and architectural drift.
   Must be loaded when reviewing code or Pull Requests.
 - **[code-tour](code-tour/SKILL.md)**: Create, update, and maintain VSCode CodeTour (.tour) JSON walkthrough files with
   full schema compliance and interactive step configuration.
@@ -113,6 +114,9 @@ and planned work into the current context.
 - **[tdd](tdd/SKILL.md)**: Commands, step-by-step procedures, and mechanical execution for test engineering,
   testability audits, and the TDD lifecycle.
   You must load this skill when executing test tasks, designing tests, doing TDD, or verifying system behavior.
+- **[tester](tester/SKILL.md)**: Elite autonomous test engineering kernel focused on proving software correctness,
+  preventing regressions, and designing refactor-resilient behavioral tests.
+  You must load this skill when designing tests, analyzing test coverage, or acting as a test engineer.
 - **[vim-ex](vim-ex/SKILL.md)**: Non-interactive file editing with Vim Ex mode (in favor of sed, shell or Python
   editing).
   You must load this skill when using Vim Ex mode for non-interactive file editing.

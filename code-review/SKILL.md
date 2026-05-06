@@ -72,6 +72,7 @@ While the workflow is managed by `github-pr-review`, this skill focuses on analy
 
 ## Related Skills
 
+- **tester**: Load this skill when you need to design or suggest new tests to cover identified gaps.
 - **github-pr**:
   Must be loaded when working with changes associated with a pull request.
 - **github-pr-review**:

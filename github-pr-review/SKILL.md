@@ -77,6 +77,8 @@ using the `task` tool to ensure thorough coverage:
 
 ## Related Skills
 
+- **tester**:
+  Must be loaded when designing or suggesting new tests to cover identified gaps.
 - **code-review**:
   Must be loaded when performing deep inspection of code changes.
 - **github-pr**:

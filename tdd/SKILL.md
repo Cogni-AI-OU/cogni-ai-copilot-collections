@@ -13,8 +13,8 @@ description: >-
 
 ## Relevant Skills
 
+- `tester`: Elite autonomous test engineering kernel for proving software correctness and behavioral contracts.
 - `pre-commit`: For integration with testing hooks and validation.
-- `test-engineering` / `integration-testing` (if applicable).
 
 ## 1. Pre-Execution: Code Testability Audit
 
