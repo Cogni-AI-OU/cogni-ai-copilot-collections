@@ -131,13 +131,17 @@ Before finishing your session, you **MUST** pull and integrate the latest upstre
 
 **Mandatory steps**:
 
-1. Stage and commit all local work (`git add` only verified files, then `git commit`).
-2. Pull with merge semantics from the current head branch:
+1. Verify changes by invoking the project's tests.
+   E.g. Re-run the same tests that were initially failing
+   (either manually or via gh run if jobs are triggerable and wait for final confirmation).
+3. Stage and commit all local work (`git add` only verified files, then `git commit`).
+4. Pull with merge semantics from the current head branch:
    `git pull --no-rebase origin $(git rev-parse --abbrev-ref HEAD)`.
-3. Resolve any merge conflicts, then commit the merge.
-4. Verify the branch is up-to-date with `git status` and `git log --oneline -3`.
-5. Reply to inline thread comments that have been fixed or outdated.
-6. Mark outdated threads as resolved (e.g. via `gh api`).
+5. Resolve any merge conflicts, then commit the merge.
+   Always review your merge commit for any inconsistencies (e.g. conflict markers or duplicated lines).
+6. Verify the branch is up-to-date with `git status` and `git log --oneline -3`.
+7. Reply to inline thread comments that have been fixed or outdated.
+8. Mark outdated threads as resolved (e.g. via `gh api`).
 
 ### 3.4 Workspace Cleanliness (Non-Modifying Tasks)
 
