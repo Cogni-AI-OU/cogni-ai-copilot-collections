@@ -82,52 +82,14 @@ When the task is problem-oriented, provide different options for how the issue c
 - Narrowing down the root cause (if it is not immediately known).
 - Splitting the problem into smaller, reproducible steps to isolate the fault.
 
-## Brainstorming - Agent runs
-
-When an active Pull Request is associated with the runtime context or the user requests PR analysis,
-you MUST identify agentic runs in the CI/CD pipeline and analyze their execution logs
-to extract insights about the implementation status, challenges, and next steps.
-
-### Step 1: Agent PR runs
-
-First, identify any agentic runs in the CI/CD pipeline associated with the Pull Request.
-Because `gh pr checks` only shows the HEAD commit's latest runs and routinely misses manual workflow calls (`workflow_dispatch`)
-or keyword triggers (`issue_comment`), you MUST use the GitHub API to query all runs matching either the PR branch OR title.
-
-**Command to list all agent runs for a PR:**
-
-```bash
-branch_name=$(gh pr view <pr_number> --repo <owner>/<repo> --json headRefName -q .headRefName)
-pr_title=$(gh pr view <pr_number> --repo <owner>/<repo> --json title -q .title)
-
-gh api repos/<owner>/<repo>/actions/runs --paginate \
-  -q ".workflow_runs[] \
-  | select((.head_branch == \"$branch_name\" or .display_title == \"$pr_title\") and .name == \"Cogni AI Agent\") \
-  | {id: .id, status: .status, conclusion: .conclusion, event: .event}"
-```
-
-**Example `ishikawa-beta` Diagram:**
-
-```mermaid
-%% This diagram visualizes the identification of agentic runs in the CI/CD pipeline for a PR.
-ishikawa-beta
-    Cogni AI Agent Runs
-    issue_comment
-        Agent Run (#<job_id>)
-            success
-    workflow_dispatch
-        Agent Run (#<job_id>)
-            failure
-            Missing facts
-```
-
-At this step, don't check for more detailed logs yet.
-
 ## Mandatory skills
 
 List of skills you must load explicitly using the native `skill` tool
 (or by reading their `SKILL.md` files) before proceeding:
 
+- brainstorm
+- brainstorm-agent-runs
+- brainstorm-github-pr
 - gh
 - gh-api
 - gh-models
