@@ -41,6 +41,7 @@ Warnings about "General" vs "general" discussion category casing are non-blockin
 ## Verification
 
 After both steps, run `git diff --stat` to review all changed files. Expect changes in:
+
 - `.github/agents/` - Updated agent files
 - `.github/aw/actions-lock.json` - Updated action pins
 - `.github/workflows/*.lock.yml` - Regenerated lock files
