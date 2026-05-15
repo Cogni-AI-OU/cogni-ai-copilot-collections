@@ -1,5 +1,5 @@
 ---
-name: github-ah-debug
+name: github-aw-debug
 description: Debug and refine GitHub Agentic Workflows (gh-aw) by analyzing execution logs, auditing runs, and resolving missing tool errors or prompt inefficiencies. You MUST load this skill when asked to debug, audit, or analyze a failing GitHub Agentic Workflow.
 ---
 
@@ -76,7 +76,7 @@ Refs: <https://github.github.com/gh-aw/reference/auth/>
 
 ## Related Skills
 
-- **github-ah**:
+- **github-aw**:
   You MUST load this skill when safely updating existing GitHub Agentic Workflows configuration.
 - **github-actions**:
   You MUST load this skill when diagnosing or debugging GitHub Actions workflow failures.
