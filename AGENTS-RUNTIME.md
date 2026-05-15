@@ -45,6 +45,9 @@ and planned work into the current context.
 - **[code-tour](code-tour/SKILL.md)**: Create, update, and maintain VSCode CodeTour (.tour) JSON walkthrough files with
   full schema compliance and interactive step configuration.
   You MUST load this skill when creating or updating .tours/ files.
+- **[coding-standard-writer](coding-standard-writer/SKILL.md)**: Write a coding standards document for a project using
+  the coding styles inferred from provided file(s) or folder(s).
+  You MUST load this skill when creating or updating coding standards from existing files.
 - **[context-aware-ops](context-aware-ops/SKILL.md)**: Intelligent resource management with size checking and filtering
   to preserve context window.
   You MUST load this skill when managing large resources or context window limits.
