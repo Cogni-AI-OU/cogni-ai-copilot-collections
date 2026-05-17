@@ -67,12 +67,29 @@ Refs: <https://github.github.com/gh-aw/reference/auth/>
 - `gh aw` commands may require `actions: read` permissions when used inside GitHub Actions workflows.
 - Cannot debug local scripts unrelated to GitHub Agentic Workflows via `gh aw` tooling.
 
+## Common Issues
+
+Frequently encountered issues when working with GitHub Agentic Workflows and their solutions.
+
+## Debugging GHE Cloud with Data Residency
+
+Step-by-step guide for setting up and debugging agentic workflows on GitHub Enterprise Cloud with data residency (*.ghe.com).
+
+## Debugging Workflows
+
+How to run, debug, and investigate agentic workflow failures using the Copilot CLI, `gh aw audit`, and log analysis.
+
+## Error Reference
+
+Comprehensive reference of error messages in GitHub Agentic Workflows, including schema validation, compilation, and runtime errors with solutions.
+
 ## References
 
 - <https://github.github.com/gh-aw/troubleshooting/common-issues/>
 - <https://github.github.com/gh-aw/troubleshooting/debug-ghe/>
 - <https://github.github.com/gh-aw/troubleshooting/debugging/>
 - <https://github.github.com/gh-aw/troubleshooting/errors/>
+- <https://github.com/github/gh-aw/tree/v0.74.3/docs/src/content/docs/troubleshooting>
 
 ## Related Skills
 
