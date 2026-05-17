@@ -472,4 +472,4 @@ Not all GitHub data is accessible through the GitHub MCP server or the GitHub RE
 ## Related Skills
 
 - **gh-aw**: You MUST load this skill when working with the `gh aw` command or configuring Agentic Workflows.
-- **gh-aw-debug**: Diagnose, troubleshoot, and fix failing GitHub Agentic Workflows
+- **gh-aw-troubleshooting**: Diagnose, troubleshoot, and fix failing GitHub Agentic Workflows

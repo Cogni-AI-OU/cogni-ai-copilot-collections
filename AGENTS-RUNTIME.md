@@ -120,7 +120,7 @@ and planned work into the current context.
 - **[gh-aw-compile](gh-aw-compile/SKILL.md)**: Regenerate and post-process all agentic workflows.
   You MUST load this skill when gh-aw is updated, workflow .md files change,
   or when asked to recompile/regenerate workflows.
-- **[gh-aw-debug](gh-aw-debug/SKILL.md)**: Diagnose and fix GitHub Agentic Workflows (`gh-aw`) failures
+- **[gh-aw-troubleshooting](gh-aw-troubleshooting/SKILL.md)**: Diagnose and fix GitHub Agentic Workflows (`gh-aw`) failures
   by analyzing logs for missing tools, permissions, or MCP configurations.
   You MUST load this skill when diagnosing or fixing `gh aw` workflow failures.
 - **[gh-aw-firewall-debug](gh-aw-firewall-debug/SKILL.md)**: Debug the AWF firewall by inspecting Docker containers,
@@ -167,7 +167,7 @@ and planned work into the current context.
 - **[github-aw](github-aw/SKILL.md)**: Safely update existing GitHub Agentic Workflows (gh-aw), distinguishing between
   frontmatter configuration that requires recompilation and markdown body prompt edits that do not.
   You MUST load this skill when updating or modifying an existing GitHub Agentic Workflow.
-- **[github-aw-debug](github-aw-debug/SKILL.md)**: Debug and refine GitHub Agentic Workflows (gh-aw) by analyzing
+- **[github-aw-troubleshooting](github-aw-troubleshooting/SKILL.md)**: Debug and refine GitHub Agentic Workflows (gh-aw) by analyzing
   execution logs, auditing runs, and resolving missing tool errors or prompt inefficiencies.
   You MUST load this skill when asked to debug, audit, or analyze a failing GitHub Agentic Workflow.
 - **[github-aw-memory](github-aw-memory/SKILL.md)**: Guide for persistent memory strategies in agentic workflows.

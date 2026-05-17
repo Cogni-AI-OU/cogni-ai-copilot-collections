@@ -1,9 +1,9 @@
 ---
-name: gh-aw-debug
+name: gh-aw-troubleshooting
 description: Diagnose and fix GitHub Agentic Workflows (gh-aw) failures by analyzing logs for missing tools, permissions, or MCP server configurations.
 ---
 
-# gh-aw-debug
+# gh-aw-troubleshooting
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 

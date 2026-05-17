@@ -1,9 +1,9 @@
 ---
-name: github-aw-debug
+name: github-aw-troubleshooting
 description: Debug and refine GitHub Agentic Workflows (gh-aw) by analyzing execution logs, auditing runs, and resolving missing tool errors or prompt inefficiencies. You MUST load this skill when asked to debug, audit, or analyze a failing GitHub Agentic Workflow.
 ---
 
-# GitHub Agentic Workflow Debugging
+# GitHub Agentic Workflow Troubleshooting
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 

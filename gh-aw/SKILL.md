@@ -113,7 +113,7 @@ When asked to create, update, debug, or upgrade GitHub Agentic Workflows, use `w
 1. **Setup**: Use `gh aw init` to initialize a repository, followed by `gh aw new <workflow-name>` or `gh aw add-wizard`.
 2. **Development**: Workflows are markdown files compiled via `gh aw compile` into GitHub Actions YAML (`.lock.yml`).
 3. **Execution**: Use `gh aw run <workflow-name>` to execute a workflow or `gh aw trial` for simulated runs.
-4. **Analysis**: If a run fails, load the `gh-aw-debug` skill to diagnose the root cause using `gh aw audit` and `gh aw logs`.
+4. **Analysis**: If a run fails, load the `gh-aw-troubleshooting` skill to diagnose the root cause using `gh aw audit` and `gh aw logs`.
 5. **Updating**: Run `gh aw upgrade` to get the latest agent files and apply codemods.
 
 ## What to Avoid
@@ -132,7 +132,7 @@ When asked to create, update, debug, or upgrade GitHub Agentic Workflows, use `w
 
 - **gh-aw-compile**:
   You MUST load this skill when recompiling Agentic Workflows.
-- **gh-aw-debug**:
+- **gh-aw-troubleshooting**:
   You MUST load this skill to diagnose and fix failing Agentic Workflows.
 - **gh-run**:
   You MUST load this skill when working with GitHub Actions workflow runs.
