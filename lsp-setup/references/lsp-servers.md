@@ -43,11 +43,16 @@ Requires **Java 21+** on `JAVA_HOME` or `$PATH`.
 
 ### Install
 
-| OS      | Command                           |
-|---------|-----------------------------------|
-| macOS   | `brew install jdtls`              |
-| Linux   | Check distro repos for `jdtls` or `eclipse.jdt.ls`; alternatively download from https://download.eclipse.org/jdtls/milestones/ |
-| Windows | Download from https://download.eclipse.org/jdtls/milestones/ and add `bin/` to `PATH` |
+| OS    | Command                |
+|-------|------------------------|
+| macOS | `brew install jdtls`   |
+
+- Linux: Check distro repos for `jdtls` or `eclipse.jdt.ls`.
+  Alternatively, download from
+  [jdtls downloads](https://download.eclipse.org/jdtls/milestones/).
+- Windows: Download from
+  [jdtls downloads](https://download.eclipse.org/jdtls/milestones/)
+  and add `bin/` to `PATH`.
 
 On macOS with Homebrew, the binary is installed as `jdtls` on `$PATH`.
 
