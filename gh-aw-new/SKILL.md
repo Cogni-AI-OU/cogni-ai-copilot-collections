@@ -17,8 +17,8 @@ Create new GitHub Agentic Workflows (gh-aw) by installing the CLI extension and 
    - If not installed or needs upgrade: `gh extension install github/gh-aw` or `gh extension upgrade github/gh-aw`
 2. **Fetch the Appropriate Prompt**:
    Use `webfetch` to retrieve the relevant instruction file based on the user's request, and read ALL instructions before proceeding:
-   - **Create New Workflow**: `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/create-agentic-workflow.md`
-   - **Create Shared Workflow**: `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/create-shared-agentic-workflow.md`
+   - **Create New Workflow**: `https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/create-agentic-workflow.md`
+   - **Create Shared Workflow**: `https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/create-shared-agentic-workflow.md`
 3. **Execute the Action**: Follow the fetched prompt's instructions exactly. Use `gh aw new <workflow-name>` to scaffold.
 4. **Review Changes**: Run `git status`. Ensure the following are present:
    - `.github/workflows/<workflow-name>.md`
@@ -66,4 +66,4 @@ gh aw compile <workflow-name>
 
 ## References
 
-- [Creating Agentic Workflows](https://github.com/github/gh-aw/blob/main/create.md)
+- [Creating Agentic Workflows](https://github.com/github/gh-aw/blob/v0.74.3/create.md)

@@ -180,10 +180,10 @@ mcp-scripts:
 
 ## References
 
-- [Upstream Debug Prompt](https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/debug-agentic-workflow.md)
-- [gh-aw Runbook](https://github.com/github/gh-aw/blob/main/.github/aw/runbooks/workflow-health.md)
+- [Upstream Debug Prompt](https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/debug-agentic-workflow.md)
+- [gh-aw Runbook](https://github.com/github/gh-aw/blob/v0.74.3/.github/aw/runbooks/workflow-health.md)
 - [Official gh-aw Repo](https://github.com/github/gh-aw)
-- [Debugging Agentic Workflows](https://github.com/github/gh-aw/blob/main/debug.md)
+- [Debugging Agentic Workflows](https://github.com/github/gh-aw/blob/v0.74.3/debug.md)
 - [Maintaining Repositories with Agentic Workflows](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/practices/maintaining-repos.md)
 
 ## Related Skills

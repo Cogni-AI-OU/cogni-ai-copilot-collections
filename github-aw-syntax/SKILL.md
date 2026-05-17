@@ -241,7 +241,7 @@ Reference for GitHub Agentic Workflows frontmatter schema, engines, networking, 
     ```
 
   - Selected variant available as `${{ experiments.<name> }}` and in `{{#if experiments.<name> }}` template blocks
-  - See [A/B Testing Experiments](https://github.com/github/gh-aw/blob/main/.github/aw/experiments.md) for full design guidance
+  - See [A/B Testing Experiments](https://github.com/github/gh-aw/blob/v0.74.3/.github/aw/experiments.md) for full design guidance
 
 - **`imports:`** - Array of workflow specifications to import (array)
   - Format: `owner/repo/path@ref` or local paths like `shared/common.md`
@@ -572,7 +572,7 @@ Reference for GitHub Agentic Workflows frontmatter schema, engines, networking, 
   - `startup-timeout:` - Timeout in seconds for MCP server initialization (integer or GitHub Actions expression, default: 120). Useful in `workflow_call` reusable workflows: `startup-timeout: ${{ inputs.startup-timeout }}`
   - `cli-proxy:` - Mount each user-facing MCP server as a standalone CLI tool on `PATH` (boolean, default: `false`). When enabled, the agent can call MCP servers via shell commands (e.g. `github issue_read --method get ...`). CLI-mounted servers remain in the MCP gateway so their containers start normally.
 
-- **`safe-outputs:`** - Safe output processing configuration. See [safe-outputs.md](https://github.com/github/gh-aw/blob/main/.github/aw/safe-outputs.md) for complete documentation of all output types: `create-issue`, `create-discussion`, `add-comment`, `create-pull-request`, `push-to-pull-request-branch`, `close-issue`, `close-discussion`, `update-issue`, `update-pull-request`, `add-labels`, `remove-labels`, `dispatch-workflow`, `call-workflow`, `create-code-scanning-alert`, `upload-asset`, `upload-artifact`, `assign-to-agent`, `assign-to-user`, and more.
+- **`safe-outputs:`** - Safe output processing configuration. See [safe-outputs.md](https://github.com/github/gh-aw/blob/v0.74.3/.github/aw/safe-outputs.md) for complete documentation of all output types: `create-issue`, `create-discussion`, `add-comment`, `create-pull-request`, `push-to-pull-request-branch`, `close-issue`, `close-discussion`, `update-issue`, `update-pull-request`, `add-labels`, `remove-labels`, `dispatch-workflow`, `call-workflow`, `create-code-scanning-alert`, `upload-asset`, `upload-artifact`, `assign-to-agent`, `assign-to-user`, and more.
 
   **Key safe-outputs global fields:**
   - `github-token:` — custom token for all safe-output jobs
@@ -672,7 +672,7 @@ cache:
 
 Cache steps are automatically added to the workflow job and the cache configuration is removed from the final `.lock.yml` file.
 
-> **Memory configuration**: For detailed documentation on `cache-memory:`, `repo-memory:`, and `comment-memory:` configuration including advanced options and use cases, see [memory.md](https://github.com/github/gh-aw/blob/main/.github/aw/memory.md).
+> **Memory configuration**: For detailed documentation on `cache-memory:`, `repo-memory:`, and `comment-memory:` configuration including advanced options and use cases, see [memory.md](https://github.com/github/gh-aw/blob/v0.74.3/.github/aw/memory.md).
 
 ## Available Coding Agents
 
@@ -712,10 +712,10 @@ Not all features are available across all engines. The table below summarizes pe
 - `max-runs` defaults to `500` and `max-effective-tokens` defaults to `25000000` when omitted.
 - `max-turns` limits the number of AI chat iterations per run (Claude only).
 - `max-continuations` enables autopilot mode with multiple consecutive runs (Copilot only).
-- `web-search` for Codex is disabled by default; add `tools: web-search:` to enable it. Other engines use a third-party MCP server — see [Using Web Search](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/web-search.md).
+- `web-search` for Codex is disabled by default; add `tools: web-search:` to enable it. Other engines use a third-party MCP server — see [Using Web Search](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/web-search.md).
 - `engine.agent` references a `.github/agents/` file for custom Copilot agent behavior. See [Copilot Custom Configuration](#copilot-custom-configuration).
-- `engine.bare` disables automatic context loading (memory files, custom instructions). See [Bare Mode](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/engines.md#bare-mode-bare).
-- `engine.harness` allows replacing the built-in Copilot harness script. See [Custom Harness Script](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/engines.md#custom-harness-script-harness).
+- `engine.bare` disables automatic context loading (memory files, custom instructions). See [Bare Mode](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/engines.md#bare-mode-bare).
+- `engine.harness` allows replacing the built-in Copilot harness script. See [Custom Harness Script](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/engines.md#custom-harness-script-harness).
 
 ## Extended Coding Agent Configuration
 
@@ -742,7 +742,7 @@ engine:
   agent: technical-doc-writer  # .github/agents/technical-doc-writer.agent.md
 ```
 
-See [Copilot Agent Files](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/copilot-custom-agents.md) for details.
+See [Copilot Agent Files](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/copilot-custom-agents.md) for details.
 
 ### Engine Environment Variables
 
@@ -757,7 +757,7 @@ engine:
     CUSTOM_API_ENDPOINT: https://api.example.com
 ```
 
-Environment variables can also be defined at workflow, job, step, and other scopes. See [Environment Variables](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/environment-variables.md) for complete documentation on precedence and all 13 env scopes.
+Environment variables can also be defined at workflow, job, step, and other scopes. See [Environment Variables](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/environment-variables.md) for complete documentation on precedence and all 13 env scopes.
 
 ## Tool Configuration
 
@@ -1098,6 +1098,6 @@ safe-outputs:
 
 ## References
 
-- [AI Engines (aka Coding Agents)](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/engines.md)
-- [gh-aw Syntax Reference](https://github.com/github/gh-aw/blob/main/.github/aw/syntax.md)
-- [gh-aw Engines Reference](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/reference/engines.md)
+- [AI Engines (aka Coding Agents)](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/engines.md)
+- [gh-aw Syntax Reference](https://github.com/github/gh-aw/blob/v0.74.3/.github/aw/syntax.md)
+- [gh-aw Engines Reference](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/reference/engines.md)

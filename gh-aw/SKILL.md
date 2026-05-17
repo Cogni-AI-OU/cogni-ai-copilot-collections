@@ -24,7 +24,7 @@ without GitHub CLI extension support), you can download and run the
 installation script:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/github/gh-aw/main/install-gh-aw.sh -o install-gh-aw.sh
+curl -sL https://raw.githubusercontent.com/github/gh-aw/v0.74.3/install-gh-aw.sh -o install-gh-aw.sh
 head -n 50 install-gh-aw.sh # Review the script before executing
 bash install-gh-aw.sh
 ```
@@ -103,10 +103,10 @@ mindmap
 
 When asked to create, update, debug, or upgrade GitHub Agentic Workflows, use `webfetch` to retrieve and read the appropriate instruction prompt from the official repository before proceeding:
 
-- **Create New Workflow**: `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/create-agentic-workflow.md`
-- **Update Existing Workflow**: `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/update-agentic-workflow.md`
-- **Upgrade Agentic Workflows**: `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/upgrade-agentic-workflows.md`
-- **Create Shared Agentic Workflow**: `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/create-shared-agentic-workflow.md`
+- **Create New Workflow**: `https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/create-agentic-workflow.md`
+- **Update Existing Workflow**: `https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/update-agentic-workflow.md`
+- **Upgrade Agentic Workflows**: `https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/upgrade-agentic-workflows.md`
+- **Create Shared Agentic Workflow**: `https://raw.githubusercontent.com/github/gh-aw/v0.74.3/.github/aw/create-shared-agentic-workflow.md`
 
 ## Core Process
 
@@ -125,8 +125,8 @@ When asked to create, update, debug, or upgrade GitHub Agentic Workflows, use `w
 
 - [gh-aw Documentation](https://github.com/github/gh-aw/)
 - [Official gh-aw Repo](https://github.com/github/gh-aw)
-- [gh-aw Runbook](https://github.com/github/gh-aw/blob/main/.github/aw/runbooks/workflow-health.md)
-- [Maintaining Repositories](https://github.com/github/gh-aw/blob/main/docs/src/content/docs/practices/maintaining-repos.md)
+- [gh-aw Runbook](https://github.com/github/gh-aw/blob/v0.74.3/.github/aw/runbooks/workflow-health.md)
+- [Maintaining Repositories](https://github.com/github/gh-aw/blob/v0.74.3/docs/src/content/docs/practices/maintaining-repos.md)
 
 ## Related Skills
 
