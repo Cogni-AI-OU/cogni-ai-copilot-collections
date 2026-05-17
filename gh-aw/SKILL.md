@@ -76,6 +76,16 @@ mindmap
     Analysis Commands
       list
         List workflows
+      audit
+        Audit workflow runs
+      checks
+        Classify CI check state
+      health
+        Show health overview
+      logs
+        Analyze workflow logs
+      status
+        Show workflow status
     Utilities
       completion
         Generate shell completion

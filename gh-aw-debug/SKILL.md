@@ -34,6 +34,25 @@ Diagnose, troubleshoot, and fix failing GitHub Agentic Workflows by analyzing lo
 - `gh aw health` → show health overview of all workflows in the repository
 - `gh aw mcp inspect <workflow-name>` → check active MCP server settings
 
+### Mindmap of Debug Commands
+
+```mermaid
+mindmap
+  root((gh aw debug))
+    audit
+      Investigate runs
+    logs
+      Analyze logs
+    checks
+      Classify CI state
+    health
+      Workflow health
+    status
+      Workflow status
+    mcp inspect
+      Active settings
+```
+
 ## Manual Debugging with CLI Commands
 
 ### Audit a specific run
