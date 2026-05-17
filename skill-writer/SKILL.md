@@ -1,6 +1,6 @@
 ---
 name: skill-writer
-description: 'Generate or refine agent skills. You MUST load this skill when creating, updating, or structuring SKILL.md files and bundling their resources.'
+description: 'Workflow and guidelines for generating or refining agent skills. You MUST load this skill when creating or updating SKILL.md files to ensure correct tone and writing style.'
 license: MIT
 ---
 

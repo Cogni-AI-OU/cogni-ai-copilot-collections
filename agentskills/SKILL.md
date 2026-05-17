@@ -1,8 +1,8 @@
 ---
 name: agentskills
 description: >-
-  Guidance on the Agent Skills open standard for creating portable, non-interactive, and secure Copilot agent skills.
-  You MUST load this skill when designing or manually creating agent skills.
+  Reference for the Agent Skills open standard. Defines the schema, directory structure, formatting, and portability requirements for agent skills.
+  You MUST load this skill to understand the technical structure of an agent skill.
 ---
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 # Agent Skills (Standard)
