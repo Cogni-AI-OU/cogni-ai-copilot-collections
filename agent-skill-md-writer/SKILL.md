@@ -43,22 +43,58 @@ the portable progressive loading architecture.
 Structure the generated file with the following sections (omit optional ones if unused):
 
 1. **YAML Frontmatter block**
-2. **Title (`# Skill Name`)**
-3. **Markdownlint overrides** (e.g., `<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->`)
-4. **`## When to Use`**: Concrete scenarios reinforcing description triggers.
-5. **`## When Not to Use`**
-6. **Section Discipline**: Use standard sections in a logical progression:
-   - `## Prerequisites` (Optional): Required tools, dependencies, or environment setup.
-   - `## Core Process` or `## Step-by-Step Workflows`: For repeatable procedures where sequence matters.
-   - `## Core Principles`
-   - `### Workflow` (Optional, under `## Core Process` or `## Step-by-Step Workflows`): Use for named sub-flows when a process section contains multiple distinct procedures.
-   - `## Common Pitfalls`: Table with Pitfall → Solution columns.
-   - `## Troubleshooting`: Reactive fixes (Symptom → Solution table).
-   - `## Best Practices`
-   - `## What to Avoid`
-   - `## Limitations`
-   - `## References`: Links to references/ files or external resources.
-   - `## Related Skills`: With brief description when to load (avoid circular dependencies).
+   Must include `name`, `description`, and `license` (MIT).
+   For the `description`, append `"You MUST load this skill when <condition>"` ONLY for exact, unambiguous triggers (e.g., a specific CLI command).
+   Omit this phrase for general-purpose skills.
+3. **Title (`# Skill Name`)**
+4. **Markdownlint overrides** (e.g., `<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->`)
+5. **`## When to Use`**: Concrete scenarios reinforcing description triggers.
+6. **`## When Not to Use`**: Explicit non-triggers to prevent false activation.
+7. **Section Discipline**: Use standard sections in a logical progression:
+   - `## Prerequisites` (Optional):
+     Required tools, dependencies, or environment setup.
+     **Requirement → Why it's needed**.
+     Use when the skill cannot function without specific external setup.
+   - `## Core Process` or `## Step-by-Step Workflows`:
+     Sequential, repeatable procedure(s).
+     **Numbered steps**, each imperative and verifiable.
+     Use `## Core Process` for a single canonical flow; use `## Step-by-Step Workflows` when the skill covers several related tasks (e.g., "Create", "Update", "Migrate").
+     - `### Workflow` (Optional):
+       Named sub-flow within a process section.
+       **Workflow Name → ordered steps**.
+       Use when a single process branches into multiple distinct named variants.
+   - `## Core Principles`:
+     Non-negotiable rules that shape every decision.
+     **Principle → Rationale** (short).
+     Use for invariants the agent must always uphold, regardless of task.
+   - `## Best Practices`:
+     Recommended (but not mandatory) techniques.
+     **Practice → Why it helps**.
+     Use for guidance that improves quality but isn't strictly required.
+   - `## What to Avoid`:
+     Anti-patterns and forbidden behaviors.
+     **Anti-pattern → Why it's harmful**.
+     Use for explicit "do NOT do this" guidance distinct from preventable mistakes (Common Pitfalls).
+   - `## Limitations`:
+     Known boundaries of what this skill can accomplish.
+     **Limitation → Workaround (if any)**.
+     Use to set realistic expectations and prevent the agent from attempting impossible tasks.
+   - `## Common Pitfalls`:
+     Proactive prevention.
+     **Pitfall → Prevention/Solution**.
+     Use to stop avoidable errors before they happen.
+   - `## Troubleshooting`:
+     Reactive recovery.
+     **Symptom → Diagnosis/Fix**.
+     Use to help the agent identify, isolate, and recover from problems that already occurred.
+   - `## References`:
+     Links to `references/` files or external resources.
+     **Title → URL or relative path**.
+     Use to enable progressive loading of long-form content without bloating `SKILL.md`.
+   - `## Related Skills`:
+     Other skills that complement this one.
+     **Skill name → When to load it**.
+     Use to suggest companion skills while avoiding circular dependencies (e.g. don't link parent skills).
 
 ## Bundling Resources
 
@@ -80,6 +116,14 @@ If the skill requires additional files, organize them into these specific folder
 - **Example Discipline**: Use fewer, shorter examples. Include only essential examples that demonstrate key patterns. Quality over quantity.
 - **Command-Line Tool Examples**: Derive usage dynamically via read/glob operations. Provide concise examples of key commands—focus on complex, multi-flag, piped, or non-standard operations.
 - **Skill Length Management**: Keep `SKILL.md` under 500 lines (ideally <200). Use `references/` for progressive loading of long content.
+
+## Common Pitfalls to Avoid
+
+- **Too Vague**: "Make the code better" → Specify exactly what "better" means.
+- **Too Restrictive**: Over-constraining can prevent useful optimizations.
+- **Missing Context**: Include relevant domain knowledge and terminology.
+- **No Examples**: Concrete examples guide LLM better than abstract descriptions.
+- **Ignoring Artifacts**: Don't refine prompts based on error feedback.
 
 ## What to Avoid
 
