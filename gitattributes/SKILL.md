@@ -95,6 +95,9 @@ Define attributes per path to enforce line-ending conversions, custom merge driv
 *.ex?     binpatch
 *.h       code diff=c
 CHANGELOG merge=union
+
+# Mark all agentic workflow .lock.yml files as generated.
+.github/workflows/*.lock.yml linguist-generated=true merge=ours
 ```
 
 Another example which can be used in `.github/aw/imports/.gitattributes`:
