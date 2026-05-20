@@ -76,10 +76,6 @@ Keeper stores facts **exclusively as Mermaid `mindmap`**. This is a hard invaria
 - Facts that are inherently relational, sequential, or directed-edge in nature are out of scope for Keeper.
 - Mindmap nodes may carry inline attributes via `::` notation (`budget::2400000.USD`), but edges between arbitrary nodes are forbidden.
 
-### Example Mindmap Structure
-
-See [FACTS.example.mmd](refs/FACTS.example.mmd) for the definitive example mindmap structure.
-
 Keep the keys in lexical order for diff clarity.
 
 ## Invocation Contract (Eight Verbs)

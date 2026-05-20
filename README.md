@@ -16,7 +16,7 @@ Cogni-AI-OU projects:
 ### Key Features
 
 - **GitHub Actions Workflows**: CI/CD and automation (OpenCode, pre-commit, etc.)
-- **AI Agent Configurations**: AGENTS.md and `*.agent.mmd` and skills for automated development
+- **AI Agent Configurations**: [agents/](agents/) directory with `*.agent.md` definitions and skills for automated development
 - **Pre-commit Hooks**: Linting and validation tooling
 
 ### How to Use
@@ -74,17 +74,7 @@ pre-commit run flake8 -a
 
 ## Project Layout
 
-- `cogni-ai-architect/cogni-ai-architect.agent.md`: primary agent configuration (source of truth for agent consumers)
-- `cogni-ai-context7-ops/cogni-ai-context7-ops.agent.md`: autonomous context7 ops for gathering and filtering docs
-- `cogni-ai-devops/cogni-ai-devops.agent.md`: elite autonomous DevOps and SRE agent
-- `cogni-ai-elite/cogni-ai-elite.agent.md`: elite agent configuration
-- `cogni-ai-fact-ops/cogni-ai-fact-ops.agent.md`: autonomous fact operator responsible for canonical fact files
-- `cogni-ai-manager/cogni-ai-manager.agent.md`: autonomous orchestration and coordination manager
-- `cogni-ai-keeper/cogni-ai-keeper.agent.md`: canonical fact custody and mindmap stewardship kernel
-- `cogni-ai-python-dev/cogni-ai-python-dev.agent.md`: autonomous Python Developer for writing Python 3 code
-- `cogni-ai-code-reviewer/cogni-ai-code-reviewer.agent.md`: elite autonomous code reviewer
-- `cogni-ai-plan-reviewer/cogni-ai-plan-reviewer.agent.md`: elite autonomous architectural reviewer
-- `cogni-ai-weaver/cogni-ai-weaver.agent.md`: canonical flow custody and diagram stewardship kernel
+- `agents/`: Cogni AI autonomous agent configurations (see [agents/README.md](agents/README.md) for catalog)
 - `AGENTS.md`: agents catalog and repository-specific guidance
 - `AGENTS-RUNTIME.md`: core loading protocols and execution logic for the GitHub Runtime
 - `AGENTS.mmd`: root canonical diagram, flows, and booting sequence visualizations (Initialization primary source)
@@ -92,48 +82,18 @@ pre-commit run flake8 -a
 - `docs/FACTS.mmd`: root canonical fact store and project mindmap
 - `docs/FLOWS.mmd`: root canonical timelines, flows, and dependency graphs
 - `.github/`: default templates, workflows, and GitHub-specific configurations
-- `.github/agents/`: AI agent configurations (cloned in CI)
-- `.github/instructions/`: AI agent instructions (cloned in CI)
-- `.github/skills/`: reusable capabilities and skills (cloned in CI)
 - `.tours/`: guided walkthroughs for repository onboarding
 - `README.md`: repository overview and local development workflow
 
 ## AI Agents
 
 This repository is the **source of truth** for Cogni AI agent configurations.
-Agent files live in agent-specific subdirectories so that when they are cloned
+Agent files live in the `agents/` directory so that when they are cloned
 into `.github/agents`, consumers receive them directly at
-`.github/agents/cogni-ai-architect/cogni-ai-architect.agent.md` (and `.github/agents/AGENTS.md`).
+`.github/agents/agents/cogni-ai-architect.agent.md` (and `.github/agents/AGENTS.md`).
 
-### Agent Configuration Files
-
-| File/Directory | Audience | Purpose |
-| -------------- | -------- | ------- |
-| [cogni-ai-architect/cogni-ai-architect.agent.md](cogni-ai-architect/cogni-ai-architect.agent.md) | Orchestrators | Primary Cogni AI Architect agent definition |
-| [cogni-ai-context7-ops/cogni-ai-context7-ops.agent.md](cogni-ai-context7-ops/cogni-ai-context7-ops.agent.md) | All agents | Autonomous Context7 Ops responsible for gathering and filtering documentation |
-| [cogni-ai-devops/cogni-ai-devops.agent.md](cogni-ai-devops/cogni-ai-devops.agent.md) | DevOps/SREs | Elite autonomous DevOps and SRE agent |
-| [cogni-ai-elite/cogni-ai-elite.agent.md](cogni-ai-elite/cogni-ai-elite.agent.md) | Orchestrators | Cogni AI Elite autonomous systems architect |
-| [cogni-ai-fact-ops/cogni-ai-fact-ops.agent.md](cogni-ai-fact-ops/cogni-ai-fact-ops.agent.md) | Fact Ops | Autonomous fact operator responsible for maintaining canonical fact files |
-| [cogni-ai-manager/cogni-ai-manager.agent.md](cogni-ai-manager/cogni-ai-manager.agent.md) | Managers | Autonomous orchestration and coordination manager |
-| [cogni-ai-keeper/cogni-ai-keeper.agent.md](cogni-ai-keeper/cogni-ai-keeper.agent.md) | Keepers | Canonical Fact Custody & Mindmap Stewardship Kernel |
-| [cogni-ai-python-dev/cogni-ai-python-dev.agent.md](cogni-ai-python-dev/cogni-ai-python-dev.agent.md) | Python Devs | Autonomous Python Developer responsible for writing and testing Python 3 code |
-| [cogni-ai-code-reviewer/cogni-ai-code-reviewer.agent.md](cogni-ai-code-reviewer/cogni-ai-code-reviewer.agent.md) | Reviewers | Elite autonomous code, PR analysis, and zero-defect enforcer |
-| [cogni-ai-plan-reviewer/cogni-ai-plan-reviewer.agent.md](cogni-ai-plan-reviewer/cogni-ai-plan-reviewer.agent.md) | Reviewers | Elite autonomous architectural reviewer for plan validation |
-| [cogni-ai-weaver/cogni-ai-weaver.agent.md](cogni-ai-weaver/cogni-ai-weaver.agent.md) | Weavers | Canonical Flow Custody & Diagram Stewardship Kernel |
-| [AGENTS.md](AGENTS.md) | All agents | Agents catalog and repository-specific guidance |
-| [AGENTS-RUNTIME.md](AGENTS-RUNTIME.md) | Runtime | Core loading protocols and execution logic |
-| [AGENTS.mmd](AGENTS.mmd) | Runtime | root canonical diagram, flows, and booting sequence visualizations (Initialization primary source) |
-| [CONSTRAINTS.mzn](CONSTRAINTS.mzn) | Runtime | formal constraint declarations (budgets, loop arrest, and guardrails) |
-| [docs/FACTS.mmd](docs/FACTS.mmd) | Fact Ops | root canonical fact store and project mindmap |
-| [docs/FLOWS.mmd](docs/FLOWS.mmd) | All agents | root canonical timelines, flows, and dependency graphs (Operational protocols) |
-| [.github/copilot-instructions.md](.github/copilot-instructions.md) | Copilot | Coding standards and project context |
-| [cogni-ai-architect/](cogni-ai-architect/) | Orchestrators | Local agent configs for this template repo |
-| [.github/skills/](.github/skills/) | All agents | Reusable capabilities (git, GitHub Actions, etc.) |
-
-See also:
-
-- [`AGENTS.md` file format specification](https://agents.md/)
-- [Best practices for using GitHub Copilot](https://gh.io/copilot-coding-agent-tips).
+See [agents/README.md](agents/README.md) for the full agent catalog, descriptions, and
+[AGENTS.md](AGENTS.md) for agent execution protocols and architecture principles.
 
 ### Installation
 
@@ -145,65 +105,9 @@ git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agents .github/agent
 git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-instructions .github/instructions
 git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-skills .github/skills
 
-# Symlink individual agents from their subdirectories to the discovery directory.
-for d in .github/agents/*/ ; do ln -fsv "$(basename "$d")/$(basename "$d").agent.md" .github/agents/ ; done
+# Symlink individual agents from the agents directory to the discovery directory.
+for f in .github/agents/agents/*.agent.md ; do ln -fsv "agents/$(basename "$f")" .github/agents/ ; done
 ```
-
-## Available Agents
-
-### [Cogni AI Architect agent](cogni-ai-architect/cogni-ai-architect.agent.md)
-
-Enhanced agent with critical thinking, robust problem-solving, and context-aware resource management. Features:
-
-- Automatic file size checking before viewing
-- Smart filtering for long outputs
-- Command installation fallback logic
-- Self-improvement capabilities
-- Never-give-up problem-solving approach
-
-### [Cogni AI Context7 Ops](cogni-ai-context7-ops/cogni-ai-context7-ops.agent.md)
-
-Autonomous Context7 Ops responsible for gathering and filtering documentation from Context7 into relevant context.
-
-### [Cogni AI DevOps](cogni-ai-devops/cogni-ai-devops.agent.md)
-
-Elite autonomous DevOps and Site Reliability Engineering agent. Focuses on task automation,
-CI/CD pipeline precision, infrastructure-as-code (IaC), and resolving deployment challenges.
-
-### [Cogni AI Elite](cogni-ai-elite/cogni-ai-elite.agent.md)
-
-Elite autonomous systems architect engineered for structural perfection and recursive problem decomposition.
-
-### [Cogni AI Fact Ops](cogni-ai-fact-ops/cogni-ai-fact-ops.agent.md)
-
-Autonomous fact operator responsible for maintaining canonical fact files and information consistency.
-
-### [Cogni AI Manager](cogni-ai-manager/cogni-ai-manager.agent.md)
-
-Autonomous orchestration and coordination manager responsible for routing work to specialized agents and ensuring
-end-to-end completion.
-
-### [Cogni AI Keeper](cogni-ai-keeper/cogni-ai-keeper.agent.md)
-
-Canonical fact-custody kernel and mindmap steward.
-Deep module for fact management via VCS-aligned plain-text mindmaps.
-
-### [Cogni AI Python Dev](cogni-ai-python-dev/cogni-ai-python-dev.agent.md)
-
-Autonomous Python Developer responsible for writing, testing, and debugging Python 3 code.
-
-### [Cogni AI Code Reviewer](cogni-ai-code-reviewer/cogni-ai-code-reviewer.agent.md)
-
-Elite autonomous agent for code review, PR analysis, and enforcing zero-defect quality and security validation.
-
-### [Cogni AI Plan Reviewer](cogni-ai-plan-reviewer/cogni-ai-plan-reviewer.agent.md)
-
-Elite autonomous architectural reviewer for plan validation and ensuring strategic alignment.
-
-### [Cogni AI Weaver](cogni-ai-weaver/cogni-ai-weaver.agent.md)
-
-Canonical flow-custody kernel and diagram steward. Specializes in flowchart memory:
-decision chains, causal flows, dependencies, state transitions, timelines.
 
 ## How to Use Custom Agents
 

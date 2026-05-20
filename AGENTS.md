@@ -7,62 +7,10 @@ For general project invariants see [README.md](README.md).
 ## Agents Catalog
 
 This repository is the source of truth for Cogni AI agent files.
-Agent files live in agent-specific subdirectories so they are accessible
+Agent files live in the `agents/` directory so they are accessible
 directly when this repo is cloned into `.github/agents`.
 
-- [**Cogni AI Agent Auditor**](cogni-ai-agent-auditor/cogni-ai-agent-auditor.agent.md):
-  Expert autonomous auditor specializing in analyzing agent session logs, evaluating reasoning workflows,
-  and generating visual reports.
-- [**Cogni AI Architect**](cogni-ai-architect/cogni-ai-architect.agent.md):
-  Primary autonomous coding agent with critical thinking, robust problem-solving,
-  and context-aware resource management.
-- [**Cogni AI DevOps**](cogni-ai-devops/cogni-ai-devops.agent.md):
-  Elite autonomous DevOps and Site Reliability Engineering agent focusing on task
-  automation, CI/CD pipeline precision, and infrastructure-as-code.
-- [**Cogni AI Elite**](cogni-ai-elite/cogni-ai-elite.agent.md):
-  Elite autonomous systems architect engineered for structural perfection
-  and recursive problem decomposition.
-- [**Cogni AI Docs Editor**](cogni-ai-docs-editor/cogni-ai-docs-editor.agent.md):
-  Autonomous documentation operator responsible for managing, reviewing,
-  and maintaining repository documentation using the docs-review skill.
-- [**Cogni AI Fact Ops**](cogni-ai-fact-ops/cogni-ai-fact-ops.agent.md):
-  Autonomous fact operator responsible for maintaining canonical fact files
-  and information consistency.
-- [**Cogni AI Context7 Ops**](cogni-ai-context7-ops/cogni-ai-context7-ops.agent.md):
-  Autonomous context gathering agent specialized in retrieving and filtering
-  documentation from the Context7 service.
-- [**Cogni AI GitHub Ops**](cogni-ai-github-ops/cogni-ai-github-ops.agent.md):
-  Autonomous GitHub Operator responsible for GitHub operations such as
-  modifying comments, issues, or discussions on behalf of other agents.
-- [**Cogni AI Manager**](cogni-ai-manager/cogni-ai-manager.agent.md):
-  Autonomous orchestration and coordination manager responsible for routing work
-  to specialized agents and ensuring end-to-end completion.
-- [**Cogni AI Keeper**](cogni-ai-keeper/cogni-ai-keeper.agent.md):
-  Canonical fact custody and mindmap stewardship kernel for structured
-  knowledge management.
-- [**Cogni AI Python Dev**](cogni-ai-python-dev/cogni-ai-python-dev.agent.md):
-  Autonomous Python Developer responsible for writing, testing,
-  and debugging Python 3 code.
-- [**Cogni AI Code Reviewer**](cogni-ai-code-reviewer/cogni-ai-code-reviewer.agent.md):
-  Elite autonomous code reviewer for PR analysis, quality enforcement,
-  and zero-defect security validation.
-  Operates in a strict review-only mode via GitHub API/CLI (`gh pr`)
-  without executing tests or mutating files.
-- [**Cogni AI Plan Reviewer**](cogni-ai-plan-reviewer/cogni-ai-plan-reviewer.agent.md):
-  Elite autonomous architectural reviewer for plan validation
-  and ensuring strategic alignment.
-- [**Cogni AI Security Auditor**](cogni-ai-security-auditor/cogni-ai-security-auditor.agent.md):
-  Elite autonomous security auditor specializing in zero-defect threat modeling,
-  vulnerability detection, and hardening boundaries.
-- [**Cogni AI Tester**](cogni-ai-tester/cogni-ai-tester.agent.md):
-  Autonomous Tester responsible for executing test tasks, ensuring quality,
-  and verifying system behavior.
-- [**Cogni AI Weaver**](cogni-ai-weaver/cogni-ai-weaver.agent.md):
-  Canonical flow custody and diagram stewardship kernel specializing in
-  flowchart and dependency memory.
-- [**Cogni AI Brain Ops**](cogni-ai-brain-ops/cogni-ai-brain-ops.agent.md):
-  Autonomous brainstorming agent responsible for gathering facts,
-  describing constraints, and architecting suggested plans and tasks.
+See [agents/README.md](agents/README.md) for the complete agent catalog with descriptions.
 
 ## Persistent Memory & Context Files
 
@@ -73,8 +21,8 @@ Read and merge these when operating inside corresponding sub-directories or repo
 - `CONSTRAINTS.mzn` (Formal constraint declarations: scheduler-theoretic bounds, budget protocol, and loop arrest)
 - [`.github/AGENTS.md`](.github/AGENTS.md) (Directory-specific health and agent guidance)
 - [`.github/copilot-instructions.md`](.github/copilot-instructions.md) (Domain context and IDE constraints)
-- [`.github/skills/AGENTS.md`](.github/skills/AGENTS.md) to discover the available
-  skill catalog before interpreting the user request
+- `AGENTS-RUNTIME.md` (runtime loading protocols and skill catalog)
+- `.github/skills/AGENTS.md` (cloned in CI; skill catalog before interpreting the user request)
 - [`.vscode/AGENTS.md`](.vscode/AGENTS.md) (command permissions and tasks)
 - Any other directory-specific `AGENTS.md` or `*.agent.mmd` (which must be followed for sequence booting instructions),
   or `SKILL.md` in ancestor, then current directory tree

@@ -39,8 +39,8 @@
     },
     {
       "title": "Custom Agents",
-      "description": "## Custom Agent Profiles\n\nThe custom agent profiles are located in their respective directories in the repository root.\n\n### Notable Files:\n\n- **`cogni-ai-architect/cogni-ai-architect.agent.md`**: The Cogni AI Architect agent profile for autonomous engineering and system architecture",
-      "file": "cogni-ai-architect/cogni-ai-architect.agent.md",
+      "description": "## Custom Agent Profiles\n\nThe custom agent profiles are located in the `agents/` directory in the repository root.\n\n### Notable Files:\n\n- **`agents/cogni-ai-architect.agent.md`**: The Cogni AI Architect agent profile for autonomous engineering and system architecture",
+      "file": "agents/cogni-ai-architect.agent.md",
       "line": 1
     },
     {
