@@ -45,6 +45,7 @@ this repo is cloned into `.github/agents`.
 
 - **Agents Location**: Agent files live in the `agents/` directory.
 - **Skills Location**: Skill files live in the `skills/` directory.
+- **Instructions Location**: Instruction files live in the `instructions/` directory.
 
 ## Subagent Delegation
 
