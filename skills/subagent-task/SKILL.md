@@ -37,7 +37,7 @@ The use of the `task` tool and spawning sub-agents is permitted for complex, mul
 
 - **Vague Delegation Prompts**: Sending ambiguous instructions to the sub-agent ("fix the code") without explicit context or success criteria, resulting in poor outcomes.
 - **Ignoring Sub-Agent Output**: Failing to properly read and synthesize the results returned by the `task` tool before taking further action.
-- **Spawning the Wrong Agent Type**: Delegating a task to an inappropriate agent (e.g., using `python-dev` for DevOps automation instead of `devops`), leading to failed runs.
+- **Spawning the Wrong Agent Type**: Delegating a task to an inappropriate agent (e.g., using `programmer` for DevOps automation instead of `devops`), leading to failed runs.
 
 ## Example: Agent Delegation Protocol
 
@@ -51,7 +51,7 @@ flowchart TD
         Arch((Cogni AI Architect))
         Arch -->|task tool| DevOps[cogni-ai-devops<br/>Task automation, CI/CD, IaC]
         Arch -->|task tool| FactOps[cogni-ai-fact-ops<br/>Maintain facts & info consistency]
-        Arch -->|task tool| PyDev[cogni-ai-python-dev<br/>Write, test, debug Python]
+        Arch -->|task tool| Programmer[cogni-ai-programmer<br/>Write, test, debug Python]
         Arch -->|task tool| BrainOps[cogni-ai-brain-ops<br/>Gather facts, constraints, plan]
         Arch -->|task tool| GHOps[cogni-ai-github-ops<br/>Modify comments, issues, discussions]
         Arch -->|task tool| CodeRev[cogni-ai-code-reviewer<br/>PR analysis, quality, security]
@@ -73,12 +73,12 @@ flowchart TD
     Trigger -->|Docs updated| Docs["docs-editor<br/>Review and update documentation"]
     Trigger -->|GitHub writes| GHOps["github-ops<br/>Invoke GitHub write operations"]
     Trigger -->|Plan validation| PlanRev["plan-reviewer<br/>Validate plan plausibility"]
-    Trigger -->|Python needed| PyDev["python-dev<br/>Write and test Python code"]
+    Trigger -->|Python needed| Programmer["programmer<br/>Write and test Python code"]
     Trigger -->|Large diff| CodeRev["code-reviewer<br/>Final code quality review"]
     Trigger -->|Security audit/review| SecAud["security-auditor<br/>Perform security audit or review"]
 
     classDef scenario fill:#f9f,stroke:#333,stroke-width:2px;
-    class Docs,Brain,PyDev,GHOps,PlanRev,CodeRev,SecRev,DevOps scenario
+    class Docs,Brain,Programmer,GHOps,PlanRev,CodeRev,SecRev,DevOps scenario
 ```
 
 ## Usage Patterns

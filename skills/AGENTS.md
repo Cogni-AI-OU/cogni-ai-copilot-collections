@@ -135,6 +135,12 @@ Ollama is used for local LLM execution.
 - **Uni-directional sibling references**: Sibling skills should only reference each other in a single
   direction (e.g., `molecule` can reference `ansible`, but `ansible` should not reference `molecule`).
 
+### Plugin-skill migration
+
+- When a skill is moved from `skills/` to a plugin directory under `plugins/`, it MUST be removed
+  from the table in `skills/README.md`. The `skills/README.md` catalog lists only skills resident
+  in the `skills/` directory; plugin-bundled skills are documented by their plugin's own `README.md`.
+
 ## References
 
 - Main documentation: [../README.md](../README.md)

@@ -106,7 +106,6 @@
 | [pre-commit](pre-commit/SKILL.md) | Using pre-commit to validate code formatting and security. |
 | [pulumi-cli](pulumi-cli/SKILL.md) | Execute Pulumi CLI commands for stack management. |
 | [pulumi-docs](pulumi-docs/SKILL.md) | Access and fetch Pulumi documentation and registry schemas. |
-| [python](python/SKILL.md) | Expert Python skill for writing and testing idiomatic code. |
 | [python-cli](python-cli/SKILL.md) | Execute Python inline scripts for data transformation. |
 | [report-writer](report-writer/SKILL.md) | Generate comprehensive system audit reports. |
 | [rfc2119](rfc2119/SKILL.md) | Enforce correct usage of RFC 2119 requirement keywords. |

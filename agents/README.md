@@ -15,7 +15,7 @@ into `.github/agents`.
 | [cogni-ai-fact-ops.agent.md](cogni-ai-fact-ops.agent.md) | Fact Ops | Autonomous fact operator for maintaining canonical fact files |
 | [cogni-ai-manager.agent.md](cogni-ai-manager.agent.md) | Managers | Autonomous orchestration and coordination manager |
 | [cogni-ai-keeper.agent.md](cogni-ai-keeper.agent.md) | Keepers | Canonical Fact Custody & Mindmap Stewardship Kernel |
-| [cogni-ai-python-dev.agent.md](cogni-ai-python-dev.agent.md) | Python Devs | Autonomous Python Developer for writing and testing Python 3 code |
+| [cogni-ai-programmer](../plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md) | Python Devs | Autonomous programmer assistant specializing in Python |
 | [cogni-ai-code-reviewer.agent.md](cogni-ai-code-reviewer.agent.md) | Reviewers | Elite autonomous code, PR analysis, and zero-defect enforcer |
 | [cogni-ai-plan-reviewer.agent.md](cogni-ai-plan-reviewer.agent.md) | Reviewers | Elite autonomous architectural reviewer for plan validation |
 | [cogni-ai-weaver.agent.md](cogni-ai-weaver.agent.md) | Weavers | Canonical Flow Custody & Diagram Stewardship Kernel |
@@ -73,9 +73,9 @@ Autonomous orchestration and coordination manager responsible for routing work t
 Canonical fact-custody kernel and mindmap steward.
 Deep module for fact management via VCS-aligned plain-text mindmaps.
 
-### [Cogni AI Python Dev](cogni-ai-python-dev.agent.md)
+### [Cogni AI Programmer](../plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md)
 
-Autonomous Python Developer responsible for writing, testing, and debugging Python 3 code.
+Autonomous programmer assistant specializing in Python. Writes, refactors, and verifies Python 3 code with type safety and idiomatic patterns.
 
 ### [Cogni AI Code Reviewer](cogni-ai-code-reviewer.agent.md)
 
