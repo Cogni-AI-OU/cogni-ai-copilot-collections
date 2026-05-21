@@ -30,7 +30,7 @@
 | [context-aware-ops](context-aware-ops/SKILL.md) | Intelligent resource management with size checking to preserve context. |
 | [copilot-cli](copilot-cli/SKILL.md) | Guidance for installing and using GitHub Copilot CLI. |
 | [copilot-docs](copilot-docs/SKILL.md) | Reference and documentation for GitHub Copilot CLI customization. |
-| [critical-thinking](critical-thinking/SKILL.md) | Engage deep analytical reasoning and adversarial red-teaming. |
+| critical-thinking | *Moved to [plugins/cogni-ai-coder/skills/critical-thinking](../plugins/cogni-ai-coder/skills/critical-thinking/SKILL.md)* |
 | [datadog-agent](datadog-agent/SKILL.md) | Expert-level guidance for installing and configuring the Datadog Agent. |
 | [datadog-api](datadog-api/SKILL.md) | Execute Datadog API requests to fetch metrics or monitor statuses. |
 | [datadog-mcp](datadog-mcp/SKILL.md) | Query observability data via Datadog MCP. |
