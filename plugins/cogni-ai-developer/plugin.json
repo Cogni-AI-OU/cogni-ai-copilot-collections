@@ -4,8 +4,8 @@
     "name": "Cogni AI",
     "email": "237644711+cogni-ai-ee@users.noreply.github.com"
   },
-  "description": "Cogni AI developer agent. Specializes in software development.",
-  "keywords": ["developer", "development"],
+  "description": "Cogni AI developer agent. Specializes in full-cycle software development, shipping complete products end-to-end.",
+  "keywords": ["developer", "development", "full-cycle", "product-delivery"],
   "license": "MIT",
   "name": "cogni-ai-developer",
   "skills": ["skills/"],

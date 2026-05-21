@@ -1,48 +1,72 @@
 ---
 name: development
 description: >-
-  Workflow and guidelines for full-cycle software development, feature implementation,
-  and architecture-compliant execution. You MUST load this skill when building features
-  or acting as an autonomous developer.
+  Workflow and guidelines for full-cycle software development — from requirements
+  gathering and system design through deployment, monitoring, and iteration.
+  Focuses on building and shipping working software that delivers user and business value.
+  You MUST load this skill when building features or acting as an autonomous developer
+  responsible for end-to-end product delivery.
 license: MIT
 ---
 # development
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-A workflow and set of guidelines for robust, end-to-end feature development.
+A comprehensive workflow for delivering complete, usable software that solves real needs. Covers the entire product lifecycle: understanding user needs, designing solutions, building, deploying, monitoring, and iterating.
 
 ## When to Use
 
-- When developing new features or building software components.
-- When tasked with translating a user requirement into a fully functional implementation.
-- When you need to ensure code aligns with architectural patterns.
+- When developing end-to-end features that span multiple layers (frontend, backend, data).
+- When responsible for the full lifecycle: requirements → design → build → deploy → maintain.
+- When shipping software that must deliver user or business value, not just correct code.
+- When coordinating across technical and product concerns to make architectural trade-offs.
 
 ## When Not to Use
 
-- For simple one-line bug fixes that do not require full-cycle development context.
-- When just formatting or linting code.
-- When generating documentation without code changes.
+- For implementing well-defined, isolated specs without system design concerns (use `coding`).
+- For algorithmic or data-structure focused tasks without product context (use `programming`).
+- For tasks that are purely about writing tests (use `tdd`) or debugging.
+
+## Common Pitfalls
+
+- **Skipping Requirements Clarity**: Building the wrong feature because user needs were not validated.
+- **Ignoring Operations**: Delivering code that works locally but fails in production due to missing monitoring, logging, or deployment considerations.
+- **Stakeholder Silence**: Making technical decisions in isolation that conflict with product priorities or timelines.
+- **Rollout Neglect**: Shipping without a rollback plan, feature flags, or incremental rollout strategy.
 
 ## Core Process
 
-1. **Understand Requirements**: Analyze user request, identify core functionality, and constraints.
-2. **Context Gathering**: Map out existing architectural patterns, dependencies, and impacted modules.
-3. **Architecture Alignment**: Ensure the planned implementation seamlessly fits the existing structure.
-4. **Implementation Strategy**: Break down the feature into small, logical increments.
-5. **Execution**: Write clean, idiomatic, and maintainable code for each increment.
-6. **Integration**: Integrate newly developed code with existing systems safely.
-7. **Verification Check**: Ensure all tests, linters, and quality gates pass.
+1. **Understand Requirements**: Analyze the user or business need. Clarify scope, priorities, and success criteria with stakeholders.
+2. **Architecture & Design**: Choose technical approaches considering scalability, maintainability, and fit with existing systems.
+3. **Implementation Strategy**: Break down the feature into small, independently shippable increments.
+4. **Build & Integrate**: Write clean, production-grade code. Integrate with existing systems safely.
+5. **Testing & Quality**: Ensure comprehensive test coverage, CI/CD pipeline validation, and security review.
+6. **Deployment & Release**: Handle rollout, feature flags, and monitoring setup. Plan for rollback if needed.
+7. **Post-Release Iteration**: Monitor production metrics, gather feedback, and plan follow-up improvements.
 
 ## Core Principles
 
-- **End-to-End Ownership**: Deliver functional, verifiable features.
-- **Incremental Progress**: Build and verify in small steps.
-- **Maintainability First**: Write code that is easy to read, test, and adapt.
-- **Architectural Harmony**: Mimic existing patterns instead of inventing new ones unless explicitly required.
+- **End-to-End Ownership**: Take responsibility from idea to production and beyond.
+- **Product-First Thinking**: Understand *why* a feature exists and how it creates value for users.
+- **Incremental Delivery**: Ship small, verifiable increments rather than large batches.
+- **Operational Awareness**: Design for observability, deployability, and recoverability from day one.
+- **Stakeholder Communication**: Keep relevant parties informed about progress, trade-offs, and risks.
 
 ## What to Avoid
 
-- **Scope Creep**: Implementing more than what was asked.
+- **Requirements Bypass**: Implementing without validating understanding of the user need.
+- **Rollout Neglect**: Shipping without rollback planning, feature flags, or gradual exposure.
+- **Operational Blindness**: Delivering code without logging, metrics, or error handling for production.
+- **Scope Creep**: Adding unrequested features that delay delivery of the core value.
 - **Pattern Invention**: Ignoring existing architectural conventions in favor of personal preference.
-- **Skipping Verification**: Committing or delivering code without running local builds and tests.
+
+## Related Skills
+
+- **tdd**:
+  You MUST load this skill when practice Test-Driven Development for reliability and regression prevention.
+- **critical-thinking**:
+  You MUST load this skill when requirements are ambiguous or complex trade-offs need evaluation.
+- **coding**:
+  You MUST load this skill for rapid implementation of well-defined sub-tasks within a larger feature.
+- **programming**:
+  You MUST load this skill when designing the algorithmic or data-intensive components of a feature.

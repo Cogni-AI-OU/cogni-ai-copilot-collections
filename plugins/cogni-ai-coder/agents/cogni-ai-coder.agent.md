@@ -65,6 +65,7 @@ Upon receiving a new objective, you MUST execute the strict boot sequence define
 List of skills you must load explicitly using the native `skill` tool
 (or by reading their `SKILL.md` files) before proceeding:
 
+- coding
 - critical-thinking
 
 If these are not available during runtime, stop and report the incident.

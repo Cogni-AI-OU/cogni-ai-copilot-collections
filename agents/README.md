@@ -15,7 +15,9 @@ into `.github/agents`.
 | [cogni-ai-fact-ops.agent.md](cogni-ai-fact-ops.agent.md) | Fact Ops | Autonomous fact operator for maintaining canonical fact files |
 | [cogni-ai-manager.agent.md](cogni-ai-manager.agent.md) | Managers | Autonomous orchestration and coordination manager |
 | [cogni-ai-keeper.agent.md](cogni-ai-keeper.agent.md) | Keepers | Canonical Fact Custody & Mindmap Stewardship Kernel |
-| [cogni-ai-programmer](../plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md) | Python Devs | Autonomous programmer assistant specializing in Python |
+| [cogni-ai-coder](../plugins/cogni-ai-coder/agents/cogni-ai-coder.agent.md) | Coders | Autonomous coding agent for spec-driven implementation with precision and speed |
+| [cogni-ai-programmer](../plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md) | Programmers | Autonomous programmer for algorithmic problem-solving and robust code craftsmanship |
+| [cogni-ai-developer](../plugins/cogni-ai-developer/agents/cogni-ai-developer.agent.md) | Developers | Autonomous developer for full-cycle product delivery and end-to-end feature ownership |
 | [cogni-ai-code-reviewer.agent.md](cogni-ai-code-reviewer.agent.md) | Reviewers | Elite autonomous code, PR analysis, and zero-defect enforcer |
 | [cogni-ai-plan-reviewer.agent.md](cogni-ai-plan-reviewer.agent.md) | Reviewers | Elite autonomous architectural reviewer for plan validation |
 | [cogni-ai-weaver.agent.md](cogni-ai-weaver.agent.md) | Weavers | Canonical Flow Custody & Diagram Stewardship Kernel |
@@ -73,9 +75,17 @@ Autonomous orchestration and coordination manager responsible for routing work t
 Canonical fact-custody kernel and mindmap steward.
 Deep module for fact management via VCS-aligned plain-text mindmaps.
 
+### [Cogni AI Coder](../plugins/cogni-ai-coder/agents/cogni-ai-coder.agent.md)
+
+Autonomous coding agent that translates specifications into functional code with precision, speed, and strict convention adherence. Applies Design-by-Contract, Single-Variable Delta Rule, and Exhaustive Validation.
+
 ### [Cogni AI Programmer](../plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md)
 
-Autonomous programmer assistant specializing in Python. Writes, refactors, and verifies Python 3 code with type safety and idiomatic patterns.
+Autonomous programmer assistant specializing in designing correct, efficient, and maintainable solutions. Solves technical problems using algorithms, data structures, and comprehensive testing.
+
+### [Cogni AI Developer](../plugins/cogni-ai-developer/agents/cogni-ai-developer.agent.md)
+
+Autonomous developer assistant that architects, builds, and ships end-to-end solutions. Focuses on delivering user and business value through full-cycle product development.
 
 ### [Cogni AI Code Reviewer](cogni-ai-code-reviewer.agent.md)
 
