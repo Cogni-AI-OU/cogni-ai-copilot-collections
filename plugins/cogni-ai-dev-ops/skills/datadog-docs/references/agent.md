@@ -1,26 +1,8 @@
----
-name: datadog-agent
-description: Use when installing, configuring, or updating Datadog Agent;
-license: MIT
----
+# Datadog Agent
 
-# Skill: datadog-agent
-
-<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+<!-- markdownlint-disable MD013 MD024 MD031 MD032 -->
 
 Expert-level guidance for installing, configuring, and extending the Datadog Agent, including Ansible orchestration and custom OpenMetrics checks.
-
-## When to Use
-
-- When configuring, installing, or troubleshooting the Datadog Agent on a Linux host.
-- To write custom Python check scripts (`AgentCheck` or `OpenMetricsBaseCheckV2`) for the agent.
-- When updating Ansible playbooks that deploy the `datadog.dd.agent` role.
-
-## When Not to Use
-
-- For querying Datadog APIs to read telemetry or dashboard data (use `datadog-api` instead).
-- When managing Datadog SaaS configurations like Monitors or SLOs (use `datadog-monitors`).
-- If you are deploying Datadog strictly via a Helm chart in Kubernetes without needing custom host-level Python checks.
 
 ## Common Pitfalls
 
@@ -114,3 +96,8 @@ class CustomOpenMetricsCheck(OpenMetricsBaseCheckV2):
 from datadog_checks.base.utils.subprocess_output import get_subprocess_output
 out, err, retcode = get_subprocess_output(["ls", "."], self.log, raise_on_empty_output=True)
 ```
+
+## References
+
+- [Datadog Agent](https://docs.datadoghq.com/agent/llms.txt): Install and configure the Agent to collect data
+  MUST be fetched when installing, configuring, or updating the Datadog Agent.

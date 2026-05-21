@@ -110,6 +110,7 @@ Structure the generated file with the following sections (omit optional ones if 
      Links to `references/` files or external resources.
      **Title → URL or relative path**.
      Use to enable progressive loading of long-form content without bloating `SKILL.md`.
+     Include explicit `MUST be fetched/loaded when <condition>` directives below specific links to clarify exactly when a reference should be read.
    - `## Related Skills`:
      Other skills that complement this one.
      **Skill name → When to load it**.

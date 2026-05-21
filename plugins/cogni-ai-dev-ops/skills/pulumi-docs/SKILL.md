@@ -53,4 +53,7 @@ license: MIT
 
 ## References
 
-- <https://www.pulumi.com/llms.txt>
+- [Datadog Provider](references/datadog.md)
+  MUST be fetched when creating or debugging Datadog infrastructure or monitors in Pulumi.
+- <https://www.pulumi.com/llms.txt> - The official Pulumi documentation curated for LLMs.
+  MUST be fetched when retrieving comprehensive Pulumi documentation, guides, or overarching provider concepts.

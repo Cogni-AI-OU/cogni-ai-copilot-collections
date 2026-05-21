@@ -1,8 +1,3 @@
----
-name: datadog-mcp
-description: Query observability data via Datadog MCP, selecting minimal toolsets to optimize context window and scope.
-license: MIT
----
 
 # Datadog MCP
 
@@ -54,9 +49,14 @@ check the full list of scopes (Datadog Role Permissions) and report to the user.
 
 ## Reference
 
+- [Datadog Bits AI for Developers LLMs context](https://docs.datadoghq.com/bits_ai/llms.txt)
+  MUST be fetched when interacting with AI (Dev Agent, SRE, MCP).
 - Datadog for VSCode: [GitHub repository](https://github.com/DataDog/datadog-for-vscode)
+  MUST be fetched when troubleshooting the VSCode extension.
 - Datadog MCP Server Toolsets: [Datadog docs](https://docs.datadoghq.com/bits_ai/mcp_server/#toolsets)
+  MUST be fetched when needing a comprehensive list of available toolsets and capabilities.
 - [Datadog Role Permissions](https://docs.datadoghq.com/account_management/rbac/permissions/#permissions-list)
+  MUST be fetched when checking required application key scopes or resolving 403 authorization errors.
 
 ## What to Avoid
 

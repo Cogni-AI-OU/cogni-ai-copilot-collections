@@ -1,28 +1,8 @@
----
-name: datadog-pulumi
-description: >-
-  Use when creating or debugging Datadog monitors in Pulumi YAML,
-  especially for schema mismatches, monitor validation errors, and provider-specific field mapping.
-license: MIT
----
-
-<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
-
 # Datadog Pulumi
 
-Use this skill to work with Datadog API examples using Pulumi.
+<!-- markdownlint-disable MD013 MD024 MD031 MD032 -->
 
-## When to Use
-
-- When migrating existing Datadog monitors from JSON definitions into declarative Pulumi YAML.
-- To troubleshoot type errors or schema validation failures during a `pulumi preview`.
-- When updating monitor thresholds or query definitions within an established Infrastructure as Code codebase.
-
-## When Not to Use
-
-- When writing raw Datadog API curl commands without Pulumi (use `datadog-api`).
-- For diagnosing why a specific Datadog monitor fired false positives in production (use `datadog-monitors`).
-- If the project uses Terraform instead of Pulumi for infrastructure management.
+Use this reference to work with Datadog API examples using Pulumi.
 
 ## Common Pitfalls
 
@@ -72,18 +52,9 @@ Use this flow when working with new Datadog resource types:
 - **Provider Panic**: During `Create` after a clean preview usually means a provider bug or an edge-case payload. Minimize optional fields first, then compare against the provider's monitor schema and upstream Terraform docs.
 - **Auth Failure**: If provider auth fails before monitor creation, inspect stack config and env credentials separately before changing monitor code.
 
-## What to Avoid
+## References
 
-- Assuming Datadog API JSON keys map 1:1 to Pulumi YAML.
-- Stopping at the first validation error; rewrite to the provider's actual shape and retry.
-- Guessing schema structures without running `pulumi package get-schema datadog@<version>`.
-
-## Limitations
-
-- Some complex widgets and nested variables in Datadog API might have poorly mapped Pulumi YAML unions, requiring careful extraction of schemas via `jq`.
-
-## Related Skills
-
-- **datadog-api**: Useful for fetching existing monitor JSON definitions via API to compare against Pulumi schema mapping.
-- **datadog-mcp**: Query existing observability data to help design and validate monitor thresholds.
-- **datadog-agent**: Datadog Agent configuration and custom checks.
+- [Pulumi Datadog Package Registry Registry](https://www.pulumi.com/registry/packages/datadog/index.md)
+  MUST be fetched when configuring the Datadog provider credentials (API/APP keys, URLs/regions),
+  setting up global default tags, adjusting HTTP retry logic, or looking up provider configuration settings.
+- <https://github.com/pulumi/pulumi-datadog>

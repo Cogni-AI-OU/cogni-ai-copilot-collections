@@ -1,26 +1,8 @@
----
-name: datadog-monitors
-description: Guidelines for designing, debugging, and troubleshooting Datadog monitor queries, handling common false positives, and operational edge cases.
-license: MIT
----
-
 # Datadog Monitors
 
 <!-- markdownlint-disable MD013 MD024 MD031 MD032 -->
 
-Use this skill to design, debug, and troubleshoot Datadog monitor evaluation logic, query semantics, and alert state management.
-
-## When to Use
-
-- When writing Pulumi, Terraform, or API payloads to create or update Datadog monitors.
-- To debug Datadog alerts that are stuck in a "ghost" or frozen state.
-- When reducing noise and false positives in infrastructure and application monitoring.
-
-## When Not to Use
-
-- For installing the actual Datadog Agent on a host (use `datadog-agent` instead).
-- When querying raw log or trace telemetry directly (use `datadog-api` or `datadog-mcp` instead).
-- If the user simply wants a link to the Datadog UI without altering query definitions.
+Guidelines for designing, debugging, and troubleshooting Datadog monitor queries, handling common false positives, and operational edge cases.
 
 ## Common Pitfalls
 
@@ -60,8 +42,7 @@ Use this skill to design, debug, and troubleshoot Datadog monitor evaluation log
 - Understand the difference between `on_missing_data: default` (what to do during normal evaluation) and explicit timeframe timeouts (what to do when an alerting entity vanishes).
 - When a monitor seems "stuck," inspect the specific tag groupings using the UI or the API (`group_states=all`) to understand exactly what tags are frozen.
 
-## Related Skills
+## References
 
-- **datadog-pulumi**: For mapping these monitor definition principles to Pulumi YAML.
-- **datadog-api**: For raw API state extraction (e.g., checking group states directly to find ghost tags).
-- **datadog-mcp**: For using Model Context Protocol to query underlying telemetry and build queries.
+- [Official Datadog Monitors LLM context](https://docs.datadoghq.com/monitors/llms.txt)
+  MUST be fetched when designing, debugging, or interacting with Datadog monitors.
