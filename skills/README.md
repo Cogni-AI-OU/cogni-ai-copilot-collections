@@ -117,7 +117,6 @@
 | [shell](shell/SKILL.md) | Efficient shell command execution with timing and best practices. |
 | [agent-skill-md-writer](agent-skill-md-writer/SKILL.md) | Generate or update SKILL.md files for coding agents. |
 | [subagent-task](subagent-task/SKILL.md) | Guidance and protocols for spawning sub-agents via the task tool. |
-| [tdd](tdd/SKILL.md) | Procedures for test engineering and the TDD lifecycle. |
 | [tester](tester/SKILL.md) | Elite autonomous test engineering kernel for proving correctness. |
 | [unicode](unicode/SKILL.md) | Reference for Unicode character hex ranges and regex blocks. |
 | [vim-ex](vim-ex/SKILL.md) | Non-interactive file editing with Vim Ex mode. |
