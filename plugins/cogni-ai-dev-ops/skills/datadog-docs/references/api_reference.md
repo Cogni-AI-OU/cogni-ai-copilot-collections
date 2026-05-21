@@ -17,7 +17,7 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 
 ## Diagnostics and Troubleshooting
 
-- `403 Forbidden`: Check `DD-API-KEY` and `DD-APPLICATION-KEY` validity and ensure they match the correct Datadog site (`datadoghq.com` vs `datadoghq.eu`).
+- `403 Forbidden`: Check `DD_API_KEY` and `DD_APP_KEY` validity and ensure they match the correct Datadog site (`datadoghq.com` vs `datadoghq.eu`).
 - `429 Too Many Requests`: Implement exponential backoff if hitting API rate limits.
 - `404 Not Found`: Verify the ID or endpoint path.
 
