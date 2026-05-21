@@ -92,9 +92,9 @@ pre-commit run flake8 -a
 Plugins are portable bundles that package agents, skills, and configuration together
 for easy installation. See the table below for currently available plugins:
 
-| Plugin | Description | Contents |
-| ------ | ----------- | -------- |
-| [cogni-ai-coder](plugins/cogni-ai-coder/) | Autonomous coding agent with critical-thinking skill | 1 agent, 1 skill |
+| Plugin | Description | Contents | Slash Commands |
+| ------ | ----------- | -------- | -------------- |
+| [cogni-ai-coder](plugins/cogni-ai-coder/) | Autonomous coding agent with critical-thinking skill | 1 agent, 1 skill | [`/cogni-ai-coder:critical-thinking`](plugins/AGENTS.md) |
 
 Install a plugin with the Copilot CLI:
 
