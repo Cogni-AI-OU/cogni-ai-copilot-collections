@@ -254,3 +254,8 @@ Comprehensive catalog of Datadog API endpoints organized by category.
 |----------|--------------|
 | API Reference (Overview) | <https://docs.datadoghq.com/api.md> |
 | API Latest | <https://docs.datadoghq.com/api/latest.md> |
+
+## References
+
+- [Datadog API Reference](https://docs.datadoghq.com/api_reference/llms.txt)
+  MUST be fetched for comprehensive catalog of all Datadog API endpoints.
