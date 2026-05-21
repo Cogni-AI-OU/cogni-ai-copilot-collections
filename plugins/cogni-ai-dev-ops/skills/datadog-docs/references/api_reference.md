@@ -4,7 +4,7 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 
 ## Core Process
 
-1. **Verify Credentials**: Ensure `DD-API-KEY` and `DD-APPLICATION-KEY` are available in the environment.
+1. **Verify Credentials**: Ensure `DD_API_KEY` and `DD_APP_KEY` are available in the environment.
 2. **Determine Datadog Site**: Default is `datadoghq.com`, but it could be `datadoghq.eu`, `us3.datadoghq.com`, etc. based on the target environment.
 3. **Execute API Call**: Construct the API request, passing necessary headers and query parameters.
 4. **Process Response**: Use text processing tools to parse and extract relevant data from the JSON response.
