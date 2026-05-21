@@ -14,8 +14,13 @@ Portable bundles that package agents, skills, and configuration together for eas
 
 ## Installation
 
+Register this repository as a plugin marketplace, then install by plugin name:
+
 ```bash
-copilot plugin install https://github.com/Cogni-AI-OU/cogni-ai-copilot-collections/tree/main/plugins/<plugin-name>
+# Register this collection as a marketplace
+copilot plugin marketplace add Cogni-AI-OU/cogni-ai-copilot-collections
+# Install a specific plugin by name
+copilot plugin install cogni-ai-architect@cogni-ai-copilot-collections
 ```
 
 Each plugin includes a `README.md` with detailed installation and usage instructions.

@@ -1,0 +1,61 @@
+{
+  "name": "cogni-ai-copilot-collections",
+  "owner": {
+    "name": "Cogni AI",
+    "email": "237644711+cogni-ai-ee@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Cogni AI autonomous agent plugins for GitHub Copilot CLI",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "cogni-ai-architect",
+      "description": "Elite autonomous systems architect engineered for structural perfection and recursive problem decomposition.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-architect"
+    },
+    {
+      "name": "cogni-ai-coder",
+      "description": "Autonomous coding agent with critical thinking, robust problem-solving, and context-aware resource management.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-coder"
+    },
+    {
+      "name": "cogni-ai-dev-ops",
+      "description": "Elite autonomous DevOps and Site Reliability Engineering agent focusing on task automation, CI/CD pipeline precision, and infrastructure-as-code.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-dev-ops"
+    },
+    {
+      "name": "cogni-ai-developer",
+      "description": "Autonomous developer agent specializing in full-cycle software development, shipping complete products end-to-end.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-developer"
+    },
+    {
+      "name": "cogni-ai-git-ops",
+      "description": "Autonomous git operations agent specializing in version control, complex git workflows, and repository management.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-git-ops"
+    },
+    {
+      "name": "cogni-ai-github-ops",
+      "description": "Autonomous GitHub operations agent specializing in GitHub workflows, pull requests, issues, actions, and agentic workflows.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-github-ops"
+    },
+    {
+      "name": "cogni-ai-programmer",
+      "description": "Autonomous programmer agent for multi-language problem-solving, algorithm design, and robust code craftsmanship.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-programmer"
+    },
+    {
+      "name": "cogni-ai-tester",
+      "description": "Elite autonomous test engineering agent focused on proving software correctness, preventing regressions, and designing refactor-resilient behavioral tests.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-tester"
+    }
+  ]
+}
