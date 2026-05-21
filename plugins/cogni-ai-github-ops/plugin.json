@@ -1,0 +1,13 @@
+{
+  "agents": "agents/",
+  "author": {
+    "name": "Cogni AI",
+    "email": "237644711+cogni-ai-ee@users.noreply.github.com"
+  },
+  "description": "Cogni AI GitHub operations agent. Specializes in GitHub workflows, pull requests, issues, actions, and agentic workflows.",
+  "keywords": ["github", "gh", "pull-request", "actions", "agentic-workflows"],
+  "license": "MIT",
+  "name": "cogni-ai-github-ops",
+  "skills": ["skills/"],
+  "version": "1.0.0"
+}

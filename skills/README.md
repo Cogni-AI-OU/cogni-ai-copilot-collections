@@ -48,40 +48,7 @@
 | [editorconfig](editorconfig/SKILL.md) | Generate comprehensive .editorconfig files based on project analysis. |
 | [fact-writer](fact-writer/SKILL.md) | Guidance for maintaining verifiable project fact files. |
 | [gdpr-compliant](gdpr-compliant/SKILL.md) | Apply GDPR-compliant engineering practices across your codebase. |
-| [gh](gh/SKILL.md) | GitHub CLI (`gh`) operations for issues, PRs, and workflows. |
-| [gh-agent-task](gh-agent-task/SKILL.md) | GitHub CLI (`gh agent-task`) operations for preview agent tasks. |
-| [gh-api](gh-api/SKILL.md) | Advanced GitHub CLI (`gh api`) queries and mutations. |
-| [gh-aw](gh-aw/SKILL.md) | GitHub Agentic Workflows (`gh aw`) operations for repository automation. |
-| [gh-aw-compile](gh-aw-compile/SKILL.md) | Regenerate and post-process all agentic workflows. |
-| [gh-aw-firewall](gh-aw-firewall/SKILL.md) | Use the AWF (Agentic Workflow Firewall) for network isolation. |
-| [gh-aw-firewall-debug](gh-aw-firewall-debug/SKILL.md) | Debug the AWF firewall and troubleshoot network issues. |
-| [gh-aw-new](gh-aw-new/SKILL.md) | Create new GitHub Agentic Workflows from scratch. |
-| [gh-aw-troubleshooting](gh-aw-troubleshooting/SKILL.md) | Diagnose and fix GitHub Agentic Workflows failures. |
-| [gh-codespace](gh-codespace/SKILL.md) | GitHub CLI (`gh codespace`) operations for managing codespaces. |
-| [gh-issue](gh-issue/SKILL.md) | GitHub CLI (`gh issue`) operations for managing issues. |
-| [gh-models](gh-models/SKILL.md) | GitHub CLI models (`gh models`) operations for running AI models. |
-| [gh-pr](gh-pr/SKILL.md) | GitHub CLI (`gh pr`) operations for pull requests and reviews. |
-| [gh-run](gh-run/SKILL.md) | GitHub CLI (`gh run`) operations for workflow runs and logs. |
-| [gh-search](gh-search/SKILL.md) | GitHub CLI (`gh search`) operations for searching code and PRs. |
-| [gh-skill](gh-skill/SKILL.md) | Expert-level guidance on managing agent skills via GitHub CLI. |
 | [gitattributes](gitattributes/SKILL.md) | Define and modify .gitattributes to standardize repo behavior. |
-| [github](github/SKILL.md) | GitHub-specific features and collaborative practices. |
-| [github-actions](github-actions/SKILL.md) | Diagnosing and debugging failing GitHub Actions workflows. |
-| [github-aw](github-aw/SKILL.md) | Safely update existing GitHub Agentic Workflows (gh-aw). |
-| [github-aw-agentics](github-aw-agentics/SKILL.md) | Expert-level guidance for optimizing and building gh-aw. |
-| [github-aw-memory](github-aw-memory/SKILL.md) | Guide for persistent memory strategies in agentic workflows. |
-| [github-aw-patterns](github-aw-patterns/SKILL.md) | Reference for common agentic operational patterns. |
-| [github-aw-practices](github-aw-practices/SKILL.md) | Organizational practices and rollout strategies for gh-aw. |
-| [github-aw-syntax](github-aw-syntax/SKILL.md) | Complete reference for GitHub Agentic Workflows syntax. |
-| [github-aw-troubleshooting](github-aw-troubleshooting/SKILL.md) | Debug and refine gh-aw by analyzing execution logs. |
-| [github-docs](github-docs/SKILL.md) | Reference and APIs for retrieving GitHub documentation. |
-| [github-issue](github-issue/SKILL.md) | Skills for working with GitHub Issues. |
-| [github-mcp-server](github-mcp-server/SKILL.md) | Guide for configuring the GitHub MCP server. |
-| [github-pr](github-pr/SKILL.md) | Skills for working with changes on a GitHub Pull Request. |
-| [github-pr-review](github-pr-review/SKILL.md) | Comprehensive PR review workflow for quality and security. |
-| [github-pulumi](github-pulumi/SKILL.md) | Manage GitHub resources with Pulumi CLI. |
-| [github-script](github-script/SKILL.md) | Advanced use cases for actions/github-script. |
-| [github-topics](github-topics/SKILL.md) | Search GitHub repositories by topics and keywords. |
 | [llmstxt](llmstxt/SKILL.md) | Standard for using /llms.txt to provide context to LLMs. |
 | [lsp-setup](lsp-setup/SKILL.md) | Enable code intelligence by configuring LSP servers. |
 | [mcp-cli](mcp-cli/SKILL.md) | Interface for MCP (Model Context Protocol) servers via CLI. |
