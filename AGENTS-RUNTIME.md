@@ -8,8 +8,8 @@ This repository is the source of truth for Cogni AI agent files.
 Agent files live in the `agents/` directory so they are accessible directly when
 this repo is cloned into `.github/agents`.
 
-- [**Cogni AI Architect**](agents/cogni-ai-architect.agent.md):
-  Primary autonomous coding agent with critical thinking, robust problem-solving, and context-aware resource management.
+- [**Cogni AI Architect**](plugins/cogni-ai-architect/agents/cogni-ai-architect.agent.md):
+  Elite autonomous neurosymbolic architect engineered for structural perfection, recursive problem decomposition, and zero-defect invariants.
 - [**Cogni AI Coder**](plugins/cogni-ai-coder/agents/cogni-ai-coder.agent.md):
   Autonomous coding agent that translates specifications into functional code with precision, speed, and strict convention adherence.
 - [**Cogni AI DevOps**](agents/cogni-ai-devops.agent.md):

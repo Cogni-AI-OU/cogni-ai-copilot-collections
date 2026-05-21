@@ -1,0 +1,13 @@
+{
+  "agents": "agents/",
+  "author": {
+    "name": "Cogni AI",
+    "email": "237644711+cogni-ai-ee@users.noreply.github.com"
+  },
+  "description": "Cogni AI architect agent. Specializes in structural perfection, recursive problem decomposition, and neurosymbolic verification.",
+  "keywords": ["architecture", "system-design", "neuro-symbolic", "structural-perfection"],
+  "license": "MIT",
+  "name": "cogni-ai-architect",
+  "skills": ["skills/"],
+  "version": "1.0.0"
+}

@@ -97,7 +97,8 @@ for easy installation. See [plugins/README.md](plugins/README.md) for the availa
 This repository is the **source of truth** for Cogni AI agent configurations.
 Agent files live in the `agents/` directory so that when they are cloned
 into `.github/agents`, consumers receive them directly at
-`.github/agents/agents/cogni-ai-architect.agent.md` (and `.github/agents/AGENTS.md`).
+`.github/agents/agents/` (and `.github/agents/AGENTS.md`). Plugins are bundled
+in [`plugins/`](plugins/) as portable agent distributions with manifests.
 
 See [agents/README.md](agents/README.md) for the full agent catalog, descriptions, and
 [AGENTS.md](AGENTS.md) for agent execution protocols and architecture principles.

@@ -8,7 +8,7 @@ into `.github/agents`.
 
 | File | Audience | Purpose |
 | ---- | -------- | ------- |
-| [cogni-ai-architect.agent.md](cogni-ai-architect.agent.md) | Orchestrators | Primary Cogni AI Architect agent definition |
+| [cogni-ai-architect.agent.md](../plugins/cogni-ai-architect/agents/cogni-ai-architect.agent.md) | Orchestrators | Primary Cogni AI Architect agent definition (moved to plugin) |
 | [cogni-ai-context7-ops.agent.md](cogni-ai-context7-ops.agent.md) | All agents | Autonomous Context7 Ops for gathering and filtering documentation |
 | [cogni-ai-devops.agent.md](cogni-ai-devops.agent.md) | DevOps/SREs | Elite autonomous DevOps and SRE agent |
 | [cogni-ai-elite.agent.md](cogni-ai-elite.agent.md) | Orchestrators | Cogni AI Elite autonomous systems architect |
@@ -39,15 +39,11 @@ See also:
 
 ## Available Agents
 
-### [Cogni AI Architect](cogni-ai-architect.agent.md)
+### [Cogni AI Architect](../plugins/cogni-ai-architect/agents/cogni-ai-architect.agent.md)
 
-Enhanced agent with critical thinking, robust problem-solving, and context-aware resource management. Features:
+Elite autonomous engineering kernel and systems architect. Specializes in maximal-fidelity problem decomposition, backpropagation-style recursive self-refinement, and neurosymbolic verification. Includes the software-architecture skill for architectural design workflows.
 
-- Automatic file size checking before viewing
-- Smart filtering for long outputs
-- Command installation fallback logic
-- Self-improvement capabilities
-- Never-give-up problem-solving approach
+> **Note**: This agent has been moved to the [cogni-ai-architect plugin](../plugins/cogni-ai-architect/) for better distribution and maintenance.
 
 ### [Cogni AI Context7 Ops](cogni-ai-context7-ops.agent.md)
 
