@@ -26,12 +26,12 @@ license: MIT
 
 ## References
 
-- **API Reference Catalog**: `references/api_reference.md` - Comprehensive catalog of all Datadog API endpoints organized by category, sourced from the [Datadog API Reference](https://docs.datadoghq.com/api_reference/llms.txt).
+- [API Reference Catalog](references/api_reference.md)
+  MUST be fetched when interacting with the Datadog API.
 - <https://docs.datadoghq.com/llms.txt> - The official Datadog documentation curated for LLMs.
+  MUST be fetched for the full context.
 
 ## Related Skills
 
-- **datadog-api**:
-  You MUST load this skill when interacting with the Datadog API.
 - **datadog-agent**:
   You MUST load this skill when configuring the Datadog Agent.
