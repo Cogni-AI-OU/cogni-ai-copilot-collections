@@ -1,16 +1,16 @@
-# Example Ops Template
+# Cogni AI Copilot Collections
 
 [![PR Reviews][pr-reviews-image]][pr-reviews-link]
 [![License][license-image]][license-link]
 
-Template repository for applying Cogni-AI-OU operations standards, reusable workflows,
+Repository for applying Cogni-AI-OU operations standards, reusable workflows,
 prompt catalogs, coding instructions, and agent guidance to a project repository.
-This template mirrors the structure and conventions of the
+This repository mirrors the structure and conventions of the
 [Cogni-AI-OU/.github](https://github.com/Cogni-AI-OU/.github) organization repository.
 
-## What This Template Provides
+## What This Repository Provides
 
-This template repository includes the standard operations infrastructure for
+This repository includes the standard operations infrastructure for
 Cogni-AI-OU projects:
 
 ### Key Features
@@ -21,9 +21,9 @@ Cogni-AI-OU projects:
 
 ### How to Use
 
-1. Create a new repository from this template
-2. Customize the configuration files for your project
-3. Remove or modify sections that don't apply to your use case
+1. Explore the available agents, skills, and plugins
+2. Install the desired tools using GitHub CLI (`gh skills install ...`)
+3. Access installed agents through the Copilot chat or CLI
 
 ## Getting Started
 
@@ -95,7 +95,7 @@ for easy installation. See [plugins/README.md](plugins/README.md) for the availa
 ## AI Agents
 
 This repository is the **source of truth** for Cogni AI agent configurations.
-Agent files live in the `agents/` directory so that when they are cloned
+Agent files live in the `agents/` directory so that when they are installed
 into `.github/agents`, consumers receive them directly at
 `.github/agents/agents/` (and `.github/agents/AGENTS.md`). Plugins are bundled
 in [`plugins/`](plugins/) as portable agent distributions with manifests.
@@ -105,16 +105,14 @@ See [agents/README.md](agents/README.md) for the full agent catalog, description
 
 ### Installation
 
-To set up the required agents, instructions, and skills in your repository:
+To set up the required agents, instructions, plugins, and skills in your repository:
 
 ```bash
-# Clone agents, instructions, and skills.
-git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agents .github/agents
-git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-instructions .github/instructions
-git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-skills .github/skills
-
-# Symlink individual agents from the agents directory to the discovery directory.
-for f in .github/agents/agents/*.agent.md ; do ln -fsv "agents/$(basename "$f")" .github/agents/ ; done
+# Install agents, instructions, skills, and plugins using GitHub CLI
+gh skills install Cogni-AI-OU/cogni-ai-agents --scope user
+gh skills install Cogni-AI-OU/cogni-ai-agent-instructions --scope user
+gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user
+gh skills install Cogni-AI-OU/cogni-ai-plugins --scope user
 ```
 
 ## How to Use Custom Agents
@@ -220,8 +218,8 @@ This repository is licensed under MIT. See [LICENSE](LICENSE) for the full text.
 
 <!-- Named links -->
 
-[pr-reviews-image]: https://img.shields.io/github/issues-pr/Cogni-AI-OU/example-ops-template?label=PR+Reviews&logo=github
-[pr-reviews-link]: https://github.com/Cogni-AI-OU/example-ops-template/pulls
+[pr-reviews-image]: https://img.shields.io/github/issues-pr/Cogni-AI-OU/cogni-ai-copilot-collections?label=PR+Reviews&logo=github
+[pr-reviews-link]: https://github.com/Cogni-AI-OU/cogni-ai-copilot-collections/pulls
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-link]: https://tldrlegal.com/license/mit-license
 [customize-env]: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment
