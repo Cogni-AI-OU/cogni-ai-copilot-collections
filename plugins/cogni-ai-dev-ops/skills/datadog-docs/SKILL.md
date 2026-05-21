@@ -58,10 +58,14 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
   MUST be fetched when querying or analyzing Datadog telemetry via MCP.
 - [Datadog Monitors](references/monitors.md)
   MUST be fetched when designing, debugging, or troubleshooting Datadog monitor queries.
+- [Datadog Agent](references/agent.md)
+  MUST be fetched when configuring, installing, or troubleshooting the Datadog Agent.
 - <https://docs.datadoghq.com/llms.txt> - The official Datadog documentation curated for LLMs.
   MUST be fetched for the full context.
 - <https://docs.datadoghq.com/monitors/llms.txt> - The official Datadog Monitors documentation curated for LLMs.
   MUST be fetched when designing, debugging, or interacting with monitors.
+- <https://docs.datadoghq.com/agent/llms.txt> - Install and configure the Agent to collect data.
+  MUST be fetched when configuring, installing, or troubleshooting the Datadog Agent.
 - Datadog API Documentation: <https://docs.datadoghq.com/api/latest/>
   MUST be fetched when looking up specific API endpoints missing from local references.
 
@@ -81,7 +85,3 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 - The agent context window can be easily overwhelmed by full dashboard JSONs. Always filter the response with `jq` when possible.
 - For retrieving telemetry (logs, metrics, traces, monitors), **always prefer optimized MCP-based tools** over raw API calls if available, as they are specifically designed to optimize data size for the agent's context window.
 
-## Related Skills
-
-- **datadog-agent**:
-  You MUST load this skill when configuring the Datadog Agent.
