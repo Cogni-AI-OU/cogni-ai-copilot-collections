@@ -29,10 +29,10 @@ Comprehensive catalog of Datadog API endpoints organized by category.
 
 | Endpoint | Documentation |
 |----------|--------------|
-| Metrics | <https://docs.datadoghq.com/api/latest/metrics.md> |
-| Monitors | <https://docs.datadoghq.com/api/latest/monitors.md> |
 | Downtimes | <https://docs.datadoghq.com/api/latest/downtimes.md> |
 | Events | <https://docs.datadoghq.com/api/latest/events.md> |
+| Metrics | <https://docs.datadoghq.com/api/latest/metrics.md> |
+| Monitors | <https://docs.datadoghq.com/api/latest/monitors.md> |
 | Service Checks | <https://docs.datadoghq.com/api/latest/service-checks.md> |
 | Snapshots | <https://docs.datadoghq.com/api/latest/snapshots.md> |
 | Tags | <https://docs.datadoghq.com/api/latest/tags.md> |
@@ -70,8 +70,8 @@ Comprehensive catalog of Datadog API endpoints organized by category.
 | APM | <https://docs.datadoghq.com/api/latest/apm.md> |
 | APM Retention Filters | <https://docs.datadoghq.com/api/latest/apm-retention-filters.md> |
 | Error Tracking | <https://docs.datadoghq.com/api/latest/error-tracking.md> |
-| Service Dependencies | <https://docs.datadoghq.com/api/latest/service-dependencies.md> |
 | Service Definition | <https://docs.datadoghq.com/api/latest/service-definition.md> |
+| Service Dependencies | <https://docs.datadoghq.com/api/latest/service-dependencies.md> |
 | Spans | <https://docs.datadoghq.com/api/latest/spans.md> |
 | Spans Metrics | <https://docs.datadoghq.com/api/latest/spans-metrics.md> |
 
@@ -111,16 +111,16 @@ Comprehensive catalog of Datadog API endpoints organized by category.
 
 | Endpoint | Documentation |
 |----------|--------------|
+| Feature Flags | <https://docs.datadoghq.com/api/latest/feature-flags.md> |
+| Product Analytics | <https://docs.datadoghq.com/api/latest/product-analytics.md> |
 | RUM | <https://docs.datadoghq.com/api/latest/rum.md> |
 | Rum Audience Management | <https://docs.datadoghq.com/api/latest/rum-audience-management.md> |
 | Rum Metrics | <https://docs.datadoghq.com/api/latest/rum-metrics.md> |
+| Rum Retention Filters | <https://docs.datadoghq.com/api/latest/rum-retention-filters.md> |
 | Rum Replay Heatmaps | <https://docs.datadoghq.com/api/latest/rum-replay-heatmaps.md> |
 | Rum Replay Playlists | <https://docs.datadoghq.com/api/latest/rum-replay-playlists.md> |
 | Rum Replay Sessions | <https://docs.datadoghq.com/api/latest/rum-replay-sessions.md> |
 | Rum Replay Viewership | <https://docs.datadoghq.com/api/latest/rum-replay-viewership.md> |
-| Rum Retention Filters | <https://docs.datadoghq.com/api/latest/rum-retention-filters.md> |
-| Product Analytics | <https://docs.datadoghq.com/api/latest/product-analytics.md> |
-| Feature Flags | <https://docs.datadoghq.com/api/latest/feature-flags.md> |
 
 ## Synthetics
 
@@ -186,20 +186,20 @@ Comprehensive catalog of Datadog API endpoints organized by category.
 
 | Endpoint | Documentation |
 |----------|--------------|
-| Workflow Automation | <https://docs.datadoghq.com/api/latest/workflow-automation.md> |
 | Action Connection | <https://docs.datadoghq.com/api/latest/action-connection.md> |
 | Actions Datastores | <https://docs.datadoghq.com/api/latest/actions-datastores.md> |
 | App Builder | <https://docs.datadoghq.com/api/latest/app-builder.md> |
+| Workflow Automation | <https://docs.datadoghq.com/api/latest/workflow-automation.md> |
 
 ## Cases & Communication
 
 | Endpoint | Documentation |
 |----------|--------------|
-| Cases | <https://docs.datadoghq.com/api/latest/cases.md> |
-| Cases Projects | <https://docs.datadoghq.com/api/latest/cases-projects.md> |
 | Case Management | <https://docs.datadoghq.com/api/latest/case-management.md> |
 | Case Management Attribute | <https://docs.datadoghq.com/api/latest/case-management-attribute.md> |
 | Case Management Type | <https://docs.datadoghq.com/api/latest/case-management-type.md> |
+| Cases | <https://docs.datadoghq.com/api/latest/cases.md> |
+| Cases Projects | <https://docs.datadoghq.com/api/latest/cases-projects.md> |
 | Email Transport | <https://docs.datadoghq.com/api/latest/email-transport.md> |
 | Status Pages | <https://docs.datadoghq.com/api/latest/status-pages.md> |
 
@@ -234,19 +234,18 @@ Comprehensive catalog of Datadog API endpoints organized by category.
 | Endpoint | Documentation |
 |----------|--------------|
 | API Management | <https://docs.datadoghq.com/api/latest/api-management.md> |
+| Authorization Scopes | <https://docs.datadoghq.com/api/latest/scopes.md> |
 | Change Management | <https://docs.datadoghq.com/api/latest/change-management.md> |
 | Cloud Authentication | <https://docs.datadoghq.com/api/latest/cloud-authentication.md> |
 | Datasets | <https://docs.datadoghq.com/api/latest/datasets.md> |
 | High Availability MultiRegion | <https://docs.datadoghq.com/api/latest/high-availability-multiregion.md> |
 | Integrations | <https://docs.datadoghq.com/api/latest/integrations.md> |
 | Observability Pipelines | <https://docs.datadoghq.com/api/latest/observability-pipelines.md> |
+| SPA | <https://docs.datadoghq.com/api/latest/spa.md> |
 | Static Analysis | <https://docs.datadoghq.com/api/latest/static-analysis.md> |
 | Storage Management | <https://docs.datadoghq.com/api/latest/storage-management.md> |
 | Test Optimization | <https://docs.datadoghq.com/api/latest/test-optimization.md> |
 | Using the API | <https://docs.datadoghq.com/api/latest/using-the-api.md> |
-| Authorization Scopes | <https://docs.datadoghq.com/api/latest/scopes.md> |
-| SPA | <https://docs.datadoghq.com/api/latest/spa.md> |
-| Integrations | <https://docs.datadoghq.com/api/latest/integrations.md> |
 
 ## API Overview
 
