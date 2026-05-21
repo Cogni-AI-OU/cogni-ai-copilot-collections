@@ -4,6 +4,12 @@
 
 Autonomous coding agent plugin for GitHub Copilot. Specializes in writing, refactoring, and testing code while adhering strictly to project conventions.
 
+| | |
+|---|---|
+| **Description** | Autonomous coding agent with critical-thinking skill |
+| **Contents** | 1 agent, 1 skill |
+| **Slash Commands** | [`/cogni-ai-coder:critical-thinking`](../AGENTS.md) |
+
 ## Installation
 
 ### Using Copilot CLI

@@ -76,7 +76,7 @@ pre-commit run flake8 -a
 
 - `agents/`: Cogni AI autonomous agent configurations (see [agents/README.md](agents/README.md) for catalog)
 - `skills/`: Cogni AI autonomous agent skills (see [skills/README.md](skills/README.md) for catalog)
-- `plugins/`: Cogni AI plugin bundles (see [Available Plugins](#available-plugins) below)
+- `plugins/`: Cogni AI plugin bundles (see [plugins/README.md](plugins/README.md) for catalog)
 - `AGENTS.md`: agents catalog and repository-specific guidance
 - `AGENTS-RUNTIME.md`: core loading protocols and execution logic for the GitHub Runtime
 - `AGENTS.mmd`: root canonical diagram, flows, and booting sequence visualizations (Initialization primary source)
@@ -90,19 +90,7 @@ pre-commit run flake8 -a
 ## Available Plugins
 
 Plugins are portable bundles that package agents, skills, and configuration together
-for easy installation. See the table below for currently available plugins:
-
-| Plugin | Description | Contents | Slash Commands |
-| ------ | ----------- | -------- | -------------- |
-| [cogni-ai-coder](plugins/cogni-ai-coder/) | Autonomous coding agent with critical-thinking skill | 1 agent, 1 skill | [`/cogni-ai-coder:critical-thinking`](plugins/AGENTS.md) |
-
-Install a plugin with the Copilot CLI:
-
-```bash
-copilot plugin install https://github.com/Cogni-AI-OU/cogni-ai-copilot-collections/tree/main/plugins/<plugin-name>
-```
-
-Each plugin includes a `README.md` with detailed installation and usage instructions.
+for easy installation. See [plugins/README.md](plugins/README.md) for the available plugins.
 
 ## AI Agents
 

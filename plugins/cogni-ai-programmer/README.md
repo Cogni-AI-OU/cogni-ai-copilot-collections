@@ -4,6 +4,12 @@
 
 Autonomous programmer agent plugin for GitHub Copilot. Specializes in writing, refactoring, and testing Python code while adhering strictly to project conventions.
 
+| | |
+|---|---|
+| **Description** | Autonomous programmer agent with Python skill |
+| **Contents** | 1 agent, 1 skill |
+| **Slash Commands** | [`/cogni-ai-programmer:python`](../AGENTS.md) |
+
 ## Installation
 
 ### Using Copilot CLI
