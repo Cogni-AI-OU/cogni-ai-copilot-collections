@@ -1,0 +1,13 @@
+{
+  "agents": "agents/",
+  "author": {
+    "name": "Cogni AI",
+    "email": "237644711+cogni-ai-ee@users.noreply.github.com"
+  },
+  "description": "Cogni AI developer agent. Specializes in software development.",
+  "keywords": ["developer", "development"],
+  "license": "MIT",
+  "name": "cogni-ai-developer",
+  "skills": ["skills/"],
+  "version": "1.0.0"
+}
