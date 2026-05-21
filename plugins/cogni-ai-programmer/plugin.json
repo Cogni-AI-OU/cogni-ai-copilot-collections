@@ -4,8 +4,8 @@
     "name": "Cogni AI",
     "email": "237644711+cogni-ai-ee@users.noreply.github.com"
   },
-  "description": "Cogni AI programmer agent for multi-language code generation, refactoring, and testing.",
-  "keywords": ["programming", "code-generation", "refactoring"],
+  "description": "Cogni AI programmer agent for multi-language problem-solving, algorithm design, and robust code craftsmanship.",
+  "keywords": ["programming", "algorithms", "problem-solving", "code-craftsmanship"],
   "license": "MIT",
   "name": "cogni-ai-programmer",
   "skills": ["skills/"],

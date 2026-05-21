@@ -2,12 +2,12 @@
 
 [![License][license-image]][license-link]
 
-Autonomous development agent plugin for GitHub Copilot. Specializes in building robust, end-to-end software solutions.
+Autonomous development agent plugin for GitHub Copilot. Specializes in building and shipping complete, usable software that delivers user and business value.
 
 | | |
 |---|---|
-| **Description** | Autonomous developer agent with development and tdd skills |
-| **Contents** | 1 agent, 2 skills |
+| **Description** | Autonomous developer agent with development, tdd, and critical-thinking skills |
+| **Contents** | 1 agent, 3 skills |
 | **Slash Commands** | [`/cogni-ai-developer:development`](../AGENTS.md) <br/> [`/cogni-ai-developer:tdd`](../AGENTS.md) |
 
 ## Installation
@@ -26,8 +26,9 @@ copilot plugin install Cogni-AI-OU/cogni-ai-copilot-collections:plugins/cogni-ai
 
 ### Skills
 
-- **development** — Workflow and guidelines for full-cycle software development, feature implementation, and architecture-compliant execution.
+- **development** — Full-cycle software development workflow: from requirements and system design through deployment, monitoring, and iteration.
 - **tdd** — Commands, step-by-step procedures, and mechanical execution for test engineering, testability audits, and the TDD lifecycle.
+- **critical-thinking** — Deep analytical reasoning framework for deconstructing assumptions, evaluating trade-offs, and solving complex problems.
 
 ## Usage
 

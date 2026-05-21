@@ -10,6 +10,8 @@ this repo is cloned into `.github/agents`.
 
 - [**Cogni AI Architect**](agents/cogni-ai-architect.agent.md):
   Primary autonomous coding agent with critical thinking, robust problem-solving, and context-aware resource management.
+- [**Cogni AI Coder**](plugins/cogni-ai-coder/agents/cogni-ai-coder.agent.md):
+  Autonomous coding agent that translates specifications into functional code with precision, speed, and strict convention adherence.
 - [**Cogni AI DevOps**](agents/cogni-ai-devops.agent.md):
   Elite autonomous DevOps and Site Reliability Engineering agent focusing on task
   automation, CI/CD pipeline precision, and infrastructure-as-code.
@@ -28,7 +30,9 @@ this repo is cloned into `.github/agents`.
 - [**Cogni AI Keeper**](agents/cogni-ai-keeper.agent.md):
   Canonical fact custody and mindmap stewardship kernel for structured knowledge management.
 - [**Cogni AI Programmer**](plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md):
-  Autonomous programmer assistant specializing in Python. Writes, refactors, and verifies Python 3 code with type safety and idiomatic patterns.
+  Autonomous programmer assistant specializing in designing correct, efficient, and maintainable solutions using algorithmic reasoning and robust code craftsmanship.
+- [**Cogni AI Developer**](plugins/cogni-ai-developer/agents/cogni-ai-developer.agent.md):
+  Autonomous developer agent for full-cycle software delivery: from requirements and system design through deployment, monitoring, and iteration.
 - [**Cogni AI Code Reviewer**](agents/cogni-ai-code-reviewer.agent.md):
   Elite autonomous code reviewer for PR analysis, quality enforcement, and zero-defect security validation.
 - [**Cogni AI Plan Reviewer**](agents/cogni-ai-plan-reviewer.agent.md):

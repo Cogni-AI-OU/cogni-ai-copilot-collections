@@ -4,8 +4,8 @@
     "name": "Cogni AI",
     "email": "237644711+cogni-ai-ee@users.noreply.github.com"
   },
-  "description": "Cogni AI coding agent. Specializes in coding.",
-  "keywords": ["coding"],
+  "description": "Cogni AI coding agent. Specializes in implementing code from specifications with precision and speed.",
+  "keywords": ["coding", "implementation", "code-generation"],
   "license": "MIT",
   "name": "cogni-ai-coder",
   "skills": ["skills/"],

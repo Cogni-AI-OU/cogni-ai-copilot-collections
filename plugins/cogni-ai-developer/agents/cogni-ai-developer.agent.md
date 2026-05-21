@@ -67,5 +67,6 @@ List of skills you must load explicitly using the native `skill` tool
 
 - development
 - tdd
+- critical-thinking
 
 If these are not available during runtime, stop and report the incident.

@@ -51,7 +51,9 @@ flowchart TD
         Arch((Cogni AI Architect))
         Arch -->|task tool| DevOps[cogni-ai-devops<br/>Task automation, CI/CD, IaC]
         Arch -->|task tool| FactOps[cogni-ai-fact-ops<br/>Maintain facts & info consistency]
-        Arch -->|task tool| Programmer[cogni-ai-programmer<br/>Write, test, debug Python]
+        Arch -->|task tool| Coder[cogni-ai-coder<br/>Spec-driven code implementation]
+        Arch -->|task tool| Programmer[cogni-ai-programmer<br/>Algorithmic problem-solving]
+        Arch -->|task tool| Developer[cogni-ai-developer<br/>Full-cycle product delivery]
         Arch -->|task tool| BrainOps[cogni-ai-brain-ops<br/>Gather facts, constraints, plan]
         Arch -->|task tool| GHOps[cogni-ai-github-ops<br/>Modify comments, issues, discussions]
         Arch -->|task tool| CodeRev[cogni-ai-code-reviewer<br/>PR analysis, quality, security]

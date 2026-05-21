@@ -2,13 +2,13 @@
 
 [![License][license-image]][license-link]
 
-Autonomous coding agent plugin for GitHub Copilot. Specializes in writing, refactoring, and testing code while adhering strictly to project conventions.
+Autonomous coding agent plugin for GitHub Copilot. Specializes in implementing code from specifications with precision and speed.
 
 | | |
 |---|---|
-| **Description** | Autonomous coding agent with critical-thinking skill |
-| **Contents** | 1 agent, 1 skill |
-| **Slash Commands** | [`/cogni-ai-coder:critical-thinking`](../AGENTS.md) |
+| **Description** | Autonomous coding agent with coding and critical-thinking skills |
+| **Contents** | 1 agent, 2 skills |
+| **Slash Commands** | [`/cogni-ai-coder:coding`](../AGENTS.md) <br/> [`/cogni-ai-coder:critical-thinking`](../AGENTS.md) |
 
 ## Installation
 
@@ -22,10 +22,11 @@ copilot plugin install Cogni-AI-OU/cogni-ai-copilot-collections:plugins/cogni-ai
 
 ### Agents
 
-- **cogni-ai-coder** — Autonomous coding assistant that generates, refactors, and verifies code. Applies Design-by-Contract, Single-Variable Delta Rule, and Exhaustive Validation before completing any task.
+- **cogni-ai-coder** — Autonomous coding assistant that translates specifications into functional code with precision, speed, and strict convention adherence.
 
 ### Skills
 
+- **coding** — Workflow for implementing code from clear specifications. Focuses on syntax accuracy, convention compliance, and rapid delivery.
 - **critical-thinking** — Deep analytical reasoning framework for deconstructing assumptions, applying Socratic questioning, and performing adversarial red-teaming to solve complex problems.
 
 ## Usage
