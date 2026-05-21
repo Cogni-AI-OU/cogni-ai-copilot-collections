@@ -1,0 +1,13 @@
+{
+  "agents": "agents/",
+  "author": {
+    "name": "Cogni AI",
+    "email": "237644711+cogni-ai-ee@users.noreply.github.com"
+  },
+  "description": "Cogni AI tester agent. Elite autonomous test engineering kernel focused on proving software correctness, preventing regressions, and designing refactor-resilient behavioral tests.",
+  "keywords": ["tester", "testing", "test-engineering", "qa"],
+  "license": "MIT",
+  "name": "cogni-ai-tester",
+  "skills": ["skills/"],
+  "version": "1.0.0"
+}

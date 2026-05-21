@@ -39,7 +39,7 @@ this repo is cloned into `.github/agents`.
   Elite autonomous code reviewer for PR analysis, quality enforcement, and zero-defect security validation.
 - [**Cogni AI Plan Reviewer**](agents/cogni-ai-plan-reviewer.agent.md):
   Elite autonomous architectural reviewer for plan validation and ensuring strategic alignment.
-- [**Cogni AI Tester**](agents/cogni-ai-tester.agent.md):
+- [**Cogni AI Tester**](plugins/cogni-ai-tester/agents/cogni-ai-tester.agent.md):
   Autonomous Tester responsible for executing test tasks, ensuring quality, and verifying system behavior.
 - [**Cogni AI Weaver**](agents/cogni-ai-weaver.agent.md):
   Canonical flow custody and diagram stewardship kernel specializing in flowchart and dependency memory.

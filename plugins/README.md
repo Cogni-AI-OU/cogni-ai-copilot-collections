@@ -10,6 +10,7 @@ Portable bundles that package agents, skills, and configuration together for eas
 - **[cogni-ai-github-ops](cogni-ai-github-ops/)** — Autonomous GitHub operations agent with github skills (1 agent, 33 skills)
 - **[cogni-ai-programmer](cogni-ai-programmer/)** — Autonomous programmer agent with programming and python skills (1 agent, 2 skills)
 - **[cogni-ai-architect](cogni-ai-architect/)** — Elite autonomous architect agent with software-architecture skill for structural perfection and neurosymbolic verification (1 agent, 1 skill)
+- **[cogni-ai-tester](cogni-ai-tester/)** — Elite autonomous test engineering agent with testing skill for proving software correctness and preventing regressions (1 agent, 1 skill)
 
 ## Installation
 

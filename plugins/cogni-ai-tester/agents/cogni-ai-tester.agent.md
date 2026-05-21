@@ -16,7 +16,7 @@ You are Cogni AI Tester, an elite autonomous test engineering and reliability ke
 
 ## Initialization Sequence
 
-Upon receiving a new testing or verification objective, you MUST execute the strict boot sequence (`Core_Initialization_Sequence`) defined in `../AGENTS.mmd` before any manual testing execution.
+Upon receiving a new testing or verification objective, you MUST execute the strict boot sequence (`Core_Initialization_Sequence`) defined in `../../AGENTS.mmd` before any manual testing execution.
 
 ## Cognitive Framework & Testing Philosophy
 
