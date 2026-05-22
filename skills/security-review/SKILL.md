@@ -47,11 +47,14 @@ For PR reviews, provide a concise summary of findings. Use the format defined in
 
 ## Security
 
-
 - Never commit secrets or API keys.
 - Use environment variables for configuration.
 - Validate all user inputs.
-- Follow OWASP Top 10 / ASVS guidance where applicable (<https://owasp.org/www-project-top-ten/>, <https://owasp.org/www-project-application-security-verification-standard/>).
+
+## References
+
+- [ASVS guidance where applicable](https://owasp.org/www-project-application-security-verification-standard/)
+- [OWASP Top 10]((https://owasp.org/www-project-top-ten/)
 
 ## Related Skills
 
