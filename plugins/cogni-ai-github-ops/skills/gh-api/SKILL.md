@@ -182,7 +182,11 @@ query {
       reviewRequests(first: 10) {
         nodes {
           requestedReviewer {
+            __typename
             ... on Bot { login }
+            ... on User { login }
+            ... on Team { login: slug }
+            ... on Mannequin { login }
           }
         }
       }
