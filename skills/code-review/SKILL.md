@@ -74,13 +74,10 @@ Enforce these code quality standards during the review:
 
 - Functions do one thing.
 - Names are descriptive and intention-revealing.
-- No magic numbers or strings (use constants).
-- Error handling is explicit (no empty catch blocks).
-- No commented-out code added.
+- Error handling is explicit.
 - Tests cover the change.
-- ✅ Keep functions small and focused.
-- ✅ Match existing patterns in the codebase.
-- ❌ Add dependencies without justification.
+- Keep functions small and focused.
+- Match existing patterns in the codebase.
 
 ### Success Indicators
 
@@ -126,6 +123,9 @@ While the workflow is managed by `github-pr-review`, this skill focuses on analy
 - Quoting massive unchanged blocks in feedback. Highlight only the segments of code requiring attention.
 - Overlooking missing tests or shallow coverage.
 - Bypassing validation boundaries, leaking state, or hardcoding credentials.
+- Magic numbers or hardcoded strings without named constants.
+- Commented-out code left in the diff.
+- Adding dependencies without justification.
 
 ## Limitations
 
