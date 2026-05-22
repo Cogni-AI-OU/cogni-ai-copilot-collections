@@ -52,5 +52,10 @@ license: MIT
 
 ## References
 
-- [llms.txt Official Specification](https://llmstxt.org/)
-- <https://llmstxt.org/llms.txt>
+- [llms.txt Official Specification](https://llmstxt.org/) (links to docs)
+- [llms.txt proposal](https://llmstxt.org/index.md): The proposal for llms.txt
+  Includes Background, Proposal, Format, Example, Existing standards, Directories, Integrations.
+- [llmstxt.org/llms.txt](https://llmstxt.org/llms.txt)
+  Includes links to docs.
+- [llms.txt sites directory](https://llmstxt.site/)
+  A list of all llms.txt file locations across the web.
