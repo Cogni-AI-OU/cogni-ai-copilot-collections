@@ -58,3 +58,5 @@ Use this flow when working with new Datadog resource types:
   MUST be fetched when configuring the Datadog provider credentials (API/APP keys, URLs/regions),
   setting up global default tags, adjusting HTTP retry logic, or looking up provider configuration settings.
 - <https://github.com/pulumi/pulumi-datadog>
+- [Pulumi package's `schema.json`](https://www.pulumi.com/registry/packages/datadog/schema.json)
+  MUST be fetched when validating against schema. Due to large size, use `jq` or similar to filter the results.
