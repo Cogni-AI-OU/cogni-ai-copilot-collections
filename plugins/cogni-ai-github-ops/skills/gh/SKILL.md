@@ -398,7 +398,7 @@ When encountering a new `gh` CLI issue:
    - What was the intended outcome?
 
 2. **Find the solution**
-   - Load the relevant skills and their references which hasn't been loaded yet.
+   - Load the relevant skills and their references that have not been loaded yet.
    - Try alternative approaches.
    - Check GitHub CLI documentation.
    - Use GraphQL API directly if needed.
