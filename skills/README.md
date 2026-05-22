@@ -1,5 +1,19 @@
 # Cogni AI Agent Skills
 
+## Installation
+
+To install all skills from this collection:
+
+```bash
+gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user
+```
+
+To install a specific skill:
+
+```bash
+gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
+```
+
 ## Skill Catalog
 
 | Skill | Description |

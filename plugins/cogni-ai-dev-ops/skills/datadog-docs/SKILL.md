@@ -84,4 +84,3 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 
 - The agent context window can be easily overwhelmed by full dashboard JSONs. Always filter the response with `jq` when possible.
 - For retrieving telemetry (logs, metrics, traces, monitors), **always prefer optimized MCP-based tools** over raw API calls if available, as they are specifically designed to optimize data size for the agent's context window.
-

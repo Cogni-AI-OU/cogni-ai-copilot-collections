@@ -76,10 +76,10 @@ This provides a clear track of outstanding issues and reviewer feedback before d
 kanban:
   tickInterval: 1
 ---
-%% This diagram visualizes PR review threads and comments.
-%% Data can be retrieved using:
-%% gh api graphql -F owner="<owner>" -F repo="<repo>" -F number=<pr_number> ...
 kanban
+  %% This diagram visualizes PR review threads and comments.
+  %% Data can be retrieved using:
+  %% gh api graphql -F owner="<owner>" -F repo="<repo>" -F number=<pr_number> ...
   Active
     [Fix inline comments support]
       bodyText: Make sure inline comments are part of labels properly.
@@ -100,31 +100,29 @@ failing, or pending jobs. Map these findings using a Mermaid `flowchart` diagram
 **Example `flowchart` Diagram:**
 
 ```mermaid
-%% This diagram visualizes the topology and statuses of CI/CD checks for a PR.
-%% Data for this diagram can be retrieved natively using:
-%% gh pr checks <pr_number> --repo <owner>/<repo>
 flowchart LR
+%% This diagram visualizes the topology and statuses of CI/CD checks for a PR.
     pr(["PR #123: Minor fixes"])
 
     subgraph Checks ["CI Format & Linting"]
         direction TB
-        c3["Actionlint<br/>#{run_id}"]:::pass
-        c1["Link Checker<br/>#{run_id}"]:::pass
-        c2["Pre-commit<br/>#{run_id}"]:::pass
+        c3["Actionlint<br/>#&#123;run_id&#125;"]:::pass
+        c1["Link Checker<br/>#&#123;run_id&#125;"]:::pass
+        c2["Pre-commit<br/>#&#123;run_id&#125;"]:::pass
     end
 
     subgraph Tests ["Test Scenarios"]
         direction TB
-        m1["default<br/>#{run_id}"]:::pass
-        m3["qa<br/>#{run_id}"]:::fail
-        m2["test<br/>#{run_id}"]:::fail
+        m1["default<br/>#&#123;run_id&#125;"]:::pass
+        m3["qa<br/>#&#123;run_id&#125;"]:::fail
+        m2["test<br/>#&#123;run_id&#125;"]:::fail
     end
 
     pr --> Checks
     pr --> Tests
 
-    classDef pass fill:#d4edda,stroke:#28a745,color:#155724,stroke-width:2px;
-    classDef fail fill:#f8d7da,stroke:#dc3545,color:#721c24,stroke-width:2px;
+    classDef pass fill:#d4edda,stroke:#28a745,color:#155724,stroke-width:2px
+    classDef fail fill:#f8d7da,stroke:#dc3545,color:#721c24,stroke-width:2px
 ```
 
 To extract the list of checks, use the `gh pr checks <pr_number>` command.
@@ -137,10 +135,8 @@ and summarize the root causes and affected jobs.
 **Example `ishikawa-beta` Diagram:**
 
 ```mermaid
-%% This diagram categorizes CI failures for a PR, grouping them by logical categories.
-%% Data for this diagram can be retrieved natively using:
-%% gh pr checks <pr_number> --repo <owner>/<repo>
 ishikawa-beta
+%% This diagram categorizes CI failures for a PR, grouping them by logical categories.
     PR 123 CI Failures
     Test Scenarios
         qa (#1234)
