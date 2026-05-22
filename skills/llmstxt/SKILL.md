@@ -56,3 +56,5 @@ license: MIT
 - [llms.txt proposal](https://llmstxt.org/index.md): The proposal for llms.txt
   Includes Background, Proposal, Format, Example, Existing standards, Directories, Integrations.
 - [llmstxt.org/llms.txt](https://llmstxt.org/llms.txt): Covers `llms.txt` proposal overview, `## Docs` section with links to the proposal, Python library docs, and ed demo
+- [llms.txt sites directory](https://llmstxt.site/)
+  A list of all llms.txt file locations across the web.
