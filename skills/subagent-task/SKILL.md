@@ -90,6 +90,11 @@ flowchart TD
 - Ensure the primary agent acts as a coordinator, processing the `task_result` from each sub-agent before continuing the plan.
 - If a sub-agent misbehaves (e.g., returning an unexpected reply) or fails to meet expectations, report this issue to the user with a clear explanation.
 
+## What to Avoid
+
+- **Do NOT use `subagent_type` for skills**:
+  The `subagent_type` parameter is reserved for agent types. Skills are loaded inside the sub-agent via the `skill` tool.
+
 ## Related Skills
 
 - **critical-thinking**:
