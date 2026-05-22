@@ -120,7 +120,7 @@ unzip -d /tmp/run_logs /tmp/run_logs.zip
 
 ### Check if Copilot Review is Pending
 
-Query review requests for Bot reviewers:
+Query review requests across reviewer types:
 
 ```bash
 # Replace OWNER, REPO, PR_NUMBER with actual values
@@ -131,7 +131,11 @@ query {
       reviewRequests(first: 10) {
         nodes {
           requestedReviewer {
+            __typename
             ... on Bot { login }
+            ... on User { login }
+            ... on Team { login: slug }
+            ... on Mannequin { login }
           }
         }
       }
