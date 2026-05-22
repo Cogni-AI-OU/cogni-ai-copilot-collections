@@ -59,3 +59,6 @@ license: MIT
   Includes links to docs.
 - [llms.txt sites directory](https://llmstxt.site/)
   A list of all llms.txt file locations across the web.
+- [AnswerDotAI/llms-txt repo](https://github.com/AnswerDotAI/llms-txt)
+  Includes README.md with Background, Proposal, Format, Existing standards, Directories, Integrations and Next steps.
+  Repository also includes llms_txt/*.py Python mini scripts and nbs/*.ipynb notebooks.
