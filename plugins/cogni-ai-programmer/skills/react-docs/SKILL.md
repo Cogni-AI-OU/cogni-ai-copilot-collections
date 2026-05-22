@@ -2,7 +2,7 @@
 name: react-docs
 description: >-
   React documentation.
-  You MUST load this skill when asked to read React documentation, Hooks, Rules of React, or React APIs.'
+  You MUST load this skill when asked to read React documentation, Hooks, Rules of React, or React APIs.
 license: MIT
 ---
 

@@ -2,7 +2,7 @@
 name: reactnative-docs
 description: >-
   React Native documentation.
-  You MUST load this skill when interactive with React such as Native documentation, Core Components, or mobile APIs.
+  You MUST load this skill when interacting with React Native documentation, Core Components, or mobile APIs.
 license: MIT
 ---
 

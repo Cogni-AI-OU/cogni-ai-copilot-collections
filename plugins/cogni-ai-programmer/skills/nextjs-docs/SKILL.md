@@ -37,7 +37,7 @@ Next.js is the React framework for building full-stack web applications.
 
 ## References
 
-- [Next.js](https://nextjs.org/llms.txt](https://nextjs.org/llms.txt)
+- [Next.js](https://nextjs.org/llms.txt)
   MUST read for a Next.js documentation index.
   This link includes recent blog posts, documentation, support policy, etc.
 - [Next.js Documentation](https://nextjs.org/docs/llms.txt): Complete Next.js documentation for LLMs.
