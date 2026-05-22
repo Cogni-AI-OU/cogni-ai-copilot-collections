@@ -70,6 +70,16 @@ A cognitive framework for deep analytical reasoning.
 - **MiniZinc Dry-Code**:
   Write MiniZinc `.mzn` snippets to formally declare the parameters, decision variables, and constraints of the problem space, even if you do not execute the solver immediately.
 
+## Self-Improvement Workflow
+
+When encountering a new error or issue:
+
+1. **Document the problem**
+   - What command was run?
+   - What was the error or unexpected behavior?
+   - What was the intended outcome?
+   - Have you loaded the right skills to overcome this issue?
+
 ## What to Avoid
 
 - **Adjacent Polishing**: Don't "improve" adjacent code, comments, or formatting.
