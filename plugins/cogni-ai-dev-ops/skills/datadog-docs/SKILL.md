@@ -8,7 +8,8 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-Execute Datadog API requests to fetch live objects, metrics, or monitor statuses, and retrieve Datadog documentation via LLM-optimized endpoints.
+Execute Datadog API requests to fetch live objects, metrics, or monitor statuses,
+and retrieve Datadog documentation via LLM-optimized endpoints.
 
 ## When to Use
 
@@ -27,9 +28,13 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 
 ## Common Pitfalls
 
-- **Paginating Endlessly**: Running an API query that returns millions of log lines without using `jq` to truncate or filter the output, causing the agent to run out of memory.
-- **Leaking API Keys**: Accidentally echoing the `DD-API-KEY` or `DD-APPLICATION-KEY` in the terminal during debugging, exposing it in the workflow logs.
-- **Incorrect Endpoint Region**: Sending requests to `datadoghq.com` when the organization's Datadog instance is actually hosted on `datadoghq.eu` or `us3.datadoghq.com`, resulting in HTTP 403 or 404 errors.
+- **Paginating Endlessly**:
+  Running an API query that returns millions of log lines without using `jq` to truncate or filter the output, causing the agent to run out of memory.
+- **Leaking API Keys**:
+  Accidentally echoing the `DD-API-KEY` or `DD-APPLICATION-KEY` in the terminal during debugging, exposing it in the workflow logs.
+- **Incorrect Endpoint Region**:
+  Sending requests to `datadoghq.com` when the organization's Datadog instance is actually hosted on `datadoghq.eu` or `us3.datadoghq.com`,
+  resulting in HTTP 403 or 404 errors.
 
 ## Core Process
 
@@ -71,7 +76,9 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 
 ## Diagnostics and Troubleshooting
 
-- `403 Forbidden` or `Failed permission authorization checks`: Check `DD-API-KEY` and `DD-APPLICATION-KEY` validity and ensure they match the correct Datadog site (`datadoghq.com` vs `datadoghq.eu`). Also verify that the Application Key has the required scopes (e.g., `teams_write`, `users_read`) for the targeted API endpoint.
+- `403 Forbidden` or `Failed permission authorization checks`: Check `DD-API-KEY` and `DD-APPLICATION-KEY` validity
+  and ensure they match the correct Datadog site (`datadoghq.com` vs `datadoghq.eu`).
+  Also verify that the Application Key has the required scopes for the targeted API endpoint.
 - `429 Too Many Requests`: Implement exponential backoff if hitting API rate limits.
 - `404 Not Found`: Verify the ID, endpoint path, and ensure you are hitting the correct region endpoint.
 
@@ -83,4 +90,5 @@ Execute Datadog API requests to fetch live objects, metrics, or monitor statuses
 ## Limitations
 
 - The agent context window can be easily overwhelmed by full dashboard JSONs. Always filter the response with `jq` when possible.
-- For retrieving telemetry (logs, metrics, traces, monitors), **always prefer optimized MCP-based tools** over raw API calls if available, as they are specifically designed to optimize data size for the agent's context window.
+- For retrieving telemetry (logs, metrics, traces, monitors), **always prefer optimized MCP-based tools** over raw API calls if available,
+  as they are specifically designed to optimize data size for the agent's context window.
