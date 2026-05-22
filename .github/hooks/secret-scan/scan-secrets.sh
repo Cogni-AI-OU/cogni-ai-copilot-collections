@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Secrets Scanner Hook
+# Secret Scan Hook
 # Scans files modified during a Copilot coding agent session for accidentally
 # leaked secrets, credentials, and sensitive data before they are committed.
 #

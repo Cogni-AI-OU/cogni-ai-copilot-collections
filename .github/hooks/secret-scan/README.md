@@ -1,10 +1,10 @@
 ---
-name: 'Secrets Scanner'
+name: 'Secret Scan'
 description: 'Scans files modified during a Copilot coding agent session for leaked secrets, credentials, and sensitive data'
 tags: ['security', 'secrets', 'scanning', 'session-end']
 ---
 
-# Secrets Scanner Hook
+# Secret Scan Hook
 
 Scans files modified during a GitHub Copilot coding agent session for accidentally leaked secrets, credentials, API keys, and other sensitive data before they are committed.
 
@@ -34,13 +34,13 @@ AI coding agents generate and modify code rapidly, which increases the risk of h
 1. Copy the hook folder to your repository:
 
    ```bash
-   cp -r hooks/secrets-scanner .github/hooks/
+   cp -r hooks/secret-scan .github/hooks/
    ```
 
 2. Ensure the script is executable:
 
    ```bash
-   chmod +x .github/hooks/secrets-scanner/scan-secrets.sh
+   chmod +x .github/hooks/secret-scan/scan-secrets.sh
    ```
 
 3. Create the logs directory and add it to `.gitignore`:
@@ -63,7 +63,7 @@ The hook is configured in `hooks.json` to run on the `sessionEnd` event:
     "sessionEnd": [
       {
         "type": "command",
-        "bash": ".github/hooks/secrets-scanner/scan-secrets.sh",
+        "bash": ".github/hooks/secret-scan/scan-secrets.sh",
         "cwd": ".",
         "env": {
           "SCAN_MODE": "warn",
@@ -173,7 +173,7 @@ Scan events are written to `logs/copilot/secrets/scan.log` in JSON Lines format:
 
 ## Pairing with Other Hooks
 
-This hook pairs well with the **Session Auto-Commit** hook. When both are installed, order them so that `secrets-scanner` runs first:
+This hook pairs well with the **Session Auto-Commit** hook. When both are installed, order them so that `secret-scan` runs first:
 
 1. Secrets scanner runs at `sessionEnd`, catches leaked secrets
 2. Auto-commit runs at `sessionEnd`, only commits if all previous hooks pass
