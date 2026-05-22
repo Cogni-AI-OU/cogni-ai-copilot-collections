@@ -137,7 +137,8 @@ query {
       }
     }
   }
-}' --jq '.data.repository.pullRequest.reviewRequests.nodes[] | select(.requestedReviewer.login == "copilot-pull-request-reviewer")'
+}' --jq '.data.repository.pullRequest.reviewRequests.nodes[]
+  | select((.requestedReviewer.login // "" | sub("\\[bot\\]$"; "")) == "copilot-pull-request-reviewer")'
 ```
 
 If output is non-empty, Copilot review is pending (in progress).
@@ -148,7 +149,8 @@ Query completed reviews via REST API:
 
 ```bash
 gh api repos/OWNER/REPO/pulls/PR_NUMBER/reviews \
-  --jq '.[] | select(.user.login == "copilot-pull-request-reviewer[bot]") | {state, submitted_at}'
+  --jq '.[] | select((.user.login // "" | sub("\\[bot\\]$"; "")) == "copilot-pull-request-reviewer")
+    | {state, submitted_at}'
 ```
 
 Or via GraphQL:
@@ -167,7 +169,8 @@ query {
       }
     }
   }
-}' --jq '.data.repository.pullRequest.reviews.nodes[] | select(.author.login == "copilot-pull-request-reviewer")'
+}' --jq '.data.repository.pullRequest.reviews.nodes[]
+  | select((.author.login // "" | sub("\\[bot\\]$"; "")) == "copilot-pull-request-reviewer")'
 ```
 
 ### Full Copilot Review Status Summary
@@ -213,15 +216,16 @@ query {
 
 # Pending review request(s)
 jq '.data.repository.pullRequest.reviewRequests.nodes[]
-  | select(.requestedReviewer.login == "copilot-pull-request-reviewer")' <<<"$copilot_review_json"
+  | select((.requestedReviewer.login // "" | sub("\\[bot\\]$"; "")) == "copilot-pull-request-reviewer")' <<<"$copilot_review_json"
 
 # Completed review(s)
 jq '.data.repository.pullRequest.reviews.nodes[]
-  | select(.author.login == "copilot-pull-request-reviewer")' <<<"$copilot_review_json"
+  | select((.author.login // "" | sub("\\[bot\\]$"; "")) == "copilot-pull-request-reviewer")' <<<"$copilot_review_json"
 
 # Unresolved Copilot thread count
 jq '[.data.repository.pullRequest.reviewThreads.nodes[]
-  | select(.isResolved == false and .comments.nodes[0].author.login == "copilot-pull-request-reviewer")]
+  | select(.isResolved == false and
+      (.comments.nodes[0].author.login // "" | sub("\\[bot\\]$"; "")) == "copilot-pull-request-reviewer")]
   | length' <<<"$copilot_review_json"
 ```
 
