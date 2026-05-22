@@ -86,11 +86,11 @@ Enforce these code quality standards during the review:
 
 These principles are working if you see:
 
-- Fewer unnecessary changes in diffs
-- Fewer rewrites due to overcomplication
-- Clarifying questions come before implementation (not after mistakes)
-- Clean, minimal PRs without drive-by refactoring
-- Tests that document expected behavior
+- Fewer unnecessary changes in diffs.
+- Fewer rewrites due to overcomplication.
+- Clarifying questions come before implementation (not after mistakes).
+- Clean, minimal PRs without drive-by refactoring.
+- Tests that document expected behavior.
 
 ## Commands / Usage Patterns
 
