@@ -107,10 +107,10 @@ Structure the generated file with the following sections (omit optional ones if 
      **Symptom → Diagnosis/Fix**.
      Use to help the agent identify, isolate, and recover from problems that already occurred.
    - `## References`:
-     Links to `references/` files or external resources.
-     **Title → URL or relative path**.
+     Links to `references/` files or external resources, e.g., [Title](https://example.com/llms.txt)
      Use to enable progressive loading of long-form content without bloating `SKILL.md`.
      Include explicit `MUST be fetched/loaded when <condition>` directives below specific links to clarify exactly when a reference should be read.
+     When a link is provided in LLM-friendly plain-text format, include a list of key headers and topics to clarify what it covers.
    - `## Related Skills`:
      Other skills that complement this one.
      **Skill name → When to load it**.
