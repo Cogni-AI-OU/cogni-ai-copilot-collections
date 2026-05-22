@@ -281,6 +281,7 @@ If the runtime did not involve intended modification of files:
   one flow.
 - Do not use `gh api` for PR operations that have native `gh pr` subcommands unless you need raw JSON fields not
   exposed by `--json`.
+- NEVER run `gh pr merge` without verifying ALL of the following gates: CI checks ALL green, all review threads resolved.
 
 ## Related Skills
 
