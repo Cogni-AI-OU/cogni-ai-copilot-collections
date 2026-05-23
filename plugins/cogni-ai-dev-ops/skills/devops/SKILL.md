@@ -38,3 +38,21 @@ license: MIT
 
 - Write idempotent automation scripts.
 - Validate via local testing or staging environments before production rollouts.
+
+## Autonomous Execution Directive
+
+Execute multi-step workflows autonomously to completion, continuously looping and self-correcting until all success criteria are met.
+If a phase fails after 3 iterations or is blocked by an external dependency, stop execution, report the blocker, and request guidance.
+
+## Execution Model
+
+```python
+while not workflow_complete:
+    for phase in workflow_phases:
+        result = execute_phase(phase)
+        if result.needs_iteration:
+            iterate_until_success_or_max_retries(phase, max_retries=3)
+        if result.is_blocked:
+            report_blocker_and_stop()
+    check_completion_criteria()
+```
