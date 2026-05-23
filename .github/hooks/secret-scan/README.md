@@ -6,11 +6,14 @@ tags: ['security', 'secrets', 'scanning', 'session-end']
 
 # Secret Scan Hook
 
-Scans files modified during a GitHub Copilot coding agent session for accidentally leaked secrets, credentials, API keys, and other sensitive data before they are committed.
+Scans files modified during a GitHub Copilot coding agent session for accidentally leaked secrets, credentials, API keys,
+and other sensitive data before they are committed.
 
 ## Overview
 
-AI coding agents generate and modify code rapidly, which increases the risk of hardcoded secrets slipping into the codebase. This hook acts as a safety net by scanning all modified files at session end for 20+ categories of secret patterns, including:
+AI coding agents generate and modify code rapidly, which increases the risk of hardcoded secrets slipping into the
+codebase. This hook acts as a safety net by scanning all modified files at session end for 20+ categories of secret
+patterns, including:
 
 - **Cloud credentials**: AWS access keys, GCP service account keys, Azure client secrets
 - **Platform tokens**: GitHub PATs, npm tokens, Slack tokens, Stripe keys
@@ -79,7 +82,7 @@ The hook is configured in `hooks.json` to run on the `sessionEnd` event:
 ### Environment Variables
 
 | Variable | Values | Default | Description |
-|----------|--------|---------|-------------|
+| --- | --- | --- | --- |
 | `SCAN_MODE` | `warn`, `block` | `warn` | `warn` logs findings only; `block` exits non-zero to prevent auto-commit |
 | `SCAN_SCOPE` | `diff`, `staged` | `diff` | `diff` scans uncommitted changes vs HEAD; `staged` scans only staged files |
 | `SKIP_SECRETS_SCAN` | `true` | unset | Disable the scanner entirely |
@@ -101,17 +104,17 @@ The hook is configured in `hooks.json` to run on the `sessionEnd` event:
 ## Detected Secret Patterns
 
 | Pattern | Severity | Example Match |
-|---------|----------|---------------|
-| `AWS_ACCESS_KEY` | critical | `AKIAIOSFODNN7EXAMPLE` | <!-- pragma: allowlist secret -->
+| --- | --- | --- |
+| `AWS_ACCESS_KEY` | critical | `AKIAIOSFODNN7EXAMPLE` <!-- pragma: allowlist secret --> |
 | `AWS_SECRET_KEY` | critical | `aws_secret_access_key = wJalr...` |
 | `GCP_SERVICE_ACCOUNT` | critical | `"type": "service_account"` |
 | `GCP_API_KEY` | high | `AIzaSyC...` |
 | `AZURE_CLIENT_SECRET` | critical | `azure_client_secret = ...` |
 | `GITHUB_PAT` | critical | `ghp_xxxxxxxxxxxx...` |
 | `GITHUB_FINE_GRAINED_PAT` | critical | `github_pat_...` |
-| `PRIVATE_KEY` | critical | `-----BEGIN RSA PRIVATE KEY-----` | <!-- pragma: allowlist secret -->
-| `GENERIC_SECRET` | high | `api_key = "sk-..."` | <!-- pragma: allowlist secret -->
-| `CONNECTION_STRING` | high | `postgresql://user:pass@host/db` | <!-- pragma: allowlist secret -->
+| `PRIVATE_KEY` | critical | `-----BEGIN RSA PRIVATE KEY-----` <!-- pragma: allowlist secret --> |
+| `GENERIC_SECRET` | high | `api_key = "sk-..."` <!-- pragma: allowlist secret --> |
+| `CONNECTION_STRING` | high | `postgresql://user:pass@host/db` <!-- pragma: allowlist secret --> |
 | `SLACK_TOKEN` | high | `xoxb-...` |
 | `STRIPE_SECRET_KEY` | critical | `sk_live_...` |
 | `NPM_TOKEN` | high | `npm_...` |
@@ -124,14 +127,14 @@ See the full list in `scan-secrets.sh`.
 
 ### Clean scan
 
-```
+```text
 🔍 Scanning 5 modified file(s) for secrets...
 ✅ No secrets detected in 5 scanned file(s)
 ```
 
 ### Findings detected (warn mode)
 
-```
+```text
 🔍 Scanning 3 modified file(s) for secrets...
 
 ⚠️  Found 2 potential secret(s) in modified files:
@@ -146,7 +149,7 @@ See the full list in `scan-secrets.sh`.
 
 ### Findings detected (block mode)
 
-```
+```text
 🔍 Scanning 3 modified file(s) for secrets...
 
 ⚠️  Found 1 potential secret(s) in modified files:
@@ -173,7 +176,8 @@ Scan events are written to `logs/copilot/secrets/scan.log` in JSON Lines format:
 
 ## Pairing with Other Hooks
 
-This hook pairs well with the **Session Auto-Commit** hook. When both are installed, order them so that `secret-scan` runs first:
+This hook pairs well with the **Session Auto-Commit** hook. When both are installed, order them so that `secret-scan`
+runs first:
 
 1. Secrets scanner runs at `sessionEnd`, catches leaked secrets
 2. Auto-commit runs at `sessionEnd`, only commits if all previous hooks pass

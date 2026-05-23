@@ -2,13 +2,20 @@
 
 [![License][license-image]][license-link]
 
-Autonomous Git Operations agent plugin for GitHub Copilot. Specializes in version control, complex git workflows, rebase operations, and repository management.
+Autonomous Git Operations agent plugin for GitHub Copilot. Specializes in version control, complex git workflows,
+rebase operations, and repository management.
 
 | | |
-|---|---|
+| --- | --- |
 | **Description** | Autonomous Git Operations agent with git skills |
 | **Contents** | 1 agent, 2 skills |
-| **Slash Commands** | [`/cogni-ai-git-ops:git`](../AGENTS.md), [`/cogni-ai-git-ops:git-docs`](../AGENTS.md) |
+
+## Slash Commands
+
+| Command | Description |
+| --- | --- |
+| `/cogni-ai-git-ops:git` | Guide for using git with non-interactive, safe operations |
+| `/cogni-ai-git-ops:git-docs` | Official Git documentation index |
 
 ## Installation
 
@@ -28,12 +35,15 @@ claude plugin install cogni-ai-git-ops@cogni-ai-agentic-collections
 
 ### Agents
 
-- **cogni-ai-git-ops** — Autonomous Git Operations assistant that handles complex repository management tasks, merges, rebases, and history rewriting safely.
+- **cogni-ai-git-ops** — Autonomous Git Operations assistant that handles complex repository management tasks,
+  merges, rebases, and history rewriting safely.
 
 ### Skills
 
-- **git** — Guide for using git with non-interactive, safe operations. Includes advanced references to reflog, bisecting, merges, cherry-picking, rebase operations, and repository recovery.
-- **git-docs** — Official Git documentation index. Use this skill when searching for specific Git commands, configuration options, how-to guides, and technical references.
+- **git** — Guide for using git with non-interactive, safe operations. Includes advanced references to reflog,
+  bisecting, merges, cherry-picking, rebase operations, and repository recovery.
+- **git-docs** — Official Git documentation index. Use this skill when searching for specific Git commands,
+  configuration options, how-to guides, and technical references.
 
 ## Usage
 

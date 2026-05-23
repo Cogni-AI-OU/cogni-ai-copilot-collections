@@ -30,9 +30,12 @@ command — you MUST run the repo-standard pre-commit hooks afterward. This is n
 
 ## Common Pitfalls
 
-- **Forgetting Pre-Commit**: Compiling the workflow but failing to run `pre-commit run --all-files`, leaving the repository in a lint-failed state.
-- **Ignoring Validation Errors**: Running `gh aw compile` but missing the schema validation warnings in the output, resulting in broken agent features.
-- **Direct YAML Edits**: Trying to manually fix the `.lock.yml` file instead of editing the `.md` source and running the compile command.
+- **Forgetting Pre-Commit**: Compiling the workflow but failing to run `pre-commit run --all-files`, leaving the
+  repository in a lint-failed state.
+- **Ignoring Validation Errors**: Running `gh aw compile` but missing the schema validation warnings in the output,
+  resulting in broken agent features.
+- **Direct YAML Edits**: Trying to manually fix the `.lock.yml` file instead of editing the `.md` source and running
+  the compile command.
 
 ## Steps
 

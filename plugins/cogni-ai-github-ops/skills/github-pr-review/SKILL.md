@@ -23,9 +23,12 @@ Elite autonomous PR review workflow for ensuring structural integrity, metadata 
 
 ## Common Pitfalls
 
-- **Ignoring Base Branch Drift**: Reviewing code without realizing the PR branch is severely outdated compared to `main`, leading to false positive approvals on code that will cause merge conflicts.
-- **Rubber-Stamping CI Failures**: Assuming a red CI check is "just a flaky test" without actually verifying the failure logs.
-- **Nitpicking Over Architecture**: Focusing exclusively on variable names and formatting while ignoring massive architectural flaws or security vulnerabilities.
+- **Ignoring Base Branch Drift**: Reviewing code without realizing the PR branch is severely outdated
+  compared to `main`, leading to false positive approvals on code that will cause merge conflicts.
+- **Rubber-Stamping CI Failures**: Assuming a red CI check is "just a flaky test" without actually
+  verifying the failure logs.
+- **Nitpicking Over Architecture**: Focusing exclusively on variable names and formatting while ignoring
+  massive architectural flaws or security vulnerabilities.
 
 ## Core Review Checkpoints
 

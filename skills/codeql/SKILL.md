@@ -89,7 +89,7 @@ jobs:
 - **SARIF upload fails**: Check if SARIF file exceeds 10 MB limit; ensure `GITHUB_TOKEN` is valid.
 
 | Problem | Solution |
-|---|---|
+| --- | --- |
 | Workflow not triggering | Verify `on:` triggers match event; check `paths`/`branches` filters; ensure workflow exists on target branch |
 | `Resource not accessible` error | Add `security-events: write` and `contents: read` permissions |
 | Autobuild failure | Switch to `build-mode: manual` and add explicit build commands |

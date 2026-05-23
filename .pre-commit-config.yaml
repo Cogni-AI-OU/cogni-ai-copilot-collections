@@ -38,13 +38,30 @@ repos:
     rev: v0.46.0
     hooks:
       - id: markdownlint
+        exclude: >-
+          (?x)(
+          \.github/prompts/|
+          references/
+          )
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 3.0.0
     hooks:
       - id: forbid-binary
       - id: git-check  # Configure in .gitattributes
       - id: require-ascii
-        exclude: (\.github/|\.tours/|README\.md|SKILL\.md|\.agent\.md)
+        exclude: >-
+          (?x)(
+          \.github/|
+          \.tours/|
+          README\.md|
+          SKILL\.md|
+          \.agent\.md|
+          references/|
+          scripts/|
+          \.prompt\.md|
+          instructions/|
+          plugins/AGENTS\.md
+          )
       - id: script-must-have-extension
   - repo: https://github.com/lyz-code/yamlfix
     rev: 1.19.1

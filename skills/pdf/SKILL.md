@@ -26,8 +26,10 @@ Analyze, edit, and shrink PDF files at the object level without losing content.
 
 ## Common Pitfalls
 
-- **Destructive Ghostscript**: Running Ghostscript first, which fundamentally rewrites the entire document, destroying the original object structure before you can inspect it.
-- **Blind Deletion**: Deleting an object stream manually in QDF without updating the cross-reference table or checking if other objects depend on it, resulting in a corrupted PDF.
+- **Destructive Ghostscript**: Running Ghostscript first, which fundamentally rewrites the entire
+  document, destroying the original object structure before you can inspect it.
+- **Blind Deletion**: Deleting an object stream manually in QDF without updating the cross-reference
+  table or checking if other objects depend on it, resulting in a corrupted PDF.
 - **Ignoring OCR**: Reducing image resolution so aggressively that scanned text becomes completely illegible.
 
 ## Tool Selection

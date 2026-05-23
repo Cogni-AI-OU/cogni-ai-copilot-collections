@@ -81,6 +81,7 @@ gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
 | [security-review](security-review/SKILL.md) | Lightweight security review focused on Pull Requests. |
 | [sed](sed/SKILL.md) | Fast, non-interactive text stream editing using sed. |
 | [shell](shell/SKILL.md) | Efficient shell command execution with timing and best practices. |
+| [squad-cli](squad-cli/SKILL.md) | Manage human-led AI agent teams for any project using the Squad CLI. |
 | [agent-skill-md-writer](agent-skill-md-writer/SKILL.md) | Generate or update SKILL.md files for coding agents. |
 | [subagent-task](subagent-task/SKILL.md) | Guidance and protocols for spawning sub-agents via the task tool. |
 | [unicode](unicode/SKILL.md) | Reference for Unicode character hex ranges and regex blocks. |
