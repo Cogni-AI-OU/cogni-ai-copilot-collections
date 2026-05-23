@@ -48,7 +48,7 @@ Execute these checks systematically using `gh` and `git` tools:
   - **Content & Documentation**:
     - **Comment Accuracy**: Identify incorrect, misleading, or outdated comments.
     - **Language & Readability**: Scan for ungrammatical sentences and propose rephrasing for better readability.
-    - **Structural Integrity**: Check for wrong numbered lists or broken formatting in documentation and comments.
+    - **Structural Integrity**: Check for incorrectly numbered lists or broken formatting in documentation and comments.
   - **Scope Control**: Ensure the PR does strictly what it claims. Flag any drive-by changes or unrelated refactoring.
   - **Overengineering Check**: Aggressively apply YAGNI. Question "nice to have" features,
     premature optimizations, and abstractions that exceed core requirements.
