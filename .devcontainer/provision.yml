@@ -29,7 +29,13 @@
       become: false
 
     - name: Inject ansible python requirements
-      ansible.builtin.command: pipx inject ansible -r {{ playbook_dir }}/requirements-ansible.txt
+      ansible.builtin.command:
+        argv:
+          - pipx
+          - inject
+          - ansible
+          - -r
+          - "{{ playbook_dir }}/requirements-ansible.txt"
       become: false
       register: pipx_inject
       changed_when: "'is already injected' not in pipx_inject.stderr"
