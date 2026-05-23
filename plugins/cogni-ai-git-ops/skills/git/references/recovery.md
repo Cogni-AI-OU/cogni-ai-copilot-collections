@@ -1,12 +1,3 @@
----
-name: git-expert
-description: >-
-  Advanced Git operations including reflog recovery,
-  bisecting, complex conflict resolution, and history manipulation.
-  You MUST load this skill when performing advanced git operations or repository
-  recovery.
-license: MIT
----
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
 # Advanced Git Operations
@@ -24,7 +15,7 @@ Expert-level guidance for executing complex Git operations safely and effectivel
 
 ## When Not to Use
 
-- For standard, day-to-day operations like simple commits, pulls, or merges (use the base `git` skill).
+- For standard, day-to-day operations like simple commits, pulls, or merges (refer to the main `git` guide).
 - When a graphical Git client or GitHub's web UI provides a safer, more transparent way to resolve a simple conflict.
 - If you lack a fundamental understanding of Git's object model (attempting expert commands without knowledge often destroys history).
 

@@ -1,15 +1,8 @@
----
-name: git-merge
-description: >-
-  Guide and safety rules for performing git merges, ensuring no conflict markers and no duplicate lines are present.
-  You MUST load this skill before performing a git merge.
-license: MIT
----
-# Skill: git-merge
+# Git Merge
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-Execute safe and verified git merges. This skill enforces pre-merge checks, explicit conflict resolution,
+Execute safe and verified git merges. This process enforces pre-merge checks, explicit conflict resolution,
 and strict post-merge validation to prevent duplicate lines or lingering conflict markers.
 
 ## When to Use

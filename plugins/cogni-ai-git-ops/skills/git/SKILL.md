@@ -365,22 +365,21 @@ git diff origin/dev..HEAD --stat
 Always explain proposed git operations step-by-step, quote exact commands, and confirm irreversible actions with the
 user.
 
-## Related Skills
-
-- **gh-merge**:
-  MUST be loaded before performing `git merge` operations.
-- **gh-pr**:
-  You MUST load this skill when working with the `gh pr` command.
-- **gh-run**:
-  MUST be loaded when using `gh run` or `gh workflow` commands.
-
 ## References
+
+To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 - [Git Filter Branch](references/git-filter-branch.md)
   Reference MUST be loaded before running `git filter-branch` for history rewriting and subdirectory extraction tasks.
 - [Bisecting (git bisect)](references/git-bisect.md)
+  Reference MUST be loaded before running `git bisect` to track down regressions or bugs.
 - [Advanced Cherry-Picking (git cherry-pick)](references/git-cherry-pick.md)
+  Reference MUST be loaded when performing advanced cherry-picking operations across branches.
 - [Git Merge](references/git-merge.md)
+  Reference MUST be loaded before performing a git merge, ensuring no conflict markers or duplicate lines are present.
 - [Git Rebase](references/git-rebase.md)
+  Reference MUST be loaded before performing Git rebase operations (interactive history cleanup or non-interactive rewrites).
 - [Reflog Recovery (git reflog)](references/git-reflog.md)
+  Reference MUST be loaded when using `git reflog` to recover lost commits, branches, or undo destructive operations.
 - [Git Recovery & Troubleshooting](references/recovery.md)
+  Reference MUST be loaded when performing repository recovery, solving complex conflicts, or manipulating history.
