@@ -247,7 +247,7 @@ The PR Nitpick Reviewer workflow provides detailed, line-level feedback on pull 
 
 ```mermaid
 graph LR
-    A[/nit command] --> B[Load cache memory]
+    A["/nit command"] --> B[Load cache memory]
     B --> C[Fetch PR diff]
     C --> D[Analyze changed code]
     D --> E{Nitpicks found?}
@@ -1158,7 +1158,7 @@ The PR Fix workflow analyzes failing CI checks, identifies root causes, implemen
 
 ```mermaid
 graph LR
-    A[/pr-fix Command] --> B[Analyze CI Failures]
+    A["/pr-fix Command"] --> B[Analyze CI Failures]
     B --> C[Identify Root Cause]
     C --> D[Implement Fix]
     D --> E[Push to Branch]
@@ -1181,7 +1181,7 @@ The Repo Ask workflow provides accurate, well-researched answers to questions ab
 
 ```mermaid
 graph LR
-    A[/repo-ask Question] --> B[Analyze Repository]
+    A["/repo-ask Question"] --> B[Analyze Repository]
     B --> C[Search Codebase]
     C --> D[Research Online]
     D --> E[Compose Answer]

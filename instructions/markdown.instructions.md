@@ -28,21 +28,29 @@ The following markdown content rules are enforced in the validators:
 
 Follow these guidelines for formatting and structuring your markdown content:
 
-- **Lists**: Use `-` for bullet points and `1.` for numbered lists. Indent nested lists with two spaces.
-- **Emphasis**: For strong emphasis, use format like:
+- **Lists**:
+  Use `-` for bullet points and `1.` for numbered lists. Indent nested lists with two spaces.
+- **Emphasis**:
+  For strong emphasis, use format like:
   - **Bold statement**:
     Follow-up statement in the next line. Keep unordered lists in order.
-- **Code Blocks**: Use triple backticks (```) to create fenced code blocks. Always specify the
+- **Code Blocks**:
+  Use triple backticks (```) to create fenced code blocks. Always specify the
   language after the opening backticks for syntax highlighting (e.g., `csharp`). This is required
   for linting compliance.
-- **Links**: Use `[link text](URL)` for links. Ensure that the link text is descriptive and the URL is valid.
+- **Links**:
+  Use `[link text](URL)` for links. Ensure that the link text is descriptive and the URL is valid.
   - If a URL is long or reused, prefer reference-style links placed at the end of the file
     after `<!-- Named links -->`.
-- **Images**: Use `![alt text](image URL)` for images. Include a brief description of the image in the alt text.
-- **Tables**: Use `|` to create tables. Ensure that columns are properly aligned and headers are included.
+- **Images**:
+  Use `![alt text](image URL)` for images. Include a brief description of the image in the alt text.
+- **Tables**:
+  Use `|` to create tables. Ensure that columns are properly aligned and headers are included.
 - **Line Length**:
   Break lines at 120 characters to match formatters (e.g. `.markdownlint.yaml`).
-  Use soft line breaks for long paragraphs. Preferred way to split long sentences is at their full stop or complete phrase.
+  Use soft line breaks for long paragraphs.
+  The preferred way to split long sentences is at a full stop or complete phrase to preserve context
+  and continuation, similar to this section.
 - **Whitespace**:
   Use blank lines to separate sections and improve readability. Avoid excessive whitespace.
 

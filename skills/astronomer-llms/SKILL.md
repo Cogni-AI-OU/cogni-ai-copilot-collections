@@ -4,9 +4,7 @@ description: 'Read and navigate Astronomer documentation using llms.txt context.
 license: MIT
 ---
 
-# Skill: astronomer-llms
-
-# Astronomer Docs
+# Skill: astronomer-llms (Astronomer Docs)
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 

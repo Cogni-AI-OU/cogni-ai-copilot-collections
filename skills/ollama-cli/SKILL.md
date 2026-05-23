@@ -21,11 +21,15 @@ license: MIT
 ## Step-by-Step Workflows
 
 ### 1. Verification and Setup
-1. **Check Daemon Status**: Run `ollama list` to verify the local Ollama daemon is active and responsive.
+
+1. **Check Daemon Status**:
+   Run `ollama list` to verify the local Ollama daemon is active and responsive.
 2. **Pull Model**: If the target model is missing, execute `ollama pull <model-name>` (e.g., `ollama pull gemma4:e2b`) to cache it locally before running.
 
 ### 2. Execution and Agent Launch
-1. **Interactive Run**: Use `ollama run <model-name>` to test the model directly in the CLI.
+
+1. **Interactive Run**:
+   Use `ollama run <model-name>` to test the model directly in the CLI.
 2. **Launch with MCP Config**: When integrating Ollama models with agent workflows (like Claude Code) that require Model Context Protocol configurations, use process substitution to pass dynamic JSON configurations safely.
 
 ## Command Examples

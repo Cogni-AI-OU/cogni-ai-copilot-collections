@@ -69,7 +69,7 @@ Structure the generated file with the following sections (omit optional ones if 
    Explicit non-triggers to prevent false activation.
    **Bullet points** (focus on non-obvious edge cases and overlaps).
    Use to set clear boundaries against similar out-of-scope tasks; skip obvious exclusions.
-7. **Section Discipline**: Use standard sections in a logical progression:
+6. **Section Discipline**: Use standard sections in a logical progression:
    - `## Prerequisites` (Optional):
      Required tools, dependencies, or environment setup.
      **Requirement → Why it's needed**.

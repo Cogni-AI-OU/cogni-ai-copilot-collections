@@ -26,9 +26,12 @@ This skill helps with work on pull requests.
 
 ## Common Pitfalls
 
-- **Rebase Crashes**: Running `git rebase` during an automated PR sync, causing the automation tools (like `report_progress`) to crash due to rewritten history. Always use `git pull --no-rebase`.
-- **Losing Context**: Replying to an inline code comment using the general PR comment API, stripping the reply of its code context.
-- **Committing Conflict Markers**: Blindly running `git commit -am "Resolved conflicts"` without checking for lingering `<<<<<<<` markers in the files.
+- **Rebase Crashes**: Running `git rebase` during an automated PR sync, causing the automation tools
+  (like `report_progress`) to crash due to rewritten history. Always use `git pull --no-rebase`.
+- **Losing Context**: Replying to an inline code comment using the general PR comment API, stripping the
+  reply of its code context.
+- **Committing Conflict Markers**: Blindly running `git commit -am "Resolved conflicts"` without checking
+  for lingering `<<<<<<<` markers in the files.
 
 ## 1. Initialization & Context Routing
 

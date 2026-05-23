@@ -34,6 +34,7 @@ Execute your security review phases strictly according to the procedures defined
 ## Mandatory skills
 
 List of skills you must load explicitly using the native `skill` tool (or by reading their `SKILL.md` files) before proceeding:
+
 - security-audit
 
 If these are not available during runtime, stop and report the incident.
