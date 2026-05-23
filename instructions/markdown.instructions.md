@@ -49,8 +49,8 @@ Follow these guidelines for formatting and structuring your markdown content:
 - **Line Length**:
   Break lines at 120 characters to match formatters (e.g. `.markdownlint.yaml`).
   Use soft line breaks for long paragraphs.
-  Preferred way to split long sentences is at their full stop or complete phrase for context and continuation purposes,
-  similar like in this section.
+  The preferred way to split long sentences is at a full stop or complete phrase to preserve context
+  and continuation, similar to this section.
 - **Whitespace**:
   Use blank lines to separate sections and improve readability. Avoid excessive whitespace.
 
