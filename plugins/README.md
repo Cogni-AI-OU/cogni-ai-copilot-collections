@@ -7,7 +7,7 @@ Portable bundles that package agents, skills, and configuration together for eas
 - **[cogni-ai-coder](cogni-ai-coder/)**
   Autonomous coding agent with coding and critical-thinking skills
 - **[cogni-ai-developer](cogni-ai-developer/)**
-  Autonomous developer agent with development, tdd, critical-thinking, and npm-cli skills
+  Autonomous developer agent with development, tdd, and npm-cli skills
 - **[cogni-ai-git-ops](cogni-ai-git-ops/)**
   Autonomous git operations agent with git skills
 - **[cogni-ai-github-ops](cogni-ai-github-ops/)**
