@@ -21,7 +21,8 @@ curl -s -X GET "https://api.datadoghq.com/api/v1/monitor/search?query=tag:env:pr
 Query Timeseries Metrics (Unix epoch timestamps):
 
 ```bash
-curl -s -X GET "https://api.datadoghq.com/api/v1/query?query=system.cpu.idle{*}&from=$(date -d '1 hour ago' +%s)&to=$(date +%s)" \
+url="https://api.datadoghq.com/api/v1/query?query=system.cpu.idle{*}&from=$(date -d '1 hour ago' +%s)&to=$(date +%s)"
+curl -s -X GET "$url" \
   -H "DD-API-KEY: ${DD_API_KEY}" \
   -H "DD-APPLICATION-KEY: ${DD_APP_KEY}"
 ```

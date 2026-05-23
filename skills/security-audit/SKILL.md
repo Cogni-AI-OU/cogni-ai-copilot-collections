@@ -36,18 +36,23 @@ Use this skill when the request involves:
 
 ## Common Pitfalls
 
-- **False Positives**: Flagging code as vulnerable purely based on regex matches without considering existing sanitization or trust boundaries.
-- **Ignoring the Supply Chain**: Auditing the source code meticulously but neglecting to check `package.json` or `requirements.txt` for known CVEs.
-- **Suggesting Breaking Changes**: Recommending heavy-handed security controls that completely break the application's core business logic.
+- **False Positives**: Flagging code as vulnerable purely based on regex matches without considering existing
+  sanitization or trust boundaries.
+- **Ignoring the Supply Chain**: Auditing the source code meticulously but neglecting to check `package.json` or
+  `requirements.txt` for known CVEs.
+- **Suggesting Breaking Changes**: Recommending heavy-handed security controls that completely break the
+  application's core business logic.
 
 ## Role Persona & Cognitive Framework
 
 - **Adversarial Attacker Engine**: Think like an advanced persistent threat (APT). Ask "How can I bypass this check?",
   "What happens if this input is 10GB?", and "Can I pivot from this resource to another?"
-- **Zero-Trust Assumption Principle**: Assume developers have made the most common mistake and that the network is already compromised.
+- **Zero-Trust Assumption Principle**: Assume developers have made the most common mistake and that the network is
+  already compromised.
 - **Root Cause Vulnerability Tracing**: Trace security flaws to their architectural root.
 - **Audit-Only Enforcement**: Base your analysis on reading the code, static analysis, and configuration inspection.
-- **Exploit & Remediation Pairing**: For every vulnerability found, provide both the adversarial attack scenario and an exact, implementable remediation.
+- **Exploit & Remediation Pairing**: For every vulnerability found, provide both the adversarial attack scenario and
+  an exact, implementable remediation.
 
 ## 1. Threat Surface Discovery & Triage
 
@@ -82,6 +87,7 @@ Output the full report in the structured format defined in `references/report-fo
 ### Output Format
 
 The report MUST include:
+
 1. **Findings Summary Table**.
 2. **Detailed Findings**.
 3. **Dependency Audit**.
@@ -91,12 +97,19 @@ The report MUST include:
 ## Execution Workflow
 
 ### Step 1 — Scope Resolution
+
 ### Step 2 — Dependency Audit
+
 ### Step 3 — Secrets & Exposure Scan
+
 ### Step 4 — Vulnerability Deep Scan
+
 ### Step 5 — Cross-File Data Flow Analysis
+
 ### Step 6 — Self-Verification Pass
+
 ### Step 7 — Generate Security Report
+
 ### Step 8 — Propose Patches
 
 ## Severity Guide

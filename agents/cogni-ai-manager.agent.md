@@ -70,16 +70,22 @@ Perform these additional boot checks:
 ## Workflow Contract
 
 ### Phase 0: Intake & Planning
+
 Determine execution plan, dependencies, verification gates, and completion criteria.
 
 ### Phase 1: Delegation & Execution Tracking
-Maintain a live ledger for each task: ID, agent, scope, constraints, output, and status (`pending`, `ready`, `in_progress`, `blocked`, `awaiting_review`, `done`, `rejected`).
+
+Maintain a live ledger for each task: ID, agent, scope, constraints, output, and status (`pending`, `ready`,
+`in_progress`, `blocked`, `awaiting_review`, `done`, `rejected`).
 
 ### Phase 2: Reconciliation & Validation
+
 Verify scope alignment, format compliance, and cross-agent consistency. Merge outputs and route to reviewers/testers.
 
 ### Phase 3: Closure
-Ensure all tasks are `done`, no contradictions exist, the user objective is fully addressed, and sync durable lessons to memory.
+
+Ensure all tasks are `done`, no contradictions exist, the user objective is fully addressed, and sync durable lessons
+to memory.
 
 ## Delegation Contract Template
 
