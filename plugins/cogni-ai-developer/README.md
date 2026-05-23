@@ -7,8 +7,8 @@ Autonomous development agent plugin for GitHub Copilot. Specializes in building 
 | | |
 |---|---|
 | **Description** | Autonomous developer agent with development, tdd, and critical-thinking skills |
-| **Contents** | 1 agent, 3 skills |
-| **Slash Commands** | [`/cogni-ai-developer:development`](../AGENTS.md) <br/> [`/cogni-ai-developer:tdd`](../AGENTS.md) <br/> [`/cogni-ai-developer:critical-thinking`](../AGENTS.md) |
+| **Contents** | 1 agent, 4 skills |
+| **Slash Commands** | [`/cogni-ai-developer:development`](../AGENTS.md) <br/> [`/cogni-ai-developer:tdd`](../AGENTS.md) <br/> [`/cogni-ai-developer:critical-thinking`](../AGENTS.md) <br/> [`/cogni-ai-developer:npm-cli`](../AGENTS.md) |
 
 ## Installation
 
@@ -29,6 +29,7 @@ copilot plugin install Cogni-AI-OU/cogni-ai-agentic-collections:plugins/cogni-ai
 - **development** — Full-cycle software development workflow: from requirements and system design through deployment, monitoring, and iteration.
 - **tdd** — Commands, step-by-step procedures, and mechanical execution for test engineering, testability audits, and the TDD lifecycle.
 - **critical-thinking** — Deep analytical reasoning framework for deconstructing assumptions, evaluating trade-offs, and solving complex problems.
+- **npm-cli** — Reference and index of documentation pages for npm CLI commands and configurations.
 
 ## Usage
 
