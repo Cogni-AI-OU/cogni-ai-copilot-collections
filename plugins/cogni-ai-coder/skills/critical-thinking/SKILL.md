@@ -33,21 +33,21 @@ A cognitive framework for deep analytical reasoning.
 
 ## Core Process
 
-1. **Analyze**: Review the task, issue, or error to understand the requirements.  
-2. **Deconstruct & Frame**: Separate the final goal (Conclusion) from the underlying logic (Premises).  
-3. **Surface Hidden Dependencies**: Identify what must be true for the current logic to hold (assumptions, state, concurrency). **State your assumptions explicitly. If uncertain, ask.**  
-4. **Generate Hypotheses**: Explicitly list alternative explanations or missing context before acting. **If multiple interpretations exist, present them—don't pick silently.**  
-5. **Push for Simplicity**: **If a simpler approach exists, say so. Push back when warranted.**  
-6. **Clarification Protocol**: **If something is unclear, stop. Name what's confusing. Ask.**  
-7. **Transform Tasks into Verifiable Goals**: Reframe ambiguity into provable outcomes:  
-   - "Add validation" → "Write tests for invalid inputs, then make them pass"  
-   - "Fix the bug" → "Write a test that reproduces it, then make it pass"  
-   - "Refactor X" → "Ensure tests pass before and after"  
-8. **Root Cause Isolation**: When troubleshooting, split the problem into smaller, reproducible steps and use version history (`git blame`/`git log`) or execution logs to narrow down the fault.  
-9. **Adversarial Red-Teaming**: Aggressively attempt to break your proposed plan. Identify the exact line or condition most likely to fail.  
-10. **Constraint Formulation (MiniZinc)**: When applicable, formally model the problem's constraints by writing dry-code definitions in MiniZinc to expose hidden dependencies and restrictions.  
-11. **Verify Systemically**: Evaluate the decision against immediate needs, technical debt accrual, and long-term maintainability. **Emit a post-verification trace**: a short written summary in the current response that lists the checks performed, the evidence observed, and the final verification result.  
-12. **Persist & Close**: After verification, record the outcome, an **assumptions ledger** (a bullet list of assumptions made, which were verified, and which remain open), and any new invariants in the skill's persistent memory/store if one is available; otherwise include them in the current response. Then emit a final **Hard Checkpoint**: a concise closing summary of decision, evidence, remaining risks, and next step.  
+1. **Analyze**: Review the task, issue, or error to understand the requirements.
+2. **Deconstruct & Frame**: Separate the final goal (Conclusion) from the underlying logic (Premises).
+3. **Surface Hidden Dependencies**: Identify what must be true for the current logic to hold (assumptions, state, concurrency). **State your assumptions explicitly. If uncertain, ask.**
+4. **Generate Hypotheses**: Explicitly list alternative explanations or missing context before acting. **If multiple interpretations exist, present them—don't pick silently.**
+5. **Push for Simplicity**: **If a simpler approach exists, say so. Push back when warranted.**
+6. **Clarification Protocol**: **If something is unclear, stop. Name what's confusing. Ask.**
+7. **Transform Tasks into Verifiable Goals**: Reframe ambiguity into provable outcomes:
+   - "Add validation" → "Write tests for invalid inputs, then make them pass"
+   - "Fix the bug" → "Write a test that reproduces it, then make it pass"
+   - "Refactor X" → "Ensure tests pass before and after"
+8. **Root Cause Isolation**: When troubleshooting, split the problem into smaller, reproducible steps and use version history (`git blame`/`git log`) or execution logs to narrow down the fault.
+9. **Adversarial Red-Teaming**: Aggressively attempt to break your proposed plan. Identify the exact line or condition most likely to fail.
+10. **Constraint Formulation (MiniZinc)**: When applicable, formally model the problem's constraints by writing dry-code definitions in MiniZinc to expose hidden dependencies and restrictions.
+11. **Verify Systemically**: Evaluate the decision against immediate needs, technical debt accrual, and long-term maintainability. **Emit a post-verification trace**: a short written summary in the current response that lists the checks performed, the evidence observed, and the final verification result.
+12. **Persist & Close**: After verification, record the outcome, an **assumptions ledger** (a bullet list of assumptions made, which were verified, and which remain open), and any new invariants in the skill's persistent memory/store if one is available; otherwise include them in the current response. Then emit a final **Hard Checkpoint**: a concise closing summary of decision, evidence, remaining risks, and next step.
 
 ## Core Principles
 

@@ -43,7 +43,16 @@
   "env": {
     "ENABLE_LSP_TOOL": "1"
   },
+  "extraKnownMarketplaces": {
+    "cogni-ai-marketplace": {
+      "source": {
+        "source": "url",
+        "url": "https://cc.fx.gd/.claude-plugin/marketplace.json"
+      }
+    }
+  },
   "enabledPlugins": {
-    "pyright-lsp@claude-plugins-official": true
+    "pyright-lsp@claude-plugins-official": true,
+    "some-plugin@cogni-ai-marketplace": true
   }
 }

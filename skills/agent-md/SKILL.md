@@ -81,6 +81,7 @@ Claude Code uses `CLAUDE.md` for project-level instructions:
 - **Subdirectory-level:** `CLAUDE.md` within a specific directory (applies to that subtree).
 - **Global:** `~/.claude/CLAUDE.md` for machine-wide preferences.
 - **Local overrides:** `CLAUDE.local.md` (typically gitignored).
+- **Marketplaces:** Claude Code supports external plugin marketplaces added via `/plugin marketplace add <url>`.
 
 ### OpenCode
 

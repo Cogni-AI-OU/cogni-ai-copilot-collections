@@ -12,7 +12,7 @@ license: MIT
 
 - Configuring allowed tools and bash permissions for Claude Code.
 - Defining PreToolUse or PostToolUse hooks for specific commands or file edits.
-- Setting up environment variables or enabling LSP plugins for Claude Code.
+- Setting up environment variables, enabling LSP plugins, or managing marketplaces for Claude Code.
 - Analyzing or updating the `.claude/settings.json` workspace configuration.
 
 ## When Not to Use
@@ -25,7 +25,33 @@ license: MIT
 1. **Locate or Create Configuration**: Ensure the `.claude` directory exists at the root of the project.
 2. **Define Permissions**: Use `.claude/settings.json` to explicitly allow specific Bash commands to prevent Claude Code from blocking them.
 3. **Configure Hooks**: Set up `PreToolUse` or `PostToolUse` hooks in `settings.json` to enforce safety checks, trigger auto-formatting, or log activity.
-4. **Set Environment & Plugins**: Enable required tools like language servers (`pyright-lsp`) or specify environment variables.
+4. **Manage Plugins & Marketplaces**: Enable required tools like language servers (`pyright-lsp`), specify environment variables, or add external marketplaces using `/plugin marketplace add <url>`.
+
+## Plugin Marketplaces
+
+Claude Code supports extending its functionality via plugins from external marketplaces.
+
+- **Add a Marketplace**: Use the CLI command to register a new plugin source.
+  ```bash
+  /plugin marketplace add https://cc.fx.gd/.claude-plugin/marketplace.json
+  ```
+- **Project-Level Configuration**: Add marketplaces to `.claude/settings.json` to share them with the team.
+  ```json
+  {
+    "extraKnownMarketplaces": {
+      "community-marketplace": {
+        "source": {
+          "source": "url",
+          "url": "https://cc.fx.gd/.claude-plugin/marketplace.json"
+        }
+      }
+    },
+    "enabledPlugins": {
+      "plugin-name@community-marketplace": true
+    }
+  }
+  ```
+- **Official Documentation**: Refer to [Claude Code Plugin Marketplaces](https://code.claude.com/docs/en/plugin-marketplaces) for more details.
 
 ## Best Practices
 
