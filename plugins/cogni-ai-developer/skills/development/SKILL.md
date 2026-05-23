@@ -27,16 +27,20 @@ A comprehensive workflow for delivering complete, usable software that solves re
 - For algorithmic or data-structure focused tasks without product context (use `programming`).
 - For tasks that are purely about writing tests (use `tdd`) or debugging.
 
-## Common Pitfalls
+## Anti-Patterns
 
-- **Skipping Requirements Clarity**: Building the wrong feature because user needs were not validated.
-- **Ignoring Operations**: Delivering code that works locally but fails in production due to missing monitoring, logging, or deployment considerations.
-- **Stakeholder Silence**: Making technical decisions in isolation that conflict with product priorities or timelines.
+- **Requirements Bypass**: Implementing without validating understanding of the user need.
+- **Operational Blindness**: Delivering code that works locally but fails in production due to missing monitoring, logging, metrics, or deployment considerations.
 - **Rollout Neglect**: Shipping without a rollback plan, feature flags, or incremental rollout strategy.
+- **Stakeholder Silence**: Making technical decisions in isolation that conflict with product priorities or timelines.
+- **Scope Creep**: Adding unrequested features that delay delivery of the core value.
+- **Pattern Invention**: Ignoring existing architectural conventions in favor of personal preference.
 
 ## Core Process
 
-1. **Understand Requirements**: Analyze the user or business need. Clarify scope, priorities, and success criteria with stakeholders.
+1. **Understand Requirements**:
+  Analyze the user or business need. Clarify scope, priorities, and success criteria with stakeholders.
+  If stakeholders are unavailable, document assumptions explicitly, proceed with the most conservative interpretation, and flag assumptions for review.
 2. **Architecture & Design**: Choose technical approaches considering scalability, maintainability, and fit with existing systems.
 3. **Implementation Strategy**: Break down the feature into small, independently shippable increments.
 4. **Build & Integrate**: Write clean, production-grade code. Integrate with existing systems safely.
@@ -55,6 +59,7 @@ A comprehensive workflow for delivering complete, usable software that solves re
 ## Autonomous Execution Directive
 
 Execute multi-step workflows autonomously to completion, continuously looping and self-correcting until all success criteria are met.
+If a phase fails after 3 iterations or is blocked by an external dependency, stop execution, report the blocker, and request guidance.
 
 ## Execution Model
 
@@ -63,19 +68,13 @@ while not workflow_complete:
     for phase in workflow_phases:
         result = execute_phase(phase)
         if result.needs_iteration:
-            iterate_until_success(phase)
+            iterate_until_success_or_max_retries(phase, max_retries=10)
+        if result.is_blocked:
+            report_blocker_and_stop()
     check_completion_criteria()
 ```
-
-## What to Avoid
-
-- **Requirements Bypass**: Implementing without validating understanding of the user need.
-- **Rollout Neglect**: Shipping without rollback planning, feature flags, or gradual exposure.
-- **Operational Blindness**: Delivering code without logging, metrics, or error handling for production.
-- **Scope Creep**: Adding unrequested features that delay delivery of the core value.
-- **Pattern Invention**: Ignoring existing architectural conventions in favor of personal preference.
 
 ## Related Skills
 
 - **tdd**:
-  You MUST load this skill when practice Test-Driven Development for reliability and regression prevention.
+  You MUST also follow the tdd skill guidelines when practicing Test-Driven Development for reliability and regression prevention.
