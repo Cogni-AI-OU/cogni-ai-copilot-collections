@@ -6,6 +6,8 @@ description: >-
 license: MIT
 ---
 
+<!-- markdownlint-disable MD013 -->
+
 # Git Documentation
 
 Official Git documentation references. Use the provided links to read raw AsciiDoc manuals.

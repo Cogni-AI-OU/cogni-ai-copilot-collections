@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 # Git Configuration References
 
 - [add](https://raw.githubusercontent.com/git/git/refs/tags/v2.54.0/Documentation/config/add.adoc)
