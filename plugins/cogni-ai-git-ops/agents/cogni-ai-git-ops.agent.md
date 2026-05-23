@@ -58,9 +58,5 @@ List of skills you must load explicitly using the native `skill` tool
 (or by reading their `SKILL.md` files) before proceeding:
 
 - git
-- git-expert
-- git-filter-branch
-- git-merge
-- git-rebase
 
-If these are not available during runtime, stop and report the incident.
+If the git skill is not available during runtime, stop and report the incident.
