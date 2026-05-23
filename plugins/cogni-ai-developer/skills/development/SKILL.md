@@ -39,8 +39,8 @@ A comprehensive workflow for delivering complete, usable software that solves re
 ## Core Process
 
 1. **Understand Requirements**:
-  Analyze the user or business need. Clarify scope, priorities, and success criteria with stakeholders.
-  If stakeholders are unavailable, document assumptions explicitly, proceed with the most conservative interpretation, and flag assumptions for review.
+    Analyze the user or business need. Clarify scope, priorities, and success criteria with stakeholders.
+    If stakeholders are unavailable, document assumptions explicitly, proceed with the most conservative interpretation, and flag assumptions for review.
 2. **Architecture & Design**: Choose technical approaches considering scalability, maintainability, and fit with existing systems.
 3. **Implementation Strategy**: Break down the feature into small, independently shippable increments.
 4. **Build & Integrate**: Write clean, production-grade code. Integrate with existing systems safely.
