@@ -52,6 +52,7 @@ List of skills you must load explicitly using the native `skill` tool
 
 - programming
 - python
+- npm-cli
 
 If these are not available during runtime, stop and report the incident.
 

@@ -7,7 +7,7 @@ Autonomous programmer agent plugin for GitHub Copilot. Specializes in solving te
 | | |
 |---|---|
 | **Description** | Autonomous programmer agent with programming and python skills |
-| **Contents** | 1 agent, 3 skills |
+| **Contents** | 1 agent, 4 skills |
 | **Slash Commands** | [`/cogni-ai-programmer:programming`](../AGENTS.md) <br/> [`/cogni-ai-programmer:python`](../AGENTS.md) |
 
 ## Installation
@@ -29,6 +29,7 @@ copilot plugin install Cogni-AI-OU/cogni-ai-agentic-collections:plugins/cogni-ai
 - **programming** — Expert workflow for solving technical problems: algorithm design, data structure selection, edge case handling, and code craftsmanship.
 - **python** — Expert Python language skill for writing, refactoring, and testing idiomatic Python 3 code.
 - **threejs-llms** — Expert guide for generating modern Three.js code using WebGL, WebGPU, and TSL.
+- **npm-cli** — Reference and index of documentation pages for npm CLI commands and configurations.
 
 ## Usage
 
