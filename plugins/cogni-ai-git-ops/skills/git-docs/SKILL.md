@@ -12,7 +12,7 @@ Official Git documentation references. Use the provided links to read raw AsciiD
 
 ## References
 
-To fully utilize this skill, you MUST read at least few of the links relevant to the current context:
+To fully utilize this skill, you MUST read at least a few of the links relevant to the current context:
 
 ### Main
 
