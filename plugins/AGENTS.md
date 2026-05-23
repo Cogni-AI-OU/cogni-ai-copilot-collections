@@ -1,6 +1,6 @@
 # AGENTS.md — Plugins Directory
 
-## Coder vs Programmer vs Developer vs Software Architect
+## Agent Roles
 
 Within the Cogni AI agent ecosystem, these roles are strictly delineated by capability, knowledge depth, and delegation hierarchy, rather than general industry titles:
 
@@ -8,6 +8,7 @@ Within the Cogni AI agent ecosystem, these roles are strictly delineated by capa
 - **Programmer** (`cogni-ai-programmer`): Possesses deep syntax and manual-level knowledge of specific languages and frameworks (e.g., Python, React, Next.js). Solves technical problems by utilizing specific language features. Can decompose tasks and delegate smaller, routine coding work to **Coder** agents.
 - **Developer** (`cogni-ai-developer`): Operates at a senior level with practical experience derived from actual software lifecycles, real-world challenges, and self-directed learning. Focuses on end-to-end functionality and delegates specific technical component implementations to **Programmer** agents.
 - **Software Architect** (`cogni-ai-architect`): Maintains a high-level understanding of system components, interdependencies, and broad architectural patterns (software and cloud architecture). Assesses complex requirements to produce strategic diagrams, plans, and component designs before delegating implementation to **Developer** agents.
+- **DevOps / SRE** (`cogni-ai-dev-ops`): Elite infrastructure and automation specialist. Focuses on CI/CD pipeline precision, infrastructure-as-code (IaC) scaling, and mitigating deployment blockers. Collaborates tangentially with Architects for cloud topology and supports Developers by ensuring resilient, zero-downtime integration and delivery.
 
 ## What's Included: Commands (Slash Commands)
 
