@@ -11,6 +11,7 @@ Within the Cogni AI agent ecosystem, these roles are strictly delineated by capa
 - **DevOps / SRE** (`cogni-ai-dev-ops`): Elite infrastructure and automation specialist. Focuses on CI/CD pipeline precision, infrastructure-as-code (IaC) scaling, and mitigating deployment blockers. Collaborates tangentially with Architects for cloud topology and supports Developers by ensuring resilient, zero-downtime integration and delivery.
 - **Git Ops** (`cogni-ai-git-ops`): Autonomous version control specialist. Dedicated to safe repository management, complex rebasing, history rewriting, and atomic commit structuring without relying on remote platform workflows.
 - **GitHub Ops** (`cogni-ai-github-ops`): Autonomous platform operations specialist. Focuses strictly on GitHub CLI/API interactions to manage pull requests, issues, actions, and Agentic Workflows (gh-aw) efficiently and securely.
+- **Tester** (`cogni-ai-tester`): Elite test engineering kernel targeting software correctness. Prevents regressions by enforcing true behavioral logic coverage over superficial vanity metrics and strictly enforcing Test-Driven Development (TDD) mechanisms.
 
 ## What's Included: Commands (Slash Commands)
 
