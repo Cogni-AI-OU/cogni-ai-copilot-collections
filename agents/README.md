@@ -54,9 +54,12 @@ See also:
 
 ### [Cogni AI Architect](../plugins/cogni-ai-architect/agents/cogni-ai-architect.agent.md)
 
-Elite autonomous engineering kernel and systems architect. Specializes in maximal-fidelity problem decomposition, backpropagation-style recursive self-refinement, and neurosymbolic verification. Includes the software-architecture skill for architectural design workflows.
+Elite autonomous engineering kernel and systems architect. Specializes in maximal-fidelity problem
+decomposition, backpropagation-style recursive self-refinement, and neurosymbolic verification. Includes
+the software-architecture skill for architectural design workflows.
 
-> **Note**: This agent has been moved to the [cogni-ai-architect plugin](../plugins/cogni-ai-architect/) for better distribution and maintenance.
+> **Note**: This agent has been moved to the [cogni-ai-architect plugin](../plugins/cogni-ai-architect/)
+> for better distribution and maintenance.
 
 ### [Cogni AI Context7 Ops](cogni-ai-context7-ops.agent.md)
 
@@ -72,7 +75,8 @@ Autonomous fact operator responsible for maintaining canonical fact files and in
 
 ### [Cogni AI Manager](cogni-ai-manager.agent.md)
 
-Autonomous orchestration and coordination manager responsible for routing work to specialized agents and ensuring end-to-end completion.
+Autonomous orchestration and coordination manager responsible for routing work to specialized agents and
+ensuring end-to-end completion.
 
 ### [Cogni AI Keeper](cogni-ai-keeper.agent.md)
 
@@ -81,19 +85,24 @@ Deep module for fact management via VCS-aligned plain-text mindmaps.
 
 ### [Cogni AI Git Ops](../plugins/cogni-ai-git-ops/agents/cogni-ai-git-ops.agent.md)
 
-Autonomous Git Operations agent. Specializes in version control, complex git workflows, rebase operations, and repository management.
+Autonomous Git Operations agent. Specializes in version control, complex git workflows, rebase
+operations, and repository management.
 
 ### [Cogni AI Coder](../plugins/cogni-ai-coder/agents/cogni-ai-coder.agent.md)
 
-Autonomous coding agent that translates specifications into functional code with precision, speed, and strict convention adherence. Applies Design-by-Contract, Single-Variable Delta Rule, and Exhaustive Validation.
+Autonomous coding agent that translates specifications into functional code with precision, speed, and
+strict convention adherence. Applies Design-by-Contract, Single-Variable Delta Rule, and Exhaustive
+Validation.
 
 ### [Cogni AI Programmer](../plugins/cogni-ai-programmer/agents/cogni-ai-programmer.agent.md)
 
-Autonomous programmer assistant specializing in designing correct, efficient, and maintainable solutions. Solves technical problems using algorithms, data structures, and comprehensive testing.
+Autonomous programmer assistant specializing in designing correct, efficient, and maintainable solutions.
+Solves technical problems using algorithms, data structures, and comprehensive testing.
 
 ### [Cogni AI Developer](../plugins/cogni-ai-developer/agents/cogni-ai-developer.agent.md)
 
-Autonomous developer assistant that architects, builds, and ships end-to-end solutions. Focuses on delivering user and business value through full-cycle product development.
+Autonomous developer assistant that architects, builds, and ships end-to-end solutions. Focuses on
+delivering user and business value through full-cycle product development.
 
 ### [Cogni AI Code Reviewer](cogni-ai-code-reviewer.agent.md)
 

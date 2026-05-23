@@ -9,7 +9,8 @@ license: MIT
 
 # Security Review Skill
 
-This skill provides a focused, diff-centric approach to security reviews. Unlike a full security audit, a review focuses on identifying vulnerabilities introduced by specific changes (Pull Requests).
+This skill provides a focused, diff-centric approach to security reviews. Unlike a full security audit, a review
+focuses on identifying vulnerabilities introduced by specific changes (Pull Requests).
 
 ## When to Use
 
@@ -54,7 +55,7 @@ For PR reviews, provide a concise summary of findings. Use the format defined in
 ## References
 
 - [ASVS guidance where applicable](https://owasp.org/www-project-application-security-verification-standard/)
-- [OWASP Top 10]((https://owasp.org/www-project-top-ten/)
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 
 ## Related Skills
 

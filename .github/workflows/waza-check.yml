@@ -1,0 +1,69 @@
+---
+name: Waza Evaluation
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.md'
+  workflow_dispatch:
+    inputs:
+      eval-path:
+        default: eval.yaml
+        description: Path to eval.yaml file
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  run-evaluation:
+    name: Run Waza Evaluation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Go Environment
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.26'
+      - name: Install waza
+        run: |
+          go install github.com/microsoft/waza/cmd/waza@latest
+      - name: Determine Eval File
+        id: eval-file
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.eval-path }}" ]; then
+            EVAL_FILE="${{ github.event.inputs.eval-path }}"
+          else
+            EVAL_FILE="eval.yaml"
+          fi
+          echo "eval-file=$EVAL_FILE" >> "$GITHUB_OUTPUT"
+          echo "Using eval file: $EVAL_FILE"
+      - name: Run Evaluation
+        id: run-eval
+        run: |
+          EVAL_FILE="${{ steps.eval-file.outputs.eval-file }}"
+          if [ ! -f "$EVAL_FILE" ]; then
+            echo "::warning::Eval file $EVAL_FILE not found. Skipping evaluation."
+            exit 0
+          fi
+          waza run "$EVAL_FILE" \
+            --output results.json \
+            --format json
+      - name: Generate Summary
+        if: always()
+        run: |
+          if [ -f "results.json" ]; then
+            waza report results.json --format github >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload Results Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: ignore
+          name: waza-evaluation-results
+          path: results.json
+          retention-days: 30

@@ -2,13 +2,19 @@
 
 [![License][license-image]][license-link]
 
-Autonomous architect agent plugin for GitHub Copilot. Specializes in structural perfection, recursive problem decomposition, and neurosymbolic verification across all codebase vectors.
+Autonomous architect agent plugin for GitHub Copilot. Specializes in structural perfection, recursive problem
+decomposition, and neurosymbolic verification across all codebase vectors.
 
 | | |
-|---|---|
+| --- | --- |
 | **Description** | Autonomous architect agent with software-architecture skill |
 | **Contents** | 1 agent, 1 skill |
-| **Slash Commands** | [`/cogni-ai-architect:software-architecture`](../AGENTS.md) |
+
+## Slash Commands
+
+| Command | Description |
+| --- | --- |
+| `/cogni-ai-architect:software-architecture` | Expert workflow for software architecture design |
 
 ## Installation
 
@@ -28,11 +34,14 @@ claude plugin install cogni-ai-architect@cogni-ai-agentic-collections
 
 ### Agents
 
-- **cogni-ai-architect** — Elite autonomous engineering kernel and systems architect engineered for maximal-fidelity problem decomposition, backpropagation-style recursive self-refinement, and neurosymbolic verification.
+- **cogni-ai-architect** — Elite autonomous engineering kernel and systems architect engineered for maximal-fidelity
+  problem decomposition, backpropagation-style recursive self-refinement, and neurosymbolic verification.
 
 ### Skills
 
-- **software-architecture** — Expert-level workflow for software architecture design, covering architectural styles (Monolith, Layered, Microservices, Event-Driven), SOLID principles, design patterns, quality attributes, and architectural decision records.
+- **software-architecture** — Expert-level workflow for software architecture design, covering architectural styles
+  (Monolith, Layered, Microservices, Event-Driven), SOLID principles, design patterns, quality attributes, and
+  architectural decision records.
 
 ## Usage
 

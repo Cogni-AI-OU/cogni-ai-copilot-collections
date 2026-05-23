@@ -23,7 +23,8 @@ Instructs the agent to produce output strictly in valid YAML format, ensuring no
 
 ## Common Pitfalls
 
-- **Markdown Wrapping**: The LLM outputting ```yaml ... ``` despite instructions, breaking a strict parser expecting raw file content.
+- **Markdown Wrapping**: The LLM outputting `` ```yaml ... ``` `` despite instructions, breaking a strict parser
+  expecting raw file content.
 - **Lost Comments**: Instructing the agent to output strict YAML and accidentally having it strip out important explanatory comments from the original structure.
 - **Invalid Types**: Outputting unquoted boolean strings like `yes` or `no` when a specific parser strictly expects `true` or `false`.
 
@@ -58,7 +59,7 @@ list:
 ## What to Avoid
 
 - Including "Here is the YAML you requested:" or similar conversational text.
-- Enclosing the output in Markdown backticks (e.g., ` ```yaml ... ``` `).
+- Enclosing the output in Markdown backticks (e.g., `` ```yaml ... ``` ``).
 - Including non-YAML comment styles (e.g., `//`, `/* */`, `<!-- -->`) or omit comments entirely unless explicitly allowed.
 
 ## Limitations

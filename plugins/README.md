@@ -4,14 +4,22 @@ Portable bundles that package agents, skills, and configuration together for eas
 
 ## Available Plugins
 
-- **[cogni-ai-coder](cogni-ai-coder/)** — Autonomous coding agent with coding and critical-thinking skills (1 agent, 2 skills)
-- **[cogni-ai-developer](cogni-ai-developer/)** — Autonomous developer agent with development, tdd, and critical-thinking skills (1 agent, 3 skills)
-- **[cogni-ai-git-ops](cogni-ai-git-ops/)** — Autonomous git operations agent with git skills (1 agent, 2 skills)
-- **[cogni-ai-github-ops](cogni-ai-github-ops/)** — Autonomous GitHub operations agent with github skills (1 agent, 33 skills)
-- **[cogni-ai-programmer](cogni-ai-programmer/)** — Autonomous programmer agent with programming and python skills (1 agent, 2 skills)
-- **[cogni-ai-architect](cogni-ai-architect/)** — Elite autonomous architect agent with software-architecture skill for structural perfection and neurosymbolic verification (1 agent, 1 skill)
-- **[cogni-ai-tester](cogni-ai-tester/)** — Elite autonomous test engineering agent with testing skill for proving software correctness and preventing regressions (1 agent, 1 skill)
-- **[cogni-ai-dev-ops](cogni-ai-dev-ops/)** — Elite autonomous DevOps and site reliability agent with devops, molecule, pulumi, datadog, and docker skills (1 agent, 7 skills)
+- **[cogni-ai-coder](cogni-ai-coder/)**
+  Autonomous coding agent with coding and critical-thinking skills
+- **[cogni-ai-developer](cogni-ai-developer/)**
+  Autonomous developer agent with development, tdd, and npm-cli skills
+- **[cogni-ai-git-ops](cogni-ai-git-ops/)**
+  Autonomous git operations agent with git skills
+- **[cogni-ai-github-ops](cogni-ai-github-ops/)**
+  Autonomous GitHub operations agent with github skills
+- **[cogni-ai-programmer](cogni-ai-programmer/)**
+  Autonomous programmer agent with programming, python, threejs-llms, react-llms, nextjs-llms, and reactnative-llms skills
+- **[cogni-ai-architect](cogni-ai-architect/)**
+  Elite autonomous architect agent with software-architecture skill for structural perfection and neurosymbolic verification
+- **[cogni-ai-tester](cogni-ai-tester/)**
+  Elite autonomous test engineering agent with testing skill for proving software correctness and preventing regressions
+- **[cogni-ai-dev-ops](cogni-ai-dev-ops/)**
+  Elite autonomous DevOps and site reliability agent with devops, molecule, pulumi, datadog, and docker skills
 
 ## Installation
 

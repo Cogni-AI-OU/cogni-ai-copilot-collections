@@ -2,13 +2,19 @@
 
 [![License][license-image]][license-link]
 
-Autonomous test engineering agent plugin for GitHub Copilot. Specializes in proving software correctness, preventing regressions, and designing refactor-resilient behavioral tests.
+Autonomous test engineering agent plugin for GitHub Copilot. Specializes in proving software correctness, preventing
+regressions, and designing refactor-resilient behavioral tests.
 
 | | |
-|---|---|
+| --- | --- |
 | **Description** | Autonomous tester agent with testing skill |
 | **Contents** | 1 agent, 1 skill |
-| **Slash Commands** | [`/cogni-ai-tester:testing`](../AGENTS.md) |
+
+## Slash Commands
+
+| Command | Description |
+| --- | --- |
+| `/cogni-ai-tester:testing` | Elite autonomous test engineering and reliability kernel |
 
 ## Installation
 
@@ -28,7 +34,8 @@ claude plugin install cogni-ai-tester@cogni-ai-agentic-collections
 
 ### Agents
 
-- **cogni-ai-tester** — Elite autonomous test engineering kernel focused on proving software correctness, preventing regressions, and designing refactor-resilient behavioral tests.
+- **cogni-ai-tester** — Elite autonomous test engineering kernel focused on proving software correctness,
+  preventing regressions, and designing refactor-resilient behavioral tests.
 
 ### Skills
 

@@ -2,13 +2,20 @@
 
 [![License][license-image]][license-link]
 
-Autonomous coding agent plugin for GitHub Copilot. Specializes in implementing code from specifications with precision and speed.
+Autonomous coding agent plugin for GitHub Copilot. Specializes in implementing code from specifications with
+precision and speed.
 
 | | |
-|---|---|
+| --- | --- |
 | **Description** | Autonomous coding agent with coding and critical-thinking skills |
 | **Contents** | 1 agent, 2 skills |
-| **Slash Commands** | [`/cogni-ai-coder:coding`](../AGENTS.md) <br/> [`/cogni-ai-coder:critical-thinking`](../AGENTS.md) |
+
+## Slash Commands
+
+| Command | Description |
+| --- | --- |
+| `/cogni-ai-coder:coding` | Workflow for implementing code from clear specifications with precision |
+| `/cogni-ai-coder:critical-thinking` | Cognitive framework for deep analytical reasoning |
 
 ## Installation
 
@@ -28,12 +35,15 @@ claude plugin install cogni-ai-coder@cogni-ai-agentic-collections
 
 ### Agents
 
-- **cogni-ai-coder** — Autonomous coding assistant that translates specifications into functional code with precision, speed, and strict convention adherence.
+- **cogni-ai-coder** — Autonomous coding assistant that translates specifications into functional code with
+  precision, speed, and strict convention adherence.
 
 ### Skills
 
-- **coding** — Workflow for implementing code from clear specifications. Focuses on syntax accuracy, convention compliance, and rapid delivery.
-- **critical-thinking** — Deep analytical reasoning framework for deconstructing assumptions, applying Socratic questioning, and performing adversarial red-teaming to solve complex problems.
+- **coding** — Workflow for implementing code from clear specifications. Focuses on syntax accuracy, convention
+  compliance, and rapid delivery.
+- **critical-thinking** — Deep analytical reasoning framework for deconstructing assumptions, applying Socratic
+  questioning, and performing adversarial red-teaming to solve complex problems.
 
 ## Usage
 

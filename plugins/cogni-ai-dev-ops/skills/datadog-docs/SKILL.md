@@ -54,7 +54,6 @@ and retrieve Datadog documentation via LLM-optimized endpoints.
 
 ## References
 
-
 - [API Reference](references/api_reference.md)
   MUST be fetched when interacting with the Datadog API.
 - [Datadog API cURL Examples](references/api_via_curl.md)

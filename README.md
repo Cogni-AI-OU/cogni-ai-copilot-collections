@@ -7,14 +7,14 @@
 
 ### Agents
 
-```
+```bash
 # Clone agents.
 git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agents ~/.copilot/agents
 ```
 
 ### Instructions
 
-```
+```bash
 # Clone instructions.
 git clone --depth=1 https://github.com/Cogni-AI-OU/cogni-ai-agent-instructions ~/.copilot/instructions
 ```
@@ -81,5 +81,3 @@ This repository is licensed under MIT. See [LICENSE](LICENSE) for the full text.
 [pr-reviews-link]: https://github.com/Cogni-AI-OU/cogni-ai-agentic-collections/pulls
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-link]: https://tldrlegal.com/license/mit-license
-[customize-env]: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment
-[firewall-config]: https://gh.io/copilot/firewall-config
