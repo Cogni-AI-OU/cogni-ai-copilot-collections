@@ -40,6 +40,7 @@ license: MIT
 - **`.cursor/`**: Directory for Cursor-specific workspace configurations, including project-specific rules, indexing settings, and AI behavior overrides.
 - **`.cursorrules`**: Defines custom instructions and behavioral rules for the Cursor AI editor, ensuring consistent AI assistance across the project.
 - **`.devcontainer/`**: Directory for containerized development environments, containing `devcontainer.json` (configuration), `requirements.txt` (Python dependencies), and `apt-packages.txt` (system packages).
+- **`.dockerignore`**: Specifies files and directories to exclude from the Docker build context, reducing image size and preventing sensitive files from being included.
 - **`.editorconfig`**: Defines consistent coding styles (indentation, line endings, character set) for multiple developers working on the same project across various IDEs.
 - **`.env.example` / `.env.sample` / `.env.dist`**: Provides a template of required environment variables without including actual secret values.
 - **`.fdignore`**: Specifies files and directories to ignore for the `fd` search tool, often mirroring `.gitignore` but used for faster file finding.
@@ -58,6 +59,7 @@ license: MIT
 - **`.gitattributes`**: Defines Git attributes per path, controlling line ending normalization, merge strategies, text/binary classification, and diff output.
 - **`.gitignore`**: Specifies intentionally untracked files to ignore (e.g., build artifacts, temporary files, secrets) preventing them from being committed to the Git repository.
 - **`.gitmodules`**: Configures Git submodules, mapping their paths to the remote repository URLs.
+- **`.golangci.yml`**: Configuration file for `golangci-lint`, a Go linters aggregator, defining enabled linters, error reporting, and analysis settings.
 - **`.htaccess`**: Distributed configuration file for Apache web server, allowing for decentralized management of web server configuration.
 - **`.lycheeignore`**: Defines URL patterns and regular expressions to exclude from link checking with lychee.
 - **`.markdown-link-check.json`**: Configures `markdown-link-check` behavior, including timeouts, ignore patterns, and status code handling.
@@ -71,6 +73,7 @@ license: MIT
 - **`.ripgreprc`**: Project-specific configuration for `ripgrep` (`rg`), defining default flags and ignore patterns.
 - **`.tours/`**: Directory for VS Code CodeTour files, including `*.tour` (walkthroughs) and `README.md` (documentation).
 - **`.vscode/`**: Directory for VS Code-specific configurations, including `settings.json` (workspace settings), `extensions.json` (recommended extensions), `launch.json` (debug configurations), and `tasks.json` (task runners).
+- **`.waza.yaml`**: Configuration file for Waza, defining project metadata, build settings, and deployment configurations.
 - **`.yamlfix.toml`**: Configures `yamlfix` for automated YAML formatting and style enforcement.
 - **`.yamllint` / `.yamllint.yaml`**: Defines rules for yamllint to ensure YAML files are syntactically valid and stylistically consistent.
 - **`AGENTS.md`**: The primary entry point and quick reference for AI agents, defining common tasks, commands, and context.
