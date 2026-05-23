@@ -21,6 +21,7 @@ license: MIT
 ## References
 
 The following pages are mapped from the official npm documentation (v11.15.0). Use webfetch to read the raw markdown contents for deep insights into each command and concept.
+To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 ### CLI Commands
 
