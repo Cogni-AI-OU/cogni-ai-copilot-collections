@@ -35,7 +35,7 @@ The Awesome GitHub Copilot repository is a community-driven collection of custom
 
 [Awesome Copilot Repository](https://github.com/github/awesome-copilot) structure:
 
-```
+```text
 .
 ├── agents/           # Custom GitHub Copilot agent definitions (.agent.md files)
 ├── instructions/     # Coding standards and guidelines (.instructions.md files)
@@ -66,7 +66,7 @@ The Awesome GitHub Copilot repository is a community-driven collection of custom
 ## Resources
 
 | Resource | Description |
-|----------|-------------|
+| -------- | ----------- |
 | 🤖 **Agents** | Specialized Copilot agents that integrate with MCP servers |
 | 📋 **Instructions** | Coding standards applied automatically by file pattern |
 | 🎯 **Skills** | Self-contained folders with instructions and bundled assets |

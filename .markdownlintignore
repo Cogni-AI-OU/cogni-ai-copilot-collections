@@ -1,0 +1,6 @@
+# Auto-generated reference files fetched from external sources
+skills/copilot-docs/references/
+skills/code-tour/references/
+.github/prompts/
+# Reference files inside plugins
+plugins/cogni-ai-dev-ops/skills/datadog-docs/references/

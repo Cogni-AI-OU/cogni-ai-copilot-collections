@@ -492,7 +492,7 @@ Not all GitHub data is accessible through the GitHub MCP server or the GitHub RE
   - `discussions` → [`pkg/github/discussions.go`](https://github.com/github/github-mcp-server/blob/main/pkg/github/discussions.go)
   - `gists` → [`pkg/github/gists.go`](https://github.com/github/github-mcp-server/blob/main/pkg/github/gists.go)
   - `issues` → [`pkg/github/issues.go`](https://github.com/github/github-mcp-server/blob/main/pkg/github/issues.go)
-  - `labels` → [`pkg/github/labels.go`](https://github.com/github/github-mcp-server/blob/main/pkg/github/labels.go)
+  - `labels` → `pkg/github/labels.go`
   - `notifications` → [`pkg/github/notifications.go`](https://github.com/github/github-mcp-server/blob/main/pkg/github/notifications.go)
   - `orgs` → [`pkg/github/search.go`](https://github.com/github/github-mcp-server/blob/main/pkg/github/search.go)
     (primary: `search_orgs`; note that `list_org_repository_security_advisories`

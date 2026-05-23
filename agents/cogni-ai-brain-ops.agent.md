@@ -76,7 +76,9 @@ When you are invoked as a subagent, you MUST follow these checkpoints to ensure 
 
 ### Problem-Oriented Troubleshooting
 
-When the task is problem-oriented, provide different options for how the issue can be troubleshot further. Depending on what is most relevant, suggest strategies such as:
+When the task is problem-oriented, provide different options for how the issue can be troubleshot
+further. Depending on what is most relevant, suggest strategies such as:
+
 - Checking version history using `git blame` or `git log` to find related changes.
 - Checking job logs, CI/CD output, or agent execution logs.
 - Narrowing down the root cause (if it is not immediately known).
