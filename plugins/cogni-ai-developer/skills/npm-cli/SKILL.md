@@ -18,19 +18,26 @@ license: MIT
 - When managing alternative package managers like `yarn` or `pnpm`.
 - When writing general JavaScript/TypeScript code that does not interact with npm packages or scripts.
 
+## Common Pitfalls
+
+- **Lockfile drift**: Running `npm install` instead of `npm ci` in CI environments can produce different dependency trees than committed in `package-lock.json`. Always use `npm ci` in CI for reproducible installs.
+- **Registry auth leakage**: Storing authentication tokens in `.npmrc` files that are committed to the repository can expose credentials. Use `npm token` with environment variables or `.npmrc` entries scoped per-registry.
+- **Unsafe lifecycle scripts**: `postinstall` and `preinstall` scripts in dependencies execute arbitrary code. Use `npm install --ignore-scripts` when installing untrusted packages, then selectively run scripts for trusted dependencies.
+- **Missing engine checks**: Relying on `engines` field in `package.json` without also setting `engine-strict=true` in `.npmrc` means npm will only warn (not fail) on version mismatches.
+
 ## References
 
-The following pages are mapped from the official npm documentation (v11.15.0). Use webfetch to read the raw markdown contents for deep insights into each command and concept.
+The following pages are mapped from the official npm documentation (v11.15.0). Use an available web fetching tool to read the raw markdown contents for deep insights into each command and concept.
 To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 ### CLI Commands
 
-- **npm**: [javascript package manager](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm.md)
+- **npm**: [JavaScript package manager](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm.md)
 - **npm access**: [Set access level on published packages](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-access.md)
 - **npm adduser**: [Add a registry user account](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-adduser.md)
 - **npm audit**: [Run a security audit](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-audit.md)
 - **npm bugs**: [Report bugs for a package in a web browser](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-bugs.md)
-- **npm cache**: [Manipulates packages cache](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-cache.md)
+- **npm cache**: [Manipulates the package cache](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-cache.md)
 - **npm ci**: [Clean install a project](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-ci.md)
 - **npm completion**: [Tab Completion for npm](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-completion.md)
 - **npm config**: [Manage the npm configuration files](https://raw.githubusercontent.com/npm/cli/refs/tags/v11.15.0/docs/lib/content/commands/npm-config.md)
