@@ -43,16 +43,7 @@
   "env": {
     "ENABLE_LSP_TOOL": "1"
   },
-  "extraKnownMarketplaces": {
-    "cogni-ai-marketplace": {
-      "source": {
-        "source": "url",
-        "url": "https://example.com/path/to/marketplace.json"
-      }
-    }
-  },
   "enabledPlugins": {
-    "pyright-lsp@claude-plugins-official": true,
-    "some-plugin@cogni-ai-marketplace": true
+    "pyright-lsp@claude-plugins-official": true
   }
 }
