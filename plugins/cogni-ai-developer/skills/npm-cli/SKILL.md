@@ -27,7 +27,7 @@ license: MIT
 
 ## References
 
-The following pages are mapped from the official npm documentation (v11.15.0). Use an available web fetching tool to read the raw markdown contents for deep insights into each command and concept.
+The following pages are mapped from the official npm CLI documentation (v11.15.0), with a small set of troubleshooting links sourced from the npm documentation repo (which tracks `main`). Use an available web fetching tool to read the raw markdown contents for deep insights into each command and concept.
 To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 ### CLI Commands
