@@ -103,7 +103,7 @@ when needed.
 ## Agent Prompts and Catalogs
 
 - [`AGENTS.md`](AGENTS.md): Agent-facing catalog for workflows in this directory.
-- [`../agents/`](../agents/): Primary Cogni agent definitions.
+- `../agents/`: Primary Cogni agent definitions.
 
 ## MCP Configuration
 
