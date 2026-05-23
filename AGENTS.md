@@ -63,20 +63,20 @@ and execution logic defined in [AGENTS-RUNTIME.md](AGENTS-RUNTIME.md).
 
 To prevent redundancy and context drift, enforce a strict conceptual boundary when authoring system components:
 
-1. **Agents (`*.agent.md`) — The "Who" and "Why"**
+1. **Agents (`*.agent.md`) -- The "Who" and "Why"**
    - **Focus**: Persona, invariants, cognitive framework, escalation gates, and output constraints.
    - **Rule**:
      Do not embed explicit execution tutorials or command-by-command scripts.
      Instruct the agent on *who* it is, *what* constraints it must obey
      (e.g., "Never mutate files directly"), and to delegate mechanical processes to specific skills.
 
-2. **Skills (`SKILL.md`) — The "How" (Execution Playbooks)**
+2. **Skills (`SKILL.md`) -- The "How" (Execution Playbooks)**
    - **Focus**: Tools, commands, step-by-step procedures, and mechanical execution.
    - **Rule**:
      A skill is agnostic to *who* uses it. It isolates the exact `bash`, `gh`,
      or API mechanics and exists strictly to define *how* an audit, build, or commit sync is correctly executed.
 
-3. **Instructions (`*.instructions.md`) — The "Rules" (Domain Standards)**
+3. **Instructions (`*.instructions.md`) -- The "Rules" (Domain Standards)**
    - **Focus**: Formatting standards, coding conventions, and structural rules (e.g., JSON schemas, Python dependencies).
    - **Rule**:
      Applied dynamically based on file type or project paths.
