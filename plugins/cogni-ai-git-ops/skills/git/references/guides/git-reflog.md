@@ -1,6 +1,6 @@
-# Git Reflog Recovery
-
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
+# Git Reflog Recovery
 
 Recover lost commits, branches, or undo a destructive operation (like a bad hard reset).
 

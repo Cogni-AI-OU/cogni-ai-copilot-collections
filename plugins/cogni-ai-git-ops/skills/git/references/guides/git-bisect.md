@@ -1,6 +1,6 @@
-# Git Bisect
-
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
+# Git Bisect
 
 Use binary search to find the exact commit that introduced a bug.
 

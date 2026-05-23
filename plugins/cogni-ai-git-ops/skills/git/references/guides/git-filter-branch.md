@@ -1,6 +1,6 @@
-# Git Filter Branch
-
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
+# Git Filter Branch
 
 Extract a specific subdirectory from an external repository and merge it into another repository's root,
 permanently preserving the git commit history of those files, using `git filter-branch` as a built-in fallback.

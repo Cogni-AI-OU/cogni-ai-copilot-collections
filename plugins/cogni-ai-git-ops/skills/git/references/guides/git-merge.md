@@ -1,6 +1,6 @@
-# Git Merge
-
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
+# Git Merge
 
 Execute safe and verified git merges. This process enforces pre-merge checks, explicit conflict resolution,
 and strict post-merge validation to prevent duplicate lines or lingering conflict markers.

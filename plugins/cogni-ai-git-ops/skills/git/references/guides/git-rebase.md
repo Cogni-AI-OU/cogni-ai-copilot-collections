@@ -1,6 +1,6 @@
-# Git Rebase
-
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
+# Git Rebase
 
 Expert-level guidance for executing Git rebase operations safely, particularly distinguishing between interactive manual usage and automated environments.
 

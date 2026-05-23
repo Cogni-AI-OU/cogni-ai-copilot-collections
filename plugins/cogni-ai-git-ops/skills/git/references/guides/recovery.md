@@ -1,6 +1,6 @@
-# Git Recovery & Troubleshooting
-
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
+
+# Git Recovery & Troubleshooting
 
 Expert-level guidance for executing complex Git operations safely and effectively.
 
