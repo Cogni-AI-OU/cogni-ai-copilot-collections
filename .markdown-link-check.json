@@ -21,9 +21,6 @@
     },
     {
       "pattern": "^https://github.com/org/repo"
-    },
-    {
-      "pattern": "^https://techcommunity.microsoft.com"
     }
   ],
   "retryCount": 3,
