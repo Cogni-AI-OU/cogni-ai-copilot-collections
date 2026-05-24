@@ -7,8 +7,8 @@ designing algorithms, data structures, and reliable solutions.
 
 | | |
 | --- | --- |
-| **Description** | Autonomous programmer agent with programming and python skills |
-| **Contents** | 1 agent, 6 skills |
+| **Description** | Autonomous programmer agent with programming and language-specific skills |
+| **Contents** | 1 agent, 8 skills |
 
 ## Slash Commands
 
@@ -20,6 +20,8 @@ designing algorithms, data structures, and reliable solutions.
 | `/cogni-ai-programmer:react-llms` | Expert guide for generating React code |
 | `/cogni-ai-programmer:nextjs-llms` | Expert guide for generating Next.js code |
 | `/cogni-ai-programmer:reactnative-llms` | Expert guide for generating React Native code |
+| `/cogni-ai-programmer:c-coding-standard` | C coding standard guidelines for names, formatting, and documentation |
+| `/cogni-ai-programmer:cpp-coding-standard` | C++ coding standard guidelines for names and object-oriented design |
 
 ## Installation
 
