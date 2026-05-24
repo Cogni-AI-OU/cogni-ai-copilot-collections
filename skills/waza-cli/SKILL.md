@@ -141,16 +141,16 @@ waza run eval.yaml --model gpt-4o --model claude-sonnet-4.6 --recommend
 waza run eval.yaml --keep-workspace -v
 ```
 
-## Related Skills
-
-- **waza-docs**:
-  Documentation and references for waza CLI and its internals.
-- **agentskills**:
-  Reference for the Agent Skills open standard. Defines the schema, directory structure, formatting, and portability requirements for agent skills.
-
 ## References
 
 - [Waza Quick Start](https://microsoft.github.io/waza/quick-start/)
 - [Waza repository](https://github.com/microsoft/waza)
 - [Waza CLI Reference](https://github.com/microsoft/waza/blob/v0.33.0/site/src/content/docs/reference/cli.mdx)
   Complete reference for all waza CLI commands and their options.
+
+## Related Skills
+
+- **waza-docs**:
+  Documentation and references for waza CLI and its internals.
+- **agentskills**:
+  Reference for the Agent Skills open standard. Defines the schema, directory structure, formatting, and portability requirements for agent skills.
