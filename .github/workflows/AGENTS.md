@@ -71,7 +71,7 @@ For a human-readable overview, see [README.md](README.md).
   Saves results as artifacts for the comment workflow.
 - Permissions: `contents: read`.
 
-### waza-check-comment.yml
+### waza-check-pr-comment.yml
 
 - Purpose: Posts results from the "Waza Evaluation" workflow as a PR comment.
 - Triggers: `workflow_run` (after Waza Evaluation), `workflow_call`, `workflow_dispatch`.
