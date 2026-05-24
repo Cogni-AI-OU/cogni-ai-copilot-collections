@@ -43,7 +43,6 @@ gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
 | [context-aware-ops](context-aware-ops/SKILL.md) | Intelligent resource management with size checking to preserve context. |
 | [copilot-cli](copilot-cli/SKILL.md) | Guidance for installing and using GitHub Copilot CLI. |
 | [copilot-docs](copilot-docs/SKILL.md) | Reference and documentation for GitHub Copilot CLI customization. |
-| [devcontainer](devcontainer/SKILL.md) | Create and maintain robust devcontainer.json configurations. |
 | [dictation](dictation/SKILL.md) | Apply dictation correction protocols to fix common speech-to-text errors. |
 | [direnv](direnv/SKILL.md) | How to maintain credentials and authenticate using direnv safely. |
 | [docs-review](docs-review/SKILL.md) | Enforce documentation quality and consistency across architecture and code. |
