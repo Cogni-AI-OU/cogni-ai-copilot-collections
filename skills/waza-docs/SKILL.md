@@ -50,6 +50,9 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [Token Limits Configuration](https://raw.githubusercontent.com/microsoft/waza/refs/tags/v0.33.0/docs/TOKEN-LIMITS.md)
   Reference for resolving token limits in configuration, such as `.waza.yaml`.
 
+- [Waza Project Configuration Schema](https://raw.githubusercontent.com/microsoft/waza/main/schemas/config.schema.json)
+  JSON Schema for validating `.waza.yaml` project configuration files.
+
 - [Writing Skill Evals - Tutorial](https://raw.githubusercontent.com/microsoft/waza/refs/tags/v0.33.0/docs/TUTORIAL.md)
   This tutorial walks you through creating evaluations for your Agent Skills.
 
