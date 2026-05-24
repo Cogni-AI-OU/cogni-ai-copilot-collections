@@ -211,5 +211,4 @@ Filter by language or keyword to narrow results -- e.g. add `language:TypeScript
 
 - **DEV Community -- "Onboard your codebase with CodeTour"**: <https://dev.to/tobiastimm/onboard-your-codebase-with-codetour-2jc8>
 - **Coder Blog -- "Onboard to new projects faster with CodeTour"**: <https://coder.com/blog/onboard-to-new-projects-faster-with-codetour>
-- **Microsoft Tech Community -- Educator Developer Blog**: <https://techcommunity.microsoft.com/blog/educatordeveloperblog/codetour-vscode-extension-allows-you-to-produce-interactive-guides-assessments-a/1274297>
 - **CodeTour GitHub Topics**: <https://github.com/topics/codetour>
