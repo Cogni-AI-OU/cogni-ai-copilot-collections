@@ -23,13 +23,13 @@ MOT provides a list of all the models currently registered and how they rank aga
 - **Strict MOF Adherence**: Always map components to the official MOF evaluation criteria for accurate classification.
 - **Concise Reporting**: Return only the requested fields (e.g., framework, architecture, producer) and the final MOF classification.
 
-## When to Use
+## WHEN TO USE
 
 - When finding a list of open models or specific model metadata from the Model Openness Tool repository.
 - When classifying a machine learning model's degree of openness using MOF.
 - When extracting specific model properties like architecture, release date, or components.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When searching for general-purpose software libraries or non-AI code repositories (use `github-topics` instead).
 - For evaluating the runtime performance, latency, or accuracy benchmarks of an LLM.

@@ -12,13 +12,13 @@ license: MIT
 
 Reference for GitHub Agentic Workflows frontmatter schema, engines, networking, tools, and safe-outputs.
 
-## When to Use
+## WHEN TO USE
 
 - When writing, editing, or debugging the YAML frontmatter of a `.md` Agentic Workflow file.
 - To configure MCP server tools, permissions, network allowlists, or safe-outputs for an agent.
 - When optimizing the caching or runtime environments of a GitHub Agentic Workflow.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For standard GitHub Actions workflows (`.github/workflows/*.yml`) that do not use the `gh-aw` engine.
 - When writing the natural language instructions inside the workflow body (use `ai-prompt-writer` instead).

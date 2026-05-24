@@ -17,13 +17,13 @@ Manage agent skills directly via the `gh skill` CLI command. This tool automates
 - **Supply Chain Integrity**: Prefer pinning skills to specific tags or commit SHAs via the `--pin` flag to ensure deterministic behavior.
 - **Automated Metadata**: `gh skill` automatically writes tracking metadata (repository, ref, tree SHA) into the `SKILL.md` frontmatter during installation.
 
-## When to Use
+## WHEN TO USE
 
 - When installing, searching, or managing GitHub Copilot skills via the command line.
 - To validate the frontmatter and metadata of a locally developed skill before publishing.
 - When adding a new capability (like `awesome-copilot`) to your personal or project-level agent scope.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When running generic shell operations unrelated to Copilot Agent Skills.
 - For managing standard GitHub extensions (use `gh extension` instead).

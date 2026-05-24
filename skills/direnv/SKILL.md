@@ -20,13 +20,13 @@ Guidance for using `direnv` to securely maintain credentials and load environmen
 - **Security Focus**: Never print, echo, or expose API keys and secrets in the terminal output.
 - **Session Persistence**: Always follow `direnv allow` with `eval "$(direnv export bash)"` to ensure the agent's shell session properly loads the variables, as standard direnv shell hooks may not be active.
 
-## When to Use
+## WHEN TO USE
 
 - When you need to automatically load environment variables upon entering a specific project directory.
 - To safely manage API keys and secrets in local development without committing them to version control.
 - When an agent needs to execute commands that depend on project-specific credentials stored in `.env`.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - In production CI/CD pipelines where secrets are securely injected by the runner environment (like GitHub Actions secrets).
 - For managing global, system-wide environment variables (use `~/.bashrc` or `~/.profile` instead).

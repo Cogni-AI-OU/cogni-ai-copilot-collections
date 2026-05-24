@@ -14,14 +14,14 @@ license: MIT
 
 A comprehensive workflow for delivering complete, usable software that solves real needs. Covers the entire product lifecycle: understanding user needs, designing solutions, building, deploying, monitoring, and iterating.
 
-## When to Use
+## WHEN TO USE
 
 - When developing end-to-end features that span multiple layers (frontend, backend, data).
 - When responsible for the full lifecycle: requirements → design → build → deploy → maintain.
 - When shipping software that must deliver user or business value, not just correct code.
 - When coordinating across technical and product concerns to make architectural trade-offs.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For implementing well-defined, isolated specs without system design concerns (use `coding`).
 - For algorithmic or data-structure focused tasks without product context (use `programming`).

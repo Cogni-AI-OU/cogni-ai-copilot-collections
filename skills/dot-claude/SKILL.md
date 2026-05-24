@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Configuring allowed tools and bash permissions for Claude Code.
 - Defining PreToolUse or PostToolUse hooks for specific commands or file edits.
 - Setting up environment variables, enabling LSP plugins, or managing marketplaces for Claude Code.
 - Analyzing or updating the `.claude/settings.json` workspace configuration.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When working with the Anthropic Claude API or Claude documentation.
 - When configuring generic coding standard rules instead of Claude-specific behavior.

@@ -8,13 +8,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Generating or writing new Apache Airflow Dags.
 - Refactoring, debugging, or analyzing existing Airflow Dags.
 - Architecting data pipelines using Airflow's TaskFlow API.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Interacting with the Airflow REST API to trigger Dag runs or manage connections (use `apache-airflow-api` instead).
 

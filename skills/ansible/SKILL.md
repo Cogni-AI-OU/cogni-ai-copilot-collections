@@ -9,31 +9,18 @@ license: MIT
 
 # Ansible Operations
 
-**ENGINEERING SKILL**
-INVOKES: `bash` with `ansible` command
-FOR SINGLE OPERATIONS: `bash` with `ansible-playbook`
 
-## USE FOR:
-
-- "run this ansible playbook"
-- "manage ansible roles"
-- "check ansible idempotency"
-- "debug ansible connection issues"
-
-## When to Use
+## WHEN TO USE
 
 - Agent needs to execute Ansible playbooks or commands.
 - User needs to run Ansible automation scripts.
 - Troubleshooting hanging issues during Ansible execution.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For localized script automation on a single machine where simple shell scripts suffice.
 - For managing ephemeral, immutable container infrastructure better suited for Terraform or Dockerfiles.
 - When the task explicitly requires agentic AI decision-making loops (Ansible is deterministic).
-
-## DO NOT USE FOR:
-
 - General shell scripts (use `shell` instead).
 - Docker operations (use `docker` instead).
 

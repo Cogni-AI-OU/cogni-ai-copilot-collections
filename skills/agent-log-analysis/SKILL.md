@@ -13,14 +13,14 @@ license: MIT
 
 This skill dictates the mechanical execution and rigid formatting requirements for auditing AI agent session logs.
 
-## When to Use
+## WHEN TO USE
 
 - Find hidden problems before a workflow goes to production
 - Audit an existing agent for quality and reliability
 - Get a prioritized remediation plan with concrete next steps
 - Health-check a workflow after significant changes
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When writing or designing the actual prompts for the agent (use `ai-prompt-writer` instead).
 - For analyzing standard, non-agentic GitHub Actions workflow logs (use `github-actions` instead).

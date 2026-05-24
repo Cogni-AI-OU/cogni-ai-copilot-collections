@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - **Skill Discovery & Search**: Searching the skills ecosystem via `npx skills find`.
 - **Skill Installation**: Installing open agent skills from repositories (e.g., `vercel-labs/agent-skills`) for various autonomous agents.
 - **Skill Updates**: Updating previously installed skills via `npx skills update`.
 - **Skill Scaffolding**: Initializing a new agent skill boilerplate via `npx skills init`.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **Content Creation**: Do not use this skill to write the internal markdown content of `SKILL.md` files (use `agent-skill-md-writer` or `agentskills` instead).
 

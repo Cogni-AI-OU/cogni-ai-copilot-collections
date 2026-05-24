@@ -13,7 +13,7 @@ license: MIT
 Use `gh` as a structured client first. Prefer native fields, explicit routing,
 and bounded fallbacks over brittle shell post-processing.
 
-## When to Use
+## WHEN TO USE
 
 - User asks to use `gh`, GitHub CLI, or to query GitHub from shell.
 - Task involves issues, PRs, reviews, workflow runs, jobs, discussions, or GitHub REST endpoints.
@@ -301,7 +301,7 @@ mindmap
       (Load gh-run skill if required)
 ```
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For interacting with raw git mechanisms (use `git` instead).
 - When a dedicated GraphQL client or specific SDK is better suited for a massive data synchronization task than CLI iteration.

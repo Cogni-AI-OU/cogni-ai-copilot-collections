@@ -16,19 +16,8 @@ license: MIT
 **render compatibility** (GitHub, VS Code, Mermaid Live Editor, Markdown), **minimalism**, and **Easy-To-Change (ETC)**
 design so diagrams remain maintainable as systems evolve.
 
-**VISUALIZATION SKILL**
-INVOKES: `mermaid-beta`
-FOR SINGLE OPERATIONS: `write` or `edit` tool with `mermaid` code blocks
 
-## USE FOR:
-
-- "create a flowchart for this process"
-- "draw a sequence diagram of the interaction"
-- "visualize the database schema with an ER diagram"
-- "map the system architecture using C4"
-- "generate a mindmap of the project facts"
-
-## When to Use
+## WHEN TO USE
 
 - Agent must explain complex logic, system architecture, or requirements via diagrams.
 - Generating diagrams that must render correctly in GitHub, Obsidian, Notion,
@@ -754,7 +743,7 @@ mindmap
       id_ver1["Rendering mismatch"]
       ::icon(fa fa-sync)
         id_ver1_fix["Fix: Use v11+ syntax consistently"]
-    Common Pitfalls
+   ## Common Pitfalls
       id_pit1["Avoid accidental edges"]
       ::icon(fa fa-project-diagram)
         id_pit1_fix["Fix: Space before 'o'/'x' in IDs"]
@@ -763,7 +752,7 @@ mindmap
         id_pit2_fix["Fix: Escape as '\,'"]
 ```
 
-## DO NOT USE FOR:
+## WHEN NOT TO USE
 
 - Complex, data-heavy visualizations better suited for specialized tools.
 - Real-time or highly interactive UI components.

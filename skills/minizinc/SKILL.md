@@ -10,19 +10,7 @@ license: MIT
 
 # MiniZinc Modeling
 
-**ENGINEERING SKILL**
-INVOKES: `bash` (for running the solver)
-FOR SINGLE OPERATIONS: `bash` with `minizinc` command
-
-## USE FOR:
-
-- "solve this scheduling problem"
-- "model the constraints for this resource allocation"
-- "find an optimal assignment"
-- "verify the logical consistency of these rules"
-- "dry-code the problem constraints formally"
-
-## When to Use
+## WHEN TO USE
 
 - Addressing constraint satisfaction, scheduling, assignment, or combinatorial problems.
 - Need to apply expert advanced modeling techniques in MiniZinc (tight domains, globals, symmetry breaking, search annotations, channeling, etc.).
@@ -30,7 +18,7 @@ FOR SINGLE OPERATIONS: `bash` with `minizinc` command
 - When manual resolution of a combinatorial challenge is required: use the MiniZinc model as a logical framework to derive and verify the solution step-by-step without premature termination.
 - When preparing to solve a complex logical or combinatorial problem: dry-write a MiniZinc model first to explicitly map and visualize the constraints before proceeding with the actual resolution.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For solving continuous, non-linear optimization problems where specialized solvers (like IPOPT or interior point methods) are strictly required.
 - When you just need to run an existing model without modifying or analyzing its structure.
@@ -116,12 +104,6 @@ FOR SINGLE OPERATIONS: `bash` with `minizinc` command
 - Never omit `globals.mzn`.
 - Never rely on default search for non-trivial models.
 - Never leave symmetry unaddressed in symmetric problems.
-
-## DO NOT USE FOR:
-
-- Simple procedural logic.
-- Continuous, non-linear optimization.
-- General application development.
 
 ## Limitations & Safety
 

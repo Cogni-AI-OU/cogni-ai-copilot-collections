@@ -11,7 +11,7 @@ license: MIT
 Execute Datadog API requests to fetch live objects, metrics, or monitor statuses,
 and retrieve Datadog documentation via LLM-optimized endpoints.
 
-## When to Use
+## WHEN TO USE
 
 - **Documentation Search**: Locating specific Datadog documentation articles or reference materials.
 - **Article Retrieval**: Fetching Datadog documentation using the provided LLM-optimized endpoints.
@@ -19,7 +19,7 @@ and retrieve Datadog documentation via LLM-optimized endpoints.
 - To retrieve and analyze the status of Datadog monitors.
 - When you need to fetch a dashboard configuration JSON to inspect or backup its definition.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When full MCP observability tools (`datadog-mcp`) are available, as they natively format data for LLM context windows.
 - If the project uses Pulumi or Terraform for Datadog resource creation (use the respective Infrastructure-as-Code skill).

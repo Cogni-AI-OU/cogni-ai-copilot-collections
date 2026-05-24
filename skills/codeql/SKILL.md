@@ -10,13 +10,13 @@ license: MIT
 
 This skill provides procedural guidance for configuring and running CodeQL code scanning — both through GitHub Actions workflows and the standalone CodeQL CLI.
 
-## When to Use
+## WHEN TO USE
 
 - When configuring advanced CodeQL security scanning via GitHub Actions (`.github/workflows/codeql.yml`).
 - To manually build CodeQL databases and run queries using the standalone CodeQL CLI.
 - When troubleshooting CodeQL autobuild failures for compiled languages like C++ or Java.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When running standard linters (like ESLint or Ruff) that do not use CodeQL's semantic analysis.
 - For managing third-party dependency vulnerabilities (use Dependabot or the `sbom` skill).

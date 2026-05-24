@@ -14,17 +14,8 @@ license: MIT
 Guidance for reviewing core architecture, documentation, and constraint files for mutual consistency and accuracy. Use this skill when checking repository documentation.
 
 **REVIEW SKILL**
-INVOKES: `critical-thinking`, `docs-writer`
-FOR SINGLE OPERATIONS: `bash` with `grep` or `read` tool
 
-## USE FOR:
-
-- "check the documentation for consistency"
-- "review this README for accuracy"
-- "audit the ADRs and runbooks"
-- "verify that AGENTS.md matches the project state"
-
-## When to Use
+## WHEN TO USE
 
 - Checking core architecture files (`*.mmd`, `*.mzn`) for consistency.
 - Reviewing documentation (`**/AGENTS.md`, `**/README.md`) for outdated references.
@@ -32,14 +23,11 @@ FOR SINGLE OPERATIONS: `bash` with `grep` or `read` tool
 - When encountering complex code to ensure it's properly documented.
 - When verifying an operational procedure or tradeoff.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For performing deep code execution or logic validation (use `testing` or `code-review` instead).
 - When the user explicitly requests purely formatting/linting fixes (use `markdown` or `yaml` skills).
 - For writing completely new features from scratch without reviewing existing architecture.
-
-## DO NOT USE FOR:
-
 - Writing new documentation (use `docs-writer` instead).
 - Deep code logic review (use `code-review` instead).
 - Simple markdown linting.

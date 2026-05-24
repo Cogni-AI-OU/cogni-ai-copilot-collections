@@ -10,18 +10,7 @@ license: MIT
 
 Agent MD is a format for defining specialized agent personas. These files provide context-specific instructions, project knowledge, and execution boundaries for autonomous agents in GitHub Copilot, OpenCode, and Claude Code. Unlike broad custom instructions, custom agents are selected for specific tasks and maintain their configuration throughout the workflow.
 
-**REFERENCE SKILL**
-INVOKES: `agent-md-writer`
-FOR SINGLE OPERATIONS: `read` tool
-
-## USE FOR:
-
-- "check the schema for a custom agent"
-- "understand the structure of .agent.md files"
-- "reference CLAUDE.md format"
-- "validate opencode.json configuration"
-
-## When to Use
+## WHEN TO USE
 
 - **Platform Syntax Reference**: Defining and validating the exact YAML frontmatter and Markdown structure for `.agent.md`, `CLAUDE.md`, and `opencode.json`.
 - **Architectural Alignment**: Correctly partitioning logic between Agents ("Who"), Skills ("How"), and Instructions ("Rules") to minimize context window bloat.
@@ -29,19 +18,15 @@ FOR SINGLE OPERATIONS: `read` tool
 - **Tool & Permission Guardrails**: Mapping autonomous capabilities to specific tools (built-in or MCP) and defining safety boundaries via `Never`/`Ask first` rules.
 - **Multi-Platform Configuration**: Standardizing agent behavior across GitHub Copilot, OpenCode, and Claude Code environments within a single codebase.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **Domain Formatting Rules**: Setting pure coding conventions or style guides — these belong in `*.instructions.md`.
 - **Mechanical Execution**: Defining step-by-step terminal commands or API workflows — these belong in `SKILL.md`.
 - **One-off Interaction**: Simple chat prompts or quick clarifications that don't require a persistent persona or complex tool mapping.
-
-## DO NOT USE FOR:
-
 - Writing the actual content of agent personas (use `agent-md-writer` instead).
 - General markdown editing.
 
 ## Common Pitfalls
-
 
 - **The 500 KiB Wall**: GitHub truncates agent files beyond this limit; avoid embedding large documentation files directly—use relative links instead.
 - **Absolute Path Breakage**: Using absolute URLs or paths within a repository; always use relative links to ensure portability across clones.
@@ -74,7 +59,7 @@ To prevent redundancy and context drift, always enforce a strict conceptual boun
      Applied dynamically based on the file-type or project paths being modified.
      They govern the output structure regardless of which agent or skill generated it.
 
-### When to Use What (Copilot Context)
+### What (Copilot Context)
 
 - **Prompts**: Direct questions or commands in chat for one-off requests and quick clarifications (single conversation).
 - **Instructions**: Global or workspace-level rules applied to all Copilot interactions (setting coding standards, preferences).

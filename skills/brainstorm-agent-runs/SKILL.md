@@ -12,13 +12,13 @@ license: MIT
 
 Analyze execution logs of agentic runs in CI/CD pipelines to extract insights about implementation status, challenges, and next steps for a Pull Request.
 
-## When to Use
+## WHEN TO USE
 
 - When analyzing a Pull Request and you need to understand the outcome of associated agentic workflow runs.
 - If an agent task was triggered on a PR but the results are unclear or hidden within CI check details.
 - To map out the execution history and failures of agents interacting with a specific Pull Request.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For analyzing non-agent CI pipelines (e.g., standard unit tests or linters), where `github-actions` or `gh-run` skills are more direct.
 - When generating diagrams for codebase architecture or generic GitHub PR history (use `brainstorm-github-pr` instead).

@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Identifying the correct dotfile to modify for a specific configuration change (e.g., formatting, linting, git behavior).
 - Troubleshooting CI/CD, linting, formatting, or environment configuration issues.
 - Setting up a new repository with standard organizational configuration files.
 - Understanding the purpose of existing hidden configuration files in the root directory.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Modifying application-specific source code or core business logic.
 - Configuring cloud infrastructure outside the repository itself (e.g., Terraform, AWS).

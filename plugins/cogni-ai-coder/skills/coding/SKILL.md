@@ -12,14 +12,14 @@ license: MIT
 
 A focused workflow for implementing code from clear specifications. Emphasizes speed, accuracy, and convention compliance rather than open-ended problem-solving.
 
-## When to Use
+## WHEN TO USE
 
 - When given well-defined requirements or designs and asked to turn them into functional code.
 - When implementing specific UI components, API endpoints, or utility functions from specs.
 - When performing bug fixes or small enhancements on existing codebases.
 - When speed of delivery and syntax correctness are the primary success criteria.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When the task requires designing novel algorithms or complex data structures from scratch (use `programming`).
 - When the task involves full product lifecycle: requirements gathering, deployment, or stakeholder communication (use `development`).

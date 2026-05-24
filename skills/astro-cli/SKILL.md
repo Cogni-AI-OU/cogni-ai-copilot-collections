@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use This Skill
+## WHEN TO USE
 
 - When initializing, configuring, or validating Astro/Airflow projects.
 - When managing local Airflow environments (Docker or Standalone mode).
@@ -16,7 +16,7 @@ license: MIT
 - When calling the Airflow REST API via the `astro api airflow` wrapper.
 - When troubleshooting production deployments by viewing logs or managing environment variables.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When writing generic Apache Airflow DAGs not specific to Astronomer CLI operations.
 

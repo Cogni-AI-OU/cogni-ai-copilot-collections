@@ -10,13 +10,13 @@ license: MIT
 
 **UTILITY SKILL** — installs and configures Language Server Protocol servers for Copilot CLI.
 
-## When to Use
+## WHEN TO USE
 
 - When the user asks to enable code intelligence, go-to-definition, or hover information for Copilot CLI.
 - When configuring a new development environment that lacks Language Server Protocol support.
 - If Copilot CLI fails to provide contextual code completions due to a missing language server.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When configuring LSP servers for a full IDE like VS Code or Neovim (this is specifically for Copilot CLI).
 - If the language does not have a widely supported or functioning Language Server Protocol implementation.

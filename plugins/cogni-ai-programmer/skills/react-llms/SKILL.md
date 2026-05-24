@@ -12,13 +12,13 @@ license: MIT
 
 React is a library for web and native user interfaces.
 
-## When to Use
+## WHEN TO USE
 
 - When developing applications using React for the web or native platforms.
 - When you need documentation on React Hooks (e.g., `useState`, `useEffect`, `useActionState`, `useOptimistic`).
 - When you need to look up React APIs, Server Components, Rules of React, or ESLint plugin rules.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When the task requires documentation specific to React Native components or Next.js routing features (use `reactnative-llms` or `nextjs-llms` instead).
 

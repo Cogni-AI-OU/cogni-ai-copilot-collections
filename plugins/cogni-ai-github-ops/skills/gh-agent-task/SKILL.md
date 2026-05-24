@@ -11,13 +11,13 @@ Provides usage patterns and expert guidance for the GitHub CLI `gh agent-task` e
 The agent-task command set is only available in v2.80.0 or later of the GitHub CLI.
 This command set is a public preview and is subject to change.
 
-## When to Use
+## WHEN TO USE
 
 - When you need to create, view, or list GitHub Copilot preview agent tasks directly from the CLI.
 - To automate the assignment of an agent to a specific pull request or issue.
 - When investigating the status or logs of an asynchronous agent task session.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For standard GitHub CLI operations (like listing PRs or Issues) that don't involve the agent task extension.
 - If your environment uses an older version of `gh` (< v2.80.0) that doesn't support the `agent-task` plugin.

@@ -19,7 +19,7 @@ AWF is a network firewall for agentic workflows that provides:
 - **Host-Level Enforcement**: Uses iptables DOCKER-USER chain to enforce firewall on ALL containers
 - **Chroot Mode**: Optional transparent access to host binaries (Python, Node.js, Go) while maintaining network isolation
 
-## When to Use AWF
+## WHEN TO USE AWF
 
 Use AWF when:
 - Running AI agents (Copilot CLI, Claude, etc.) that need network access but should be restricted
@@ -28,7 +28,7 @@ Use AWF when:
 - Running untrusted commands with limited network access
 - Testing Playwright or other tools against localhost services
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When running standard unit tests that do not require any external network requests.
 - For workflows that are already running in a fully air-gapped, self-hosted runner environment where AWF is redundant.

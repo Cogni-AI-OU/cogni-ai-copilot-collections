@@ -9,7 +9,7 @@ license: MIT
 
 Use `gh api` and `gh api graphql` when standard `gh` subcommands do not expose the required functionality or metadata.
 
-## When to Use
+## WHEN TO USE
 
 - User specifically asks to hit GitHub API endpoints via `gh api`.
 - Task requires fetching data unavailable in native commands (`gh pr view`, `gh issue view`).
@@ -22,7 +22,7 @@ Use `gh api` and `gh api graphql` when standard `gh` subcommands do not expose t
 - Task to resolve outdated PR comments.
 - User specifically asks for `gh api` or `gh api graphql` usage.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When a native `gh` command (like `gh issue view` or `gh pr create`) already provides the exact
   functionality and fields needed.

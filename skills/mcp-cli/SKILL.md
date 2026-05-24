@@ -10,13 +10,13 @@ license: MIT
 
 Access MCP servers through the command line. MCP enables interaction with external systems like GitHub, filesystems, databases, and APIs.
 
-## When to Use
+## WHEN TO USE
 
 - To interactively call an MCP (Model Context Protocol) server's tool from the command line.
 - When debugging or inspecting the JSON schema of an available MCP tool.
 - To execute specific filesystem, database, or API queries provided by a configured MCP server without writing a wrapper script.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Inside automated scripts where direct API calls (e.g., `curl` or language-specific SDKs) are faster and more reliable than shelling out to an MCP server wrapper.
 - For managing GitHub resources natively supported by `gh` (e.g., `gh issue list`).

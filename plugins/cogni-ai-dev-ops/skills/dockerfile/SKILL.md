@@ -10,13 +10,13 @@ license: MIT
 
 Create and maintain highly optimized, secure, and minimal Dockerfiles. Focus on strict deterministic builds, security compliance, and caching efficiency.
 
-## When to Use
+## WHEN TO USE
 
 - When writing, optimizing, or reviewing a `Dockerfile` for a new or existing service.
 - To reduce the image size or improve the layer caching efficiency of an existing Docker build.
 - When auditing a `Dockerfile` for security compliance (e.g., non-root users, pinned bases).
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When configuring local development environments that rely strictly on `devcontainer.json` without custom Dockerfiles.
 - For managing runtime container orchestration (use `docker` or `docker-compose` instead).

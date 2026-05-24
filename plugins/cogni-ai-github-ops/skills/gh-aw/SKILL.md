@@ -11,13 +11,13 @@ license: MIT
 
 Use `gh aw` to orchestrate GitHub Agentic Workflows for repository automation.
 
-## When to Use
+## WHEN TO USE
 
 - To initialize, create, update, or run GitHub Agentic Workflows.
 - When compiling `.md` agent definitions into executable `.lock.yml` GitHub Actions.
 - To manage MCP (Model Context Protocol) servers and toolsets within a repository's agent configuration.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For standard GitHub CLI operations that don't involve the Agentic Workflows extension (e.g., just listing issues or PRs).
 - When writing application code that simply uses the OpenAI or Anthropic API directly.

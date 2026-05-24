@@ -11,13 +11,13 @@ license: MIT
 
 Standardize `.github` directory structure, enforce agentic documentation patterns.
 
-## When to Use
+## WHEN TO USE
 
 - When establishing or organizing the structure of the `.github/` directory for a new repository.
 - To create or update `AGENTS.md` documentation specifically for the workflows folder.
 - When you need to safely disable a workflow by moving it instead of deleting it.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For creating generic documentation outside of the `.github/` folder (use `docs-writer` instead).
 - When configuring actual CI/CD pipeline logic inside the YAML files (use `github-actions` or `gh-aw-syntax`).

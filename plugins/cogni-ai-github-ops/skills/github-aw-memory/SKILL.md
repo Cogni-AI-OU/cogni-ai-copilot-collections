@@ -9,13 +9,13 @@ license: MIT
 
 Persistent memory strategy for GitHub Agentic Workflows (`cache-memory`, `repo-memory`, `comment-memory`).
 
-## When to Use
+## WHEN TO USE
 
 - To persist workflow state across multiple runs (e.g., maintaining a daily progress tracker).
 - When a workflow needs to remember which PRs or issues it has already processed to avoid duplicate work.
 - To store configuration baselines or operational notes (using `repo-memory`) that must survive cache expiration.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When the state can be trivially derived from existing GitHub abstractions (e.g., checking if a label exists instead of writing a memory file).
 - For storing highly sensitive secrets or credentials (use GitHub Secrets instead).

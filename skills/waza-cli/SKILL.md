@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use This Skill
+## WHEN TO USE
 
 - When initializing, configuring, or generating waza evaluation suites.
 - When running evaluation benchmarks from a YAML spec file.

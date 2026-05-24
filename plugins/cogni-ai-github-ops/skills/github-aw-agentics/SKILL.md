@@ -16,7 +16,7 @@ license: MIT
 A collection of reusable GitHub Agentic Workflows
 from [githubnext/agentics](https://github.com/githubnext/agentics/tree/main/docs).
 
-## When to Use This Skill
+## WHEN TO USE
 
 - User is looking for inspiration or ideas for new agentic workflows to implement
 - User needs to implement or optimize a new agentic workflow based on existing patterns
@@ -24,7 +24,7 @@ from [githubnext/agentics](https://github.com/githubnext/agentics/tree/main/docs
 - User wants to reference official documentation for specific workflows
 - User wants to understand the "How It Works" logic (mermaid diagrams) for specific agents
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For creating generic GitHub Actions that do not involve LLMs, AI agents, or autonomous decision-making loops.
 - When you just need to run basic `gh` CLI commands to list issues or PRs without workflow orchestration.

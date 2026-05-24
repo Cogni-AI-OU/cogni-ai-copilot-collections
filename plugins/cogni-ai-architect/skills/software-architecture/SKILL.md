@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When tasked with designing the high-level structure of a new software system.
 - When determining the architectural style (e.g., Monolith, Microservices, Event-Driven) for an application.
@@ -16,7 +16,7 @@ license: MIT
 - When applying SOLID principles and other foundational design principles (DRY, KISS, YAGNI, Law of Demeter).
 - When defining or evaluating architectural trade-offs and creating Architecture Decision Records (ADRs).
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When implementing low-level coding tasks that do not involve structural or architectural decisions (use the `coding` skill instead).
 - When debugging simple logic errors or writing unit tests (use the `programming` or `tdd` skill instead).

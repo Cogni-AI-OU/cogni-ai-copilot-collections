@@ -10,12 +10,12 @@ license: MIT
 
 Elite autonomous PR review workflow for ensuring structural integrity, metadata accuracy, and zero-defect deployments.
 
-## When to Use
+## WHEN TO USE
 
 - Triggered when asked to review, audit, or verify a GitHub Pull Request.
 - Loaded automatically during the final verification phase of a PR lifecycle.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When fixing a localized, single-file typo where a full architectural review is overkill.
 - When the PR is in a Draft state and explicitly marked as "Do Not Review".

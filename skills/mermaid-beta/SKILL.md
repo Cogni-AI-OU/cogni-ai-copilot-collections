@@ -11,12 +11,12 @@ license: MIT
 
 Expert in creating, optimizing, and troubleshooting experimental Mermaid.js beta diagrams.
 
-## When to Use
+## WHEN TO USE
 
 - User wants to use experimental beta Mermaid diagram types like Architecture, Flow, Sankey, etc.
 - Working with newer versions of Mermaid.js.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For standard, fully stable Mermaid diagrams (like simple Flowcharts, Sequence diagrams, or Class
   diagrams) where `mermaid/SKILL.md` is more appropriate.

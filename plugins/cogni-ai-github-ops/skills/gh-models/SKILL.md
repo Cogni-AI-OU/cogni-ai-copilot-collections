@@ -15,7 +15,7 @@ license: MIT
 Run, evaluate, and auto-generate tests for AI prompts directly from the terminal. Ideal for CLI-centric
 agentic workflows on issues, PRs, repo events, and prompt engineering at scale.
 
-## When to Use
+## WHEN TO USE
 
 - Agentic workflows require automated prompt engineering, scoring, or regression testing for LLMs.
 - Need to execute specific prompts in parallel, so they can be delegated to subagents.
@@ -23,7 +23,7 @@ agentic workflows on issues, PRs, repo events, and prompt engineering at scale.
 - User asks to use GitHub Models, `gh models`, or perform AI inference via CLI.
 - Task involves running, evaluating, or generating tests for AI prompts and LLM-based workflows.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When querying production LLM endpoints that require direct API integration (e.g., using `openai` Python package in application code).
 - For traditional, deterministic unit testing of standard application logic.

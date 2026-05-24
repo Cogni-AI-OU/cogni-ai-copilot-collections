@@ -12,7 +12,7 @@ license: MIT
 
 Analyze and visualize GitHub Pull Requests by mapping commit history, reviewer feedback, and CI/CD status into structured Mermaid diagrams to establish context before deep analysis.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When tasked with writing actual code to fix the PR; this skill is for *analyzing and visualizing* the PR state first.
 - If the PR is trivial (e.g., a one-line typo fix) where generating four different Mermaid diagrams is unnecessary overhead.

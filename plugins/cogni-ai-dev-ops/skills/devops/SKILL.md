@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When automating infrastructure deployment.
 - When configuring CI/CD pipelines (GitHub Actions, etc.).

@@ -12,11 +12,8 @@ license: MIT
 
 A cognitive framework and protocol for exploring options, breaking down complexities, and summarizing information.
 
-**COGNITIVE SKILL**
-INVOKES: `mermaid`, `mermaid-beta`, `critical-thinking`
-FOR SINGLE OPERATIONS: `bash` for fact gathering
 
-## USE FOR:
+## WHEN TO USE
 
 - "explore architecture options"
 - "break down this complex feature"
@@ -149,14 +146,13 @@ radar-beta
 
 - **Assumption-Driven Brainstorming**: Relying on guesses instead of factual context gathered through tools.
 
-## DO NOT USE FOR:
+## WHEN NOT TO USE
 
 - Narrow technical debugging (use `critical-thinking` or `tester` instead).
 - Convergent evaluation of a single plan (use `critical-thinking` instead).
 - Simple file management or git operations.
 
 ## Related Skills
-
 
 - **brainstorm-agent-runs**: You MUST load this skill when identifying agentic runs in CI/CD for a Pull Request.
 - **brainstorm-github-pr**: You MUST load this skill when asked to analyze or brainstorm a Pull Request.

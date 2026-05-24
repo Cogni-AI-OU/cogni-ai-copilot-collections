@@ -13,14 +13,14 @@ license: MIT
 
 A methodical approach to building robust, correct, and efficient code solutions. Focuses on problem decomposition, algorithm design, edge case handling, and code craftsmanship.
 
-## When to Use
+## WHEN TO USE
 
 - When designing and implementing algorithms, data structures, or complex logic.
 - When building modules, features, or subsystems that require careful design.
 - When optimizing existing code for performance, correctness, or maintainability.
 - When debugging complex issues that require deep logical analysis.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For simple implementation of well-defined specs without algorithmic complexity (use `coding`).
 - For full product lifecycle tasks involving deployment, monitoring, or stakeholder management (use `development`).

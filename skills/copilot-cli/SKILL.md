@@ -10,13 +10,13 @@ license: MIT
 
 Guidance for installing the GitHub Copilot CLI on Debian/Ubuntu and using it with custom agents via command-line options.
 
-## When to Use
+## WHEN TO USE
 
 - When executing programmatic requests against GitHub Copilot via the terminal.
 - To orchestrate specialized subagents using the `--agent` flag.
 - When installing or authenticating the Copilot CLI in a CI/CD or local environment.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When trying to use standard `gh` commands for repo management (Copilot CLI is an extension specifically for AI assistance).
 - Inside highly restricted environments without internet access or where external API calls to `api.github.com` are blocked.

@@ -12,13 +12,13 @@ license: MIT
 
 This skill helps with work on issues.
 
-## When to Use
+## WHEN TO USE
 
 - When triggered by an issue comment event in a GitHub Action workflow.
 - When tasked with labeling, assigning, or editing a GitHub Issue natively via `gh issue`.
 - When diagnosing bug reports or feature requests filed as GitHub Issues.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For interacting with Pull Requests (use `github-pr` and `gh-pr` instead).
 - When attempting to write project documentation (Issues are ephemeral trackers, not persistent wiki pages).

@@ -13,13 +13,13 @@ license: MIT
 Guidance for structuring and maintaining verifiable project fact files. Use this skill when managing `FACTS.md`,
 `FACTS.mmd`, or similar canonical stores.
 
-## When to Use
+## WHEN TO USE
 
 - Creating or updating canonical fact stores (e.g., `FACTS.md`, `FACTS.mmd`).
 - Documenting verifiable ecosystem properties, constraints, or architectural decisions.
 - Resolving state conflicts or contradictions within documentation limits.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For writing conversational READMEs or unstructured tutorial documentation (use `docs-writer` instead).
 - When recording temporal, ephemeral state like "Build 45 failed" (fact stores are for persistent architectural truths).

@@ -12,13 +12,13 @@ license: MIT
 
 Generic guidelines for YAML formatting, linting, and structural rules.
 
-## When to Use
+## WHEN TO USE
 
 - When creating or modifying YAML configuration files (e.g., `.yml`, `.yaml`).
 - To ensure proper formatting, quoting, and indentation of YAML data structures.
 - Before committing YAML files to ensure they pass project linting standards.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When performing complex, programmatic queries, merges, or deep value extractions from YAML files (use the `yq` skill instead).
 - For processing JSON files, unless converting them explicitly to YAML.

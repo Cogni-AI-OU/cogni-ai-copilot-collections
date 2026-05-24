@@ -8,7 +8,7 @@ license: MIT
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 # Molecule Testing
 
-## When to Use
+## WHEN TO USE
 
 - Agent needs to execute syntax/lint/test checks for Ansible playbooks locally.
 - Troubleshooting configuration logic inside devcontainers or codespaces.

@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Querying, triggering, or managing DAGs and DAG Runs via the Airflow REST API.
 - Managing Airflow Variables, Connections, Pools, or Assets autonomously.
 - Extracting Task Instance logs, XCom entries, or execution statistics.
 - Handling backfill operations (pause, unpause, cancel) programmatically.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When interacting with Airflow internal database directly (use standard SQL queries instead).
 - When modifying DAG source files locally (use `python` or standard editing skills instead).
