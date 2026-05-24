@@ -57,8 +57,50 @@ jobs:
             let verdict = '✅ All checks passed';
             if (exitCode !== '0' || errorCount > 0) {
               verdict = '⛔ Findings need attention';
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: 'waza-eval-error',
+                  color: 'B60205',
+                  description: 'Waza evaluation reported errors'
+                });
+              } catch (error) {
+                if (error.status !== 422) console.error('Error creating label:', error);
+              }
+              const { data: currentLabels } = await github.rest.issues.listLabelsOnIssue({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber
+              });
+              if (!currentLabels.find(l => l.name === 'waza-eval-error')) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  labels: ['waza-eval-error']
+                });
+              }
             } else if (warningCount > 0) {
               verdict = '⚠️ Warnings or advisories found';
+            } else {
+              try {
+                const { data: currentLabels } = await github.rest.issues.listLabelsOnIssue({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber
+                });
+                if (currentLabels.find(l => l.name === 'waza-eval-error')) {
+                  await github.rest.issues.removeLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: prNumber,
+                    name: 'waza-eval-error'
+                  });
+                }
+              } catch (error) {
+                if (error.status !== 404) console.error('Error removing label:', error);
+              }
             }
             const summaryLines = rawOutput
               .split('\n')
