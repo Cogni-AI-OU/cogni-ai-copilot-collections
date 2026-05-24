@@ -53,9 +53,11 @@ jobs:
           else
             CHANGED=""
           fi
-          echo "changed<<EOF" >> "$GITHUB_OUTPUT"
-          echo "$CHANGED" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
+          {
+            echo "changed<<EOF"
+            echo "$CHANGED"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
           echo "Changed skill files:"
           echo "$CHANGED"
       - name: Run waza check on changed skills
