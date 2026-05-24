@@ -743,7 +743,7 @@ mindmap
       id_ver1["Rendering mismatch"]
       ::icon(fa fa-sync)
         id_ver1_fix["Fix: Use v11+ syntax consistently"]
-   ## Common Pitfalls
+    Common Pitfalls
       id_pit1["Avoid accidental edges"]
       ::icon(fa fa-project-diagram)
         id_pit1_fix["Fix: Space before 'o'/'x' in IDs"]
