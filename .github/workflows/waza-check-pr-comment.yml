@@ -34,19 +34,25 @@ jobs:
       (github.event_name == 'workflow_run' && github.event.workflow_run.event == 'pull_request')
     steps:
       - name: Download results artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
         with:
           name: waza-check-results
           run-id: ${{ inputs.run_id || github.event.workflow_run.id }}
           github-token: ${{ github.token }}
       - name: Post PR comment with results
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b  # v7.1.0
         with:
           script: |-
             const fs = require('fs');
-            const prNumber = parseInt(fs.readFileSync('waza-results/pr-number.txt', 'utf8').trim(), 10);
+            const rawPr = fs.readFileSync('waza-results/pr-number.txt', 'utf8').trim();
+            const prNumber = parseInt(rawPr, 10);
+            if (isNaN(prNumber)) {
+              console.log(`Invalid or missing PR number ('${rawPr}') — cannot post comment.`);
+              return;
+            }
             const exitCode = fs.readFileSync('waza-results/exit-code.txt', 'utf8').trim();
-            const rawOutput = fs.readFileSync('waza-results/waza-output.txt', 'utf8').trim();
+            const rawOutput = fs.readFileSync('waza-results/waza-output.txt', 'utf8').trim()
+              .replace(/```/g, '\\`\\`\\`');
             const changedSkills = fs.readFileSync('waza-results/changed-skills.txt', 'utf8').trim();
             const hasResultsJson = fs.existsSync('waza-results/results.json');
             const marker = '<!-- waza-check-results -->';
@@ -141,7 +147,7 @@ jobs:
               hasResultsJson ? '> Detailed results available in the uploaded artifact.' : '',
               '',
               '<details>',
-              '<summary>Full waza output</summary>',
+               '<summary>Waza check output</summary>',
               '',
               '```text',
               rawOutput || 'No output captured.',

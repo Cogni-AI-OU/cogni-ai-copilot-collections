@@ -60,36 +60,50 @@ jobs:
         run: |
           CHANGED="${{ steps.changed-skills.outputs.changed }}"
           FAILED=0
-          OUTPUT_LOG=""
+          RAW_OUTPUT=""
+          OUTPUT_FILE="$(mktemp)"
+          FINAL_FILE="$(mktemp)"
           if [ -z "$CHANGED" ]; then
             echo "No skill files changed."
-            OUTPUT_LOG="No skill files changed."
+            printf '%s\n' "No skill files changed." >> "$FINAL_FILE"
           else
             while IFS= read -r skill; do
               [ -z "$skill" ] && continue
               SKILL_DIR="$(dirname "$skill")"
               echo "::group::waza check: $skill"
               if [ -f "$skill" ]; then
-                if waza check "$SKILL_DIR" 2>&1; then
-                  echo "✅ $skill passed"
-                  OUTPUT_LOG="${OUTPUT_LOG}✅ $skill passed\n"
+                : > "$OUTPUT_FILE"
+                if waza check "$SKILL_DIR" > "$OUTPUT_FILE" 2>&1; then
+                  cat "$OUTPUT_FILE"
+                  {
+                    printf '\n## %s\n\n' "$skill"
+                    cat "$OUTPUT_FILE"
+                    printf '\n'
+                  } >> "$FINAL_FILE"
                 else
+                  cat "$OUTPUT_FILE"
                   echo "::error::$skill failed waza check"
                   FAILED=1
-                  OUTPUT_LOG="${OUTPUT_LOG}❌ $skill failed\n"
+                  {
+                    printf '\n## %s\n\n' "$skill"
+                    cat "$OUTPUT_FILE"
+                    printf '\n'
+                  } >> "$FINAL_FILE"
                 fi
               else
                 echo "::warning::$skill was deleted, skipping"
-                OUTPUT_LOG="${OUTPUT_LOG}⚠ $skill was deleted, skipping\n"
+                printf '⚠ %s was deleted, skipping\n' "$skill" >> "$FINAL_FILE"
               fi
               echo "::endgroup::"
             done <<< "$CHANGED"
           fi
+          RAW_OUTPUT=$(cat "$FINAL_FILE")
+          rm -f "$OUTPUT_FILE" "$FINAL_FILE"
           {
-            echo "failed=$FAILED"
-            echo "output_log<<EOF"
-            echo -e "$OUTPUT_LOG"
-            echo "EOF"
+            printf '%s\n' "failed=$FAILED"
+            printf '%s\n' "output_log<<WAZA_EOF"
+            printf '%s\n' "$RAW_OUTPUT"
+            printf '%s\n' "WAZA_EOF"
           } >> "$GITHUB_OUTPUT"
           if [ "$FAILED" -ne 0 ]; then
             exit 1
