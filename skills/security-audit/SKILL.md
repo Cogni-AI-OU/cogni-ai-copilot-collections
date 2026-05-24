@@ -13,7 +13,7 @@ This skill outlines the mechanical steps, mindset, and procedures required to co
 audit on a target codebase or architectural component. It integrates dependency analysis,
 deep vulnerability scanning, structured threat modeling, and strict output constraints.
 
-## When to Use
+## WHEN TO USE
 
 Use this skill when the request involves:
 
@@ -28,7 +28,7 @@ Use this skill when the request involves:
 - Any request phrasing like "is my code secure?", "scan this file", or "check my repo for vulnerabilities"
 - Running `/security-audit` or `/security-audit <path>`
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When performing a lightweight PR review (use `security-review`).
 - When writing tests for functional validation (use `testing` or `tdd`).

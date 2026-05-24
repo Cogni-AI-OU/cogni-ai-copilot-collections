@@ -11,34 +11,20 @@ license: MIT
 Fast, non-interactive text stream editing and precise file segment extraction using `sed`.
 
 **UTILITY SKILL**
-INVOKES: `bash`
-FOR SINGLE OPERATIONS: `bash` with `sed` command
 
-## USE FOR:
-
-- "extract lines 10 to 20 from this file"
-- "replace 'foo' with 'bar' in this log file"
-- "trim whitespace from each line"
-- "programmatic find-and-replace in large text files"
-
-## When to Use This Skill
+## WHEN TO USE
 
 - You need to extract specific line ranges from a large file without reading the whole file into memory.
 - You need to perform non-interactive, programmatic find-and-replace across files.
 - You are writing shell scripts or processing streams of data in pipelines.
 - You want to extract snippets of log files or codebase for context extraction.
 
-## When Not to Use
+## WHEN NOT TO USE
 
-- Parsing or modifying complex structured data formats (JSON, YAML, XML) where context-aware tools (`jq`, `yq`) are significantly safer.
-- Making multi-line replacements with complex indentation rules where `ex` (Vim) or Python scripting is more robust.
-- Interactive text editing.
-
-## DO NOT USE FOR:
-
-- Parsing JSON, YAML, or XML (use `jq`, `yq` instead).
 - Complex multi-line replacements (use `python` or `vim-ex` instead).
-- Interactive text editing.
+- Making multi-line replacements with complex indentation rules where `ex` (Vim) or Python scripting is more robust.
+- Parsing JSON, YAML, or XML (use `jq`, `yq` instead).
+- Parsing or modifying complex structured data formats (JSON, YAML, XML) where context-aware tools (`jq`, `yq`) are significantly safer.
 
 ## Core Process
 

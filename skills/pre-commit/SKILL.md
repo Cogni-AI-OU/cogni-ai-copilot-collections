@@ -14,11 +14,17 @@ license: MIT
 Expert guide for pre-commit framework usage, configuration, and custom hook development. Focus on autonomous validation,
 diagnostics, and fix workflows.
 
-## When to Use
+## WHEN TO USE
 
 - Analyzing why pre-commit validation blocked a user's local git commit.
 - Running mass syntax/lint checks on the repository proactively.
 - User needs to configure, update, or bypass a pre-commit hook (markdownlint, yamllint, etc.).
+
+## WHEN NOT TO USE
+
+- When writing complex, multi-file integration tests that require a full environment boot (pre-commit is for fast, isolated, file-level checks).
+- If the repository has explicitly opted out of pre-commit in favor of a different localized linting orchestration tool (like `npm run lint`).
+- For enforcing subjective architectural patterns that cannot be statically analyzed.
 
 ## Core Principles
 
@@ -29,12 +35,6 @@ diagnostics, and fix workflows.
   pass.
 - **Skip only when necessary**: Use `--no-verify` or `SKIP=<hook-id>` sparingly; prefer fixing issues over bypassing
   validation.
-
-## When Not to Use
-
-- When writing complex, multi-file integration tests that require a full environment boot (pre-commit is for fast, isolated, file-level checks).
-- If the repository has explicitly opted out of pre-commit in favor of a different localized linting orchestration tool (like `npm run lint`).
-- For enforcing subjective architectural patterns that cannot be statically analyzed.
 
 ## Common Pitfalls
 

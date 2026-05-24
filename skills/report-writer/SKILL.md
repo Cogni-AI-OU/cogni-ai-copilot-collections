@@ -9,13 +9,13 @@ license: MIT
 
 Generates a comprehensive report of available resources or system state by self-inspecting, comparing against expected state definitions, and updating documentation accordingly.
 
-## When to Use
+## WHEN TO USE
 
 - When required to perform a comprehensive audit of system configuration against a baseline definition.
 - To discover and document orphaned, duplicated, or miscategorized items in a repository.
 - When generating status reports that track changes (diffs) since the last execution.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For simply writing a single documentation file (use `docs-writer` instead).
 - When investigating a specific failure or bug report rather than conducting a full system audit.

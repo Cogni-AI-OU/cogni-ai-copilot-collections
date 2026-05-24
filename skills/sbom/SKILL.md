@@ -12,13 +12,13 @@ license: MIT
 
 Guidelines and commands for generating a Software Bill of Materials (SBOM) to provide visibility into the dependency tree, enabling compliance reporting, vulnerability tracking, and supply chain risk assessment.
 
-## When to Use
+## WHEN TO USE
 
 - When required to generate compliance reports for software supply chain security.
 - To produce an inventory of all third-party dependencies used in a project.
 - When configuring a CI/CD pipeline step that requires SPDX or CycloneDX artifacts.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For routine unit testing or local syntax linting.
 - When specifically auditing source code for logic vulnerabilities (use `security-audit` instead).

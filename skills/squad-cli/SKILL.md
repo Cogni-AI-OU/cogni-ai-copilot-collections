@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Initializing a new AI agent team in a project.
 - Upgrading Squad-owned files or the CLI itself.
@@ -16,7 +16,7 @@ license: MIT
 - Managing team roster, decisions, and session history.
 - Externalizing or internalizing squad state.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - General GitHub CLI operations (use `gh` skill).
 - Core GitHub Copilot coding tasks (use `@copilot`).

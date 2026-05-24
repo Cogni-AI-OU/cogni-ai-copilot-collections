@@ -11,13 +11,13 @@ license: MIT
 
 Use this skill for managing the structure and content of `Pipfile` and `Pipfile.lock` files.
 
-## When to Use
+## WHEN TO USE
 
 - When manually resolving merge conflicts in a `Pipfile` following standard TOML syntax.
 - To strictly review the separation of `[packages]` vs `[dev-packages]` in a Python project.
 - When migrating legacy `requirements.txt` declarations into a structured `Pipfile`.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When actually installing or resolving the dependencies (use the `pipenv` skill to execute the CLI commands).
 - For attempting to manually edit the `Pipfile.lock` (which should never be touched by humans or agents directly).

@@ -11,13 +11,13 @@ license: MIT
 
 Use this skill for managing Python project environments and dependencies through the `pipenv` CLI tool.
 
-## When to Use
+## WHEN TO USE
 
 - When initializing a new Python project that requires deterministic dependency management.
 - To add, update, or remove Python packages while keeping the `Pipfile.lock` strictly synchronized.
 - When executing tests or scripts securely within an isolated virtual environment (`pipenv run`).
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For managing global Python system packages or basic scripting where `pip` or `pipx` is strictly preferred.
 - In projects mandated to use `poetry`, `uv`, or raw `requirements.txt` workflows.
