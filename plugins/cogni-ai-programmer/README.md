@@ -19,8 +19,8 @@ designing algorithms, data structures, and reliable solutions.
 | `/cogni-ai-programmer:react-llms` | Expert guide for generating React code |
 | `/cogni-ai-programmer:nextjs-llms` | Expert guide for generating Next.js code |
 | `/cogni-ai-programmer:reactnative-llms` | Expert guide for generating React Native code |
-| `/cogni-ai-programmer:c-coding-standard` | C coding standard guidelines for names, formatting, and documentation |
-| `/cogni-ai-programmer:cpp-coding-standard` | C++ coding standard guidelines for names and object-oriented design |
+| `/cogni-ai-programmer:c-coding-standard` | C standard for names, formatting, documentation, and best practices |
+| `/cogni-ai-programmer:cpp-coding-standard` | C++ standard for names, formatting, OO design, and complexity management |
 
 ## Installation
 
