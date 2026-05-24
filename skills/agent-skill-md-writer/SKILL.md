@@ -171,28 +171,45 @@ For more details, you can read **waza-docs** skill.
 When refining or generating a skill, ensure the output passes the following advisory Waza checks and compliance patterns:
 
 - **Compliance Score & Description:**
-  Ensure the description is sufficiently detailed and contains explicit triggers. The first sentence should lead with an action verb to maximize clarity.
+  Ensure the description is sufficiently detailed and contains explicit triggers.
+  The first sentence should lead with an action verb to maximize clarity.
 - **Spec Compliance:**
   Verify the skill strictly meets standard `agentskills` specifications (proper YAML frontmatter, standard headers, etc.).
 - **Links Validation:**
   Verify that all referenced URLs and sub-directory links are valid and accessible.
 - **Token Budget & Complexity:**
-  Keep the skill concise. The hard limit is typically around 500 tokens (or ~200-500 lines). If exceeded, reduce content or offload procedural details to `references/` modules.
+  Keep the skill concise.
+  The hard limit is typically around 500 tokens (or ~200-500 lines).
+  If exceeded, reduce content or offload procedural details to `references/` modules.
 - **Evaluation Suite:**
   Evaluate whether the skill has an `eval.yaml` or defined test framework for verification.
 - **Advisory Checks:**
   - **Negative Delta Risk:**
-    Avoid conflicting procedure paths (e.g., "but alternatively", "however you can also", "another approach is"), duplicate procedures (multiple "Step 1:" blocks), and excessive constraints (more than 5 uses of "must not", "never", "always", "forbidden", "prohibited").
+    Avoid conflicting procedure paths (e.g., "but alternatively", "however you can also", "another approach is"),
+    duplicate procedures (multiple "Step 1:" blocks), and excessive constraints
+    (more than 5 uses of "must not", "never", "always", "forbidden", "prohibited").
   - **Procedural Content:**
-    Description should contain procedural lead words (e.g., process, extract, deploy, configure, analyze, create, build, run, execute, validate, check, test, install, set up, implement) or procedure keywords (e.g., step, first, then, next, finally, workflow, pipeline, procedure, when, if...then, after, before).
+    Description should contain procedural lead words (e.g., process, extract, deploy, configure, analyze, create, build,
+    run, execute, validate, check, test, install, set up, implement) or procedure keywords (e.g., step, first, then,
+    next, finally, workflow, pipeline, procedure, when, if...then, after, before).
   - **Over-Specificity:**
-    Avoid hardcoded environment-specific details such as absolute Unix paths (`/usr/`, `/etc/`, `/home/`, `/var/`, `/opt/`), absolute Windows paths (`C:\`), IP addresses, specific port numbers, and hardcoded URLs with paths (except for documentation domains like `github.com`, `arxiv.org`, `docs.*`, `learn.microsoft.com`).
+    Avoid hardcoded environment-specific details such as absolute Unix paths
+    (`/usr/`, `/etc/`, `/home/`, `/var/`, `/opt/`),
+    absolute Windows paths (`C:\`), IP addresses, specific port numbers, and hardcoded URLs with paths
+    (except for documentation domains like `github.com`, `arxiv.org`, `docs.*`, `learn.microsoft.com`).
   - **Cross-Model Density:**
-    Keep description under 60 words for maximum cross-model effectiveness. Ensure the first sentence starts with an action verb (e.g., use, when, help, enable, provide, support, create, build, run, execute, analyze, process, extract, deploy, configure, validate, check, test, install, implement).
+    Keep description under 60 words for maximum cross-model effectiveness.
+    Ensure the first sentence starts with an action verb (e.g., use, when, help, enable, provide, support,
+    create, build, run, execute, analyze, process, extract, deploy, configure, validate, check, test, install, implement).
   - **Body Structure Quality:**
-    Include actionable instructions (code blocks or numbered steps), explicit practical examples (e.g., `## example`, `### example`, `**example`, `for example:`), and error handling or troubleshooting sections (`## error`, `error handling`, `## troubleshooting`, `troubleshooting`, `common issues`, `known limitations`, `warnings`, `caveats`, `note:`, `important:`).
+    Include actionable instructions (code blocks or numbered steps), explicit practical examples
+    (e.g., `## example`, `### example`, `**example`, `for example:`), and error handling or troubleshooting sections
+    (`## error`, `error handling`, `## troubleshooting`, `troubleshooting`, `common issues`, `known limitations`,
+    `warnings`, `caveats`, `note:`, `important:`).
   - **Progressive Disclosure:**
-    Body content should stay under 500 lines. Avoid code blocks larger than 50 lines; move large scripts or detailed explanations to `references/` modules. Keep complexity optimal by managing token count and reference modules (2-3 files is optimal, avoid 4+ modules).
+    Body content should stay under 500 lines.
+    Avoid code blocks larger than 50 lines; move large scripts or detailed explanations to `references/` modules.
+    Keep complexity optimal by managing token count and reference modules (2-3 files is optimal, avoid 4+ modules).
   - **Capability Scope:**
     Consolidate signals (like level-2 headings) so the skill's scope is easily detected.
 
