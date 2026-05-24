@@ -22,7 +22,6 @@ gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
 | [apache-airflow-dags](apache-airflow-dags/SKILL.md) | Expert-level guide for authoring Apache Airflow DAGs. |
 | [astro-cli](astro-cli/SKILL.md) | Expert-level guide for using the Astro CLI to manage Astronomer Airflow. |
 | [astronomer-llms](astronomer-llms/SKILL.md) | Read and navigate Astronomer documentation using llms.txt context. |
-| [awesome-copilot](awesome-copilot/SKILL.md) | Community-contributed instructions, agents, and skills for GitHub Copilot. |
 | [brainstorm](brainstorm/SKILL.md) | Activate brainstorming protocol to explore options and research. |
 | [brainstorm-agent-runs](brainstorm-agent-runs/SKILL.md) | Identify and analyze agent runs via GitHub API for a given PR. |
 | [brainstorm-github-pr](brainstorm-github-pr/SKILL.md) | Analyze and visualize commit history and CI pipeline checks for a PR. |
