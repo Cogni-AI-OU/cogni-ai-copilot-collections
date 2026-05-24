@@ -86,5 +86,6 @@ gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
 | [subagent-task](subagent-task/SKILL.md) | Guidance and protocols for spawning sub-agents via the task tool. |
 | [unicode](unicode/SKILL.md) | Reference for Unicode character hex ranges and regex blocks. |
 | [vim-ex](vim-ex/SKILL.md) | Non-interactive file editing with Vim Ex mode. |
+| [waza-cli](waza-cli/SKILL.md) | Automate the skill development workflow and run evaluation benchmarks using waza. |
 | [yaml](yaml/SKILL.md) | Generic guidelines for YAML formatting and linting. |
 | [yq](yq/SKILL.md) | Parse, edit, and transform YAML files using yq. |
