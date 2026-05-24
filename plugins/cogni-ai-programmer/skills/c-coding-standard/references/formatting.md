@@ -89,6 +89,8 @@ is not necessary when reading code.\
 -   We even view and print diff output correctly on all terminals and
     printers.
 
+## *If Then Else* Formatting
+
 ### Layout
 
 It's up to the programmer. Different bracing styles will yield slightly
