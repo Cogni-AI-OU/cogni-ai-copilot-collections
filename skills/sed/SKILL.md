@@ -10,8 +10,6 @@ license: MIT
 
 Fast, non-interactive text stream editing and precise file segment extraction using `sed`.
 
-**UTILITY SKILL**
-
 ## WHEN TO USE
 
 - You need to extract specific line ranges from a large file without reading the whole file into memory.

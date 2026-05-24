@@ -26,7 +26,6 @@ A cognitive framework and protocol for exploring options, breaking down complexi
 - Narrow technical debugging (use `critical-thinking` or `tester` instead).
 - Simple file management or git operations.
 
-
 ## Core Process
 
 1. **Context Gathering & Research**: Aggressively gather facts, existing data, and constraints before formulating any conclusions.
@@ -154,12 +153,6 @@ radar-beta
 - **False Dichotomies**: Assuming only two opposing solutions exist without exploring orthogonal architectural paths.
 - **Overcomplicated Diagrams**: Creating massive, unreadable diagrams. Break them into smaller, focused visual summaries.
 - **Premature Convergence**: Proposing a final solution without explicitly documenting the discarded alternative options.
-
-## WHEN NOT TO USE
-
-- Convergent evaluation of a single plan (use `critical-thinking` instead).
-- Narrow technical debugging (use `critical-thinking` or `tester` instead).
-- Simple file management or git operations.
 
 ## Related Skills
 
