@@ -123,3 +123,14 @@ repos:
         additional_dependencies:
           - '@probelabs/maid@0.0.29'
         files: \.(md|mmd)$
+        exclude: >-
+          (?x)(
+          skills/mermaid/SKILL\.md|
+          skills/mermaid-beta/SKILL\.md|
+          skills/agent-log-analysis/SKILL\.md|
+          skills/brainstorm/SKILL\.md|
+          skills/brainstorm-github-pr/SKILL\.md|
+          skills/brainstorm-agent-runs/SKILL\.md|
+          plugins/.*/SKILL\.md|
+          \.github/prompts/.*\.md
+          )
