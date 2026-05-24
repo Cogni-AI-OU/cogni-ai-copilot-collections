@@ -80,5 +80,6 @@ List of skills you must load explicitly using the native `skill` tool
 (or by reading their `SKILL.md` files) before proceeding:
 
 - devops
+- ansible
 
 If these are not available during runtime, stop and report the incident.
