@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Fetching documentation or schemas programmatically (e.g., parsing `https://www.pulumi.com/llms.txt`).
 - Retrieving provider READMEs or documentation via the Pulumi Registry API.
 - Accessing markdown versions of Pulumi documentation pages.
 - Retrieving provider schemas for analysis or code generation.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Executing Pulumi CLI commands for stack management (use `pulumi-cli` instead).
 - Writing infrastructure code.

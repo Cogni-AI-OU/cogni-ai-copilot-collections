@@ -11,13 +11,13 @@ license: MIT
 
 Search GitHub repositories using topics and keywords to discover relevant software and resources.
 
-## When to Use
+## WHEN TO USE
 
 - To discover new tools, libraries, or frameworks that match the project's technology stack.
 - When searching for curated "awesome lists" to find community-approved resources.
 - If the user asks for recommendations on how to solve a specific technical problem and you need to find open-source solutions.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When searching for specific code snippets or implementations inside a single repository (use `gh search code` instead).
 - To find issues or PRs (use `gh issue list` or `gh pr list`).

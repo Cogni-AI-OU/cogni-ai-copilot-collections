@@ -12,14 +12,14 @@ license: MIT
 
 Use this skill when developing Python code. For inline bash script Python execution, refer to the `python-cli` skill.
 
-## When to Use
+## WHEN TO USE
 
 - Writing new Python 3 scripts, modules, or classes.
 - Refactoring existing Python code for performance, readability, or modern syntax.
 - Writing unit tests using `pytest` or `unittest`.
 - Debugging complex Python tracebacks or logic errors.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When executing one-off shell pipeline data transformations (use `python-cli` instead).
 - For writing shell scripts (`bash`) or other languages (`JS/TS`, `Go`, `Rust`).

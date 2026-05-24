@@ -16,7 +16,8 @@ license: MIT
 **render compatibility** (GitHub, VS Code, Mermaid Live Editor, Markdown), **minimalism**, and **Easy-To-Change (ETC)**
 design so diagrams remain maintainable as systems evolve.
 
-## When to Use
+
+## WHEN TO USE
 
 - Agent must explain complex logic, system architecture, or requirements via diagrams.
 - Generating diagrams that must render correctly in GitHub, Obsidian, Notion,
@@ -750,6 +751,12 @@ mindmap
       ::icon(fa fa-minus)
         id_pit2_fix["Fix: Escape as '\,'"]
 ```
+
+## WHEN NOT TO USE
+
+- Complex, data-heavy visualizations better suited for specialized tools.
+- Real-time or highly interactive UI components.
+- Standard text-only documentation.
 
 ## Related Skills
 

@@ -13,14 +13,14 @@ license: MIT
 Expert guide for using actions/github-script in GitHub Actions workflows. Focuses on advanced API interactions,
 cross-platform execution, and secure script implementation.
 
-## When to Use
+## WHEN TO USE
 
 - You need to perform complex interactions with the GitHub API from within a workflow.
 - You want to use JavaScript/TypeScript to automate issue management, PR reviews, or other GitHub actions.
 - You're looking for examples of how to use the pre-authenticated `octokit` client provided by `actions/github-script`.
 - You need to execute shell commands cross-platform within a GitHub Script block.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When a native `gh` CLI command or existing standard GitHub Action already performs the exact required task efficiently.
 - For running complex bash scripts that don't need the GitHub API (use standard `run:` steps instead).

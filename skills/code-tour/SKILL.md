@@ -24,13 +24,13 @@ Two reference files are bundled:
 - **`references/codetour-schema.json`** — the authoritative JSON schema. Read it to verify any field name or type. Every field you use must conform to it.
 - **`references/examples.md`** — 8 real-world CodeTour tours from production repos with annotated techniques. Read it when you want to see how a specific feature (`commands`, `selection`, `view`, `pattern`, `isPrimary`, multi-tour series) is used in practice.
 
-## When to Use
+## WHEN TO USE
 
 - When tasked with creating an onboarding guide for new repository contributors.
 - To generate a step-by-step walkthrough of a complex bug fix or architectural feature.
 - Whenever a user asks to "create a tour" or "make a code tour" for a specific codebase subsystem.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When writing standard `README.md` documentation that doesn't require interactive IDE navigation.
 - If the requested files are highly volatile and change line numbers constantly (unless using `pattern` anchors).

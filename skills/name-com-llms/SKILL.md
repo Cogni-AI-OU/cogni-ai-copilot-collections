@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Building a domain search and purchase flow (search → check availability → register).
 - Managing domain settings (DNS records, nameservers, WHOIS privacy, autorenew, locks).
@@ -18,7 +18,7 @@ license: MIT
 - Testing domain operations safely in sandbox before production launch.
 - Integrating domain renewal, pricing, and account balance operations.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Interacting with domain registrars other than name.com.
 - Operations entirely outside the scope of domain, DNS, and webhook management.

@@ -14,7 +14,7 @@ This skill provides patterns and techniques for managing large files and command
 efficiently, preventing context window exhaustion while maintaining effective problem-solving
 capabilities.
 
-## When to Use
+## WHEN TO USE
 
 - Before executing commands that might produce large output
 - Before reading any file in the codebase
@@ -22,7 +22,7 @@ capabilities.
 - When searching through codebases
 - When working with logs, build outputs, or data files
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For trivially small, single-file edits where the overhead of checking file size slows down the workflow unnecessarily.
 - When the user explicitly demands the full output of a specific file and context limits are known to be sufficient.

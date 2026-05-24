@@ -12,13 +12,13 @@ license: MIT
 Use `gh search` to query GitHub for code, commits, issues, pull requests, and repositories.
 Prefer structured JSON output over manual text parsing.
 
-## When to Use
+## WHEN TO USE
 
 - To find examples of specific function usage or API patterns across millions of repositories.
 - When looking for issues or PRs that match specific criteria (labels, state, author) across an entire organization.
 - To programmatically aggregate repository metadata using structured `--json` output.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For searching file contents within a small, local repository (use `grep` or `rg` directly instead of incurring API latency).
 - When attempting to perform automated code modifications or refactoring across multiple repos.

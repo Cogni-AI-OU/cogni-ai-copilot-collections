@@ -12,7 +12,7 @@ license: MIT
 
 Guidance for writing core architecture, documentation, and constraint files. Use this skill when creating or updating repository documentation.
 
-## When to Use
+## WHEN TO USE
 
 - Writing or generating Architectural Decision Records (ADRs).
 - Documenting non-obvious code or complex algorithms.
@@ -20,7 +20,7 @@ Guidance for writing core architecture, documentation, and constraint files. Use
 - Updating README files to reflect current state or instructions.
 - Creating local `AGENTS.md` files for subdirectories.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When writing the actual application source code or fixing a software bug.
 - For generating automated API references where dedicated tools (like JSDoc or Swagger) should be used instead.

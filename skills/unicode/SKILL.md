@@ -8,13 +8,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 MD033 -->
 
-## When to Use This Skill
+## WHEN TO USE
 
 - You need to search, match, or filter text containing specific Unicode ranges (e.g., CJK, Cyrillic, Emoji).
 - You are writing regex to validate or extract international characters, symbols, or specific scripts.
 - You need a reference for exact hexadecimal ranges for various languages or symbols.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Simple ASCII string matching where standard regex bounds (`[a-zA-Z]`) are sufficient.
 - Language translation or natural language processing tasks (regex only identifies character classes, not semantic meaning).

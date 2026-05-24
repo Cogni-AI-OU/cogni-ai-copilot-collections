@@ -7,13 +7,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When needing documentation or usage instructions for specific `npm` commands (e.g., `npm install`, `npm exec`, `npm ci`).
 - When dealing with npm configuration files like `.npmrc`, `package.json`, or `package-lock.json`.
 - When understanding npm concepts such as workspaces, scopes, and dependency selectors.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When managing alternative package managers like `yarn` or `pnpm`.
 - When writing general JavaScript/TypeScript code that does not interact with npm packages or scripts.

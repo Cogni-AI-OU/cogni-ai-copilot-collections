@@ -16,13 +16,13 @@ performing data transformations (like URL encoding/decoding), or parsing structu
 where standard bash utilities (awk/sed/grep) become unwieldy or fragile. If `python3` is
 unavailable, you may fall back to `python`.
 
-## When to Use
+## WHEN TO USE
 
 - When processing complex JSON structures in shell scripts where `jq` is insufficient or unavailable.
 - To perform multi-line text transformations, URL encoding, or regex processing inline.
 - When iterating over massive log files requiring stateful parsing that breaks standard bash pipelines.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For writing permanent, complex application logic (create a proper `.py` module instead).
 - When a simple `grep` or `sed` command is completely sufficient and more performant for the task.

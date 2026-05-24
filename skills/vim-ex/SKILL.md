@@ -18,7 +18,7 @@ execute complex multi-line modifications, and utilize powerful normal-mode comma
 mimics in-place editing by secretly using temporary files (which leads to notoriously frustrating syntax
 incompatibilities between GNU/Linux and macOS), `ex` safely and natively edits the file directly in-place.
 
-## When to Use
+## WHEN TO USE
 
 You should prefer using `ex` over standard shell utilities (`sed`, `awk`, `grep`) in the following scenarios:
 
@@ -33,7 +33,7 @@ You should prefer using `ex` over standard shell utilities (`sed`, `awk`, `grep`
 - **Vim power from the shell:** Whenever you want to leverage Vim's normal mode commands (like `gqq` for formatting or
   `norm! vitd` for text object deletion) non-interactively.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Simple, single-line replacements on a few files where `sed` or `awk` are well-understood and sufficient.
 - Operations that require complex external data processing better suited for Python, Node.js, or dedicated parsing tools.

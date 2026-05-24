@@ -10,13 +10,13 @@ license: MIT
 
 Use this skill when you need to debug the awf firewall, inspect container state, analyze traffic, or troubleshoot network issues.
 
-## When to Use
+## WHEN TO USE
 
 - When an agentic workflow run fails with a `blocked egress` error.
 - To inspect Docker container states (`awf-squid`, `awf-agent`) during local firewall debugging.
 - When needing to view or analyze Squid access logs or `iptables` rules to troubleshoot network issues.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For debugging simple YAML schema errors in the workflow frontmatter (use `gh aw compile --verbose`).
 - When diagnosing missing MCP tools (use `gh aw audit` instead of checking the network firewall).

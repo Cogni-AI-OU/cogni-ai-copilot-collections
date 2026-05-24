@@ -13,18 +13,21 @@ license: MIT
 
 Safely parse, edit, merge, and transform YAML files using yq, providing robust command-line examples for extraction and in-place modifications.
 
-## When to Use
+## WHEN TO USE
 
 - Automating modifications to YAML configuration files in CI/CD pipelines.
 - Extracting specific values from complex or deeply nested YAML structures.
 - Merging multiple YAML files programmatically.
 - Converting between JSON and YAML formats in shell scripts.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When writing full-fledged Python or Node.js scripts (use native YAML parsing libraries instead).
 - When dealing with malformed or non-compliant YAML files (fix the files first).
 - Simple string replacements where the YAML structure is flat and strictly controlled (though `yq` is still safer).
+- Simple text files that are not YAML (use `sed` instead).
+- JSON files where `jq` is preferred (though `yq` works).
+- Writing complex logic better suited for `python`.
 
 ## Core Principles
 

@@ -13,13 +13,13 @@ license: MIT
 
 Execute expert-level code reviews, dissecting codebases and Pull Requests (PRs) with surgical precision to identify logical flaws, architectural drift, performance bottlenecks, and security vulnerabilities before they merge.
 
-## When to Use
+## WHEN TO USE
 
 - When explicitly asked to review, audit, or verify a Pull Request before it merges.
 - To analyze a specific code snippet or file for security vulnerabilities, architectural drift, or logical flaws.
 - When performing a final verification check as part of a larger agentic task.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When the objective is simply to format code or fix syntax errors (use `coding-standard-writer` or linters).
 - If the PR is a trivial documentation update (use `docs-review` instead).

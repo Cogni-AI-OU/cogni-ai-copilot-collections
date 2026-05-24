@@ -11,6 +11,18 @@ license: MIT
 
 Connect to and manage GitHub Codespaces natively from the CLI.
 
+## WHEN TO USE
+
+- When managing, creating, or connecting to GitHub Codespaces natively from the CLI.
+- When you need to securely transfer files between the local machine and a Codespace without configuring SCP manually.
+- To handle port forwarding for local testing of applications running inside a Codespace.
+
+## WHEN NOT TO USE
+
+- For managing local Docker containers or Devcontainers not hosted on GitHub's infrastructure (use `docker` or `devcontainer` skills instead).
+- When attempting to perform automated Git commits (the agent should use native local `git` tools instead of proxying through a Codespace).
+- If the user explicitly asks to work locally and has not initialized a Codespace environment.
+
 ## Mindmap of Commands
 
 ```mermaid
@@ -43,18 +55,6 @@ mindmap
     view
       View details
 ```
-
-## When to Use
-
-- When managing, creating, or connecting to GitHub Codespaces natively from the CLI.
-- When you need to securely transfer files between the local machine and a Codespace without configuring SCP manually.
-- To handle port forwarding for local testing of applications running inside a Codespace.
-
-## When Not to Use
-
-- For managing local Docker containers or Devcontainers not hosted on GitHub's infrastructure (use `docker` or `devcontainer` skills instead).
-- When attempting to perform automated Git commits (the agent should use native local `git` tools instead of proxying through a Codespace).
-- If the user explicitly asks to work locally and has not initialized a Codespace environment.
 
 ## Common Pitfalls
 

@@ -11,7 +11,7 @@ license: MIT
 
 Create new GitHub Agentic Workflows (gh-aw) by installing the CLI extension and fetching official step-by-step creation instructions.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - To modify or debug an *existing* agentic workflow (use `github-aw` or `gh-aw-troubleshooting` instead).
 - When creating standard GitHub Actions (`.yml`) that don't use the Agentic Workflows framework.
@@ -50,7 +50,7 @@ Create new GitHub Agentic Workflows (gh-aw) by installing the CLI extension and 
 - **Dynamic Loading**: Never guess the structure of a new workflow. Always fetch and read the appropriate `ROOT/.github/aw/create-*.md` prompt first.
 - **Artifact Inclusion**: Always include regenerated lock files and agent definitions in the commit to ensure the workflow is ready for execution.
 
-## When to Use
+## WHEN TO USE
 
 - When the user wants to create a new workflow from scratch, add automation, or design a workflow that doesn't exist yet.
 

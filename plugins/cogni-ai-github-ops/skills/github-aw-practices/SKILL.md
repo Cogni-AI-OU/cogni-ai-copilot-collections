@@ -9,13 +9,13 @@ license: MIT
 This skill provides organizational practices, rollout strategies, and A/B experiment specifications for maintaining
 repositories with GitHub Agentic Workflows (gh-aw).
 
-## When to Use
+## WHEN TO USE
 
 - When planning the rollout of a new GitHub Agentic Workflow across an organization.
 - When configuring A/B experiments to test prompt variations in production.
 - When establishing centralized repository practices for AI agents.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For debugging syntax errors within a specific workflow file (use `github-aw-syntax` or `github-aw-troubleshooting` instead).
 - When writing the actual prompts for the agent (use `ai-prompt-writer`).

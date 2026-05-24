@@ -14,7 +14,7 @@ license: MIT
 This skill enables autonomous diagnosis of GitHub Actions failures, preferring MCP tools for summaries and falling back
 to gh CLI.
 
-## When to Use
+## WHEN TO USE
 
 - Agent needs to identify or fix a workflow failure
 - Error output references Actions job steps
@@ -22,7 +22,7 @@ to gh CLI.
 - User provides a GitHub Actions URL (e.g., `https://github.com/owner/repo/actions/runs/RUN_ID/job/JOB_ID`)
 - User reports a failing GitHub Actions workflow, CI failure, or red status check
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For modifying application code logic completely unrelated to CI/CD infrastructure.
 - For local build issues that don't manifest in GitHub Actions.

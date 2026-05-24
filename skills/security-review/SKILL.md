@@ -12,7 +12,7 @@ license: MIT
 This skill provides a focused, diff-centric approach to security reviews. Unlike a full security audit, a review
 focuses on identifying vulnerabilities introduced by specific changes (Pull Requests).
 
-## When to Use
+## WHEN TO USE
 
 Use this skill when:
 
@@ -21,7 +21,7 @@ Use this skill when:
 - Responding to a `/security-review` command on a PR thread.
 - You need to verify that new code follows secure coding practices.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When asked to perform a deep, repository-wide scan (use `security-audit`).
 - When performing architectural threat modeling from scratch.

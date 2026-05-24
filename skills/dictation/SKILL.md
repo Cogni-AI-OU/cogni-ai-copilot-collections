@@ -23,12 +23,12 @@ Apply dictation correction protocols to fix common speech-to-text errors, especi
 - **No Code Generation**: Do not generate code examples or output step-by-step planning to the user. You may follow the Core Process internally, but the response should primarily be the corrected text.
 - **Maintain Intent**: Do not simplify technical concepts or alter the user's intended meaning.
 
-## When to Use
+## WHEN TO USE
 
 - When processing raw dictation or speech-to-text input.
 - When refining draft documentation or workflow descriptions that contain filler words or inaccuracies.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For refactoring actual source code, where technical syntax must remain untouched by NLP heuristics.
 - When generating new content from scratch (use documentation generation skills instead).

@@ -11,13 +11,13 @@ license: MIT
 Use caution when running `cat` or heredocs (`<<EOF`) in automated environments or agentic runtimes, as missing or
 truncated EOF delimiters can cause persistent shell hangs.
 
-## When to Use
+## WHEN TO USE
 
 - Using `cat` to write files.
 - Using heredoc (`<<EOF`) to pass multiline strings.
 - Reading or streaming file contents.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For modifying or appending to files when specific, robust file-writing tools (like the Edit or Write tools) are
   available.

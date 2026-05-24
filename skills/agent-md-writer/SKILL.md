@@ -10,7 +10,7 @@ license: MIT
 
 This skill provides a structured process and set of principles for creating effective agent personas that reduce hallucination and increase task success rates.
 
-## When to Use
+## WHEN TO USE
 
 - **Specialized Persona Creation**: Designing high-performance agent personas (`*.agent.md`, `CLAUDE.md`) with a narrow, domain-specific mandate.
 - **Cognitive Architecture Design**: Defining internal reasoning protocols like Socratic Depth, Adversarial Red-Teaming, and Design-by-Contract.
@@ -18,7 +18,7 @@ This skill provides a structured process and set of principles for creating effe
 - **Workflow Standardization**: Authoring consistent boot sequences, task boards, and verification gates for autonomous agents.
 - **Pruning & Optimization**: Refining existing personas to remove fluff, reduce token usage, and eliminate activation drift.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **Platform Syntax Reference**: Learning the technical syntax or frontmatter schema of Agent MD files — use the `agent-md` skill instead.
 - **Mechanical Playbook Authoring**: Writing command-level execution steps for specific tools — use `SKILL.md` (via `agent-skill-md-writer`) instead.

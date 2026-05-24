@@ -9,13 +9,13 @@ license: MIT
 
 Instructs the agent to produce output strictly in valid YAML format, ensuring no conversational filler, markdown wrappers (like ```yaml), or additional explanations are present.
 
-## When to Use
+## WHEN TO USE
 
 - When an automated downstream process strictly expects a raw YAML response to parse.
 - To enforce pure structural output without the LLM adding "Here is your config:" headers.
 - When generating infrastructure-as-code manifests (like Kubernetes or Ansible) inline.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - If the user explicitly asks for an explanation or tutorial alongside the YAML code.
 - When outputting to a Markdown file where standard ```yaml codeblocks are expected and required.

@@ -24,12 +24,12 @@ Generate a robust, comprehensive, and best-practice-oriented `.editorconfig` fil
 - **Universal Standards**: Use `lf` for line endings, `utf-8` charset, trim trailing whitespace, and insert final newlines globally unless context demands otherwise.
 - **Exceptions Mapping**: Explicitly disable `trim_trailing_whitespace` for `[*.md]` files since trailing whitespace holds semantic meaning (hard line breaks).
 
-## When to Use
+## WHEN TO USE
 
 - When requested to generate, update, or configure an `.editorconfig` file.
 - When standardizing coding styles or formatting hooks for a workspace.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When the project already has an established `.editorconfig` that simply needs minor adjustments (edit the existing file rather than generating a new one from scratch).
 - For enforcing complex logic constraints or code quality metrics (use Linters like ESLint or Pylint instead).

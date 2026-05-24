@@ -8,13 +8,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When needing to read or reference Astronomer or Airflow documentation.
 - When searching for Astronomer-specific Airflow deployment, orchestration, or DAG guidelines.
 - When you are prompted to check `astronomer.io/docs` for information.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When you are writing Airflow DAGs (use `apache-airflow-dags` instead).
 - When interacting with Airflow APIs (use `apache-airflow-api` instead).

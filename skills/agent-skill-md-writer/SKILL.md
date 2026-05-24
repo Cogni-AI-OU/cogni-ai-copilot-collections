@@ -8,7 +8,7 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - **Capability Documentation**: Formalizing a specific agent capability into a portable `SKILL.md` playbook with verifiable, imperative steps.
 - **Mechanical Workflow Design**: Authoring precise `bash`, `gh`, or API execution sequences that any agent can invoke regardless of their persona.
@@ -16,7 +16,7 @@ license: MIT
 - **Resource Bundling**: Organizing scripts, templates, and reference docs into a structured directory for progressive context loading.
 - **Skill Refactoring**: Decomposing bloated skills into atomic units or offloading detailed content to the `references/` directory to save context.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **Persona Specification**: Defining a persistent agent identity, mandate, or internal reasoning protocol — use `agent-md-writer` instead.
 - **General Project Context**: Setting repo-wide build/test commands or architectural constraints — use `agents-md-writer` (AGENTS.md) instead.
@@ -44,28 +44,41 @@ the portable progressive loading architecture.
 
 ## Core Principles
 
-- **Autonomous Execution Focus**: Write for non-interactive agent flow: self-contained loops, built-in error recovery, verification steps, and no user confirmation prompts except for safety-critical actions.
-- **YAML Frontmatter is Mandatory**: Begin every SKILL.md with required fields `name` (lowercase-hyphenated, exactly matching folder name) and `description` (single-line, keyword-dense, wrapped in single quotes). Include `license` only if needed. YAML must pass all repository validation rules.
-- **Description Precision**: Write the `description` as a single, highly specific sentence that matches user intent patterns without overlap—poor phrasing causes missed or false activations.
-- **Avoid Hardcoding**: Never embed specific values, file paths, repository names, user details, or tool versions; instead, use clear placeholders (e.g., `<repository-name>`, `<file-path>`, `<version>`).
-- **Pure Markdown Body**: Use only Markdown in the body; never include extraneous files, scripts, or resources unless explicitly required for the skill.
-- **Common Pitfalls are High Signal**: Always include a `## Common Pitfalls` section for documenting proactive warnings about non-obvious behavior.
+- **Autonomous Execution Focus**:
+  Write for non-interactive agent flow: self-contained loops, built-in error recovery, verification steps, and no user confirmation prompts except for safety-critical actions.
+- **YAML Frontmatter is Mandatory**:
+  Begin every SKILL.md with required fields `name` (lowercase-hyphenated, exactly matching folder name) and `description` (single-line, keyword-dense, wrapped in single quotes). YAML must pass all repository validation rules.
+- **Description Precision**:
+  Write the `description` as a single, highly specific sentence that matches user intent patterns without overlap—poor phrasing causes missed or false activations.
+- **Avoid Hardcoding**:
+  Never embed specific values, file paths, repository names, user details, or tool versions; instead, use clear placeholders (e.g., `<repository-name>`, `<file-path>`, `<version>`).
+- **Pure Markdown Body**:
+  Use only Markdown in the body; never include extraneous files, scripts, or resources unless explicitly required for the skill.
+- **Common Pitfalls are High Signal**:
+  Always include a `## Common Pitfalls` section for documenting proactive warnings about non-obvious behavior.
 
 ## Skill Structure & Formatting
 
 Structure the generated file with the following sections (omit optional ones if unused):
 
 1. **YAML Frontmatter block**
-   Must include `name`, `description`, and `license` (MIT).
-   For the `description`, append `"You MUST load this skill when <condition>"` ONLY for exact, unambiguous triggers (e.g., a specific CLI command).
-   Omit this phrase for general-purpose skills. Split long sentences into multiple lines.
+   Must include the following fields:
+   - `name`
+   - `description`:
+      Include `USE FOR:` for concise positive routing with list of trigger phrases.
+     Include `DO NOT USE FOR:` for negative routing boundaries (anti-trigger phrases).
+      Include `MUST LOAD WHEN:` ONLY for exact, unambiguous triggers (e.g., a specific CLI command). Omit for general-purpose skills.
+     Optionally `**FOR SINGLE OPERATIONS**` (one-shot / atomic task routing) or `**WORKFLOW SKILL**` (multi-step process routing).
+     Start each above section from a new line for clarity.
+     Avoid vague phrasing that could lead to false positives or negatives.
+   - `license` (MIT)
 2. **Title (`# Skill Name`)**
 3. **Markdownlint overrides** (e.g., `<!-- markdownlint-disable MD013 MD023 MD031 MD032 -->`)
-4. **`## When to Use`**:
+4. **`## WHEN TO USE`**
    Concrete scenarios reinforcing description triggers.
    **Bullet points** (concise and strictly relevant).
    Use to clarify exact activation conditions. Skip generic filler.
-5. **`## When Not to Use`**:
+5. **`## WHEN NOT TO USE`**
    Explicit non-triggers to prevent false activation.
    **Bullet points** (focus on non-obvious edge cases and overlaps).
    Use to set clear boundaries against similar out-of-scope tasks; skip obvious exclusions.

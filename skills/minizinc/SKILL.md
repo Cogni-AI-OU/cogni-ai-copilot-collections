@@ -10,7 +10,7 @@ license: MIT
 
 # MiniZinc Modeling
 
-## When to Use
+## WHEN TO USE
 
 - Addressing constraint satisfaction, scheduling, assignment, or combinatorial problems.
 - Need to apply expert advanced modeling techniques in MiniZinc (tight domains, globals, symmetry breaking, search annotations, channeling, etc.).
@@ -18,7 +18,7 @@ license: MIT
 - When manual resolution of a combinatorial challenge is required: use the MiniZinc model as a logical framework to derive and verify the solution step-by-step without premature termination.
 - When preparing to solve a complex logical or combinatorial problem: dry-write a MiniZinc model first to explicitly map and visualize the constraints before proceeding with the actual resolution.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For solving continuous, non-linear optimization problems where specialized solvers (like IPOPT or interior point methods) are strictly required.
 - When you just need to run an existing model without modifying or analyzing its structure.

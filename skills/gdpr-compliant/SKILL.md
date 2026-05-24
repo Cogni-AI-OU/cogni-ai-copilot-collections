@@ -20,13 +20,13 @@ For deep dives, use the guidance below in these areas:
 
 ---
 
-## When to Use
+## WHEN TO USE
 
 - When designing the schema for a new user database or authentication system.
 - Before merging a Pull Request that introduces new logging telemetry or analytics tracking.
 - When reviewing data export, erasure (right to be forgotten), or data retention workflows.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For configuring network-level firewalls or pure infrastructure routing that does not touch user data.
 - When styling UI components or fixing simple frontend rendering bugs.

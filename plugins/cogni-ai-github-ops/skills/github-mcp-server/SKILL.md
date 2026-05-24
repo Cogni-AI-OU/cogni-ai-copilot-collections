@@ -10,13 +10,13 @@ license: MIT
 
 Provide expert-level guidance for configuring and using the GitHub MCP server, specifically within Agentic Workflows, covering authentication, toolsets, and best practices.
 
-## When to Use
+## WHEN TO USE
 
 - When explicitly configuring the `mcp-servers:` block for a GitHub Agentic Workflow.
 - To understand the exact mapping of GitHub tools to their respective `toolsets`.
 - When deciding between `gh-proxy`, `local`, and `remote` access modes for GitHub tools.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When using the `gh` CLI directly in an interactive terminal session without an MCP context.
 - For configuring generic, third-party MCP servers (like Google Drive or Notion) not hosted by GitHub.
@@ -375,7 +375,7 @@ Use this table to identify which toolset contains the tools you need:
 
 ## Using Allowed Pattern with Custom MCP Servers
 
-:::note[When to Use Allowed]
+:::note[USE FOR Allowed]
 The `allowed:` pattern is appropriate for:
 - Custom MCP servers (non-GitHub)
 - Gradual migration of existing workflows

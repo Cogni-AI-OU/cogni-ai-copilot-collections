@@ -9,14 +9,14 @@ license: MIT
 
 Define attributes per path to enforce line-ending conversions, custom merge drivers, textual diff strategies, and language statistics overrides across repositories.
 
-## When to Use
+## WHEN TO USE
 
 - When line endings (CRLF vs LF) are causing cross-platform issues for developers.
 - To prevent merge conflicts in auto-generated files (e.g., `package-lock.json`) by setting a custom merge driver.
 - When GitHub's language statistics are incorrectly classifying repository code.
 - To exclude vendored or binary files from standard diff outputs.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For ignoring files from version control entirely (use `.gitignore` instead).
 - When resolving a single, isolated merge conflict manually.

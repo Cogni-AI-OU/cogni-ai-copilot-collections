@@ -10,18 +10,18 @@ license: MIT
 
 Fast, non-interactive text stream editing and precise file segment extraction using `sed`.
 
-## When to Use This Skill
+## WHEN TO USE
 
 - You need to extract specific line ranges from a large file without reading the whole file into memory.
 - You need to perform non-interactive, programmatic find-and-replace across files.
 - You are writing shell scripts or processing streams of data in pipelines.
 - You want to extract snippets of log files or codebase for context extraction.
 
-## When Not to Use
+## WHEN NOT TO USE
 
-- Parsing or modifying complex structured data formats (JSON, YAML, XML) where context-aware tools (`jq`, `yq`) are significantly safer.
+- Complex multi-line replacements (use `python` or `vim-ex` instead).
 - Making multi-line replacements with complex indentation rules where `ex` (Vim) or Python scripting is more robust.
-- Interactive text editing.
+- Parsing JSON, YAML, or XML (use `jq`/`yq` instead—structured-data-aware tools are significantly safer).
 
 ## Core Process
 

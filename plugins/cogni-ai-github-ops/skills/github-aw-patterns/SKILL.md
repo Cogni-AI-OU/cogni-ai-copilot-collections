@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use This Skill
+## WHEN TO USE
 
 - When designing or architecting a new GitHub Agentic Workflow.
 - When determining the best architectural pattern for automation (e.g., choosing between sequential vs. batch processing).
 - When implementing specific Agentic Workflow patterns such as BatchOps, CentralRepoOps, ChatOps, DailyOps, etc.
 - When organizing multi-repository or cross-repository workflow operations.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When writing the specific Markdown or YAML syntax of an individual workflow (use `github-aw-syntax`).
 - For debugging a workflow that failed during execution (use `gh-aw-troubleshooting`).

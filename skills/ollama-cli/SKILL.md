@@ -7,13 +7,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When querying, pulling, or managing local LLMs via the `ollama` CLI.
 - When configuring local model backends for AI agents.
 - When launching wrapper tools (like Claude Code) using an Ollama model with Model Context Protocol (MCP) configurations.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When making standard REST API calls to remote cloud providers (e.g., OpenAI, Anthropic) without a local proxy.
 - For managing Python environments or general CLI tools unrelated to local inference.

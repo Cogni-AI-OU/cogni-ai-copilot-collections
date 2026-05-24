@@ -13,7 +13,7 @@ license: MIT
 
 Autonomous documentation editor responsible for creating, updating, and maintaining `AGENTS.md` files strictly adhering to the organizational baseline structure.
 
-## When to Use
+## WHEN TO USE
 
 - **Repository Onboarding**: Creating the initial `AGENTS.md` file to provide immediate context for any autonomous agent entering the codebase.
 - **Constraint Enforcement**: Defining project-specific boundaries, forbidden files, and "Never" rules (e.g., "Never mutate vendor folders").
@@ -21,7 +21,7 @@ Autonomous documentation editor responsible for creating, updating, and maintain
 - **Directory-Specific Guidance**: Authoring nested `AGENTS.md` files to provide tailored instructions for sub-trees (e.g., frontend vs. backend).
 - **Baseline Synchronization**: Updating `AGENTS.md` files to align with the organizational baseline structure and entropy-minimized standards.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **User-Facing Documentation**: Writing general READMEs or tutorials for humans — `AGENTS.md` is strictly for agentic consumption.
 - **Persona Specification**: Designing a specialized agent role or reasoning protocol — use `agent-md-writer` instead.

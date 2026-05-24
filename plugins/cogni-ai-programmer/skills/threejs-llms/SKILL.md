@@ -8,14 +8,14 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Writing, updating, or debugging Three.js code.
 - Implementing WebGL or WebGPU renderers for 3D graphics.
 - Creating custom shaders or advanced materials using TSL (Three.js Shading Language).
 - Setting up new Three.js environments requiring modern ES module imports.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - General JavaScript/TypeScript web development without 3D or graphical requirements.
 - 2D canvas manipulations not utilizing the Three.js library.

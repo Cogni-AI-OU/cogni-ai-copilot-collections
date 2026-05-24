@@ -25,13 +25,13 @@ Dynamically generate a coding standards document based on the existing syntax, f
 - **Template Adaptation**: Use "verbose" for comprehensive style guides and "minimal" for concise rule summaries.
 - **Contextual Insertion**: When appending to `README.md`, locate the most logical insertion point (e.g., at the end or under a "Contributing" heading).
 
-## When to Use
+## WHEN TO USE
 
 - When tasked with creating coding guidelines from existing code.
 - To detect and fix formatting inconsistencies across multiple files.
 - When generating `CONTRIBUTING.md`, `STYLE.md`, or `STYLEGUIDE.md`.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When the project already has an explicit, well-documented `CONTRIBUTING.md` or `.editorconfig` that should not be overwritten.
 - To enforce rules that contradict the organization's global engineering standards.

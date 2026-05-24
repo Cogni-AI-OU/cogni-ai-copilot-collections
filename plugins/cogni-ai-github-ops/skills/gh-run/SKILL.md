@@ -11,13 +11,13 @@ license: MIT
 Use `gh run` and `gh workflow` to interact with GitHub Actions workflows. Prefer structured output and explicit
 routing over brittle shell post-processing.
 
-## When to Use
+## WHEN TO USE
 
 - When diagnosing why a specific GitHub Actions CI/CD pipeline failed.
 - To download artifact logs for a run that is currently stuck or in progress.
 - When manually triggering a `workflow_dispatch` event via the CLI.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For retrieving standard Pull Request metadata (use `gh pr view` instead).
 - When attempting to write or modify the actual `.github/workflows/*.yml` files (this skill is for

@@ -8,12 +8,12 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - **Documentation Search**: Locating specific Claude Code or Anthropic Claude documentation articles.
 - **Article Retrieval**: Fetching the full rendered markdown of a specific Claude docs page via its `llms.txt` or related context.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **Claude API Operations**: Interacting with live Claude APIs to generate text. Use appropriate API endpoints or SDKs for that.
 

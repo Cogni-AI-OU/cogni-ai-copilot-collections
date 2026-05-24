@@ -8,13 +8,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When using the `webfetch` tool to read documentation from a website.
 - When creating, updating, or maintaining an `/llms.txt` file for a project.
 - When retrieving context about a website to help LLMs understand its structure.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When reading local files that do not correspond to web documentation.
 - When the task does not involve fetching external documentation or creating LLM context files.

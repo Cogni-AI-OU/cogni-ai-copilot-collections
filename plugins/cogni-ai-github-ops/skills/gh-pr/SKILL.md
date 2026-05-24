@@ -11,7 +11,7 @@ license: MIT
 Use `gh pr` to natively interact with GitHub Pull Requests. Prefer native
 fields and explicit routing over brittle shell post-processing.
 
-## When to Use
+## WHEN TO USE
 
 - User asks to manage, review, or inspect a pull request using the GitHub CLI (`gh pr`).
 - Task involves querying PR CI/CD checks (`gh pr checks`), logs, mergeability, or PR metadata.

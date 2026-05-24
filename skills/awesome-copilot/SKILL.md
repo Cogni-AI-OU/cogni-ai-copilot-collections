@@ -10,13 +10,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When looking for community-contributed instructions, agents, skills, and configurations for GitHub Copilot.
 - When needing to install plugins or agentic workflows from the Awesome Copilot marketplace.
 - When seeking examples of Copilot hooks, skills, or recipes for working with Copilot APIs.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When configuring built-in Copilot features unrelated to community plugins or awesome-copilot resources.
 

@@ -10,13 +10,13 @@ license: MIT
 
 Diagnose, troubleshoot, and fix failing GitHub Agentic Workflows by analyzing logs, verifying MCP configurations, and correcting frontmatter.
 
-## When to Use
+## WHEN TO USE
 
 - When a GitHub Agentic Workflow run fails and requires root-cause analysis.
 - To diagnose `401 Unauthorized`, missing tools, or firewall egress blocks in an agent session.
 - When an agent's `safe-outputs` configuration is rejecting intended file writes or API calls.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For debugging standard CI/CD pipelines (like unit tests or linters) that do not involve `gh-aw` agents (use `github-actions` instead).
 - When editing the conversational prompt text inside the markdown file without changing the YAML frontmatter constraints (this rarely causes structural failures).

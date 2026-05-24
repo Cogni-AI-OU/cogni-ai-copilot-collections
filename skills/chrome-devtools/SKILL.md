@@ -26,7 +26,7 @@ A specialized skill for controlling and inspecting a live Chrome browser. This s
 - **Troubleshoot Objectively**: When a page fails, check both console logs (`list_console_messages`) and network requests (`list_network_requests`).
 - **Profile Methodically**: Use `performance_start_trace` and `performance_analyze_insight` to identify LCP issues or layout shifts.
 
-## When to Use
+## WHEN TO USE
 
 Use this skill when:
 

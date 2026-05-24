@@ -10,13 +10,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - Executing core Pulumi commands like `pulumi up`, `pulumi preview`, or `pulumi destroy`.
 - Managing Pulumi stacks with `pulumi stack` and configuration with `pulumi config`.
 - Interacting directly with the Pulumi Cloud REST API using `pulumi api`.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Writing or refactoring Pulumi infrastructure code (use language-specific skills like `python` or `typescript`).
 - Fetching documentation or schemas (use `pulumi-docs` instead).

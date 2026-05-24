@@ -8,13 +8,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - **Documentation Search**: Locating specific GitHub documentation articles via search queries.
 - **Article Retrieval**: Fetching the full rendered markdown of a specific GitHub docs page.
 - **Documentation Browsing**: Programmatically listing available pages, languages, or versions of GitHub docs.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **GitHub API/Operations**: Interacting with live repositories, issues, or PRs. Use `gh`, `gh-api`, or the `github-mcp-server` directly for operational data.
 - **REST/GraphQL Endpoint Usage**: Executing REST/GraphQL queries for repo data, unless looking up the *documentation* of how those APIs work.

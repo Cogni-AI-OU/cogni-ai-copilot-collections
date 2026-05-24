@@ -10,13 +10,13 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - When developing mobile cross-platform applications using React Native.
 - When you need documentation on React Native Core Components (e.g., `View`, `Text`, `FlatList`, `ScrollView`).
 - When you need documentation on React Native APIs, Animations, Handling Touches, or linking libraries.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When working on standard web applications using React (use `react-llms` instead).
 

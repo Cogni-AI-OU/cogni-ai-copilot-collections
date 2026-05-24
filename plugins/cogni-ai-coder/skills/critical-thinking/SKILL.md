@@ -13,13 +13,13 @@ license: MIT
 
 A cognitive framework for deep analytical reasoning.
 
-## When to Use
+## WHEN TO USE
 
 - When confronted with an ambiguous, contradictory, or complex problem that defies immediate technical fixes.
 - Before embarking on a massive, repository-wide architectural refactoring.
 - When an automated test or build fails silently and standard debugging yields no obvious root cause.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For trivial syntax errors or obvious spelling mistakes.
 - When the user explicitly requests immediate, uncritical execution of a basic command without review.

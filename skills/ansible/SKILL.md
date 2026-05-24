@@ -9,17 +9,20 @@ license: MIT
 
 # Ansible Operations
 
-## When to Use
+
+## WHEN TO USE
 
 - Agent needs to execute Ansible playbooks or commands.
 - User needs to run Ansible automation scripts.
 - Troubleshooting hanging issues during Ansible execution.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For localized script automation on a single machine where simple shell scripts suffice.
 - For managing ephemeral, immutable container infrastructure better suited for Terraform or Dockerfiles.
 - When the task explicitly requires agentic AI decision-making loops (Ansible is deterministic).
+- General shell scripts (use `shell` instead).
+- Docker operations (use `docker` instead).
 
 ## Common Pitfalls
 

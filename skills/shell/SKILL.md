@@ -10,13 +10,13 @@ license: MIT
 
 Execute shell commands with performance monitoring and timeout protection.
 
-## When to Use
+## WHEN TO USE
 
 - Commands that might hang indefinitely
 - Long-running commands (builds, tests, deployments)
 - Performance optimization and debugging
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - Quick, reliable commands that execute in milliseconds
 - Interactive terminal sessions requiring human input

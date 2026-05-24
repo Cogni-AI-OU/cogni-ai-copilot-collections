@@ -11,12 +11,12 @@ license: MIT
 
 Guidance on interacting with GitHub features, specifically around Pull Requests and diff viewing.
 
-## When to Use
+## WHEN TO USE
 
 - When working with GitHub Pull Requests, comparing branches, or needing to view diffs/patches.
 - When needing to extract plain text diffs from GitHub PRs.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For scripting bulk issue creation or complex repository management (use the `gh` CLI or `gh-api` skills instead).
 - When resolving Git merge conflicts directly in the local repository (use `git` or `git-expert`).

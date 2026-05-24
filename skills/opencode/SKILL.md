@@ -10,13 +10,13 @@ license: MIT
 
 OpenCode uses XDG base directories for configuration and data. Access the OpenCode Zen API to list available models.
 
-## When to Use
+## WHEN TO USE
 
 - To locate or modify OpenCode's internal configurations, credentials, and state.
 - When needing to verify the current set of supported AI models via the Zen API.
 - If an agent needs to programmatically inject configurations directly into the OpenCode XDG base directories.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When debugging general code issues in a repository completely unrelated to OpenCode's own configuration.
 - For interacting with standard GitHub Copilot CLI configurations (`~/.copilot`).

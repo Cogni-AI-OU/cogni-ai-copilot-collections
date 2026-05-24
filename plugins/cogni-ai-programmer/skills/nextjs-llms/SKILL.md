@@ -12,13 +12,13 @@ license: MIT
 
 Next.js is the React framework for building full-stack web applications.
 
-## When to Use
+## WHEN TO USE
 
 - When developing applications using the Next.js framework (App Router or Pages Router).
 - When you need to look up documentation on Next.js routing, data fetching, rendering, server components, API routes, or caching.
 - When you need syntax, usage examples, or version-specific details for Next.js 14, 15, or 16.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When working on a plain React application without Next.js (use `react-llms` instead).
 - When the context is already sufficiently clear and you do not need to read the official Next.js documentation.

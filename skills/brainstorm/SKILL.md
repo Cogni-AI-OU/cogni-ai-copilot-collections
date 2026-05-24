@@ -12,6 +12,20 @@ license: MIT
 
 A cognitive framework and protocol for exploring options, breaking down complexities, and summarizing information.
 
+## WHEN TO USE
+
+- Brainstorming alternative solutions for systemic issues or technical debt.
+- Breaking down highly complex features into manageable, atomic components.
+- Deconstructing an ambiguous problem space to define clear facts and priorities.
+- Exploring and comparing multiple architectural options before committing to a design.
+- Visualizing system dependencies and constraints to establish a shared mental model.
+
+## WHEN NOT TO USE
+
+- Convergent evaluation of a single plan (use `critical-thinking` instead).
+- Narrow technical debugging (use `critical-thinking` or `tester` instead).
+- Simple file management or git operations.
+
 ## Core Process
 
 1. **Context Gathering & Research**: Aggressively gather facts, existing data, and constraints before formulating any conclusions.

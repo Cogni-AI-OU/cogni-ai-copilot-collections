@@ -10,6 +10,18 @@ license: MIT
 
 The Agent Skills open standard provides a framework for structuring and specifying skills to ensure portability across different AI systems and agent hosts. Agent Skills work with GitHub Copilot (Cloud, CLI, and VS Code), Claude Code, OpenCode, and other compliant agents. Agent Skills are self-contained folders with instructions and bundled resources that teach AI agents specialized capabilities, unlike custom instructions which only define coding standards.
 
+## WHEN TO USE
+
+- When designing, architecting, or manually creating a new agent skill folder from scratch.
+- To understand the progressive loading architecture, directory structure, and metadata requirements of the open standard.
+- When reviewing a third-party skill for compliance with the Agent Skills specification.
+
+## WHEN NOT TO USE
+
+- When generating the markdown content for a skill automatically (use `agent-skill-md-writer` instead).
+- For configuring the top-level behavior or personality of the agent itself (use `agent-md-writer`).
+- When writing project-specific coding conventions that do not require actionable agent instructions.
+
 ## Core Principles
 
 - **Open Standard**: Rely on the open standard for structure and specifications to ensure portability across different AI systems.
@@ -22,18 +34,6 @@ The Agent Skills open standard provides a framework for structuring and specifyi
   1. **Discovery** (~100 tokens): `name` and `description` are loaded at startup.
   2. **Instructions** (< 5000 tokens): `SKILL.md` body is loaded when the request matches the description.
   3. **Resources** (as needed): Scripts, examples, and docs are loaded only when explicitly referenced.
-
-## When to Use
-
-- When designing, architecting, or manually creating a new agent skill folder from scratch.
-- To understand the progressive loading architecture, directory structure, and metadata requirements of the open standard.
-- When reviewing a third-party skill for compliance with the Agent Skills specification.
-
-## When Not to Use
-
-- When generating the markdown content for a skill automatically (use `agent-skill-md-writer` instead).
-- For configuring the top-level behavior or personality of the agent itself (use `agent-md-writer`).
-- When writing project-specific coding conventions that do not require actionable agent instructions.
 
 ## Common Pitfalls
 
@@ -96,7 +96,7 @@ The `name` and `description` fields in `SKILL.md` frontmatter are critical. The 
 
 Recommended sections:
 - `# Title`: Brief overview of what this skill enables.
-- `## When to Use This Skill`: List of scenarios reinforcing description triggers.
+- `## WHEN TO USE`: List of scenarios reinforcing description triggers.
 - `## Prerequisites`: Required tools or dependencies.
 - `## Step-by-Step Workflows`: Numbered steps for repeatable procedures (build, deploy, setup). Use flexible guidelines instead of rigid steps for open-ended tasks.
 - `## Gotchas`: Proactive warnings about non-obvious behavior. **This is the highest-signal content**. Bold the key constraint and explain why.

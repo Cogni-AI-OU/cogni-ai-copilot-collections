@@ -12,13 +12,13 @@ license: MIT
 
 This skill helps with work on pull requests.
 
-## When to Use
+## WHEN TO USE
 
 - When an agent is triggered directly by a comment on a Pull Request.
 - When tasked with reviewing, updating, or synchronizing a PR branch with its base.
 - To programmatically fetch and read the conversation history of a specific PR.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - When managing generic issues that do not have attached code changes (use `github-issue` instead).
 - For writing raw Git commits locally without interacting with the GitHub Pull Request lifecycle.

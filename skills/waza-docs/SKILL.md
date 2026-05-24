@@ -7,7 +7,7 @@ name: waza-docs
 
 <!-- markdownlint-disable MD013 MD024 MD033 -->
 
-## When to Use
+## WHEN TO USE
 
 - When configuring or troubleshooting Waza implementations.
 - When creating SKILL assessments and evaluating agents using Waza.

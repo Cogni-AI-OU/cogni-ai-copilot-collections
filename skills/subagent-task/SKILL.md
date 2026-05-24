@@ -12,6 +12,19 @@ license: MIT
 
 Provides policies and examples for using the `task` tool to spawn sub-agents for specialized, parallel, or complex tasks.
 
+## WHEN TO USE
+
+- Delegating complex, multi-step tasks to specialized project agents.
+- Executing modular sub-tasks in parallel (e.g., retrieving facts, analyzing logs, validating plans).
+- Preventing context clutter in the primary agent by offloading heavy reading or analysis to a sub-agent.
+- Utilizing specific personas for targeted expertise.
+
+## WHEN NOT TO USE
+
+- For trivial, single-step operations (e.g., running a quick `ls` or a simple `git commit`).
+- When the overhead of explaining the task to a sub-agent outweighs doing it directly.
+- If the primary agent is already a specialized agent perfectly suited for the entire task.
+
 ## Core Principles
 
 - **Specialization**: Delegate tasks to specialized project agents rather than attempting to handle broad contexts monolithically.
@@ -26,12 +39,6 @@ The use of the `task` tool and spawning sub-agents is permitted for complex, mul
 - **Built-in Subagents Disabled**: Built-in `explore` and `general` subagents are not approved for this runtime and MUST NOT be used, even if a host tool still lists them.
 - **Maintain Context**: Ensure that the primary agent remains the coordinator and synthesizes the results from sub-agents into the final response.
 - **Strategic Delegation**: Delegate only when the task involves broad codebase analysis or independent sub-tasks that can be executed in parallel.
-
-## When Not to Use
-
-- For trivial, single-step operations (e.g., running a quick `ls` or a simple `git commit`).
-- When the overhead of explaining the task to a sub-agent outweighs doing it directly.
-- If the primary agent is already a specialized agent perfectly suited for the entire task.
 
 ## Common Pitfalls
 

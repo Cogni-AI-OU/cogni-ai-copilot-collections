@@ -10,6 +10,18 @@ license: MIT
 
 Design, review, and optimize secure AI prompts using advanced prompt engineering patterns, safety frameworks, and injection mitigation strategies.
 
+## WHEN TO USE
+
+- Engineering system prompts, LLM templates, or Copilot instructions.
+- Auditing existing prompts for injection vulnerabilities or data leakage risks.
+- Defining automated prompt evaluation metrics or safety checklists.
+
+## WHEN NOT TO USE
+
+- When writing strict procedural code (like Python or Bash scripts) where natural language ambiguity is unacceptable.
+- For managing low-level hardware or infrastructure where strict, deterministic APIs should be used instead of LLMs.
+- When generating general project documentation without targeting an AI consumer (use `docs-writer` instead).
+
 ## Core Process
 
 1. **Contextualize**: Define explicit tasks, target audience, and precise constraints (format, length, tone).
@@ -25,12 +37,6 @@ Design, review, and optimize secure AI prompts using advanced prompt engineering
 - **Data Minimization**: Exclude sensitive, personal, or proprietary data from prompts.
 - **Neutrality**: Enforce inclusive language; eliminate demographic or contextual assumptions.
 
-## When to Use
-
-- Engineering system prompts, LLM templates, or Copilot instructions.
-- Auditing existing prompts for injection vulnerabilities or data leakage risks.
-- Defining automated prompt evaluation metrics or safety checklists.
-
 ## Commands / Usage Patterns
 
 - **Role Setup**: `You are a <role> with <years> experience in <domain>. Review <target> and identify <issues>.`
@@ -44,12 +50,6 @@ Design, review, and optimize secure AI prompts using advanced prompt engineering
 - Implement content moderation pre/post-processing for user-facing AI pipelines.
 - Establish A/B testing and automated evaluation for continuous prompt refinement.
 - Document prompt purpose, scope, assumptions, and limitations.
-
-## When Not to Use
-
-- When writing strict procedural code (like Python or Bash scripts) where natural language ambiguity is unacceptable.
-- For managing low-level hardware or infrastructure where strict, deterministic APIs should be used instead of LLMs.
-- When generating general project documentation without targeting an AI consumer (use `docs-writer` instead).
 
 ## Common Pitfalls
 

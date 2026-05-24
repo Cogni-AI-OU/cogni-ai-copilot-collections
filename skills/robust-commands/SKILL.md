@@ -13,7 +13,7 @@ This skill provides patterns for executing commands with automatic error
 recovery, fallback mechanisms, and installation of missing dependencies.
 Never give up when a command fails - try alternatives!
 
-## When to Use
+## WHEN TO USE
 
 - When a command might not be installed
 - When debugging command failures
@@ -21,7 +21,7 @@ Never give up when a command fails - try alternatives!
 - When working in different environments (containers, CI, local)
 - When you need to ensure commands succeed
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - For highly sensitive or destructive commands (like `rm -rf /` or database drops) where silent fallback
   execution could be disastrous.

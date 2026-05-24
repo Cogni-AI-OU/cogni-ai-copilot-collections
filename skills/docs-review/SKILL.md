@@ -13,19 +13,17 @@ license: MIT
 
 Guidance for reviewing core architecture, documentation, and constraint files for mutual consistency and accuracy. Use this skill when checking repository documentation.
 
-## When to Use
+## WHEN TO USE
 
-- Checking core architecture files (`*.mmd`, `*.mzn`) for consistency.
-- Reviewing documentation (`**/AGENTS.md`, `**/README.md`) for outdated references.
-- After any significant architectural decision to verify documentation exists and is accurate.
-- When encountering complex code to ensure it's properly documented.
-- When verifying an operational procedure or tradeoff.
+- Auditing core architecture files (`*.mmd`, `*.mzn`) for consistency.
+- Reviewing documentation (`**/AGENTS.md`, `**/README.md`) for outdated or contradictory references.
+- Verifying that architectural decisions, operational procedures, and complex code blocks are accurately documented.
 
-## When Not to Use
+## WHEN NOT TO USE
 
-- For performing deep code execution or logic validation (use `testing` or `code-review` instead).
-- When the user explicitly requests purely formatting/linting fixes (use `markdown` or `yaml` skills).
-- For writing completely new features from scratch without reviewing existing architecture.
+- Writing completely new documentation from scratch (use `docs-writer` instead).
+- Performing deep code execution or logic validation (use `testing` or `code-review` instead).
+- Applying purely formatting or linting fixes.
 
 ## Common Pitfalls
 
