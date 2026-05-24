@@ -155,7 +155,6 @@ jobs:
                 findings.push({ skill: currentSkill, level, text });
               }
             });
-
             const summaryFindings = findings.slice(0, 20);
             const scopeTable = [
               '| Scope | Checked |',
