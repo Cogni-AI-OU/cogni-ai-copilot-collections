@@ -12,7 +12,7 @@ For a human-readable overview, see [README.md](README.md).
 - **[cogni-ai-agent.yml](cogni-ai-agent.yml)**: Logic for the Cogni AI Agent.
 - **[copilot-setup-steps.yml](copilot-setup-steps.yml)**: Environment setup utility.
 - **[devcontainer-ci.yml](devcontainer-ci.yml)**: Build/test devcontainer and required tools/packages.
-- **[waza-eval.yml](waza-eval.yml)**: Waza evaluation for Markdown files.
+- **[waza-check.yml](waza-check.yml)**: Waza validation for skill files.
 
 ## Details
 
@@ -60,9 +60,9 @@ For a human-readable overview, see [README.md](README.md).
 - Permissions: callers must grant `packages: write` when pushing images to GHCR.
 - Reusable: `uses: Cogni-AI-OU/.github/.github/workflows/devcontainer-ci.yml@main`.
 
-### waza-eval.yml
+### waza-check.yml
 
-- Purpose: run Waza evaluation framework on skill files (SKILL.md, .agent.md) in PRs.
+- Purpose: run Waza validation framework on skill files (SKILL.md, .agent.md) in PRs.
 - Triggers: `pull_request` and `push` when `**/SKILL.md`, `**/*.agent.md`, or skill directories
   (`.github/skills/**`, `skills/**`, `plugins/**/skills/**`) are modified, and `workflow_dispatch`.
 - Details: Installs Go, builds waza from source (github.com/microsoft/waza), detects changed
@@ -71,11 +71,11 @@ For a human-readable overview, see [README.md](README.md).
   Saves results as artifacts for the comment workflow.
 - Permissions: `contents: read`.
 
-### waza-eval-pr-comment.yml
+### waza-check-pr-comment.yml
 
-- Purpose: Posts results from the "Waza Evaluation" workflow as a PR comment.
-- Triggers: `workflow_run` (after Waza Evaluation), `workflow_call`, `workflow_dispatch`.
-- Details: Downloads the waza-evaluation-results artifact and posts a "Skill Readiness Check" comment
+- Purpose: Posts results from the "Waza Check" workflow as a PR comment.
+- Triggers: `workflow_run` (after Waza Check), `workflow_call`, `workflow_dispatch`.
+- Details: Downloads the waza-check-results artifact and posts a "Skill Readiness Check" comment
   with error/warning counts and findings. Updates existing comments via marker detection.
 - Permissions: `issues: write`, `pull-requests: write`, `actions: read`.
 

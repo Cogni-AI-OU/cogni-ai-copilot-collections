@@ -1,5 +1,5 @@
 ---
-name: Waza Evaluation
+name: Waza Check
 on:
   pull_request:
     paths:
@@ -133,7 +133,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           if-no-files-found: ignore
-          name: waza-evaluation-results
+          name: waza-check-results
           path: |-
             waza-results/
             results.json

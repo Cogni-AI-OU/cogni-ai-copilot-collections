@@ -1,5 +1,5 @@
 ---
-name: Waza Evaluation — PR Comment
+name: Waza Check — PR Comment
 # Posts results from the "Waza Evaluation" workflow as a PR comment.
 # Runs with write permissions but never checks out PR code,
 # so it is safe for fork PRs.
@@ -18,7 +18,7 @@ on:
         type: string
   workflow_run:
     workflows:
-      - Waza Evaluation
+      - Waza Check
     types:
       - completed
 permissions:
@@ -36,7 +36,7 @@ jobs:
       - name: Download results artifact
         uses: actions/download-artifact@v4
         with:
-          name: waza-evaluation-results
+          name: waza-check-results
           run-id: ${{ inputs.run_id || github.event.workflow_run.id }}
           github-token: ${{ github.token }}
       - name: Post PR comment with results
@@ -50,7 +50,7 @@ jobs:
             const rawOutput = fs.readFileSync('waza-output.txt', 'utf8').trim();
             const changedSkills = fs.readFileSync('changed-skills.txt', 'utf8').trim();
             const hasResultsJson = fs.existsSync('results.json');
-            const marker = '<!-- waza-evaluation-results -->';
+            const marker = '<!-- waza-check-results -->';
             const changedCount = changedSkills ? changedSkills.split('\n').filter(Boolean).length : 0;
             const errorCount = (rawOutput.match(/❌/g) || []).length;
             const warningCount = (rawOutput.match(/⚠/g) || []).length;
@@ -61,7 +61,7 @@ jobs:
                 await github.rest.issues.createLabel({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  name: 'waza-eval-error',
+                  name: 'waza-check-error',
                   color: 'B60205',
                   description: 'Waza evaluation reported errors'
                 });
@@ -73,12 +73,12 @@ jobs:
                 repo: context.repo.repo,
                 issue_number: prNumber
               });
-              if (!currentLabels.find(l => l.name === 'waza-eval-error')) {
+              if (!currentLabels.find(l => l.name === 'waza-check-error')) {
                 await github.rest.issues.addLabels({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: prNumber,
-                  labels: ['waza-eval-error']
+                  labels: ['waza-check-error']
                 });
               }
             } else if (warningCount > 0) {
@@ -90,12 +90,12 @@ jobs:
                   repo: context.repo.repo,
                   issue_number: prNumber
                 });
-                if (currentLabels.find(l => l.name === 'waza-eval-error')) {
+                if (currentLabels.find(l => l.name === 'waza-check-error')) {
                   await github.rest.issues.removeLabel({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     issue_number: prNumber,
-                    name: 'waza-eval-error'
+                    name: 'waza-check-error'
                   });
                 }
               } catch (error) {
