@@ -4,12 +4,12 @@
 
 This section contains some miscellaneous do's and don'ts.
 
--   Don't use floating-point variables where discrete values are
+- Don't use floating-point variables where discrete values are
     needed. Using a float for a loop counter is a great way to shoot
     yourself in the foot. Always test floating-point numbers as \<= or
     \>=, never use an exact comparison (== or !=).
 
--   Compilers have bugs. Common trouble spots include structure
+- Compilers have bugs. Common trouble spots include structure
     assignment and bit fields. You cannot generally predict which bugs a
     compiler has. You could write a program that avoids all constructs
     that are known broken on all compilers. You won't be able to write
@@ -18,7 +18,7 @@ This section contains some miscellaneous do's and don'ts.
     \`\`around'' compiler bugs only when you are forced to use a
     particular buggy compiler.
 
--   Do not rely on automatic beautifiers. The main person who benefits
+- Do not rely on automatic beautifiers. The main person who benefits
     from good program style is the programmer him/herself, and
     especially in the early design of handwritten algorithms or
     pseudo-code. Automatic beautifiers can only be applied to complete,
@@ -35,7 +35,7 @@ This section contains some miscellaneous do's and don'ts.
     gained by such a program. Beautifiers are best for gross formatting
     of machine-generated code.
 
--   Accidental omission of the second \`\`='' of the logical compare
+- Accidental omission of the second \`\`='' of the logical compare
     is a problem. The following is confusing and prone to error.
 
                 if (abool= bbool) { ... }
@@ -49,7 +49,7 @@ This section contains some miscellaneous do's and don'ts.
                abool= bbool;
                if (abool) { ... }
 
--   Modern compilers will put variables in registers automatically. Use
+- Modern compilers will put variables in registers automatically. Use
     the register sparingly to indicate the variables that you think are
     most critical. In extreme cases, mark the 2-4 most critical values
     as register and mark the rest as REGISTER. The latter can be
@@ -149,12 +149,12 @@ Do not put data definitions in header files. for example:
      */
     int x = 0;
 
-1.  It's bad magic to have space consuming code silently inserted
+1. It's bad magic to have space consuming code silently inserted
     through the innocent use of header files.
-2.  It's not common practice to define variables in the header file so
+2. It's not common practice to define variables in the header file so
     it will not occur to developers to look for this when there are
     problems.
-3.  Consider defining the variable once in a .c file and use an extern
+3. Consider defining the variable once in a .c file and use an extern
     statement to reference it.
 
 ## Mixing C and C++
@@ -238,12 +238,12 @@ your application.
 
 ## Error Return Check Policy
 
--   Check every system call for an error return, unless you know you
+- Check every system call for an error return, unless you know you
     wish to ignore errors. For example, *printf* returns an error code
     but rarely would you check for its return code. In which case you
     can cast the return to **(void)** if you really care.
--   Include the system error text for every system error message.
--   Check every call to malloc or realloc unless you know your versions
+- Include the system error text for every system error message.
+- Check every call to malloc or realloc unless you know your versions
     of these calls do the right thing. You might want to have your own
     wrapper for these calls, including new, so you can do the right
     thing always and developers don't have to make memory checks
