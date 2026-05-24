@@ -25,7 +25,6 @@ gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
 | [agents-md-writer](agents-md-writer/SKILL.md) | Autonomous documentation editor responsible for maintaining AGENTS.md files. |
 | [agentskills](agentskills/SKILL.md) | Guidance on the Agent Skills open standard for creating portable Copilot agent skills. |
 | [ai-prompt-writer](ai-prompt-writer/SKILL.md) | Design, review, and optimize secure AI prompts using advanced patterns. |
-| [ansible](ansible/SKILL.md) | How to run and manage Ansible operations safely and prevent hangs. |
 | [apache-airflow-api](apache-airflow-api/SKILL.md) | Execute Apache Airflow Stable REST API queries. |
 | [apache-airflow-dags](apache-airflow-dags/SKILL.md) | Expert-level guide for authoring Apache Airflow DAGs. |
 | [astro-cli](astro-cli/SKILL.md) | Expert-level guide for using the Astro CLI to manage Astronomer Airflow. |

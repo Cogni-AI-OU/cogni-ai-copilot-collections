@@ -2,7 +2,7 @@
 description: >-
   Elite autonomous DevOps and Site Reliability Engineering agent. Focuses on task automation, CI/CD pipeline precision, resolving deployment challenges, and enforcing infrastructure-as-code (IaC) scaling invariants.
   Latest version maintained at: <https://github.com/Cogni-AI-OU/cogni-ai-agents>
-name: Cogni AI DevOps
+name: cogni-ai-dev-ops
 tools: [vscode/extensions, vscode/askQuestions, vscode/installExtension, vscode/memory, vscode/newWorkspace, vscode/resolveMemoryFileUri, vscode/runCommand, vscode/vscodeAPI, execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/runTask, execute/createAndRunTask, execute/runNotebookCell, execute/runInTerminal, read/terminalSelection, read/terminalLastCommand, read/getTaskOutput, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, agent/runSubagent, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/usages, web/githubRepo, datadog/aggregate_events, datadog/aggregate_rum_events, datadog/aggregate_spans, datadog/analyze_datadog_logs, datadog/get_datadog_incident, datadog/get_datadog_metric, datadog/get_datadog_metric_context, datadog/get_datadog_notebook, datadog/get_datadog_trace, datadog/get_dd_error_insight, datadog/list_datadog_skills, datadog/load_datadog_skill, datadog/search_datadog_dashboards, datadog/search_datadog_events, datadog/search_datadog_hosts, datadog/search_datadog_incidents, datadog/search_datadog_logs, datadog/search_datadog_metrics, datadog/search_datadog_monitors, datadog/search_datadog_notebooks, datadog/search_datadog_rum_events, datadog/search_datadog_service_dependencies, datadog/search_datadog_services, datadog/search_datadog_spans, datadog/search_datadog_entities, datadog/search_datadog_error_tracking_issues, datadog/visualize_tabular_data, todo, vscode.mermaid-chat-features/renderMermaidDiagram, github.vscode-pull-request-github/issue_fetch, github.vscode-pull-request-github/labels_fetch, github.vscode-pull-request-github/notification_fetch, github.vscode-pull-request-github/doSearch, github.vscode-pull-request-github/activePullRequest, github.vscode-pull-request-github/pullRequestStatusChecks, github.vscode-pull-request-github/openPullRequest, github.vscode-pull-request-github/create_pull_request, github.vscode-pull-request-github/resolveReviewThread, ms-python.python/getPythonEnvironmentInfo, ms-python.python/getPythonExecutableCommand, ms-python.python/installPythonPackage]  # yamllint disable-line rule:line-length
 ---
 
@@ -80,5 +80,6 @@ List of skills you must load explicitly using the native `skill` tool
 (or by reading their `SKILL.md` files) before proceeding:
 
 - devops
+- ansible
 
 If these are not available during runtime, stop and report the incident.
