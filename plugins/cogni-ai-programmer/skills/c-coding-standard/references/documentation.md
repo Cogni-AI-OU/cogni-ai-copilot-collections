@@ -41,31 +41,31 @@ a report so people can make a special effort where needed.
 
 ### Gotcha Keywords
 
--   **\@author:**\
+- **\@author:**\
     specifies the author of the module
--   **\@version:**\
+- **\@version:**\
     specifies the version of the module
--   **\@param:**\
+- **\@param:**\
     specifies a parameter into a function
--   **\@return:**\
+- **\@return:**\
     specifies what a function returns
--   **\@deprecated:**\
+- **\@deprecated:**\
     says that a function is not to be used anymore
--   **\@see:**\
+- **\@see:**\
     creates a link in the documentation to the file/function/variable to
     consult to get a better understanding on what the current block of
     code does.
--   **\@todo:**\
+- **\@todo:**\
     what remains to be done
--   **\@bug:**\
+- **\@bug:**\
     report a bug found in the piece of code
 
 ### Gotcha Formatting
 
--   Make the gotcha keyword the first symbol in the comment.
--   Comments may consist of multiple lines, but the first line should be
+- Make the gotcha keyword the first symbol in the comment.
+- Comments may consist of multiple lines, but the first line should be
     a self-containing, meaningful summary.
--   The writer's name and the date of the remark should be part of the
+- The writer's name and the date of the remark should be part of the
     comment. This information is in the source repository, but it can
     take a quite a while to find out when and by whom it was added.
     Often gotchas stick around longer than they should. Embedding date
