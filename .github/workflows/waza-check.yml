@@ -5,18 +5,18 @@ on:
     paths:
       - '**/SKILL.md'
       - '**/*.agent.md'
-      - '.github/skills/**'
-      - 'skills/**'
-      - 'plugins/**/skills/**'
+      - .github/skills/**
+      - skills/**
+      - plugins/**/skills/**
   push:
     branches:
       - main
     paths:
       - '**/SKILL.md'
       - '**/*.agent.md'
-      - '.github/skills/**'
-      - 'skills/**'
-      - 'plugins/**/skills/**'
+      - .github/skills/**
+      - skills/**
+      - plugins/**/skills/**
   workflow_dispatch:
     inputs:
       eval-path:
@@ -65,27 +65,37 @@ jobs:
         run: |
           CHANGED="${{ steps.changed-skills.outputs.changed }}"
           FAILED=0
+          OUTPUT_LOG=""
           if [ -z "$CHANGED" ]; then
             echo "No skill files changed."
+            OUTPUT_LOG="No skill files changed."
           else
             while IFS= read -r skill; do
               [ -z "$skill" ] && continue
               SKILL_DIR="$(dirname "$skill")"
               echo "::group::waza check: $skill"
               if [ -f "$skill" ]; then
-                if waza check "$SKILL_DIR"; then
+                if waza check "$SKILL_DIR" 2>&1; then
                   echo "✅ $skill passed"
+                  OUTPUT_LOG="${OUTPUT_LOG}✅ $skill passed\n"
                 else
                   echo "::error::$skill failed waza check"
                   FAILED=1
+                  OUTPUT_LOG="${OUTPUT_LOG}❌ $skill failed\n"
                 fi
               else
                 echo "::warning::$skill was deleted, skipping"
+                OUTPUT_LOG="${OUTPUT_LOG}⚠ $skill was deleted, skipping\n"
               fi
               echo "::endgroup::"
             done <<< "$CHANGED"
           fi
-          echo "failed=$FAILED" >> "$GITHUB_OUTPUT"
+          {
+            echo "failed=$FAILED"
+            echo "output_log<<EOF"
+            echo -e "$OUTPUT_LOG"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
       - name: Run evaluation (workflow_dispatch)
         if: github.event_name == 'workflow_dispatch'
         id: run-eval
@@ -105,11 +115,26 @@ jobs:
           if [ -f "results.json" ]; then
             waza report results.json --format github >> "$GITHUB_STEP_SUMMARY"
           fi
+      - name: Save metadata for PR comment
+        if: always()
+        run: |
+          mkdir -p waza-results
+          {
+            echo "${{ github.event.pull_request.number }}" > waza-results/pr-number.txt
+            echo "${{ steps.check.outputs.failed }}" > waza-results/exit-code.txt
+            echo "${{ steps.check.outputs.output_log }}" > waza-results/waza-output.txt
+            echo "${{ steps.changed-skills.outputs.changed }}" > waza-results/changed-skills.txt
+          }
+          if [ -f results.json ]; then
+            cp results.json waza-results/results.json
+          fi
       - name: Upload Results Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           if-no-files-found: ignore
           name: waza-evaluation-results
-          path: results.json
+          path: |-
+            waza-results/
+            results.json
           retention-days: 30

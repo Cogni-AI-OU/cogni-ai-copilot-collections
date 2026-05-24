@@ -68,7 +68,16 @@ For a human-readable overview, see [README.md](README.md).
 - Details: Installs Go, builds waza from source (github.com/microsoft/waza), detects changed
   skill files via `git diff`, and runs `waza check` on each for compliance validation.
   On `workflow_dispatch`, also supports running `waza run` with an optional eval path or auto-discovery.
+  Saves results as artifacts for the comment workflow.
 - Permissions: `contents: read`.
+
+### waza-check-comment.yml
+
+- Purpose: Posts results from the "Waza Evaluation" workflow as a PR comment.
+- Triggers: `workflow_run` (after Waza Evaluation), `workflow_call`, `workflow_dispatch`.
+- Details: Downloads the waza-evaluation-results artifact and posts a "Skill Readiness Check" comment
+  with error/warning counts and findings. Updates existing comments via marker detection.
+- Permissions: `issues: write`, `pull-requests: write`, `actions: read`.
 
 ## Synchronized Configuration
 

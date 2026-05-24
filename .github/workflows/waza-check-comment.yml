@@ -1,0 +1,134 @@
+---
+name: Waza Evaluation — PR Comment
+# Posts results from the "Waza Evaluation" workflow as a PR comment.
+# Runs with write permissions but never checks out PR code,
+# so it is safe for fork PRs.
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: The run ID of the gate workflow
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      run_id:
+        description: The run ID of the gate workflow
+        required: true
+        type: string
+  workflow_run:
+    workflows:
+      - Waza Evaluation
+    types:
+      - completed
+permissions:
+  issues: write
+  pull-requests: write
+  actions: read
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'workflow_call' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.event == 'pull_request')
+    steps:
+      - name: Download results artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: waza-evaluation-results
+          run-id: ${{ inputs.run_id || github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Post PR comment with results
+        uses: actions/github-script@v7
+        with:
+          script: |-
+            const fs = require('fs');
+            const path = require('path');
+            const prNumber = parseInt(fs.readFileSync('pr-number.txt', 'utf8').trim(), 10);
+            const exitCode = fs.readFileSync('exit-code.txt', 'utf8').trim();
+            const rawOutput = fs.readFileSync('waza-output.txt', 'utf8').trim();
+            const changedSkills = fs.readFileSync('changed-skills.txt', 'utf8').trim();
+            const hasResultsJson = fs.existsSync('results.json');
+            const marker = '<!-- waza-evaluation-results -->';
+            const changedCount = changedSkills ? changedSkills.split('\n').filter(Boolean).length : 0;
+            const errorCount = (rawOutput.match(/❌/g) || []).length;
+            const warningCount = (rawOutput.match(/⚠/g) || []).length;
+            let verdict = '✅ All checks passed';
+            if (exitCode !== '0' || errorCount > 0) {
+              verdict = '⛔ Findings need attention';
+            } else if (warningCount > 0) {
+              verdict = '⚠️ Warnings or advisories found';
+            }
+            const summaryLines = rawOutput
+              .split('\n')
+              .filter(Boolean)
+              .slice(0, 10);
+            const findingsTable = summaryLines.length === 0
+              ? ['_No findings were emitted._']
+              : [
+                  '| Level | Finding |',
+                  '|---|---|',
+                  ...summaryLines.map(line => {
+                    const level = line.startsWith('❌')
+                      ? '❌'
+                      : line.startsWith('⚠')
+                        ? '⚠️'
+                        : line.startsWith('✅')
+                          ? '✅'
+                          : (exitCode !== '0' ? '⛔' : 'ℹ️');
+                    const text = line.replace(/^[❌⚠️✅\s]+/, '').replace(/\|/g, '\\|');
+                    return `| ${level} | ${text} |`;
+                  }),
+                ];
+            const body = [
+              marker,
+              '## 🔍 Skill Readiness Check',
+              '',
+              `**${verdict}**`,
+              '',
+              '| Scope | Checked |',
+              '|---|---:|',
+              `| Skills changed | ${changedCount} |`,
+              `| Errors | ${errorCount} |`,
+              `| Warnings | ${warningCount} |`,
+              '',
+              '### Summary',
+              '',
+              ...findingsTable,
+              '',
+              hasResultsJson ? '> Detailed results available in the uploaded artifact.' : '',
+              '',
+              '<details>',
+              '<summary>Full waza output</summary>',
+              '',
+              '```text',
+              rawOutput || 'No output captured.',
+              '```',
+              '',
+              '</details>',
+            ].filter(Boolean).join('\n');
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              per_page: 100,
+            });
+            const existing = comments.find(c => c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+              console.log(`Updated existing comment ${existing.id}`);
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+              console.log(`Created new PR comment on  #${prNumber}`);
+            }
