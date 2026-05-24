@@ -17,7 +17,7 @@ caught.
 -   Use upper case letters as word separators, lower case for the rest
     of a word
 -   First character in a name is upper case
--   No underbars (\'\_\')
+-   No underbars ('\_')
 
 ### Justification
 
@@ -35,15 +35,15 @@ caught.
 
 ### 
 
--   Name the class after what it is. If you can\'t think of what it is
+-   Name the class after what it is. If you can't think of what it is
     that is a clue you have not thought through the design well enough.
 -   Compound names of over three words are a clue your design may be
     confusing various entities in your system. Revisit your design. Try
     a CRC card session to see if your objects have more responsibilities
     than they should.
 -   Avoid the temptation of bringing the name of the class a class
-    derives from into the derived class\'s name. A class should stand on
-    its own. It doesn\'t matter what it derives from.
+    derives from into the derived class's name. A class should stand on
+    its own. It doesn't matter what it derives from.
 -   Suffixes are sometimes helpful. For example, if your system uses
     agents then naming something DownloadAgent conveys real information.
 
@@ -52,14 +52,14 @@ caught.
 -   Now that name spaces are becoming more widely implemented, name
     spaces should be used to prevent class name conflicts among
     libraries from different vendors and groups.
--   When not using name spaces, it\'s common to prevent class name
+-   When not using name spaces, it's common to prevent class name
     clashes by prefixing class names with a unique string. Two
     characters is sufficient, but a longer length is fine.
 -   It is strongly recommended to use namespaces
 
 ### Example
 
-John Johnson\'s complete data structure library could use *JJ* as a
+John Johnson's complete data structure library could use *JJ* as a
 prefix, so classes would be:
 
        class JjLinkList
@@ -107,7 +107,7 @@ prefix, so classes would be:
 -   Prefixes are sometimes useful:
 
     -   *Is* - to ask a question about something. Whenever someone sees
-        *Is* they will know it\'s a question.
+        *Is* they will know it's a question.
     -   *Get* - get a value.
     -   *Set* - set a value.
 
@@ -115,13 +115,13 @@ prefix, so classes would be:
 
 ## Class Attribute Names
 
--   Attribute names should be prepended with the character \'a\'.
--   After the \'a\' use the same rules as for class names.
--   \'a\' always precedes other name modifiers like \'p\' for pointer.
+-   Attribute names should be prepended with the character 'a'.
+-   After the 'a' use the same rules as for class names.
+-   'a' always precedes other name modifiers like 'p' for pointer.
 
 ### Justification
 
--   Prepending \'a\' prevents any conflict with method names. Often your
+-   Prepending 'a' prevents any conflict with method names. Often your
     methods and attribute names will be similar, especially for
     accessors.
 
@@ -169,7 +169,7 @@ files.
 
 -   In a C++ project there should be very few C functions.
 -   For C functions use the GNU convention of all lower case letters
-    with \'\_\' as the word delimiter.
+    with '\_' as the word delimiter.
 
 ### Justification
 
@@ -184,9 +184,9 @@ files.
 ## Make Names Fit
 
 Names are the heart of programming. In the past people believed knowing
-someone\'s true name gave them magical power over that person. If you
+someone's true name gave them magical power over that person. If you
 can think up the true name for something, you give yourself and the
-people coming after power over the code. Don\'t laugh!
+people coming after power over the code. Don't laugh!
 
 A name is the result of a long deep thought process about the ecology it
 lives in. Only a programmer who understands the system as a whole can
@@ -207,12 +207,12 @@ probably revisit your design.
 #### Justification
 
 -   People seem to have very different intuitions when making names
-    containing abbreviations. It\'s best to settle on one strategy so
+    containing abbreviations. It's best to settle on one strategy so
     the names are absolutely predictable.
 
     Take for example *NetworkABCKey*. Notice how the C from ABC and K
-    from key are confused. Some people don\'t mind this and others just
-    hate it so you\'ll find different policies in different code so you
+    from key are confused. Some people don't mind this and others just
+    hate it so you'll find different policies in different code so you
     never know what to call something.
 
 #### Example
@@ -223,7 +223,7 @@ probably revisit your design.
 ## Variable Names on the Stack
 
 -   use all lower case letters
--   use \'\_\' as the word separator.
+-   use '\_' as the word separator.
 
 ### Justification
 
@@ -240,7 +240,7 @@ probably revisit your design.
 
 ## Pointer Variables
 
--   pointers should be prepended by a \'p\' in most cases
+-   pointers should be prepended by a 'p' in most cases
 -   place the *\** close to variable name not pointer type
 
 ### Example
@@ -251,8 +251,8 @@ probably revisit your design.
 
 ## Reference Variables and Functions Returning References
 
--   References should be prepended with \'r\'.
--   Const refs should not have \'r\'.
+-   References should be prepended with 'r'.
+-   Const refs should not have 'r'.
 
 ### Justification
 
@@ -277,11 +277,11 @@ probably revisit your design.
 
 ## Global Variables
 
--   Global variables should be prepended with a \'g\'.
+-   Global variables should be prepended with a 'g'.
 
 ### Justification
 
--   It\'s important to know the scope of a variable.
+-   It's important to know the scope of a variable.
 
 ### Example
 
@@ -290,11 +290,11 @@ probably revisit your design.
 
 ## Global Constants
 
--   Global constants should be all caps with \'\_\' separators.
+-   Global constants should be all caps with '\_' separators.
 
 ### Justification
 
-It\'s tradition for global constants to named this way. You must be
+It's tradition for global constants to named this way. You must be
 careful to not conflict with other global *#define*s and enum labels.
 
 ### Example
@@ -303,11 +303,11 @@ careful to not conflict with other global *#define*s and enum labels.
 
 ## Static Variables
 
--   Static variables may be prepended with \'s\'.
+-   Static variables may be prepended with 's'.
 
 ### Justification
 
--   It\'s important to know the scope of a variable.
+-   It's important to know the scope of a variable.
 
 ### Example
 
@@ -338,7 +338,7 @@ careful to not conflict with other global *#define*s and enum labels.
 
 ## Enum Names
 
-### Labels All Upper Case with \'\_\' Word Separators
+### Labels All Upper Case with '\_' Word Separators
 
 This is the standard rule for enum labels.
 
@@ -370,7 +370,7 @@ name: Aclass::PIN_OFF.
 
 ### Make a Label for an Error State
 
-It\'s often useful to be able to say an enum is not in any of its
+It's often useful to be able to say an enum is not in any of its
 *valid* states. Make a label for an uninitialized or error state. Make
 it the first label if possible.
 
@@ -380,7 +380,7 @@ it the first label if possible.
 
 ## #define and Macro Names
 
--   Put #defines and macros in all upper using \'\_\' separators.
+-   Put #defines and macros in all upper using '\_' separators.
 
 ### Justification
 

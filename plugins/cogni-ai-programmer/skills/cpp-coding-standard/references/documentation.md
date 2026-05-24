@@ -63,7 +63,7 @@ complete list of Gotcha Keywords, please refer to
 -   Make the gotcha keyword the first symbol in the comment.
 -   Comments may consist of multiple lines, but the first line should be
     a self-containing, meaningful summary.
--   The writer\'s name and the date of the remark should be part of the
+-   The writer's name and the date of the remark should be part of the
     comment. This information is in the source repository, but it can
     take a quite a while to find out when and by whom it was added.
     Often gotchas stick around longer than they should. Embedding date
@@ -91,7 +91,7 @@ the .hh file, should have a header in the .cn file.
 
 Include statements should be documented, telling the user why a
 particular file was included. If the file includes a class used by the
-class then it\'s useful to specify a class relationship:
+class then it's useful to specify a class relationship:
 
 -   ISA
 -   HASA
@@ -143,7 +143,7 @@ accomplish.
 # Unified Modeling Language
 
 The Unified Modeling Language is too large to present here. Fortunately
-you can see it at [Rational\'s](http://www.rational.com/ot/uml.html) web
+you can see it at [Rational's](http://www.rational.com/ot/uml.html) web
 site. Since you do need a modeling language UML is a safe choice. It
 combines features from several methods into one unified language.
 Remember all languages and methods are open to local customization. If
@@ -169,12 +169,12 @@ The Open/Closed principle states a class must be open and closed where:
 -   closed means a class is closed for modifications other than
     extension. The idea is once a class has been approved for use having
     gone through code reviews, unit tests, and other qualifying
-    procedures, you don\'t want to change the class very much, just
+    procedures, you don't want to change the class very much, just
     extend it.
 
 The Open/Closed principle is a pitch for stability. A system is extended
 by adding new code not by changing already working code. Programmers
-often don\'t feel comfortable changing old code because it works! This
+often don't feel comfortable changing old code because it works! This
 principle just gives you an academic sounding justification for your
 fears :-)
 
@@ -191,7 +191,7 @@ The idea of design by contract is strongly related to
 of what to expect from another party. In this case the contract is
 between pieces of code. An object and/or method states that it does X
 and you are supposed to believe it. For example, when you ask an object
-for its volume that\'s what you should get. And because volume is a
+for its volume that's what you should get. And because volume is a
 verifiable attribute of a thing you could run a series of checks to
 verify volume is correct, that is, it satisfies its contract.
 
@@ -201,5 +201,5 @@ languages a bit of faith is needed.
 
 Design by contract when coupled with language based verification
 mechanisms is a very powerful idea. It makes programming more like
-assembling spec\'d parts.
+assembling spec'd parts.
 

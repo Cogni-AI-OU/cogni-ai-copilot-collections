@@ -32,8 +32,8 @@ single statement within the braces. For example:
 #### Justification
 
 It ensures that when someone adds a line of code later there are already
-braces and they don\'t forget. It provides a more consistent look. This
-doesn\'t affect execution speed. It\'s easy to do.
+braces and they don't forget. It provides a more consistent look. This
+doesn't affect execution speed. It's easy to do.
 
 ### One Line Form
 
@@ -47,7 +47,7 @@ readable form.
 ### Add Comments to Closing Braces
 
 Adding a comment to closing braces can help when you are reading code
-because you don\'t have to find the begin brace to know what is going
+because you don't have to find the begin brace to know what is going
 on.
 
     while(1) {
@@ -63,7 +63,7 @@ on.
 
 -   Do not put parens next to keywords. Put a space between.
 -   Do put parens next to function names.
--   Do not use parens in return statements when it\'s not necessary.
+-   Do not use parens in return statements when it's not necessary.
 
 ### Justification
 
@@ -99,7 +99,7 @@ on.
 
 ### Layout
 
-It\'s up to the programmer. Different bracing styles will yield slightly
+It's up to the programmer. Different bracing styles will yield slightly
 different looks. One common approach is:
 
        if (condition) {
@@ -155,7 +155,7 @@ to this format, but then it really gets useful.
 ### Goto
 
 Goto statements should be used sparingly, as in any well-structured
-code. The goto debates are boring so we won\'t go into them here. The
+code. The goto debates are boring so we won't go into them here. The
 main place where they can be usefully employed is to break out of
 several levels of switch, for, and while nesting, although the need to
 do such a thing may indicate that the inner constructs should be broken
@@ -257,7 +257,7 @@ Related to this is always define one variable per line:
 The reasons are:
 
 1.  Documentation can be added for the variable on the line.
-2.  It\'s clear that the variables are initialized.
+2.  It's clear that the variables are initialized.
 3.  Declarations are clear which reduces the probablity of declaring a
     pointer when you meant to declare just a char.
 

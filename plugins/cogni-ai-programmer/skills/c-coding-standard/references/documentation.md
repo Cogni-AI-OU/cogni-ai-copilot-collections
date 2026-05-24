@@ -65,7 +65,7 @@ a report so people can make a special effort where needed.
 -   Make the gotcha keyword the first symbol in the comment.
 -   Comments may consist of multiple lines, but the first line should be
     a self-containing, meaningful summary.
--   The writer\'s name and the date of the remark should be part of the
+-   The writer's name and the date of the remark should be part of the
     comment. This information is in the source repository, but it can
     take a quite a while to find out when and by whom it was added.
     Often gotchas stick around longer than they should. Embedding date
@@ -88,11 +88,11 @@ particular file was included.\
 \*/\
 /\* Non-local includes in brackets. \*/\
 /\*\
-\* If it\'s a network program, put the network include files next.\
+\* If it's a network program, put the network include files next.\
 \* Group the includes files by subdirectory.\
 \*/\
 /\*\
-\* Then there\'s a blank line, followed by the /usr include files.\
+\* Then there's a blank line, followed by the /usr include files.\
 \* The /usr include files should be sorted!\
 \*/
 

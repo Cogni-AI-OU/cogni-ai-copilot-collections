@@ -2,9 +2,9 @@
 
 ## General advice
 
-This section contains some miscellaneous do\'s and don\'ts.
+This section contains some miscellaneous do's and don'ts.
 
--   Don\'t use floating-point variables where discrete values are
+-   Don't use floating-point variables where discrete values are
     needed. Using a float for a loop counter is a great way to shoot
     yourself in the foot. Always test floating-point numbers as \<= or
     \>=, never use an exact comparison (== or !=).
@@ -12,10 +12,10 @@ This section contains some miscellaneous do\'s and don\'ts.
 -   Compilers have bugs. Common trouble spots include structure
     assignment and bit fields. You cannot generally predict which bugs a
     compiler has. You could write a program that avoids all constructs
-    that are known broken on all compilers. You won\'t be able to write
+    that are known broken on all compilers. You won't be able to write
     anything useful, you might still encounter bugs, and the compiler
     might get fixed in the meanwhile. Thus, you should write
-    \`\`around\'\' compiler bugs only when you are forced to use a
+    \`\`around'' compiler bugs only when you are forced to use a
     particular buggy compiler.
 
 -   Do not rely on automatic beautifiers. The main person who benefits
@@ -35,7 +35,7 @@ This section contains some miscellaneous do\'s and don\'ts.
     gained by such a program. Beautifiers are best for gross formatting
     of machine-generated code.
 
--   Accidental omission of the second \`\`=\'\' of the logical compare
+-   Accidental omission of the second \`\`='' of the logical compare
     is a problem. The following is confusing and prone to error.
 
                 if (abool= bbool) { ... }
@@ -60,9 +60,9 @@ This section contains some miscellaneous do\'s and don\'ts.
 ## Be Const Correct
 
 C provides the *const* key word to allow passing as parameters objects
-that cannot change to indicate when a method doesn\'t modify its object.
+that cannot change to indicate when a method doesn't modify its object.
 Using const in all the right places is called \"const correctness.\"
-It\'s hard at first, but using const really tightens up your coding
+It's hard at first, but using const really tightens up your coding
 style. Const correctness grows on you. 
 
 ## Use #if Not #ifdef
@@ -86,7 +86,7 @@ does the right thing, even if DEBUG is not defined at all (!)
 
 If you really need to test whether a symbol is defined or not, test it
 with the defined() construct, which allows you to add more things later
-to the conditional without editing text that\'s already in the program:
+to the conditional without editing text that's already in the program:
 
     #if !defined(USER_NAME)
      #define USER_NAME "john smith"
@@ -112,15 +112,15 @@ The easiest way to do this is with an #if 0 block:
           more code
         }
 
-You can\'t use **/\*\*/** style comments because comments can\'t contain
+You can't use **/\*\*/** style comments because comments can't contain
 comments and surely a large block of your code will contain a comment,
-won\'t it?
+won't it?
 
-Don\'t use #ifdef as someone can unknowingly trigger ifdefs from the
+Don't use #ifdef as someone can unknowingly trigger ifdefs from the
 compiler command line. #if 0is that even day later you or anyone else
 has know idea why this code is commented out. Is it because a feature
-has been dropped? Is it because it was buggy? It didn\'t compile? Can it
-be added back? It\'s a mystery.
+has been dropped? Is it because it was buggy? It didn't compile? Can it
+be added back? It's a mystery.
 
 ### Use Descriptive Macro Names Instead of #if 0
 
@@ -151,9 +151,9 @@ Do not put data definitions in header files. for example:
      */
     int x = 0;
 
-1.  It\'s bad magic to have space consuming code silently inserted
+1.  It's bad magic to have space consuming code silently inserted
     through the innocent use of header files.
-2.  It\'s not common practice to define variables in the header file so
+2.  It's not common practice to define variables in the header file so
     it will not occur to developers to look for this when there are
     problems.
 3.  Consider defining the variable once in a .c file and use an extern
@@ -161,7 +161,7 @@ Do not put data definitions in header files. for example:
 
 ## Mixing C and C++
 
-In order to be backward compatible with dumb linkers C++\'s link time
+In order to be backward compatible with dumb linkers C++'s link time
 type safety is implemented by encoding type information in link symbols,
 a process called *name mangling*. This creates a problem when linking to
 C code as C function names are not mangled. When calling a C function
@@ -205,7 +205,7 @@ must use the *\_\_cplusplus* preprocessor directive. For example:
 
 ## No Magic Numbers
 
-A magic number is a bare naked number used in source code. It\'s magic
+A magic number is a bare naked number used in source code. It's magic
 because no-one has a clue what it means including the author inside 3
 months. For example:
 
@@ -231,7 +231,7 @@ For example:
     else if (THEY_DIDNT_PAY       == foo) { infinite_loop(); }
     else                                  { happy_days_i_know_why_im_here(); }
 
-Now isn\'t that better? The const and enum options are preferable
+Now isn't that better? The const and enum options are preferable
 because when debugging the debugger has enough information to display
 both the value and the label. The #define option just shows up as a
 number in the debugger which is very inconvenient. The const option has
@@ -248,6 +248,6 @@ your application.
 -   Check every call to malloc or realloc unless you know your versions
     of these calls do the right thing. You might want to have your own
     wrapper for these calls, including new, so you can do the right
-    thing always and developers don\'t have to make memory checks
+    thing always and developers don't have to make memory checks
     everywhere.
 

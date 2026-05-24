@@ -17,9 +17,9 @@
     Standards](http://www.cs.umd.edu/users/cml/cstyle)
 -   [Design by Contract from
     Eiffle](http://www.eiffel.com/doc/manuals/technology/contract/)
--   [C++ isn\'t Perfect, Here are Some Reasons
+-   [C++ isn't Perfect, Here are Some Reasons
     Why](http://www.progsoc.uts.edu.au/~geldridg/cpp/cppcv3.html)
--   [Doxygen](http://www.stack.nl/~dimitri/doxygen/) - is a \'javadoc\'
+-   [Doxygen](http://www.stack.nl/~dimitri/doxygen/) - is a 'javadoc'
     like utility that extracts comments and relevant information from
     your C++/C programs and generates HTML pages from it.
 -   [Const Correctness](const.html) - A very nice article on const

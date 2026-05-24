@@ -3,9 +3,9 @@
 ## Make Names Fit
 
 Names are the heart of programming. In the past people believed knowing
-someone\'s true name gave them magical power over that person. If you
+someone's true name gave them magical power over that person. If you
 can think up the true name for something, you give yourself and the
-people coming after power over the code. Don\'t laugh!
+people coming after power over the code. Don't laugh!
 
 A name is the result of a long deep thought process about the ecology it
 lives in. Only a programmer who understands the system as a whole can
@@ -40,7 +40,7 @@ probably revisit your design.
 -   Prefixes are sometimes useful:
 
     -   *is* - to ask a question about something. Whenever someone sees
-        *Is* they will know it\'s a question.
+        *Is* they will know it's a question.
     -   *get* - get a value.
     -   *set* - set a value.
 
@@ -57,22 +57,22 @@ example:
 
 ## Structure Names
 
--   Use underbars (\'\_\') to separate name components
+-   Use underbars ('\_') to separate name components
 -   When declaring variables in structures, declare them organized by
     use in a manner to attempt to minimize memory wastage because of
     compiler alignment issues, then by size, and then by alphabetical
-    order. E.g, don\'t use \`\`int a; char \*b; int c; char \*d\'\'; use
-    \`\`int a; int b; char \*c; char \*d\'\'. Each variable gets its own
+    order. E.g, don't use \`\`int a; char \*b; int c; char \*d''; use
+    \`\`int a; int b; char \*c; char \*d''. Each variable gets its own
     type and line, although an exception can be made when declaring
-    bitfields (to clarify that it\'s part of the one bitfield). Note
+    bitfields (to clarify that it's part of the one bitfield). Note
     that the use of bitfields in general is discouraged. Major
     structures should be declared at the top of the file in which they
     are used, or in separate header files, if they are used in multiple
     source files. Use of the structures should be by separate
     declarations and should be \"extern\" if they are declared in a
     header file. It may be useful to use a meaningful prefix for each
-    member name. E.g, for \`\`struct softc\'\' the prefix could be
-    \`\`sc\_\'\'.
+    member name. E.g, for \`\`struct softc'' the prefix could be
+    \`\`sc\_''.
 
 ### Example
 
@@ -91,7 +91,7 @@ example:
 ## Variable Names on the Stack
 
 -   use all lower case letters
--   use \'\_\' as the word separator.
+-   use '\_' as the word separator.
 
 ### Justification
 
@@ -119,12 +119,12 @@ example:
 
 ## Global Variables
 
--   Global variables should be prepended with a \'g\_\'.
+-   Global variables should be prepended with a 'g\_'.
 -   Global variables should be avoided whenever possible.
 
 ### Justification
 
--   It\'s important to know the scope of a variable.
+-   It's important to know the scope of a variable.
 
 ### Example
 
@@ -133,11 +133,11 @@ example:
 
 ## Global Constants
 
--   Global constants should be all caps with \'\_\' separators.
+-   Global constants should be all caps with '\_' separators.
 
 ### Justification
 
-It\'s tradition for global constants to named this way. You must be
+It's tradition for global constants to named this way. You must be
 careful to not conflict with other global *#define*s and enum labels.
 
 ### Example
@@ -146,7 +146,7 @@ careful to not conflict with other global *#define*s and enum labels.
 
 ## #define and Macro Names
 
--   Put #defines and macros in all upper using \'\_\' separators. Macros
+-   Put #defines and macros in all upper using '\_' separators. Macros
     are capitalized, parenthesized, and should avoid side-effects.
     Spacing before and after the macro name may be any whitespace,
     though use of TABs should be consistent through a file. If they are
@@ -154,7 +154,7 @@ careful to not conflict with other global *#define*s and enum labels.
     lowercase, the macro has the same name all in uppercase. If the
     macro is an expression, wrap the expression in parenthesis. If the
     macro is more than a single statement, use \`\`do { \... } while
-    (0)\'\', so that a trailing semicolon works. Right-justify the
+    (0)'', so that a trailing semicolon works. Right-justify the
     backslashes; it makes it easier to read.
 
 ### Justification
@@ -178,7 +178,7 @@ same name.
 
 ## Enum Names
 
-### Labels All Upper Case with \'\_\' Word Separators
+### Labels All Upper Case with '\_' Word Separators
 
 This is the standard rule for enum labels. No comma on the last element.
 
@@ -191,7 +191,7 @@ This is the standard rule for enum labels. No comma on the last element.
 
 ### Make a Label for an Error State
 
-It\'s often useful to be able to say an enum is not in any of its
+It's often useful to be able to say an enum is not in any of its
 *valid* states. Make a label for an uninitialized or error state. Make
 it the first label if possible.
 

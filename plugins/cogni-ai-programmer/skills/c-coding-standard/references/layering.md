@@ -7,7 +7,7 @@ non-adjacent layer then a layering violation has occurred.
 
 A layering violation simply means we have dependency between layers that
 is not controlled by a well defined interface. When one of the layers
-changes code could break. We don\'t want code to break so we want layers
+changes code could break. We don't want code to break so we want layers
 to work only with other adjacent layers.
 
 Sometimes we need to jump layers for performance reasons. This is fine,

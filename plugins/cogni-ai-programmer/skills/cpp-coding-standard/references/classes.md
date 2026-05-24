@@ -1,7 +1,7 @@
 # Required Methods for a Class
 
 To be good citizens almost all classes should implement the following
-methods. If you don\'t have to define and implement any of the
+methods. If you don't have to define and implement any of the
 \"required\" methods they should still be represented in your class
 definition as comments.
 
@@ -32,8 +32,8 @@ definition as comments.
     compiler-generated versions will be used.
 
     If your class objects should not be copied, make the copy
-    constructor and assignment operator private and don\'t define bodies
-    for them. If you don\'t know whether the class objects should be
+    constructor and assignment operator private and don't define bodies
+    for them. If you don't know whether the class objects should be
     copyable, then assume not unless and until the copy operations are
     needed.
 
@@ -44,15 +44,15 @@ definition as comments.
     be used.
 
     If your objects should not be assigned, make the assignment operator
-    private and don\'t define bodies for them. If you don\'t know
+    private and don't define bodies for them. If you don't know
     whether the class objects should be assignable, then assume not.
 
 ## Justification
 
 -   Virtual destructors ensure objects will be completely destructed
-    regardless of inheritance depth. You don\'t have to use a virtual
+    regardless of inheritance depth. You don't have to use a virtual
     destructor when:
-    -   You don\'t expect a class to have descendants.
+    -   You don't expect a class to have descendants.
     -   An object must have a certain data layout and size.
 -   A default constructor allows an object to be used in an array.
 -   The copy constructor and assignment operator ensure an object is
@@ -89,7 +89,7 @@ An example using default values:
 ### Class Definition in One File
 
 Each class definition should be in its own file where each file is named
-directly after the class\'s name:
+directly after the class's name:
 
        ClassName.hh
 
@@ -108,7 +108,7 @@ following rule:
        ClassName_section.C
 
 **section** is some name that identifies why the code is chunked
-together. The class name and section name are separated by \'\_\'.
+together. The class name and section name are separated by '\_'.
 
 ## Class Layout
 
@@ -137,7 +137,7 @@ them.
 Notice that the public interface is placed first in the class, protected
 next, and private last. The reasons are:
 
--   programmers should care about a class\'s interface more than
+-   programmers should care about a class's interface more than
     implementation
 -   when programmers need to use a class they need the interface not the
     implementation
@@ -145,7 +145,7 @@ next, and private last. The reasons are:
 It makes sense then to have the interface first. Placing implementation,
 the private section, first is a historical accident as the first
 examples used the private first layout. Over time emphasis has switched
-deemphasizing a class\'s interface over implementation details.
+deemphasizing a class's interface over implementation details.
 
 ### LIFECYCLE
 
@@ -159,8 +159,8 @@ Place all operators in this section.
 
 ### OPERATIONS
 
-Place the bulk of a class\'s non access and inquiry method methods here.
-A programmer will look here for the meat of a class\'s interface.
+Place the bulk of a class's non access and inquiry method methods here.
+A programmer will look here for the meat of a class's interface.
 
 ### ACCESS
 
@@ -180,7 +180,7 @@ which is much uglier.
 
 ### Public Section
 
-Only put an object\'s interface in the public section. **DO NOT** expose
+Only put an object's interface in the public section. **DO NOT** expose
 any private data items in the public section. At least encapsulate
 access via access methods. Ideally your method interface should make
 most access methods unnecessary. Do not put data in the public
@@ -216,13 +216,13 @@ public methods virtual flexibility is preserved.
 
  The approach used is to place a comment block before each
 method that can be extracted by a tool and be made part of the class
-documentation. Here we\'ll use [Doxygen](http://www.doxygen.org) . See
+documentation. Here we'll use [Doxygen](http://www.doxygen.org) . See
 the Doxygen documentation for a list of attributes supported by the
 document generator.
 
 ### Method Header
 
-Follow Doxygen\'s way.
+Follow Doxygen's way.
 
 ## Use of Namespaces
 
@@ -235,9 +235,9 @@ There are two basic strategies for naming: root that name at some naming
 authority, like the company name and division name; try and make names
 globally independent.
 
-### Don\'t Globally Define using
+### Don't Globally Define using
 
-Don\'t place \"using namespace\" directive at global scope in a header
+Don't place \"using namespace\" directive at global scope in a header
 file. This can cause lots of magic invisible conflicts that are hard to
 track. Keep using statements to implementation files.
 
@@ -286,7 +286,7 @@ If namespaces are used then to be completely safe:
 ### Why Accessors?
 
 Access methods provide access to the physical or logical attributes of
-an object. Accessing an object\'s attributes directly as we do for C
+an object. Accessing an object's attributes directly as we do for C
 structures is greatly discouraged in C++. We disallow direct access to
 attributes to break dependencies, the reason we do most things. Directly
 accessing an attribute exposes implementation details about the object.
@@ -306,7 +306,7 @@ makes such a promise.
 ### Accessors Considered Somewhat Harmful
 
 At least in the public interface having accessors many times is an
-admission of failure, a failure to make an object\'s interface complete.
+admission of failure, a failure to make an object's interface complete.
 At the protected or private level accessors are fine as these are the
 implementation levels of a class.
 
@@ -327,10 +327,10 @@ There are three major idioms for creating accessors.
 
 The problem with Get/Set is twofold:
 
--   It\'s ugly. Get and Set are strewn throughout the code cluttering it
+-   It's ugly. Get and Set are strewn throughout the code cluttering it
     up.
--   It doesn\'t treat attributes as objects in their own right. An
-    object will have an assignment operator. Why shouldn\'t age be an
+-   It doesn't treat attributes as objects in their own right. An
+    object will have an assignment operator. Why shouldn't age be an
     object and have its own assignment operator?
 
 One benefit, that it shares with the *One Method Name*, is when used
@@ -383,9 +383,9 @@ complete the assignment. For example:
        x.rName()= "test";
 
 This approach is also more consistent with the object philosophy: the
-object should do it. An object\'s *=* operator can do all the checks for
-the assignment and it\'s done once in one place, in the object, where it
-belongs. It\'s also clean from a name perspective.
+object should do it. An object's *=* operator can do all the checks for
+the assignment and it's done once in one place, in the object, where it
+belongs. It's also clean from a name perspective.
 
 When possible use this approach to attribute access.
 
@@ -407,8 +407,8 @@ matters to you) then the answer is definitely no.
 
 ### Do Work in Open
 
-Do not do any real work in an object\'s constructor. Inside a
-constructor initialize variables only and/or do only actions that can\'t
+Do not do any real work in an object's constructor. Inside a
+constructor initialize variables only and/or do only actions that can't
 fail.
 
 Create an Open() method for an object which completes construction.
@@ -428,7 +428,7 @@ Open() should be called after object instantiation.
 
 ### Use Open Reasons
 
-1.  It is difficult to write exception safe code in constructor. It\'s
+1.  It is difficult to write exception safe code in constructor. It's
     possible to throw an exception and not destruct objects allocated in
     the constructor. Use of **auto_ptr** can help prevent this problem.
 2.  Some compilers do not support thread safe exceptions on all
@@ -453,7 +453,7 @@ fine to perform real work in the constructor. This is the guru endorced
 approach as a matter of fact.
 
 The constructor code must still be very careful not to leak resources in
-the constructor. It\'s possible to throw an exception and not destruct
+the constructor. It's possible to throw an exception and not destruct
 objects allocated in the constructor.
 
 There is a pattern called **Resource Acquisition as Initialization**
@@ -481,7 +481,7 @@ The logic might look like:
        delete buffer;
     }
 
-Let\'s say an exception is thrown while deleting the database
+Let's say an exception is thrown while deleting the database
 connection. Will the buffer be deleted? No. Exceptions are basically
 non-local gotos with stack cleanup. The code for deleting the buffer
 will never be executed creating a gaping resource leak.
