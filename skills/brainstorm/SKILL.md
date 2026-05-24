@@ -151,6 +151,9 @@ radar-beta
 ## What to Avoid
 
 - **Assumption-Driven Brainstorming**: Relying on guesses instead of factual context gathered through tools.
+- **False Dichotomies**: Assuming only two opposing solutions exist without exploring orthogonal architectural paths.
+- **Overcomplicated Diagrams**: Creating massive, unreadable diagrams. Break them into smaller, focused visual summaries.
+- **Premature Convergence**: Proposing a final solution without explicitly documenting the discarded alternative options.
 
 ## WHEN NOT TO USE
 
