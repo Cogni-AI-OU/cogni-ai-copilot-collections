@@ -41,9 +41,10 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             git fetch origin "${{ github.base_ref }}"
-            CHANGED=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- '**/SKILL.md' '**/*.agent.md')
+            CHANGED=$(git diff --name-only --diff-filter=d "origin/${{ github.base_ref }}...HEAD" \
+              -- '**/SKILL.md' '**/*.agent.md')
           elif [ "${{ github.event_name }}" = "push" ]; then
-            CHANGED=$(git diff --name-only "${{ github.event.before }}...${{ github.sha }}" \
+            CHANGED=$(git diff --name-only --diff-filter=d "${{ github.event.before }}...${{ github.sha }}" \
               -- '**/SKILL.md' '**/*.agent.md' 2>/dev/null || echo "")
           else
             CHANGED=""
@@ -53,7 +54,7 @@ jobs:
             echo "$CHANGED"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
-          echo "Changed skill files:"
+          echo "Changed skill files (excluding deleted):"
           echo "$CHANGED"
       - name: Run waza check on changed skills
         id: check
@@ -71,28 +72,23 @@ jobs:
               [ -z "$skill" ] && continue
               SKILL_DIR="$(dirname "$skill")"
               echo "::group::waza check: $skill"
-              if [ -f "$skill" ]; then
-                : > "$OUTPUT_FILE"
-                if waza check "$SKILL_DIR" > "$OUTPUT_FILE" 2>&1; then
+              : > "$OUTPUT_FILE"
+              if waza check "$SKILL_DIR" > "$OUTPUT_FILE" 2>&1; then
+                cat "$OUTPUT_FILE"
+                {
+                  printf '\n## %s\n\n' "$skill"
                   cat "$OUTPUT_FILE"
-                  {
-                    printf '\n## %s\n\n' "$skill"
-                    cat "$OUTPUT_FILE"
-                    printf '\n'
-                  } >> "$FINAL_FILE"
-                else
-                  cat "$OUTPUT_FILE"
-                  echo "::error::$skill failed waza check"
-                  FAILED=1
-                  {
-                    printf '\n## %s\n\n' "$skill"
-                    cat "$OUTPUT_FILE"
-                    printf '\n'
-                  } >> "$FINAL_FILE"
-                fi
+                  printf '\n'
+                } >> "$FINAL_FILE"
               else
-                echo "::warning::$skill was deleted, skipping"
-                printf '⚠ %s was deleted, skipping\n' "$skill" >> "$FINAL_FILE"
+                cat "$OUTPUT_FILE"
+                echo "::error::$skill failed waza check"
+                FAILED=1
+                {
+                  printf '\n## %s\n\n' "$skill"
+                  cat "$OUTPUT_FILE"
+                  printf '\n'
+                } >> "$FINAL_FILE"
               fi
               echo "::endgroup::"
             done <<< "$CHANGED"
