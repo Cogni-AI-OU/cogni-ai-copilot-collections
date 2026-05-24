@@ -41,7 +41,8 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             git fetch origin "${{ github.base_ref }}"
-            CHANGED=$(git diff --name-only --diff-filter=d "origin/${{ github.base_ref }}...HEAD" -- '**/SKILL.md' '**/*.agent.md')
+            CHANGED=$(git diff --name-only --diff-filter=d "origin/${{ github.base_ref }}...HEAD" \
+              -- '**/SKILL.md' '**/*.agent.md')
           elif [ "${{ github.event_name }}" = "push" ]; then
             CHANGED=$(git diff --name-only --diff-filter=d "${{ github.event.before }}...${{ github.sha }}" \
               -- '**/SKILL.md' '**/*.agent.md' 2>/dev/null || echo "")
