@@ -1,0 +1,13 @@
+{
+  "agents": "agents/",
+  "author": {
+    "name": "Cogni AI",
+    "email": "237644711+cogni-ai-ee@users.noreply.github.com"
+  },
+  "description": "Cogni AI agentic ops plugin. Specializes in managing, maintaining, refining, and deploying agentic workflows, configurations, and skills.",
+  "keywords": ["agentic-ops", "workflows", "llm-skills", "agent-configuration"],
+  "license": "MIT",
+  "name": "cogni-ai-agentic-ops",
+  "skills": ["skills/"],
+  "version": "1.0.0"
+}
