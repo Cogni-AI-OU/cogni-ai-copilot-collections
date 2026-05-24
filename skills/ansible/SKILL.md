@@ -9,7 +9,6 @@ license: MIT
 
 # Ansible Operations
 
-
 ## WHEN TO USE
 
 - Agent needs to execute Ansible playbooks or commands.

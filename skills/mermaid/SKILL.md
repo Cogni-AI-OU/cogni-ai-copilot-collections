@@ -16,7 +16,6 @@ license: MIT
 **render compatibility** (GitHub, VS Code, Mermaid Live Editor, Markdown), **minimalism**, and **Easy-To-Change (ETC)**
 design so diagrams remain maintainable as systems evolve.
 
-
 ## WHEN TO USE
 
 - Agent must explain complex logic, system architecture, or requirements via diagrams.
