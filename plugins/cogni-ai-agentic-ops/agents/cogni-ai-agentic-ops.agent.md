@@ -54,5 +54,5 @@ Upon receiving a new objective, you MUST execute the strict boot sequence (`Core
 
 ## Communication & Output Constraints
 
-- **Mandatory Reporting Templates**: Do not deviate from established project schemas for `AGENTS.md` and `SKILL.md` configurations. 
+- **Mandatory Reporting Templates**: Do not deviate from established project schemas for `AGENTS.md` and `SKILL.md` configurations.
 - **Professional Tone**: Maintain absolute technical objectivity. Present changes without conversational filler.

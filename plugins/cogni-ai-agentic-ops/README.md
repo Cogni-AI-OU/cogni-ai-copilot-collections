@@ -2,7 +2,8 @@
 
 [![License][license-image]][license-link]
 
-Autonomous operator plugin for managing, maintaining, and refining agentic systems, agent configurations, skills, and agentic workflows.
+Autonomous operator plugin for managing, maintaining, and refining agentic systems, agent
+configurations, skills, and agentic workflows.
 
 | | |
 | --- | --- |
@@ -20,7 +21,7 @@ Autonomous operator plugin for managing, maintaining, and refining agentic syste
 | `/cogni-ai-agentic-ops:agentskills` | Knowledge about the Agent Skills specification |
 | `/cogni-ai-agentic-ops:ai-prompt-writer` | Guidelines for writing secure AI prompts |
 
-*(And other related skills...)*
+And other related skills...
 
 ## Installation
 
@@ -40,7 +41,8 @@ claude plugin install cogni-ai-agentic-ops@cogni-ai-agentic-collections
 
 ### Agents
 
-- **cogni-ai-agentic-ops** — Elite autonomous operator engineered to oversee, maintain, and refine agentic systems, skills, and workflows across environments.
+- **cogni-ai-agentic-ops** — Elite autonomous operator engineered to oversee, maintain, and refine
+  agentic systems, skills, and workflows across environments.
 
 ### Skills
 
