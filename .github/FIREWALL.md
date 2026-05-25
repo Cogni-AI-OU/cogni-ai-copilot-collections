@@ -88,7 +88,6 @@ vuejs.org
 vuln.go.dev
 web.archive.org
 www.astronomer.io
-www.cyberdyne-object-sys.com
 www.dre.vanderbilt.edu
 www.eiffel.com
 www.kernel.org

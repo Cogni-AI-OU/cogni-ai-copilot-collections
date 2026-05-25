@@ -3,7 +3,6 @@
 - [OO Info Sources](https://www.objenv.com/oo_infos.html)
 - [Unified Modeling Language (UML)](http://www.rational.com/uml/index.jtmpl)
 - [OPEN Method](https://web.archive.org/web/19990219200533/http://www.markv.com/OPEN)
-- [OO FAQ - All You Wanted to Know About OO](http://www.cyberdyne-object-sys.com/)
 - [C++ FAQ LITE](http://www.parashift.com/c++-faq-lite/)
 - [C++ Source Libraries](https://web.archive.org/web/20210101000000/http://www.desy.de/user/projects/C++/Projects.html)
 - [C++ Tutorials](https://web.archive.org/web/20210101000000/http://www.desy.de/user/projects/C++/Learning.html)
