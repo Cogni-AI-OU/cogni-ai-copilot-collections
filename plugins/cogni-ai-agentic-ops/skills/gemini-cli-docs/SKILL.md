@@ -2,8 +2,8 @@
 name: gemini-cli-docs
 description: >-
   USE FOR: Reading, searching, or referencing Gemini CLI documentation (docs directory, CLI reference, tutorials, hooks, extensions, tools, configuration, MCP, and IDE integration guides).
-  DO NOT USE FOR: Operating the Gemini CLI itself, writing Gemini CLI plugins or extensions, or setting up Gemini authentication and credentials.
-  You MUST load this skill when interacting with Gemini CLI in the terminal.
+  DO NOT USE FOR: Executing Gemini CLI commands or setting up Gemini authentication/credentials; use appropriate development skills when implementing plugins/extensions/hooks.
+  You MUST load this skill when you need to consult Gemini CLI documentation while working with or using the Gemini CLI.
 license: MIT
 ---
 
