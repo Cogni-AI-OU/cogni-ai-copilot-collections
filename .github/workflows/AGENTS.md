@@ -12,6 +12,7 @@ For a human-readable overview, see [README.md](README.md).
 - **[cogni-ai-agent.yml](cogni-ai-agent.yml)**: Logic for the Cogni AI Agent.
 - **[copilot-setup-steps.yml](copilot-setup-steps.yml)**: Environment setup utility.
 - **[devcontainer-ci.yml](devcontainer-ci.yml)**: Build/test devcontainer and required tools/packages.
+- **[devcontainer-publish.yml](devcontainer-publish.yml)**: Publish devcontainer image to GHCR.
 - **[waza-check.yml](waza-check.yml)**: Waza validation for skill files.
 - **[waza-check-pr-comment.yml](waza-check-pr-comment.yml)**: PR feedback and label management for Waza Check workflow results.
 
@@ -60,6 +61,13 @@ For a human-readable overview, see [README.md](README.md).
   `workflow_call`.
 - Permissions: callers must grant `packages: write` when pushing images to GHCR.
 - Reusable: `uses: Cogni-AI-OU/.github/.github/workflows/devcontainer-ci.yml@main`.
+
+### devcontainer-publish.yml
+
+- Purpose: publish the dev container image to GitHub Container Registry (GHCR).
+- Triggers: `push` to `main` branch or `v*` tags; `workflow_dispatch`.
+- Details: Uses `docker/metadata-action` for tagging and `docker/build-push-action` for building and pushing. Supports a matrix of platforms (e.g., `ubuntu-noble`).
+- Permissions: `packages: write`.
 
 ### waza-check.yml
 
