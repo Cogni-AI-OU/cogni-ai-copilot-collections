@@ -1,6 +1,6 @@
 ---
 name: openai-llms
-description: 'Reference and APIs for retrieving OpenAI documentation programmatically for LLMs. You MUST load this skill when asked to search or retrieve OpenAI documentation.'
+description: 'Reference and APIs for retrieving OpenAI documentation programmatically for LLMs. USE FOR: Documentation Search, Article Retrieval. DO NOT USE FOR: OpenAI API Operations. You MUST load this skill when asked to search or retrieve OpenAI documentation.'
 license: MIT
 ---
 
@@ -10,12 +10,12 @@ license: MIT
 
 ## When to Use
 
-- **USE FOR: Documentation Search**: Locating specific OpenAI API, guides, concepts, or reference documentation articles.
-- **USE FOR: Article Retrieval**: Fetching the full rendered markdown of a specific OpenAI docs page via its `llms.txt` or related context.
+- **Documentation Search**: Locating specific OpenAI API, guides, concepts, or reference documentation articles.
+- **Article Retrieval**: Fetching the full rendered markdown of a specific OpenAI docs page via its `llms.txt` or related context.
 
 ## When Not to Use
 
-- **DO NOT USE FOR: OpenAI API Operations**: Interacting with live OpenAI APIs to generate text, images, or audio. Use appropriate API endpoints or SDKs for that.
+- **OpenAI API Operations**: Interacting with live OpenAI APIs to generate text, images, or audio. Use appropriate API endpoints or SDKs for that.
 
 ## Core Process
 
