@@ -35,7 +35,7 @@ license: MIT
 To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 - [z.AI Documentation (llms.txt)](https://docs.z.ai/llms.txt)
-  MUST be fetched/loaded when searching for z.AI API references, agents, audio, image/video generation capabilities, or tools integrations.
+  MUST be fetched/loaded when searching for z.AI API references, agents, audio, image/video generation capabilities, or tool integrations.
   USE FOR: 
   - API Reference (Chat, Audio, Image, Video)
   - Agents (Translation, Slide/Poster)
