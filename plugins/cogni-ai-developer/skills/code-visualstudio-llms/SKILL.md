@@ -3,7 +3,8 @@ name: code-visualstudio-llms
 description: >-
   Reference and APIs for retrieving Visual Studio Code documentation programmatically for LLMs.
   USE FOR: vscode, visual studio code, code.visualstudio.com, vs code, code editor, ide, copilot in vscode, github copilot chat, extension marketplace, dev containers.
-  DO NOT USE FOR: visual studio (full IDE), intellij, rider, eclipse, webstorm. You MUST load this skill when asked to search or retrieve Visual Studio Code documentation.
+  DO NOT USE FOR: visual studio (full IDE), intellij, rider, eclipse, webstorm.
+  You MUST load this skill when asked to search or retrieve Visual Studio Code documentation.
 license: MIT
 ---
 
