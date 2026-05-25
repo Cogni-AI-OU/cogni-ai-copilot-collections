@@ -26,6 +26,7 @@ Slash commands are invoked via `/agent:skill` in the Copilot CLI or VS Code Chat
 | `/cogni-ai-developer:development` | Load the development skill -- full-cycle software development workflow from requirements and system design through deployment, monitoring, and iteration |
 | `/cogni-ai-developer:tdd` | Load the tdd skill -- commands, step-by-step procedures, and mechanical execution for test engineering, testability audits, and the TDD lifecycle |
 | `/cogni-ai-developer:npm-cli` | Load the npm-cli skill -- reference and index of documentation pages for npm CLI commands and configurations |
+| `/cogni-ai-developer:bun-llms` | Load the bun-llms skill -- reference and APIs for retrieving Bun documentation programmatically for LLMs |
 | `/cogni-ai-tester:testing` | Load the testing skill -- elite autonomous test engineering and reliability kernel for proving correctness |
 | `/cogni-ai-git-ops:git` | Load the git skill -- Guide for using git with non-interactive, safe operations. Includes references for reflog, bisecting, merges, rebase, cherry-picking, and recovery |
 | `/cogni-ai-git-ops:git-docs` | Load the git-docs skill -- Official Git documentation index. Load this skill when searching for specific Git commands, configuration options, how-to guides, and technical references |

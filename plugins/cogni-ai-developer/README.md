@@ -7,8 +7,7 @@ software that delivers user and business value.
 
 | | |
 | --- | --- |
-| **Description** | Autonomous developer agent with development, tdd, and critical-thinking skills |
-| **Contents** | 1 agent, 4 skills |
+| **Description** | Autonomous developer agent with development, tdd, critical-thinking, npm-cli, and bun-llms skills |
 
 ## Slash Commands
 
@@ -18,6 +17,7 @@ software that delivers user and business value.
 | `/cogni-ai-developer:tdd` | Commands and procedures for test engineering and the TDD lifecycle |
 | `/cogni-ai-developer:critical-thinking` | Cognitive framework for deep analytical reasoning |
 | `/cogni-ai-developer:npm-cli` | Reference and index of documentation pages for npm CLI commands |
+| `/cogni-ai-developer:bun-llms` | Reference and APIs for retrieving Bun documentation programmatically for LLMs |
 
 ## Installation
 
@@ -49,6 +49,7 @@ claude plugin install cogni-ai-developer@cogni-ai-agentic-collections
 - **critical-thinking** — Deep analytical reasoning framework for deconstructing assumptions, evaluating trade-offs,
   and solving complex problems.
 - **npm-cli** — Reference and index of documentation pages for npm CLI commands and configurations.
+- **bun-llms** — Reference and APIs for retrieving Bun documentation programmatically for LLMs.
 
 ## Usage
 
