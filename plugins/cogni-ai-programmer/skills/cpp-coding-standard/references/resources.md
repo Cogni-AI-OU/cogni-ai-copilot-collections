@@ -10,5 +10,4 @@
 - [ACE C++ Library](https://www.dre.vanderbilt.edu/~schmidt/ACE.html)
 - [Collection of Other Standards](https://cs.arizona.edu/~mccann/cstyle.html)
 - [Design by Contract from Eiffel](http://www.eiffel.com/doc/manuals/technology/contract/)
-- [Doxygen](https://www.doxygen.nl/) - is a 'javadoc' like utility that extracts comments and relevant information from your C++/C programs and generates HTML pages from it.
-- [Abraxis Code Check](http://www.abxsoft.com/) - A program for checking code for coding standard violations and other problems.
+- [Doxygen](https://github.com/doxygen/doxygen) - is a 'javadoc' like utility that extracts comments and relevant information from your C++/C programs and generates HTML pages from it.
