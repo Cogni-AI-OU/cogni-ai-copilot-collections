@@ -1,6 +1,8 @@
 ---
 name: letta-llms
-description: 'USE FOR: Letta documentation search, Letta SDK references, retrieving Letta framework details, Letta agent APIs. DO NOT USE FOR: executing Letta agents, interacting with live Letta endpoints, general Python programming.'
+description: >-
+  USE FOR: Letta documentation search, Letta SDK references, retrieving Letta framework details, Letta agent APIs.
+  DO NOT USE FOR: executing Letta agents, interacting with live Letta endpoints, general Python programming.
 license: MIT
 ---
 
