@@ -28,4 +28,4 @@ license: MIT
 To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 - [Model Context Protocol](https://modelcontextprotocol.io/llms.txt)
-- [Model Context Protocol Full](https://modelcontextprotocol.io/llms-full.txt) — **Caution**: Very large file (~1.3MB+). MUST be fetched with `?format=text` and filtered using targeted `grep`/`rg` for specific topics or sections to avoid context overflow. Use `llms.txt` first for navigation.
+- [Model Context Protocol Full](https://modelcontextprotocol.io/llms-full.txt) — **Caution**: Very large file (~1.3MB+). File is already plain text; must be filtered using targeted `grep`/`rg` for specific topics or sections to avoid context overflow. Use `llms.txt` first for navigation.
