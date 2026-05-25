@@ -37,4 +37,5 @@ license: MIT
 To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
 
 - [Visual Studio Code Documentation Index](https://code.visualstudio.com/llms.txt)
-  USE FOR: Index of documentation, Setup, Get Started, GitHub Copilot, Configure, Edit Code, Build, Debug, Test, Source Control, Terminal, Enterprise, Languages, Node.js / JavaScript, TypeScript, Python, Java, C++, C#, Container Tools, Data Science, Intelligent Apps, Azure, Remote.
+  USE FOR: Index of documentation, Setup, Get Started, GitHub Copilot, Configure, Edit Code, Build, Debug, Test, Source Control, Terminal, Enterprise,
+  Languages, Node.js / JavaScript, TypeScript, Python, Java, C++, C#, Container Tools, Data Science, Intelligent Apps, Azure, Remote.
