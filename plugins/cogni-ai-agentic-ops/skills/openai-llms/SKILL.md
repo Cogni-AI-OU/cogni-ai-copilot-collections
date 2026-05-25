@@ -39,6 +39,6 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [OpenAI Developers Full Docs](https://developers.openai.com/llms-full.txt)
   USE FOR: Full single-file Markdown export of all developers docs (large, so needs to be filtered).
 - [OpenAI API Docs](https://developers.openai.com/api/docs/llms.txt)
-  USE FOR: Documentation sets, Actions, Assistants, Bots, Concepts, Deprecations, GPTs, Guides, Libraries, Mcp, Pricing, Quickstart, Supported Countries, Tutorials, Ui Kit Demo.
+  USE FOR: Documentation sets, Actions, Assistants, Bots, Concepts, Deprecations, GPTs, Guides, Libraries, MCP, Pricing, Quickstart, Supported Countries, Tutorials, UI Kit Demo.
 - [OpenAI API Full Docs](https://developers.openai.com/api/docs/llms-full.txt)
   USE FOR: Combined single-file API docs containing all guides and conceptual documentation (large, so needs to be filtered).
