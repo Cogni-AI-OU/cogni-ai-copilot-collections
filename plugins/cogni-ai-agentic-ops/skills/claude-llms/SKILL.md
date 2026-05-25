@@ -31,6 +31,13 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
   Includes: Get started, Capabilities (Built-in tools, Hooks, Subagents, MCP, Permissions, Sessions),
   Features (Agent SDK vs Client SDK, Agent SDK vs Claude Code CLI, Agent SDK vs Managed Agents),
   Compare the Agent SDK to other Claude tools, Guidelines.
+  USE FOR: `Agent SDK`, `Capabilities`, `Hooks`, `Subagents`, `MCP`, `Permissions`, `Sessions`.
 - [Anthropic Developer Documentation](https://platform.claude.com/llms.txt)
+  USE FOR: `Anthropic API`, `Models`, `Developer Guides`, `Rate Limits`.
+- [Anthropic Developer Documentation (Full)](https://platform.claude.com/llms-full.txt)
+  (NOTE: This file is extremely large and SHOULD be filtered when loading).
+  USE FOR: `Full API Reference`, `Exhaustive Documentation`.
 - [Claude Docs](https://claude.com/llms.txt)
+  USE FOR: `Claude Usage`, `General AI Capabilities`, `Claude UI Features`.
 - [Claude Code Docs](https://code.claude.com/llms.txt)
+  USE FOR: `Claude Code CLI`, `Commands`, `Local Development`, `CLAUDE.md`.
