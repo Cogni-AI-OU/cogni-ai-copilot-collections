@@ -32,7 +32,7 @@ license: MIT
 
 ## Examples
 
-- **Fetching protocol spec**: `webfetch https://modelcontextprotocol.io/llms.txt` and searching for "transport" or "security" sections.
+- **Fetching protocol spec**: Fetch and search for "transport" or "security" sections.
 - **Targeted extraction from full docs**: If `llms.txt` is insufficient, fetch `llms-full.txt` and pipe through `rg "## (Servers|Clients|Transports)"` to extract only the relevant section.
 
 ## Troubleshooting
