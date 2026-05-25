@@ -26,6 +26,10 @@ license: MIT
 2. **Execute the Query**: Use `webfetch` to fetch the data from the `llms.txt` reference or relevant URLs.
 3. **Process Content**: Extract the relevant information to answer the user's query or inform the ongoing task. For full docs (`llms-full.txt`), use filtering or grep techniques as they are very large.
 
+## Common Pitfalls
+
+- **Fetching `llms-full.txt` without narrowing the scope**. Prefer the index or a targeted document when possible, and filter aggressively if you must use the full file.
+
 ## References
 
 To fully utilize this skill, you MUST read at least one of the links relevant to the current context:
