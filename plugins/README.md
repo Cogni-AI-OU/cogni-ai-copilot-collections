@@ -182,5 +182,4 @@ copilot plugin install cogni-ai-tester@cogni-ai-agentic-collections
 claude plugin install cogni-ai-tester@cogni-ai-agentic-collections
 ```
 
-
 Each plugin includes a `README.md` with detailed installation and usage instructions.
