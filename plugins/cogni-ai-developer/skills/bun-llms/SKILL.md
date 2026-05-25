@@ -11,12 +11,12 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
-## When to Use
+## WHEN TO USE
 
 - **Documentation Search**: Locating specific Bun documentation articles, CLI commands, or API references.
 - **Article Retrieval**: Fetching the full rendered markdown of a specific Bun docs page via its `llms.txt` or related context.
 
-## When Not to Use
+## WHEN NOT TO USE
 
 - **Other Runtimes/Managers**: When the user explicitly asks for Node.js, Deno, npm, yarn, or pnpm documentation.
 
