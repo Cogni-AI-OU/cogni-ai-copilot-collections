@@ -54,6 +54,12 @@
       "version": "1.0.0",
       "source": "./plugins/cogni-ai-tester",
       "description": "Cogni AI tester agent."
+    },
+    {
+      "name": "cogni-ai-agentic-ops",
+      "version": "1.0.0",
+      "source": "./plugins/cogni-ai-agentic-ops",
+      "description": "Cogni AI agentic ops plugin. Specializes in managing, maintaining, refining, and deploying agentic workflows, configurations, and skills."
     }
   ]
 }
