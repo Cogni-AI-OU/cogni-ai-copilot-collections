@@ -10,6 +10,12 @@
   },
   "plugins": [
     {
+      "name": "cogni-ai-agentic-ops",
+      "description": "Cogni AI agentic ops plugin. Specializes in managing, maintaining, refining, and deploying agentic workflows, configurations, and skills.",
+      "version": "1.0.0",
+      "source": "plugins/cogni-ai-agentic-ops"
+    },
+    {
       "name": "cogni-ai-architect",
       "description": "Elite autonomous systems architect engineered for structural perfection and recursive problem decomposition.",
       "version": "1.0.0",
@@ -56,12 +62,6 @@
       "description": "Elite autonomous test engineering agent focused on proving software correctness, preventing regressions, and designing refactor-resilient behavioral tests.",
       "version": "1.0.0",
       "source": "plugins/cogni-ai-tester"
-    },
-    {
-      "name": "cogni-ai-agentic-ops",
-      "description": "Cogni AI agentic ops plugin. Specializes in managing, maintaining, refining, and deploying agentic workflows, configurations, and skills.",
-      "version": "1.0.0",
-      "source": "plugins/cogni-ai-agentic-ops"
     }
   ]
 }
