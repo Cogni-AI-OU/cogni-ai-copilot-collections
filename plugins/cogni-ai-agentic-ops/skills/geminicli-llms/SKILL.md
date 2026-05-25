@@ -37,8 +37,9 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [Gemini CLI Documentation (llms.txt)](https://geminicli.com/llms.txt)
   MUST be fetched/loaded when searching for Gemini CLI references, installation, usage, or tool integrations. Note: This file contains the entire documentation corpus and needs to be filtered due to its massive size.
   USE FOR:
-  - Gemini CLI Usage and Installation
-  - Configuration and Prompt Templates
-  - API Keys and Authentication
-  - Supported Models and Capabilities
-  - Developer Tools Configurations (OpenCode, Claude Code, etc.)
+  - Install and Get Started guides (setup, auth, first run, npm install, deployment)
+  - CLI command and behavior references (commands, slash commands, keyboard shortcuts)
+  - Core tools and workflows (shell, file edit/read, web fetch/search, todos, memory)
+  - Configuration and customization topics (settings, models, themes, system prompt, `.geminiignore`)
+  - Extension and integration guidance (MCP servers, IDE integration, hooks, subagents)
+  - Runtime and safety controls (sandboxing, plan mode/read-only mode, telemetry)
