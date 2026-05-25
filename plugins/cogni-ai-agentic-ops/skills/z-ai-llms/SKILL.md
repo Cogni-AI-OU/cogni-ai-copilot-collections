@@ -45,6 +45,6 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 
 - [z.AI Full Documentation (llms-full.txt)](https://docs.z.ai/llms-full.txt)
   MUST be fetched/loaded when deep, exhaustive context is needed across the entire z.AI ecosystem. Note: This file contains the entire documentation corpus and needs to be filtered due to its massive size.
-  USE FOR: 
+  USE FOR:
   - Comprehensive searches across all docs
   - Extracting specific, detailed code examples when llms.txt is insufficient
