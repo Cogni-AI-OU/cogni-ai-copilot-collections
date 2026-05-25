@@ -53,6 +53,7 @@ license: MIT
 - **`.env.example` / `.env.sample` / `.env.dist`**: Provides a template of required environment variables without including actual secret values.
 - **`.fdignore`**: Specifies files and directories to ignore for the `fd` search tool, often mirroring `.gitignore` but used for faster file finding.
 - **`.gemini/`**: Directory containing configuration for Google Gemini, such as `settings.json` which typically points it to use `AGENTS.md` for context.
+- **`.geminiignore`**: Specifies files and directories that Google Gemini tooling should ignore when indexing, reading, or using repository context, helping exclude generated files, secrets, and other irrelevant content.
 - **`.github/CODEOWNERS`**: Defines individuals or teams responsible for specific code paths, automatically assigning them as PR reviewers.
 - **`.github/ISSUE_TEMPLATE/*.yml`**: Structured templates for bug reports and feature requests to ensure consistent issue reporting.
 - **`.github/actionlint.yml`**: Configuration file for `actionlint` to define custom linting rules or ignore specific errors in GitHub Actions workflows.
