@@ -21,6 +21,7 @@ designing algorithms, data structures, and reliable solutions.
 | `/cogni-ai-programmer:reactnative-llms` | Expert guide for generating React Native code |
 | `/cogni-ai-programmer:c-coding-standard` | C standard for names, formatting, documentation, and best practices |
 | `/cogni-ai-programmer:cpp-coding-standard` | C++ standard for names, formatting, OO design, and complexity management |
+| `/cogni-ai-programmer:pydantic-llms` | Reference and APIs for retrieving Pydantic documentation |
 
 ## Installation
 
@@ -54,6 +55,7 @@ claude plugin install cogni-ai-programmer@cogni-ai-agentic-collections
 - **reactnative-llms** — Expert guide for generating React Native mobile applications.
 - **c-coding-standard** — C coding standard guidelines for names, formatting, documentation, and complexity management.
 - **cpp-coding-standard** — C++ coding standard guidelines for names, formatting, and object-oriented design.
+- **pydantic-llms** — Reference and APIs for retrieving Pydantic documentation programmatically.
 
 ## Usage
 

@@ -119,7 +119,7 @@ documentation Java programmers take for granted.
 
 ### Class and Method Documentation
 
-It is recommended a program like [Doxygen](http://www.doxygen.org/) be
+It is recommended a program like [Doxygen](https://github.com/doxygen) be
 used to document C++ classes, method, variables, functions, and macros.
 The documentation can be extracted and put in places in a common area
 for all programmers to access. This saves programmers having to read
@@ -215,7 +215,7 @@ public methods virtual flexibility is preserved.
 
  The approach used is to place a comment block before each
 method that can be extracted by a tool and be made part of the class
-documentation. Here we'll use [Doxygen](http://www.doxygen.org) . See
+documentation. Here we'll use [Doxygen](https://github.com/doxygen) . See
 the Doxygen documentation for a list of attributes supported by the
 document generator.
 
