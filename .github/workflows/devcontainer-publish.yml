@@ -44,12 +44,14 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
+          flavor: |
+            prefix=devcontainer-
           tags: |
-            # Immutable versioned tags: v1.0.4-ubuntu-noble
+            # Immutable versioned tags: devcontainer-v1.0.4-ubuntu-noble
             type=semver,pattern={{version}}-${{ matrix.platform }},enable=${{ env.IS_TAG == 'true' }}
-            # Distro rolling tags: ubuntu-noble
+            # Distro rolling tags: devcontainer-ubuntu-noble
             type=raw,value=${{ matrix.platform }},enable=${{ env.IS_RELEASE == 'true' }}
-            # Branch-specific platform tags: latest-ubuntu-noble (for default branch)
+            # Branch-specific platform tags: devcontainer-latest-ubuntu-noble (for default branch)
             type=raw,value=latest-${{ matrix.platform }},enable=${{ env.IS_DEFAULT_BRANCH == 'true' }}
             # Global rolling tags (only for default platform)
             type=semver,pattern={{version}},enable=${{ matrix.is_default == true && env.IS_TAG == 'true' }}
