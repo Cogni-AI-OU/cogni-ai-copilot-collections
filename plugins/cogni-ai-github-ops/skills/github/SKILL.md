@@ -47,7 +47,7 @@ and you need to retrieve the diff or patch content for processing.
 
 ## Repository Archive
 
-To download repository archive, Codeload can be used instead of the API, e.g.
+To download a repository archive, Codeload can be used instead of the API, e.g.:
 
 - `https://codeload.github.com/<owner>/<repo>/tar.gz/<ref>`
 
