@@ -1,8 +1,8 @@
 ---
 name: npx-skills
 description: >-
-  Install, find, update, and manage agent skills using the npx skills CLI tool for both agents and users.
-  You MUST load this skill when asked to use the npx skills command, or when users or agents need to discover installable skills.
+  Install, find, update, and manage agent skills using the npx skills CLI tool.
+  You MUST load this skill when using the npx skills command or when discovering installable skills.
 license: MIT
 ---
 
@@ -14,13 +14,13 @@ The Skills CLI (`npx skills`) is the package manager for the open agent skills e
 
 ## WHEN TO USE
 
-- **Skill Discovery & Search**: Searching the skills ecosystem via `npx skills find` for either the user or the agent itself.
-- **Skill Installation**: Installing open agent skills from repositories (e.g., `vercel-labs/agent-skills`) for various autonomous agents.
+- **Skill Discovery & Search**: Searching the skills ecosystem via `npx skills find`.
+- **Skill Installation**: Installing open agent skills from repositories (e.g., `vercel-labs/agent-skills`).
 - **Skill Updates**: Updating previously installed skills via `npx skills update`.
 - **Skill Scaffolding**: Initializing a new agent skill boilerplate via `npx skills init`.
-- A user or agent asks "how do I do X" where X might be a common task with an existing skill.
-- A user or agent says "find a skill for X" or "is there a skill for X".
-- Expresses interest in extending capabilities (design, testing, deployment, etc.).
+- Incoming request maps to a known capability domain (testing, design, deploy, etc.).
+- Task is a common pattern that likely has an existing skill package.
+- Capability extension is needed (e.g., adding PR review workflows, performance analysis).
 
 ## WHEN NOT TO USE
 
@@ -176,14 +176,14 @@ INSTALL_INTERNAL_SKILLS=1 npx skills add vercel-labs/agent-skills --list
 
 ## How to Find Skills
 
-### Step 1: Understand What Skill is Needed
+### Step 1: Determine the Search Target
 
-Skills can extend capabilities for either the user (e.g., domain-specific guidance) or the agent (e.g., specialized workflows). When someone asks for help, identify:
+Before searching, determine:
 
-1. The target — is this for the **user** (knowledge/guidance) or the **agent** (execution workflows)?
-2. The domain (e.g., React, testing, design, deployment)
-3. The specific task (e.g., writing tests, creating animations, reviewing PRs)
-4. Whether this is a common enough task that a skill likely exists
+1. **Target audience**: **user** (knowledge/guidance) or **agent** (execution workflows)
+2. **Domain**: React, testing, design, deployment, etc.
+3. **Specific task**: writing tests, creating animations, reviewing PRs, etc.
+4. **Likelihood**: whether this is a common enough task that a skill likely exists
 
 ### Step 2: Check the Leaderboard First
 
@@ -208,9 +208,9 @@ Search tips:
 
 For example:
 
-- Agent or user asks "how do I make my React app faster?" → `npx skills find react performance`
-- Agent or user asks "can you help me with PR reviews?" → `npx skills find pr review`
-- Agent asks "I need a changelog workflow" → `npx skills find changelog`
+- Input: "React app performance optimization" → Command: `npx skills find react performance`
+- Input: "PR review workflow" → Command: `npx skills find pr review`
+- Input: "changelog generation" → Command: `npx skills find changelog`
 
 ### Step 4: Verify Quality Before Recommending
 
@@ -220,36 +220,35 @@ For example:
 2. **Source reputation** — Official sources (`vercel-labs`, `anthropics`, `microsoft`) are more trustworthy than unknown authors.
 3. **GitHub stars** — Check the source repository. A skill from a repo with <100 stars should be treated with skepticism.
 
-### Step 5: Present Options to the User
+### Step 5: Present Candidate Skills
 
-When you find relevant skills, present options with:
+Present each candidate skill with its metadata and install command:
 
-1. The skill name and what it does
-2. The install count and source (avoid hard-coded numbers — use relative terms like "high install count")
-3. The install command they can run
-4. A link to learn more at skills.sh
+1. Skill name and description
+2. Install count and source (avoid hard-coded numbers — use relative terms like "high install count")
+3. Install command
+4. skills.sh reference link
 
-Example response (skill names are illustrative):
+Output template (skill names are illustrative):
 
 ```text
-I found a skill that might help! The "<skill-name>" skill provides
-<description> from <source>.
-
-To install it:
-npx skills add <owner>/<repo>@<skill-name>
-
+Skill: <skill-name>
+Description: <description>
+Source: <owner>/<repo>
+Installs: <high/moderate/low>
+Install: npx skills add <owner>/<repo>@<skill-name>
 Learn more: https://skills.sh/<owner>/<repo>/<skill-name>
 ```
 
-### Step 6: Offer to Install
+### Step 6: Install the Skill
 
-If the user wants to proceed, you can install the skill for them:
+To install a selected skill:
 
 ```bash
 npx skills add <owner/repo@skill> -g -y
 ```
 
-The `-g` flag installs globally (user-level) and `-y` skips confirmation prompts.
+`-g` installs globally (user-level); `-y` skips confirmation prompts.
 
 ## Common Skill Categories
 
@@ -269,18 +268,17 @@ When searching, consider these common categories:
 
 If no relevant skills exist:
 
-1. Acknowledge that no existing skill was found
-2. Offer to help with the task directly using your general capabilities
-3. Suggest the user could create their own skill with `npx skills init`
+1. Report that no match was found
+2. Proceed with direct task execution using available capabilities
+3. Suggest creating a new skill: `npx skills init <skill-name>`
 
-Example:
+Output template:
 
 ```text
-I searched for skills related to "xyz" but didn't find any matches.
-I can still help you with this task directly! Would you like me to proceed?
-
-If this is something you do often, you could create your own skill:
-npx skills init my-xyz-skill
+Query: <query>
+Result: no matching skills found
+Next step: execute task directly or create a skill with:
+  npx skills init <skill-name>
 ```
 
 ## Limitations
