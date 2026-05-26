@@ -186,5 +186,7 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [Subagents](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/core/subagents.md)
   - USE FOR: subagents, delegation strategy, specialized agents, parallel tasks, agent orchestration
 
+### Repository
+
 - [Main Repository](https://github.com/MoonshotAI/kimi-cli)
   - USE FOR: source repository, upstream code, issues, pull requests, releases, project roadmap
