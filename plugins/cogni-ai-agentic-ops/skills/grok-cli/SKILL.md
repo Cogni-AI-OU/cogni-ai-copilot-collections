@@ -43,6 +43,7 @@ An open-source coding agent for the Grok API.
    curl -fsSL https://x.ai/cli/install.sh | bash
    ```
    *Alternative*: `bun add -g grok-dev`
+   *Alternative from GitHub*: `curl -fsSL https://raw.githubusercontent.com/superagent-ai/grok-cli/main/install.sh | bash`
 
 2. Verify installation:
    ```bash
