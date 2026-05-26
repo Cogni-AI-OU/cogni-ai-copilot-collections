@@ -45,8 +45,6 @@ gh skills install Cogni-AI-OU/cogni-ai-agent-skills --scope user <skill-name>
 | [minizinc](minizinc/SKILL.md) | Expert MiniZinc modeling for constraint satisfaction. |
 | [mot](mot/SKILL.md) | Evaluate and classify models based on Model Openness Framework. |
 | [name-com-llms](name-com-llms/SKILL.md) | Reference for name.com Core API documentation. |
-| [npx-skills](npx-skills/SKILL.md) | Install and manage agent skills using the npx skills CLI. |
-| [ollama-cli](ollama-cli/SKILL.md) | Execute and manage local LLMs using the ollama CLI. |
 | [out-yaml](out-yaml/SKILL.md) | Instructs the agent to produce output strictly in valid YAML. |
 | [pdf](pdf/SKILL.md) | PDF file inspection, editing, and lossless size reduction. |
 | [pipenv](pipenv/SKILL.md) | Manage Python dependencies and environments using pipenv. |

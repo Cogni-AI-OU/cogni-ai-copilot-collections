@@ -30,6 +30,8 @@ configurations, skills, and agentic workflows.
 | `/cogni-ai-agentic-ops:waza-cli` | Workflows for the Waza tool |
 | `/cogni-ai-agentic-ops:gemini-cli-docs` | Documentation references for Google Gemini CLI |
 | `/cogni-ai-agentic-ops:kimi-cli-docs` | Documentation references for Kimi CLI |
+| `/cogni-ai-agentic-ops:npx-skills` | Manage agent skills with the npx skills CLI |
+| `/cogni-ai-agentic-ops:ollama-cli` | Execute and manage local LLMs via ollama CLI |
 | `/cogni-ai-agentic-ops:waza-docs` | References for the Microsoft/Waza docs |
 
 ## Installation
@@ -69,6 +71,9 @@ claude plugin install cogni-ai-agentic-ops@cogni-ai-agentic-collections
 - **kimi-cli-docs** — Documentation references for Kimi CLI.
 - **mcp-cli** — Specifications for MCP CLI usage.
 - **modelcontextprotocol-llms** — Reference and APIs for retrieving Model Context Protocol (MCP) documentation.
+- **npx-skills** — Install, find, update, and manage agent skills using the npx skills CLI tool.
+- **ollama-cli** — Execute and manage local LLMs using the ollama CLI,
+  including pulling models and launching agents with MCP configurations.
 - **opencode** — Guidelines for the OpenCode ecosystem.
 - **squad-cli** — Automation workflows for the Squad CLI.
 - **waza-cli** — Workflows for the Waza tool.
