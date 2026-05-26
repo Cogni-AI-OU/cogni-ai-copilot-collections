@@ -248,10 +248,8 @@ Send a voice note or audio attachment in Telegram and Grok will transcribe it wi
 }
 ```
 
-| Setting    | Default | Description                                                                                                           |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| `enabled`  | `true`  | Set to `false` to ignore voice/audio messages entirely.                                                               |
-| `language` | `en`    | Language code forwarded to `/v1/stt`. Enables Inverse Text Normalization (numbers, currencies, units → written form). |
+- **`enabled`** (default `true`) — Set to `false` to ignore voice/audio messages entirely.
+- **`language`** (default `en`) — Language code forwarded to `/v1/stt`. Enables Inverse Text Normalization (numbers, currencies, units → written form).
 
 Optional headless flow when you do not want the TUI open:
 
