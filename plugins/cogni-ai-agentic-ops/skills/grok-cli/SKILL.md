@@ -57,7 +57,7 @@ license: MIT
 ### CLI Subcommands Reference
 
 - `grok agent` - Run Grok without the interactive UI
-- `grok completions` - Generate shell completion scripts (bash, zsh, fish, powershell)
+- `grok completions` - Generate shell completion scripts (bash, zsh, fish, PowerShell)
 - `grok export` / `grok import` - Manage session transcripts
 - `grok inspect` - Show the configuration Grok discovers for the directory
 - `grok login` / `grok logout` - Manage xAI credentials
