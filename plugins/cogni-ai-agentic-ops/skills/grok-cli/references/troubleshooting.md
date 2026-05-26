@@ -54,26 +54,30 @@ Try a different terminal emulator. Recommended:
 
 **Screen flickering or artifacts**
 
-Ensure your terminal supports true color and Unicode. Update your terminal emulator to the latest version.
+Ensure your terminal supports true color and Unicode.
+Update your terminal emulator to the latest version.
 
 ### Telegram remote control
 
 **Bot doesn't respond**
 
 1. Verify `TELEGRAM_BOT_TOKEN` is set correctly
-2. Ensure the CLI process is still running (long polling lives in the process)
+2. Ensure the CLI process is still running
+   (long polling lives in the process)
 3. Check that you've completed the `/pair` flow and been approved
 
 **Voice messages not transcribing**
 
 - Verify `GROK_API_KEY` is set (transcription uses the same key)
-- Check `~/.grok/user-settings.json` has `telegram.audioInput.enabled: true`
+- Check `~/.grok/user-settings.json` has
+  `telegram.audioInput.enabled: true`
 
 ### Sandbox mode
 
 **Sandbox only works on macOS 14+ with Apple Silicon**
 
-If you're on Intel Mac or Linux, sandbox mode is not available. Use standard mode without `--sandbox`.
+If you're on Intel Mac or Linux, sandbox mode is not available.
+Use standard mode without `--sandbox`.
 
 ### Performance issues
 
@@ -85,7 +89,8 @@ If you're on Intel Mac or Linux, sandbox mode is not available. Use standard mod
 
 **High memory usage**
 
-- Long-running sessions accumulate context; start a fresh session periodically
+- Long-running sessions accumulate context;
+  start a fresh session periodically
 - Use `/compact` in TUI to compress conversation history
 
 ### Getting help
