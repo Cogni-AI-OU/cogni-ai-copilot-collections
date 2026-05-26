@@ -66,6 +66,11 @@ license: MIT
 - **`.github/workflows/*.yml`**: GitHub Actions workflow files for CI/CD automation, testing, and deployment.
 - **`.github/{actionlint,pre-commit}-matcher.json`**: GitHub Actions problem matchers that enable inline error reporting for linters in PRs.
 - **`.golangci.yml`**: Configuration file for `golangci-lint`, a Go linters aggregator, defining enabled linters, error reporting, and analysis settings.
+- **`.grok/`**: Directory for Grok (X.ai) project-specific configuration; Grok discovers project-local skills from `.grok/skills/`, plugins from `.grok/plugins/`, and hook scripts from `.grok/hooks/`.
+- **`.grok/config.toml`**: Project-level Grok configuration; defines model settings and may reference marketplace sources when used in the workspace context.
+- **`.grok/hooks/`**: Project-local Grok hook scripts invoked on session and tool lifecycle events.
+- **`.grok/plugins/`**: Project-local Grok plugins that extend tools, skills, and MCP server integrations.
+- **`.grok/skills/`**: Reusable Grok skills scoped to the repository; automatically discovered and loaded for project context.
 - **`.htaccess`**: Distributed configuration file for Apache web server, allowing for decentralized management of web server configuration.
 - **`.lycheeignore`**: Defines URL patterns and regular expressions to exclude from link checking with lychee.
 - **`.markdown-link-check.json`**: Configures `markdown-link-check` behavior, including timeouts, ignore patterns, and status code handling.
@@ -116,6 +121,16 @@ license: MIT
 - **`.zprofile`**: The login shell initialization script for Zsh.
 - **`.zshrc`**: The initialization script for Zsh shells, similar to `.bashrc`.
 - **`my.cnf`**: Configuration for MySQL and MariaDB clients and servers, defining connection parameters and system variables.
+
+### AI Agent & HOME-Oriented Dotfiles
+
+- **`~/.claude/`**: Home-level Claude configuration directory; Grok also reads compatible Claude marketplaces, plugins, skills, MCPs, and instruction files from here for cross-tool compatibility.
+- **`~/.claude/plugins/known_marketplaces.json`**: Claude-compatible marketplace source file that Grok can discover for additional marketplace entries.
+- **`~/.copilot/`**: Home-level GitHub Copilot user configuration directory for user-scoped agent preferences and tooling settings.
+- **`~/.grok/`**: Home-level Grok (X.ai) configuration directory; Grok discovers user-global skills from `~/.grok/skills/`, plugins from `~/.grok/plugins/`, and marketplace sources from `~/.grok/config.toml`.
+- **`~/.grok/config.toml`**: User-global Grok configuration, including `[[marketplace.sources]]` entries for skill and plugin marketplace discovery.
+- **`~/.grok/plugins/`**: User-global Grok plugins available across all repositories.
+- **`~/.grok/skills/`**: User-global Grok skills available across all repositories.
 
 ## Best Practices
 
