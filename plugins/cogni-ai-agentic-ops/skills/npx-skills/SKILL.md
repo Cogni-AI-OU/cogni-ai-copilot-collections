@@ -3,7 +3,7 @@ name: npx-skills
 description: >-
   Install, find, update, and manage agent skills using the npx skills CLI tool. You MUST load this skill when asked to use the npx skills command.
   Helps to discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
-  USE FOR ...
+  Use this skill to discover, install, update, and manage reusable agent skills from the open agent skills ecosystem.
 license: MIT
 ---
 
@@ -195,8 +195,8 @@ When a user or agent asks for help with something, identify:
 Before running a CLI search, check the [skills.sh leaderboard](https://skills.sh/) to see if a well-known skill already exists for the domain. The leaderboard ranks skills by total installs, surfacing the most popular and battle-tested options.
 
 For example, top skills for web development include:
-- `vercel-labs/agent-skills` — React, Next.js, web design (100K+ installs each)
-- `anthropics/skills` — Frontend design, document processing (100K+ installs)
+- `vercel-labs/agent-skills` — React, Next.js, web design (widely used across the ecosystem)
+- `anthropics/skills` — Frontend design, document processing (popular on the leaderboard)
 
 ### Step 3: Search for Skills
 
