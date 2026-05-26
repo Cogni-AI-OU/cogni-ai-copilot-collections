@@ -302,6 +302,29 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/users/support/troubleshooting.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/support/troubleshooting.md)
   - USE FOR: Troubleshooting; trigger words: user-guide, configuration, features, how-to, support, troubleshooting, faq, debugging
 
+### Skills
+
+- [.qwen/skills/bugfix/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/bugfix/SKILL.md)
+  - USE FOR: Reproduce-first workflow for fixing GitHub issue bugs from report to verification; trigger words: bugfix, github-issue, reproduction, verification, regression
+- [.qwen/skills/codegraph/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/codegraph/SKILL.md)
+  - USE FOR: Graph + vector index analysis for call graphs, dependencies, architecture, bug tracing, and PR risk/conflict review; trigger words: codegraph, call-graph, dependencies, architecture, impact-analysis, pr-review
+- [.qwen/skills/docs-audit-and-refresh/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/docs-audit-and-refresh/SKILL.md)
+  - USE FOR: Audit docs against current code and refresh missing, incorrect, or stale documentation; trigger words: docs-audit, documentation-drift, coverage-gaps, docs-refresh
+- [.qwen/skills/docs-update-from-diff/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/docs-update-from-diff/SKILL.md)
+  - USE FOR: Update official docs based on local `git diff` and behavior changes in current branch; trigger words: docs-update, git-diff, changelog-sync, docs-from-code
+- [.qwen/skills/e2e-testing/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/e2e-testing/SKILL.md)
+  - USE FOR: End-to-end CLI testing with headless mode, MCP integration checks, and raw API traffic inspection; trigger words: e2e-testing, headless, mcp-testing, api-logs, reproduction
+- [.qwen/skills/feat-dev/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/feat-dev/SKILL.md)
+  - USE FOR: Full non-trivial feature workflow: investigation, design, test planning, implementation, verification, and review; trigger words: feature-development, design-doc, e2e-plan, implementation, code-review
+- [.qwen/skills/qwen-code-claw/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/qwen-code-claw/SKILL.md)
+  - USE FOR: Using Qwen Code as a coding agent for code understanding, generation, refactoring, bug fixes, and reviews; trigger words: code-agent, coding-tasks, refactoring, bug-fix, project-generation
+- [.qwen/skills/structured-debugging/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/structured-debugging/SKILL.md)
+  - USE FOR: Hypothesis-driven debugging for hard bugs, flaky tests, and complex root-cause analysis; trigger words: structured-debugging, hypothesis, instrumentation, root-cause, flaky-tests
+- [.qwen/skills/terminal-capture/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/terminal-capture/SKILL.md)
+  - USE FOR: Automated terminal UI screenshot scenarios for CLI output and slash-command visual verification; trigger words: terminal-capture, screenshot-testing, cli-visuals, slash-commands
+- [.qwen/skills/tmux-real-user-testing/SKILL.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/.qwen/skills/tmux-real-user-testing/SKILL.md)
+  - USE FOR: Real-user-style tmux TUI testing with readable step-by-step logs and reproducible artifacts; trigger words: tmux-testing, tui, real-user-flow, readable-logs, interaction-testing
+
 ### Repository
 
 - [Qwen Code Repository](https://github.com/QwenLM/qwen-code)
