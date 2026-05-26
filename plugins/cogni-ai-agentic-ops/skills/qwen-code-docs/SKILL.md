@@ -27,7 +27,7 @@ license: MIT
 1. **Identify the Topic**: Determine the docs area (users, developers, design, plans, superpowers/plans, e2e-tests, or root).
 2. **Fetch Doc Content**: Build the URL path using the pattern:
    ```text
-   https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/<filename>
+    https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/<section>/<filename>
    ```
 3. **Process Content**: Extract relevant information to answer the query.
 
@@ -136,13 +136,13 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/developers/qwen-serve-protocol.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/qwen-serve-protocol.md)
   - USE FOR: `qwen serve` HTTP protocol reference
 - [docs/developers/roadmap.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/roadmap.md)
-  - USE FOR: Qwen Code RoadMap
+  - USE FOR: Qwen Code Roadmap
 - [docs/developers/sdk-java.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/sdk-java.md)
   - USE FOR: Qwen Code Java SDK
 - [docs/developers/sdk-python.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/sdk-python.md)
   - USE FOR: Python SDK
 - [docs/developers/sdk-typescript.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/sdk-typescript.md)
-  - USE FOR: Typescript SDK
+  - USE FOR: TypeScript SDK
 - [docs/developers/tools/exit-plan-mode.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/tools/exit-plan-mode.md)
   - USE FOR: Exit Plan Mode Tool (`exit_plan_mode`)
 - [docs/developers/tools/file-system.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/tools/file-system.md)
@@ -166,7 +166,7 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/developers/tools/web-search.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/developers/tools/web-search.md)
   - USE FOR: Web Search
 
-### E2E-tests
+### E2E Tests
 
 - [docs/e2e-tests/2026-05-18-qwen-memory-benchmark-report.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/2026-05-18-qwen-memory-benchmark-report.md)
   - USE FOR: Qwen Code Runtime Memory Benchmark Report
@@ -280,7 +280,7 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/users/ide-integration/ide-integration.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/ide-integration/ide-integration.md)
   - USE FOR: IDE Integration
 - [docs/users/integration-github-action.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/integration-github-action.md)
-  - USE FOR: Github Actions：qwen-code-action
+  - USE FOR: GitHub Actions：qwen-code-action
 - [docs/users/integration-jetbrains.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/integration-jetbrains.md)
   - USE FOR: JetBrains IDEs
 - [docs/users/integration-vscode.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/integration-vscode.md)
@@ -306,3 +306,5 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 
 - [Qwen Code Repository](https://github.com/QwenLM/qwen-code)
   - USE FOR: source code, issues, pull requests, main entry point
+- [README.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/README.md)
+  - USE FOR: project overview, installation, quick start, authentication, configuration, usage
