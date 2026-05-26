@@ -45,6 +45,12 @@ There are two modes for viewing Pull Requests in plain text:
 Use these formats when user sends a GitHub PR URL
 and you need to retrieve the diff or patch content for processing.
 
+## Repository Archive
+
+To download a repository archive, Codeload can be used instead of the API, e.g.:
+
+- `https://codeload.github.com/<owner>/<repo>/tar.gz/<ref>`
+
 ## GitHub File Links
 
 - **Line Numbers (`#L<number>`)**: When a user provides a link to a file on GitHub that includes a line number reference (e.g., `#L123` or `#L10-L20`), always check the specified line(s) to determine whether it is relevant to the current context or task.
