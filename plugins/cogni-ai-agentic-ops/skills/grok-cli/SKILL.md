@@ -369,6 +369,25 @@ grok -d /path/to/your/app --verify
 
 The agent inspects your project, figures out how to build and run it, spins up a sandbox, and produces a verification report with screenshots and video evidence. Works with any app type.
 
+## Development
+
+From a clone:
+
+```bash
+bun install
+bun run build
+bun run start
+# or: node dist/index.js
+```
+
+Other useful commands:
+
+```bash
+bun run dev      # run from source (Bun)
+bun run typecheck
+bun run lint
+```
+
 ## Best Practices
 
 - **Structured Output**: Use `--format json` for headless semantic event streams (useful for CI).
