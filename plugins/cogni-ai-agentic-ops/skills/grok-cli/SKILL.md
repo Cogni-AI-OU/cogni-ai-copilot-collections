@@ -244,6 +244,7 @@ Send a voice note or audio attachment in Telegram and Grok will transcribe it wi
     "audioInput": {
       "enabled": true,
       "language": "en"
+    }
   }
 }
 ```
