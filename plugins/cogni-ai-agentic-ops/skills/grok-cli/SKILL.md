@@ -58,7 +58,7 @@ grok -k your_key_here
 { "apiKey": "your_key_here" }
 ```
 
-Optional **subAgents** — custom foreground sub-agents. Each entry needs **name**, **model**, and **instruction**:
+Optional `subAgents` — custom foreground sub-agents. Each entry needs `name`, `model`, and `instruction`:
 
 ```json
 {
