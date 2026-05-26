@@ -67,3 +67,7 @@ agent-browser close
 - If the page is dynamic, use `snapshot -i` again after each meaningful DOM change.
 - If the target URL is ambiguous because multiple forwarded ports exist, stop and report the ambiguity instead of guessing.
 - If `agent-browser` is unavailable, fall back to bash-only verification and say so clearly.
+
+## References
+
+- [agent-browser's SKILL](https://raw.githubusercontent.com/superagent-ai/grok-cli/refs/heads/main/.agents/skills/agent-browser/SKILL.md)
