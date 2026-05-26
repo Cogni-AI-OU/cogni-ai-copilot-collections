@@ -63,6 +63,6 @@ license: MIT
 
 - [OpenAI Whisper Repository](https://github.com/openai/whisper)
 - [OpenAI Whisper Discussions](https://github.com/openai/whisper/discussions)
-  USE FOR: searching issues or answer to questions.
+  USE FOR: searching issues or answers to questions.
 - [OpenAI Whisper Pull Requests](https://github.com/openai/whisper/pulls)
   USE FOR: searching issues or features.
