@@ -47,7 +47,7 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [Print Mode Customization](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/customization/print-mode.md)
   - USE FOR: print mode, output formatting, non-interactive output, CI-friendly output, text rendering
 - [Skills Customization](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/customization/skills.md)
-  - USE FOR: skills customization, SKILL.md usage, skill loading, skill organization, custom skills
+  - USE FOR: skills customization, SKILL.md configuration, skill loading settings, skill organization, skill behavior tuning
 - [Wire Mode Customization](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/customization/wire-mode.md)
   - USE FOR: wire mode, structured output, machine-readable responses, protocol output, automation integration
 - [FAQ](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/faq.md)
@@ -65,7 +65,7 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [Use Cases Guide](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/guides/use-cases.md)
   - USE FOR: use cases, practical examples, scenario-based workflows, implementation patterns, real-world tasks
 - [Index](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/index.md)
-  - USE FOR: main docs index, kimi-cli overview, feature navigation, topic discovery, docs entrypoint
+  - USE FOR: kimi-cli main index, docs homepage, feature navigation, topic discovery, primary docs entry
 - [Keyboard Reference](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/reference/keyboard.md)
   - USE FOR: keyboard shortcuts, keybindings, navigation keys, terminal controls, productivity shortcuts
 - [Kimi ACP Reference](https://raw.githubusercontent.com/MoonshotAI/kimi-cli/refs/tags/1.44.0/docs/en/reference/kimi-acp.md)
@@ -130,7 +130,7 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 - [Sandbox](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/sandbox.md)
   - USE FOR: sandbox, execution isolation, command restrictions, security boundaries, safe execution
 - [Session Management](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/session-management.md)
-  - USE FOR: session management, session resume, history tracking, conversation persistence, session lifecycle
+  - USE FOR: session commands, session resume operations, history management, persistence controls, session operations
 - [Settings](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/settings.md)
   - USE FOR: settings, config options, preferences, settings files, global/project configuration
 - [Skills Best Practices](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/skills-best-practices.md)
