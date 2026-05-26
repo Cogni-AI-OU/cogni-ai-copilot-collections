@@ -69,7 +69,7 @@ license: MIT
 - `grok setup` - Fetch and install managed deployment configuration
 - `grok trace` - Export or upload session trace data
 - `grok update` - Check for updates or install a specific version
-- `grok worktree` - Manage git worktrees
+- `grok worktree` - Manage Git worktrees
 
 ## Best Practices
 
