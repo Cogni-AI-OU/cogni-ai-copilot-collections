@@ -7,15 +7,19 @@ description: >-
 
 # agent-desktop
 
-**USE FOR:** Host desktop automation through OS accessibility trees with structured JSON output and deterministic element refs.
-Use this skill when the task involves the host macOS desktop rather than repository files, shell output, or browser-only verification.
+**USE FOR:** Host desktop automation through OS accessibility trees with structured JSON output
+and deterministic element refs.
+Use this skill when the task involves the host macOS desktop rather than repository files,
+shell output, or browser-only verification.
 
-This project uses `agent-desktop` on the host. Prefer the built-in `Computer` sub-agent for these tasks instead of trying to drive the desktop with plain shell commands.
+This project uses `agent-desktop` on the host. Prefer the built-in `Computer` sub-agent for
+these tasks instead of trying to drive the desktop with plain shell commands.
 
 ## When to use it
 
 - The user wants to inspect or interact with a native macOS application.
-- The task needs app launch, window focus, accessibility snapshots, semantic element refs, clicks, typing, keypresses, or scrolling.
+- The task needs app launch, window focus, accessibility snapshots, semantic element refs,
+  clicks, typing, keypresses, or scrolling.
 - A browser-only workflow is not enough, or the target is not a web page.
 
 ## Requirements
@@ -26,7 +30,8 @@ This project uses `agent-desktop` on the host. Prefer the built-in `Computer` su
 
 ## Preferred flow
 
-1. Delegate to `task` with `agent: "computer"` unless the current agent already has the `computer_*` tools and the task is tiny.
+1. Delegate to `task` with `agent: "computer"` unless the current agent already has the
+   `computer_*` tools and the task is tiny.
 2. Use `computer_launch`, `computer_list_windows`, or `computer_focus_window` to get the target app/window ready.
 3. Start with `computer_snapshot`.
 4. Pick one ref-based action.
@@ -70,6 +75,7 @@ Stop and report clearly if:
 
 ## References
 
-- [agent-desktop's SKILL](https://raw.githubusercontent.com/superagent-ai/grok-cli/refs/heads/main/.agents/skills/agent-desktop/SKILL.md)  
+- [agent-desktop's SKILL](https://raw.githubusercontent.com/superagent-ai/grok-cli/refs/heads/main/.agents/skills/agent-desktop/SKILL.md)
   **USE FOR:** macOS automation, accessibility snapshots, element refs, semantic clicks, keypress simulation.
-  Trigger words: grok, computer_launch, computer_snapshot, computer_click, computer_type, computer_press, computer_scroll, computer_get, computer_screenshot
+  Trigger words: grok, computer_launch, computer_snapshot, computer_click, computer_type,
+  computer_press, computer_scroll, computer_get, computer_screenshot

@@ -1,6 +1,8 @@
 ---
 name: npx-skills
-description: 'Install, find, update, and manage agent skills using the npx skills CLI tool. You MUST load this skill when asked to use the npx skills command.'
+description: >-
+  Install, find, update, and manage agent skills using the npx skills CLI tool.
+  You MUST load this skill when using the npx skills command or when discovering installable skills.
 license: MIT
 ---
 
@@ -8,12 +10,17 @@ license: MIT
 
 <!-- markdownlint-disable MD013 MD023 MD031 MD032 -->
 
+The Skills CLI (`npx skills`) is the package manager for the open agent skills ecosystem. Skills are modular packages that extend agent capabilities with specialized knowledge, workflows, and tools.
+
 ## WHEN TO USE
 
 - **Skill Discovery & Search**: Searching the skills ecosystem via `npx skills find`.
-- **Skill Installation**: Installing open agent skills from repositories (e.g., `vercel-labs/agent-skills`) for various autonomous agents.
+- **Skill Installation**: Installing open agent skills from repositories (e.g., `vercel-labs/agent-skills`).
 - **Skill Updates**: Updating previously installed skills via `npx skills update`.
 - **Skill Scaffolding**: Initializing a new agent skill boilerplate via `npx skills init`.
+- Incoming request maps to a known capability domain (testing, design, deploy, etc.).
+- Task is a common pattern that likely has an existing skill package.
+- Capability extension is needed (e.g., adding PR review workflows, performance analysis).
 
 ## WHEN NOT TO USE
 
@@ -107,6 +114,12 @@ license: MIT
 
 ## Examples
 
+**Key commands:**
+
+- `npx skills find [query]` - Search for skills interactively or by keyword
+- `npx skills add <package>` - Install a skill from GitHub or other sources
+- `npx skills update` - Update all installed skills
+
 ```bash
 # List skills in a repository without installing
 npx skills add vercel-labs/agent-skills --list
@@ -160,6 +173,113 @@ INSTALL_INTERNAL_SKILLS=1 npx skills add vercel-labs/agent-skills --list
 - **Symlinking Strategy**: Interactive installations use symlinks by default (creating a canonical copy linked from agent directories). Use `--copy` to force copying.
 - **Scope Awareness**: Project scope is default. It commits skills within `.agents/skills/` (or agent-specific paths). Global scope (`-g`) applies across all projects.
 - **Non-Interactive Execution**: When executing via an autonomous agent, use the `-y` or `--yes` flag to bypass all confirmation prompts.
+
+## How to Find Skills
+
+### Step 1: Determine the Search Target
+
+Before searching, determine:
+
+1. **Target audience**: **user** (knowledge/guidance) or **agent** (execution workflows)
+2. **Domain**: React, testing, design, deployment, etc.
+3. **Specific task**: writing tests, creating animations, reviewing PRs, etc.
+4. **Likelihood**: whether this is a common enough task that a skill likely exists
+
+### Step 2: Check the Leaderboard First
+
+Before running a CLI search, check the [skills.sh leaderboard](https://skills.sh/) to see if a well-known skill already exists for the domain. The leaderboard ranks skills by total installs, surfacing the most popular and battle-tested options.
+
+For example (illustrative — actual leaderboard content changes over time):
+- `vercel-labs/agent-skills` — React, Next.js, web design (widely used across the ecosystem)
+- Official sources like `vercel-labs`, `microsoft`, or prominent community publishers
+
+### Step 3: Search for Skills
+
+If the leaderboard doesn't cover the need, run the find command:
+
+```bash
+npx skills find [query]
+```
+
+Search tips:
+- **Use specific keywords**: "react testing" is better than just "testing"
+- **Try alternative terms**: If "deploy" doesn't work, try "deployment" or "ci-cd"
+- **Check popular sources**: Many skills come from `vercel-labs/agent-skills` or `ComposioHQ/awesome-claude-skills`
+
+For example:
+
+- Input: "React app performance optimization" → Command: `npx skills find react performance`
+- Input: "PR review workflow" → Command: `npx skills find pr review`
+- Input: "changelog generation" → Command: `npx skills find changelog`
+
+### Step 4: Verify Quality Before Recommending
+
+**Do not recommend a skill based solely on search results.** Always verify:
+
+1. **Install count** — Prefer skills with 1K+ installs. Be cautious with anything under 100.
+2. **Source reputation** — Official sources (`vercel-labs`, `anthropics`, `microsoft`) are more trustworthy than unknown authors.
+3. **GitHub stars** — Check the source repository. A skill from a repo with <100 stars should be treated with skepticism.
+
+### Step 5: Present Candidate Skills
+
+Present each candidate skill with its metadata and install command:
+
+1. Skill name and description
+2. Install count and source (avoid hard-coded numbers — use relative terms like "high install count")
+3. Install command
+4. skills.sh reference link
+
+Output template (skill names are illustrative):
+
+```text
+Skill: <skill-name>
+Description: <description>
+Source: <owner>/<repo>
+Installs: <high/moderate/low>
+Install: npx skills add <owner>/<repo>@<skill-name>
+Learn more: https://skills.sh/<owner>/<repo>/<skill-name>
+```
+
+### Step 6: Install the Skill
+
+To install a selected skill:
+
+```bash
+npx skills add <owner/repo@skill> -g -y
+```
+
+`-g` installs globally (user-level); `-y` skips confirmation prompts.
+
+## Common Skill Categories
+
+When searching, consider these common categories:
+
+| Category        | Example Queries                          |
+| --------------- | ---------------------------------------- |
+| Web Development | react, nextjs, typescript, css, tailwind |
+| Testing         | testing, jest, playwright, e2e           |
+| DevOps          | deploy, docker, kubernetes, ci-cd        |
+| Documentation   | docs, readme, changelog, api-docs        |
+| Code Quality    | review, lint, refactor, best-practices   |
+| Design          | ui, ux, design-system, accessibility     |
+| Productivity    | workflow, automation, git                |
+
+## When No Skills Are Found
+
+If no relevant skills exist:
+
+1. Report that no match was found
+2. Proceed with direct task execution using available capabilities
+3. Suggest creating a new skill: `npx skills init <skill-name>`
+
+Output template:
+
+```text
+Query: <query>
+Result: no matching skills found
+Next step: execute task directly or create a skill with:
+  npx skills init <skill-name>
+```
 
 ## Limitations
 
