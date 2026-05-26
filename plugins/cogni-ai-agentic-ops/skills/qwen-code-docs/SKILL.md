@@ -51,7 +51,7 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/design/auto-compaction-threshold-redesign.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/auto-compaction-threshold-redesign.md)
   - USE FOR: Auto-Compaction Threshold Redesign; trigger words: design-spec, architecture, tradeoffs, implementation-notes, auto, compaction, threshold, redesign
 - [docs/design/auto-memory/memory-system.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/auto-memory/memory-system.md)
-  - USE FOR: Memory 记忆管理系统; trigger words: design-spec, architecture, tradeoffs, implementation-notes, auto, memory, context-retention, long-running-sessions, system
+  - USE FOR: Memory Management System; trigger words: design-spec, architecture, tradeoffs, implementation-notes, auto, memory, context-retention, long-running-sessions, system
 - [docs/design/channels/channels-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/channels/channels-design.md)
   - USE FOR: Channels Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, channels
 - [docs/design/compact-mode/compact-mode-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/compact-mode/compact-mode-design.md)
@@ -63,7 +63,7 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/design/customize-banner-area/customize-banner-area.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/customize-banner-area/customize-banner-area.md)
   - USE FOR: Customize Banner Area Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, customize, banner, area
 - [docs/design/customize-banner-area/customize-banner-area.zh-CN.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/customize-banner-area/customize-banner-area.zh-CN.md)
-  - USE FOR: Banner 自定义区域设计方案; trigger words: design-spec, architecture, tradeoffs, implementation-notes, customize, banner, area, zh, cn
+  - USE FOR: Customize Banner Area Design (Chinese); trigger words: design-spec, architecture, tradeoffs, implementation-notes, customize, banner, area, zh, cn
 - [docs/design/fork-subagent/fork-subagent-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/fork-subagent/fork-subagent-design.md)
   - USE FOR: Fork Subagent Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, fork, subagent
 - [docs/design/markdown-syntax-extension.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/markdown-syntax-extension.md)
@@ -81,17 +81,17 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/design/session-title/session-title-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/session-title/session-title-design.md)
   - USE FOR: Session Title Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, session, title
 - [docs/design/skill-nudge/skill-nudge.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/skill-nudge/skill-nudge.md)
-  - USE FOR: AutoSkill：自动技能提炼系统设计文档; trigger words: design-spec, architecture, tradeoffs, implementation-notes, skill, nudge
+  - USE FOR: AutoSkill Design Document; trigger words: design-spec, architecture, tradeoffs, implementation-notes, skill, nudge
 - [docs/design/slash-command/compare.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/slash-command/compare.md)
-  - USE FOR: Qwen Code Command 模块重构方案; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, compare
+  - USE FOR: Qwen Code Command Module Refactoring Plan; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, compare
 - [docs/design/slash-command/phase1-technical-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/slash-command/phase1-technical-design.md)
-  - USE FOR: Phase 1 技术设计文档：基础设施重建; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, phase1, technical
+  - USE FOR: Phase 1 Technical Design: Infrastructure Reconstruction; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, phase1, technical
 - [docs/design/slash-command/phase2-technical-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/slash-command/phase2-technical-design.md)
-  - USE FOR: Phase 2 技术设计文档：能力扩展; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, phase2, technical
+  - USE FOR: Phase 2 Technical Design: Capability Extension; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, phase2, technical
 - [docs/design/slash-command/phase3-technical-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/slash-command/phase3-technical-design.md)
-  - USE FOR: Phase 3 技术设计文档：体验对齐; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, phase3, technical
+  - USE FOR: Phase 3 Technical Design: Experience Alignment; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, phase3, technical
 - [docs/design/slash-command/roadmap.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/slash-command/roadmap.md)
-  - USE FOR: Slash Command 重构路线图; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, roadmap, future-work, planned-features
+  - USE FOR: Slash Command Refactoring Roadmap; trigger words: design-spec, architecture, tradeoffs, implementation-notes, slash, command, roadmap, future-work, planned-features
 - [docs/design/structured-output/structured-output.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/structured-output/structured-output.md)
   - USE FOR: Structured Output (`--json-schema`) — Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, structured, structured-output, json-schema, typed-response, output
 - [docs/design/telemetry-llm-request-timing-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/telemetry-llm-request-timing-design.md)
@@ -101,9 +101,9 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/design/tool-use-summary/tool-use-summary-design.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/tool-use-summary/tool-use-summary-design.md)
   - USE FOR: Tool-Use Summary Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, tool, use, summary
 - [docs/design/workflow-tracing-gaps.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/workflow-tracing-gaps.md)
-  - USE FOR: Workflow 级 Span 粒度不足分析 (P1); trigger words: design-spec, architecture, tradeoffs, implementation-notes, workflow, tracing, gaps
+  - USE FOR: Workflow-Level Span Granularity Analysis (P1); trigger words: design-spec, architecture, tradeoffs, implementation-notes, workflow, tracing, gaps
 - [docs/design/worktree.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/design/worktree.md)
-  - USE FOR: Worktree 通用能力设计; trigger words: design-spec, architecture, tradeoffs, implementation-notes, worktree, parallel-branches, isolated-workspace
+  - USE FOR: Worktree General Capability Design; trigger words: design-spec, architecture, tradeoffs, implementation-notes, worktree, parallel-branches, isolated-workspace
 
 ### Developers
 
@@ -171,11 +171,11 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/e2e-tests/2026-05-18-qwen-memory-benchmark-report.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/2026-05-18-qwen-memory-benchmark-report.md)
   - USE FOR: Qwen Code Runtime Memory Benchmark Report; trigger words: benchmark, e2e-tests, performance, diagnostics, memory, context-retention, long-running-sessions, latency, throughput, report
 - [docs/e2e-tests/2026-05-19-oom-reproduction-report.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/2026-05-19-oom-reproduction-report.md)
-  - USE FOR: OOM 压力测试与长任务 Replay 报告; trigger words: benchmark, e2e-tests, performance, diagnostics, oom, out-of-memory, memory-pressure, stress-testing, reproduction, report
+  - USE FOR: OOM Stress Test and Long Task Replay Report; trigger words: benchmark, e2e-tests, performance, diagnostics, oom, out-of-memory, memory-pressure, stress-testing, reproduction, report
 - [docs/e2e-tests/2026-05-19-qwen-runtime-diagnostics-benchmark-report.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/2026-05-19-qwen-runtime-diagnostics-benchmark-report.md)
   - USE FOR: Qwen Code Runtime Diagnostics Benchmark Report; trigger words: benchmark, e2e-tests, performance, diagnostics, runtime, latency, throughput, report
 - [docs/e2e-tests/2026-05-21-qwen-0.15.11-default-heap-oom-stress-report.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/2026-05-21-qwen-0.15.11-default-heap-oom-stress-report.md)
-  - USE FOR: Qwen Code 0.15.11 默认 Heap OOM 压测报告; trigger words: benchmark, e2e-tests, performance, diagnostics, default, heap, oom, out-of-memory, memory-pressure, stress-testing
+  - USE FOR: Qwen Code 0.15.11 Default Heap OOM Stress Test Report; trigger words: benchmark, e2e-tests, performance, diagnostics, default, heap, oom, out-of-memory, memory-pressure, stress-testing
 - [docs/e2e-tests/worktree-phase-c.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/worktree-phase-c.md)
   - USE FOR: Worktree Phase C E2E Test Plan; trigger words: benchmark, e2e-tests, performance, diagnostics, worktree, parallel-branches, isolated-workspace
 - [docs/e2e-tests/worktree.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/e2e-tests/worktree.md)
@@ -280,7 +280,7 @@ Use `webfetch` or equivalent to retrieve raw markdown files.
 - [docs/users/ide-integration/ide-integration.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/ide-integration/ide-integration.md)
   - USE FOR: IDE Integration; trigger words: user-guide, configuration, features, how-to, ide, integration
 - [docs/users/integration-github-action.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/integration-github-action.md)
-  - USE FOR: GitHub Actions：qwen-code-action; trigger words: user-guide, configuration, features, how-to, integration, action
+  - USE FOR: GitHub Actions: qwen-code-action; trigger words: user-guide, configuration, features, how-to, integration, action
 - [docs/users/integration-jetbrains.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/integration-jetbrains.md)
   - USE FOR: JetBrains IDEs; trigger words: user-guide, configuration, features, how-to, integration, jetbrains
 - [docs/users/integration-vscode.md](https://raw.githubusercontent.com/QwenLM/qwen-code/refs/tags/v0.16.1/docs/users/integration-vscode.md)
