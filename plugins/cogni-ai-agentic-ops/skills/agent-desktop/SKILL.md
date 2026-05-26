@@ -71,7 +71,4 @@ Stop and report clearly if:
 ## References
 
 - [agent-desktop's SKILL](https://raw.githubusercontent.com/superagent-ai/grok-cli/refs/heads/main/.agents/skills/agent-desktop/SKILL.md)  
-  **Tags:** `agent-desktop`, `grok-cli`, `desktop-automation`, `accessibility-tree`, `computer-sub-agent`  
-  **Topics:** macOS automation, accessibility snapshots, element refs, semantic clicks, keypress simulation  
-  **Headers:** Requirements, preferred flow, tool guidance, reliability rules, blockers  
-  **Trigger words:** grok, computer_launch, computer_snapshot, computer_click, computer_type, computer_press, computer_scroll, computer_get, computer_screenshot
+  **USE FOR:** macOS automation, accessibility snapshots, element refs, semantic clicks, keypress simulation. Trigger words: grok, computer_launch, computer_snapshot, computer_click, computer_type, computer_press, computer_scroll, computer_get, computer_screenshot
