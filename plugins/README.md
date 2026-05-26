@@ -20,6 +20,24 @@ claude plugin marketplace add Cogni-AI-OU/cogni-ai-agentic-collections
 
 ## Available Plugins
 
+### [cogni-ai-agentic-ops](cogni-ai-agentic-ops/)
+
+Autonomous operator for managing, maintaining, and refining agentic systems, skills, and agentic workflows.
+
+**Installation:**
+
+**GitHub Copilot:**
+
+```bash
+copilot plugin install Cogni-AI-OU/cogni-ai-agentic-collections:plugins/cogni-ai-agentic-ops
+```
+
+**Claude Code:**
+
+```bash
+claude plugin install cogni-ai-agentic-ops@cogni-ai-agentic-collections
+```
+
 ### [cogni-ai-architect](cogni-ai-architect/)
 
 Elite autonomous architect agent with software-architecture skill for structural perfection and neurosymbolic verification.

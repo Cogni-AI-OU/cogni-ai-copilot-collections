@@ -24,20 +24,22 @@
       args:
         creates: '{{ ansible_env.HOME }}/.local/bin/ansible'
       become: false
-    - name: Load ansible python requirements from file
-      ansible.builtin.set_fact:
-        ansible_python_requirements: >-
-          {{ lookup('file', playbook_dir + '/requirements-ansible.txt').splitlines()
-          | map('trim') | reject('equalto', '') | reject('match', '^#') | list }}
     - name: Inject ansible python requirements
       ansible.builtin.command:
-        argv: '{{ ["pipx", "inject", "ansible"] + ansible_python_requirements }}'
+        argv:
+          - pipx
+          - runpip
+          - ansible
+          - install
+          - -r
+          - '{{ playbook_dir }}/requirements-ansible.txt'
       become: false
-      register: pipx_inject
-      changed_when: "'is already injected' not in pipx_inject.stderr"
-      failed_when: pipx_inject.rc != 0 and 'is already injected' not in pipx_inject.stderr
+      register: pipx_runpip
+      changed_when: "'Successfully installed' in (pipx_runpip.stdout + pipx_runpip.stderr)"
+      failed_when: pipx_runpip.rc != 0
     - name: Install python requirements
       ansible.builtin.pip:
+        executable: /usr/local/bin/pip3
         requirements: '{{ playbook_dir }}/requirements.txt'
         extra_args: --user
         state: present

@@ -18,7 +18,7 @@ and why.
 
 ## Use Headers
 
-Use a document extraction system like [Doxygen](http://www.doxygen.org)
+Use a document extraction system like [Doxygen](https://github.com/doxygen)
 . Other sections in this document describe how to use ccdoc to document
 a class and method.
 
@@ -35,7 +35,7 @@ used to point out issues and potential problems. Consider a robot will
 parse your comments looking for keywords, stripping them out, and making
 a report so people can make a special effort where needed. For a
 complete list of Gotcha Keywords, please refer to
-[Doxygen](http://www.doxygen.org/) . Here are some useful ones:
+[Doxygen](https://github.com/doxygen) . Here are some useful ones:
 
 ### Gotcha Keywords
 

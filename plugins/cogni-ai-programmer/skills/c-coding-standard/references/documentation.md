@@ -18,7 +18,7 @@ and why. Archeologists will find this the most useful information.
 
 ## Use Headers
 
-Use a document extraction system like [Doxygen](http://www.doxygen.org).
+Use a document extraction system like [Doxygen](https://github.com/doxygen).
 
 These headers are structured in such a way as they can be parsed and
 extracted. They are not useless like normal headers. So take time to
@@ -28,7 +28,7 @@ necessary.
 ## Comment Layout
 
 Each part of the project has a specific comment layout.
-[Doxygen](http://www.doxygen.org) has the recommended format for the
+[Doxygen](https://github.com/doxygen) has the recommended format for the
 comment layouts.
 
 ## Make Gotchas Explicit

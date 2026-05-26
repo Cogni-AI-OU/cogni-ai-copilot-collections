@@ -19,8 +19,16 @@ configurations, skills, and agentic workflows.
 | `/cogni-ai-agentic-ops:agents-md-writer` | Guidelines for creating AGENTS.md |
 | `/cogni-ai-agentic-ops:agentskills` | Knowledge about the Agent Skills specification |
 | `/cogni-ai-agentic-ops:ai-prompt-writer` | Guidelines for writing secure AI prompts |
-
-And other related skills...
+| `/cogni-ai-agentic-ops:agent-log-analysis` | Procedures for analyzing agent session logs and telemetry |
+| `/cogni-ai-agentic-ops:claude-llms` | Guides for Anthropic Claude LLMs |
+| `/cogni-ai-agentic-ops:copilot-cli` | Configuration and usage guides for Copilot CLI |
+| `/cogni-ai-agentic-ops:copilot-docs` | Copilot agent customization docs |
+| `/cogni-ai-agentic-ops:mcp-cli` | Specifications for MCP CLI usage |
+| `/cogni-ai-agentic-ops:modelcontextprotocol-llms` | Reference for MCP documentation |
+| `/cogni-ai-agentic-ops:opencode` | Guidelines for the OpenCode ecosystem |
+| `/cogni-ai-agentic-ops:squad-cli` | Automation workflows for the Squad CLI |
+| `/cogni-ai-agentic-ops:waza-cli` | Workflows for the Waza tool |
+| `/cogni-ai-agentic-ops:waza-docs` | References for the Microsoft/Waza docs |
 
 ## Installation
 
@@ -55,7 +63,9 @@ claude plugin install cogni-ai-agentic-ops@cogni-ai-agentic-collections
 - **claude-llms** — Guides for Anthropic Claude LLMs.
 - **copilot-cli** — Configuration and usage guides for Copilot CLI.
 - **copilot-docs** — Copilot agent customization docs.
+- **gemini-cli-docs** — Documentation references for Google Gemini CLI.
 - **mcp-cli** — Specifications for MCP CLI usage.
+- **modelcontextprotocol-llms** — Reference and APIs for retrieving Model Context Protocol (MCP) documentation.
 - **opencode** — Guidelines for the OpenCode ecosystem.
 - **squad-cli** — Automation workflows for the Squad CLI.
 - **waza-cli** — Workflows for the Waza tool.
