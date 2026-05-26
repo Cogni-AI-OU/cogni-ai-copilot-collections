@@ -31,6 +31,7 @@ Slash commands are invoked via `/agent:skill` in the Copilot CLI or VS Code Chat
 | `/cogni-ai-agentic-ops:copilot-cli` | Load the copilot-cli skill -- Configuration and usage guides for Copilot CLI |
 | `/cogni-ai-agentic-ops:copilot-docs` | Load the copilot-docs skill -- Copilot agent customization docs |
 | `/cogni-ai-agentic-ops:gemini-cli-docs` | Load the gemini-cli-docs skill -- Documentation references for Google Gemini CLI |
+| `/cogni-ai-agentic-ops:kimi-cli-docs` | Load the kimi-cli-docs skill -- Documentation references for Kimi CLI |
 | `/cogni-ai-agentic-ops:mcp-cli` | Load the mcp-cli skill -- Specifications for MCP CLI usage |
 | `/cogni-ai-agentic-ops:opencode` | Load the opencode skill -- Guidelines for the OpenCode ecosystem |
 | `/cogni-ai-agentic-ops:squad-cli` | Load the squad-cli skill -- Automation workflows for the Squad CLI |

@@ -28,6 +28,8 @@ configurations, skills, and agentic workflows.
 | `/cogni-ai-agentic-ops:opencode` | Guidelines for the OpenCode ecosystem |
 | `/cogni-ai-agentic-ops:squad-cli` | Automation workflows for the Squad CLI |
 | `/cogni-ai-agentic-ops:waza-cli` | Workflows for the Waza tool |
+| `/cogni-ai-agentic-ops:gemini-cli-docs` | Documentation references for Google Gemini CLI |
+| `/cogni-ai-agentic-ops:kimi-cli-docs` | Documentation references for Kimi CLI |
 | `/cogni-ai-agentic-ops:waza-docs` | References for the Microsoft/Waza docs |
 
 ## Installation
@@ -64,6 +66,7 @@ claude plugin install cogni-ai-agentic-ops@cogni-ai-agentic-collections
 - **copilot-cli** — Configuration and usage guides for Copilot CLI.
 - **copilot-docs** — Copilot agent customization docs.
 - **gemini-cli-docs** — Documentation references for Google Gemini CLI.
+- **kimi-cli-docs** — Documentation references for Kimi CLI.
 - **mcp-cli** — Specifications for MCP CLI usage.
 - **modelcontextprotocol-llms** — Reference and APIs for retrieving Model Context Protocol (MCP) documentation.
 - **opencode** — Guidelines for the OpenCode ecosystem.
