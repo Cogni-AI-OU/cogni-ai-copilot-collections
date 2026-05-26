@@ -1,7 +1,7 @@
 ---
 name: grok-cli
 description: >
-  Manage and run the grok-cli coding agent.
+  Manage and run the grok-cli coding agent. You MUST load this skill when interacting with the grok-cli command.
   USE FOR: grok terminal, xAI CLI, headless grok, sub-agents, grok-dev, OpenTUI, web search, media generation, telegram remote control, sandbox mode, hooks configuration, MCP, sessions, worktree, setup, agent, verify, batch API, Shuru microVM.
   DO NOT USE FOR: general xAI API integration without the CLI, non-grok agents.
 license: MIT
