@@ -40,7 +40,7 @@
     - name: Install python requirements
       ansible.builtin.pip:
         requirements: '{{ playbook_dir }}/requirements.txt'
-        extra_args: --user
+        extra_args: --user --break-system-packages
         state: present
       become: false
     - name: Install pre-commit hooks
