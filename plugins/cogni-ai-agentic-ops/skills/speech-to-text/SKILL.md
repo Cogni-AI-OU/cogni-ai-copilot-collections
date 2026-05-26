@@ -1,7 +1,10 @@
 ---
 name: speech-to-text
 description: >-
-  Speech-to-text translation projects.
+  Open-source speech-to-text and voice typing tools for dictation, transcription, and voice input across desktop, mobile, and terminal.
+  USE FOR: evaluating local/hybrid ASR tools, comparing platform-specific voice typing options, selecting dictation tools with direct editor integration.
+  DO NOT USE FOR: meeting bots, call transcription services, closed-source dictation products, general speech APIs without a typing interface, non-open-source mobile assistants.
+  You MUST load this skill when evaluating or comparing open-source speech-to-text and voice typing tools.
 license: MIT
 ---
 
@@ -39,18 +42,29 @@ This list does not try to cover:
 - General transcription tools that do not support typing or dictation workflows
 - Meeting bots, note takers, or speech APIs without a usable typing interface
 
-<details>
-<summary>Browse by platform</summary>
+## Core Process
 
-- Linux: Buzz, Elograf, Epicenter Whispering, Handy, HNS, hyprwhspr, nerd-dictation, OpenWhispr, Speak to AI, Vibe, Vocalinux, Voquill, VOXD, VoxType, whisper_dictation, whisper-writer
-- macOS: Amical, Buzz, Epicenter Whispering, FluidVoice, FnKey, Ghost Pepper, Handy, HNS, OpenSuperWhisper, OpenWhispr, Pindrop, Tambourine Voice, TypeWhisper, Vibe, VoiceInk, VoiceTypr, Voquill, whisper-writer
-- Windows: Amical, Buzz, Chirp, Epicenter Whispering, Handy, HNS, OmniDictate, OpenWhispr, Tambourine Voice, Vibe, VoiceTypr, Voquill, whisper-writer
-- Android: Offline Voice Input, Transcribro, Whisper IME
-- iOS: WhisperBoard
+1. **Identify Target Platform**: Determine the OS (Linux, macOS, Windows, Android, iOS).
+2. **Select Mode**: Choose `Local` for fully offline recognition or `Hybrid` for cloud-assisted ASR.
+3. **Filter by Engine**: Match against available ASR engines (Whisper, Whisper.cpp, Faster Whisper, Parakeet, Vosk).
+4. **Evaluate Tool**: Scan the directory below for matching entries, then visit the repository for setup instructions.
 
-</details>
+## Quick Start Example
 
-Most tools on this list support offline speech recognition. See `Mode` and `Engine` in the directory below for the details.
+```bash
+# Transcribe an audio file using whisper.cpp
+git clone https://github.com/ggml-org/whisper.cpp
+cd whisper.cpp && make -j
+./main -m models/ggml-base.en.bin -f sample.wav
+
+# Start nerd-dictation on Linux (offline Vosk-based dictation)
+nerd-dictation begin --vosk-model en-us-small
+# Speak into your microphone...
+nerd-dictation end
+# Transcribed text appears in the active window.
+```
+
+Most tools on this list support offline speech recognition. See `Mode` and `Engine` in the directory below for details.
 
 ## Directory
 
@@ -59,72 +73,26 @@ Most tools on this list support offline speech recognition. See `Mode` and `Engi
 | Name | Platforms | Mode | Engine | Summary |
 | --- | --- | --- | --- | --- |
 | [Amical](https://github.com/amicalhq/amical) | macOS, Windows | Local | Whisper | Context-aware dictation that adapts formatting to the app you are using. |
-| [Buzz](https://github.com/chidiwilliams/buzz) | Linux, macOS, Windows | Local | Whisper, Whisper.cpp, Faster Whisper | Desktop app for microphone or file transcription; text stays in its own UI rather than typing into other apps. |
-| [Chirp](https://github.com/Whamp/chirp) | Windows | Local | Parakeet TDT | Dictates into Windows apps, runs on CPU only, and is aimed at locked-down corporate environments. |
-| [Elograf](https://github.com/papoteur-mga/elograf) | Linux | Local | Vosk (via nerd-dictation) | GUI tray frontend for nerd-dictation with model switching and timeout controls. |
-| [Epicenter Whispering](https://github.com/EpicenterHQ/epicenter/tree/main/apps/whispering) | Linux, macOS, Windows, Web | Hybrid | Whisper | Local-first dictation with a global shortcut and multiple Whisper providers; also available as a Chrome extension and web app. |
-| [FluidVoice](https://github.com/altic-dev/FluidVoice) | macOS | Hybrid | Parakeet, Apple Speech, Whisper | macOS dictation app that can type into any app and switch between local speech engines. |
-| [FnKey](https://github.com/evoleinik/fnkey) | macOS | Hybrid | Deepgram Nova-3, Groq Whisper | Rust menu bar app that activates the microphone only while holding Fn, with real-time streaming and batch cloud backends. |
-| [Ghost Pepper](https://github.com/matthartman/ghost-pepper) | macOS | Local | WhisperKit | Hold-to-talk menu bar dictation with local LLM cleanup of filler words; runs entirely on Apple Silicon. |
-| [Handy](https://github.com/cjpais/Handy) | Linux, macOS, Windows | Local | Whisper.cpp, Parakeet TDT | Shortcut-driven offline dictation built with Tauri and supporting several ASR model families. |
-| [HNS](https://github.com/primaprashant/hns) | Linux, macOS, Windows | Local | Faster Whisper | CLI tool that records from your mic, transcribes locally, and copies the result to the clipboard. |
-| [hyprwhspr](https://github.com/goodroot/hyprwhspr) | Linux | Hybrid | Whisper.cpp, Parakeet, BYOK cloud | Push-to-talk Linux dictation with a visualizer plus Waybar and systemd integration. |
-| [nerd-dictation](https://github.com/ideasman42/nerd-dictation) | Linux | Local | Vosk | Hackable offline dictation that types into any window via simulated keystrokes. |
-| [Offline Voice Input (Android)](https://github.com/notune/android_transcribe_app) | Android | Local | Parakeet TDT | Offline Android voice input keyboard with live subtitles and a privacy-first focus. |
+| [Epicenter Whispering](https://github.com/EpicenterHQ/epicenter/tree/main/apps/whispering) | Linux, macOS, Windows, Web | Hybrid | Whisper | Local-first dictation with global shortcut and multiple Whisper providers. |
+| [FluidVoice](https://github.com/altic-dev/FluidVoice) | macOS | Hybrid | Parakeet, Apple Speech, Whisper | macOS dictation that types into any app and switches between local speech engines. |
+| [FnKey](https://github.com/evoleinik/fnkey) | macOS | Hybrid | Deepgram Nova-3, Groq Whisper | Rust menu bar app; activates mic only while holding Fn, real-time streaming. |
+| [hyprwhspr](https://github.com/goodroot/hyprwhspr) | Linux | Hybrid | Whisper.cpp, Parakeet | Push-to-talk Linux dictation with visualizer, Waybar, and systemd integration. |
+| [nerd-dictation](https://github.com/ideasman42/nerd-dictation) | Linux | Local | Vosk | Offline dictation that types into any window via simulated keystrokes. |
 | [OmniDictate](https://github.com/gurjar1/OmniDictate) | Windows | Local | Whisper | Desktop dictation tool aimed at type-anywhere workflows. |
-| [OpenSuperWhisper](https://github.com/Starmel/OpenSuperWhisper) | macOS | Local | Whisper, Parakeet | Native Swift menu bar dictation app optimized for Apple Silicon and global shortcuts. |
-| [OpenWhispr](https://github.com/OpenWhispr/openwhispr) | Linux, macOS, Windows | Hybrid | Whisper.cpp, Parakeet, BYOK cloud | Cross-platform dictation with local models, optional cloud providers, and a custom dictionary. |
-| [Pindrop](https://github.com/watzon/pindrop) | macOS | Local | WhisperKit | Offline menu bar dictation app with optional AI-based transcript cleanup. |
-| [Speak to AI](https://github.com/AshBuk/speak-to-ai) | Linux | Local | Whisper.cpp | Minimal Linux dictation tool that inserts text into the active window and can also run from the CLI. |
-| [Tambourine Voice](https://github.com/kstonekuan/tambourine-voice) | macOS, Windows | Hybrid | Faster Whisper, BYOK cloud | Voice interface for any app with configurable STT and LLM providers. |
-| [Transcribro](https://github.com/soupslurpr/Transcribro) | Android | Local | Whisper.cpp | Private and on-device speech recognition keyboard and service for Android. |
-| [TypeWhisper](https://github.com/TypeWhisper/typewhisper-mac) | macOS | Hybrid | Whisper (local and/or cloud) | Voice typing app with both local and cloud engine options. |
-| [Vibe](https://github.com/thewh1teagle/vibe) | Linux, macOS, Windows | Local | Whisper.cpp | Desktop app to transcribe audio and video offline using OpenAI Whisper. |
-| [Vocalinux](https://github.com/jatinkrmalik/vocalinux) | Linux | Local | Whisper.cpp, Whisper, Vosk | Linux dictation with distro-specific setup guides and Vulkan acceleration notes. |
-| [VoiceInk](https://github.com/Beingpax/VoiceInk) | macOS | Hybrid | WhisperKit, BYOK | Native macOS dictation with per-app tuning, a custom dictionary, and optional commercial distribution. |
-| [VoiceTypr](https://github.com/moinulmoin/voicetypr) | macOS, Windows | Local | Whisper-based | Voice-to-text dictation built with Tauri; the repository is open source, but binaries require a one-time license purchase. |
-| [Voquill](https://github.com/josiahsrc/voquill) | Linux, macOS, Windows | Hybrid | Whisper.cpp, BYOK cloud | Cross-platform voice typing with a personal glossary and AI-assisted cleanup. |
-| [VOXD](https://github.com/jakovius/voxd) | Linux | Local | Whisper.cpp | Linux dictation with GUI, tray, and CLI modes plus optional LLM post-processing. |
-| [VoxType](https://github.com/peteonrails/voxtype) | Linux | Hybrid | Whisper.cpp, Parakeet, Moonshine, SenseVoice | Push-to-talk Linux dictation with seven engine choices, CJK support, and Wayland-optimized text insertion. |
-| [WhisperBoard](https://github.com/Saik0s/Whisperboard) | iOS | Local | Whisper.cpp | iOS app for recording speech and producing text with downloadable Whisper models. |
-| [Whisper IME](https://github.com/woheller69/whisperIME) | Android | Local | Whisper.cpp | Android keyboard and standalone app powered by Whisper, fully offline, and available on F-Droid. |
-| [whisper-writer](https://github.com/savbell/whisper-writer) | Linux, macOS, Windows | Hybrid | Faster Whisper, OpenAI API | Hotkey-driven dictation that auto-types into the active window with several recording modes. |
-| [whisper_dictation](https://github.com/themanyone/whisper_dictation) | Linux | Local | Whisper.cpp | Feature-rich Linux voice keyboard with dictation, voice commands, and webcam integration. |
+| [Tambourine Voice](https://github.com/kstonekuan/tambourine-voice) | macOS, Windows | Hybrid | Faster Whisper | Voice interface for any app with configurable STT and LLM providers. |
+| [Vibe](https://github.com/thewh1teagle/vibe) | Linux, macOS, Windows | Local | Whisper.cpp | Desktop app to transcribe audio and video offline. |
+| [VoiceInk](https://github.com/Beingpax/VoiceInk) | macOS | Hybrid | WhisperKit | Native macOS dictation with per-app tuning and custom dictionary. |
+| [VoiceTypr](https://github.com/moinulmoin/voicetypr) | macOS, Windows | Local | Whisper | Voice-to-text dictation built with Tauri (binaries require a license). |
+| [VOXD](https://github.com/jakovius/voxd) | Linux | Local | Whisper.cpp | Linux dictation with GUI, tray, CLI modes, and optional LLM post-processing. |
+| [VoxType](https://github.com/peteonrails/voxtype) | Linux | Hybrid | Whisper.cpp, Parakeet, Moonshine, SenseVoice | Linux dictation with seven engine choices, CJK support, and Wayland insertion. |
+| [WhisperBoard](https://github.com/Saik0s/Whisperboard) | iOS | Local | Whisper.cpp | iOS app for recording speech with downloadable Whisper models. |
 
 ## Related Projects
 
 Speech recognition engines, models, and APIs that power the tools listed above.
 
-- [Whisper](https://huggingface.co/collections/openai/whisper-release-6501bba2cf999715571c6b98) - OpenAI's ASR model weights; tiny through large, English-only and multilingual.
-- [whisper.cpp](https://github.com/ggml-org/whisper.cpp) - Pure C/C++ Whisper inference with zero dependencies; runs on Apple Silicon, CUDA, Vulkan, and WASM.
+- [whisper.cpp](https://github.com/ggml-org/whisper.cpp) - Pure C/C++ Whisper inference; runs on Apple Silicon, CUDA, Vulkan, and WASM.
 - [Faster Whisper](https://github.com/SYSTRAN/faster-whisper) - CTranslate2-based Whisper reimplementation; up to 4x faster with lower memory.
-- [WhisperKit](https://github.com/argmaxinc/WhisperKit) - Swift package for on-device Whisper on Apple Silicon with streaming support.
-- [Parakeet](https://huggingface.co/collections/nvidia/parakeet-702d39a47302ef820e49839d) - NVIDIA's high-accuracy English ASR models in CTC, RNN-T, and TDT architectures.
-- [Vosk](https://github.com/alphacep/vosk-api) - Lightweight offline ASR with compact models, 20+ languages, and multi-language bindings.
 - [Apple Speech](https://developer.apple.com/documentation/speech) - Apple's on-device speech recognition framework for iOS, macOS, and watchOS.
-- [Awesome Whisper](https://github.com/sindresorhus/awesome-whisper) - Curated list of Whisper tools and resources.
 
 ## References
-
-- [SimulStreaming](https://github.com/ufal/SimulStreaming)
-  USE FOR:
-    - SimulStreaming
-    - Simultaneous Translation
-    - Offline Speech
-    - LLM Models
-    - IWSLT 2025
-    - Whisper speech-to-text
-    - EuroLLM text-to-text translation
-    - streaming ASR
-- [whisper_streaming](https://github.com/ufal/whisper_streaming)
-  USE FOR:
-    - Whisper realtime streaming
-    - long speech-to-text transcription
-    - LocalAgreement policy
-    - Whisper-Streaming
-    - faster-whisper
-    - whisper_timestamped
-    - mlx-whisper
-    - Voice Activity Controller (VAC)
-- [Awesome Voice Typing](https://github.com/primaprashant/awesome-voice-typing)
-  USE FOR: Curated list of open-source speech-to-text and voice typing tools for Linux, macOS, Windows, Android, and iOS. Offline, local, and cloud.
