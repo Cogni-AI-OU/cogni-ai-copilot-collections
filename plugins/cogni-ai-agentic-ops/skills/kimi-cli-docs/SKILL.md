@@ -91,63 +91,63 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 
 ### CLI Section
 
-- [ACP Mode](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/acp-mode.md)
+- [ACP Mode](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/acp-mode.md)
   - USE FOR: ACP mode, protocol mode, acp workflow, agent protocol integration, acp configuration
-- [Auto Memory](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/auto-memory.md)
+- [Auto Memory](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/auto-memory.md)
   - USE FOR: auto memory, persistent memory, memory automation, context retention, memory updates
-- [Checkpointing](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/checkpointing.md)
+- [Checkpointing](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/checkpointing.md)
   - USE FOR: checkpointing, snapshots, rollback, state restore, recovery workflow
-- [CLI Reference](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/cli-reference.md)
+- [CLI Reference](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/cli-reference.md)
   - USE FOR: CLI reference, command syntax, flags, options, terminal commands
-- [Creating Skills](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/creating-skills.md)
+- [Creating Skills](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/creating-skills.md)
   - USE FOR: authoring new skills, SKILL.md structure, skill scaffolding workflow, custom skill implementation, skill development setup
-- [Custom Commands](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/custom-commands.md)
+- [Custom Commands](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/custom-commands.md)
   - USE FOR: custom commands, command aliases, slash command extension, workflow commands, command customization
-- [Enterprise](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/enterprise.md)
+- [Enterprise](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/enterprise.md)
   - USE FOR: enterprise controls, org policy, governance settings, compliance, enterprise deployment
-- [Gemini Ignore](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/gemini-ignore.md)
+- [Gemini Ignore](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/gemini-ignore.md)
   - USE FOR: ignore patterns, file exclusion, context filtering, privacy filters, .geminiignore behavior
-- [Gemini MD](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/gemini-md.md)
+- [Gemini MD](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/gemini-md.md)
   - USE FOR: GEMINI.md, project instructions, persistent memory file, policy context, instruction hierarchy
-- [Generation Settings](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/generation-settings.md)
+- [Generation Settings](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/generation-settings.md)
   - USE FOR: generation settings, temperature, top-p, model parameters, response tuning
-- [Git Worktrees](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/git-worktrees.md)
+- [Git Worktrees](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/git-worktrees.md)
   - USE FOR: git worktrees, parallel branches, multi-worktree workflow, branch isolation, repository layout
-- [Headless](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/headless.md)
+- [Headless](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/headless.md)
   - USE FOR: headless mode, non-interactive execution, scripting automation, CI runs, prompt mode
-- [Model Routing](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/model-routing.md)
+- [Model Routing](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/model-routing.md)
   - USE FOR: model routing, fallback strategy, model selection, routing rules, provider preference
-- [Model Steering](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/model-steering.md)
+- [Model Steering](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/model-steering.md)
   - USE FOR: model steering, behavior control, instruction steering, response style tuning, constraints
-- [Model](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/model.md)
+- [Model](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/model.md)
   - USE FOR: model selection, model options, model capabilities, selecting default model, model config
-- [Notifications](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/notifications.md)
+- [Notifications](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/notifications.md)
   - USE FOR: notifications, desktop alerts, completion alerts, user prompts, notification settings
-- [Plan Mode](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/plan-mode.md)
+- [Plan Mode](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/plan-mode.md)
   - USE FOR: plan mode, planning workflow, read-only planning, task decomposition, implementation planning
-- [Rewind](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/rewind.md)
+- [Rewind](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/rewind.md)
   - USE FOR: rewind, history rollback, undo actions, timeline navigation, state recovery
-- [Sandbox](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/sandbox.md)
+- [Sandbox](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/sandbox.md)
   - USE FOR: sandbox, execution isolation, command restrictions, security boundaries, safe execution
-- [Session Management](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/session-management.md)
+- [Session Management](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/session-management.md)
   - USE FOR: session CLI commands, session command reference, resume command usage, history operations, persistence controls
-- [Settings](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/settings.md)
+- [Settings](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/settings.md)
   - USE FOR: settings, config options, preferences, settings files, global/project configuration
-- [Skills Best Practices](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/skills-best-practices.md)
+- [Skills Best Practices](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/skills-best-practices.md)
   - USE FOR: skills best practices, skill quality, maintainable skills, documentation standards, skill governance
-- [Skills](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/skills.md)
+- [Skills](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/skills.md)
   - USE FOR: skill system architecture, discovery and activation flow, skills architecture concepts, capability composition, skills conceptual model
-- [System Prompt](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/system-prompt.md)
+- [System Prompt](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/system-prompt.md)
   - USE FOR: system prompt, prompt overrides, base instructions, behavior policy, instruction customization
-- [Telemetry](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/telemetry.md)
+- [Telemetry](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/telemetry.md)
   - USE FOR: telemetry, usage metrics, analytics, observability, privacy controls
-- [Themes](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/themes.md)
+- [Themes](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/themes.md)
   - USE FOR: themes, terminal UI styling, color schemes, customization, display preferences
-- [Token Caching](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/token-caching.md)
+- [Token Caching](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/token-caching.md)
   - USE FOR: token caching, cost optimization, reuse tokens, caching strategy, performance tuning
-- [Trusted Folders](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/trusted-folders.md)
+- [Trusted Folders](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/trusted-folders.md)
   - USE FOR: trusted folders, workspace trust, security prompts, safe directories, trust configuration
-- [Using Agent Skills](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/cli/using-agent-skills.md)
+- [Using Agent Skills](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/cli/using-agent-skills.md)
   - USE FOR: using existing skills, runtime skill invocation, task-to-skill matching, context injection in execution, operational skill orchestration
 
 #### Tutorials
@@ -175,15 +175,15 @@ To fully utilize this skill, you MUST read at least one of the links relevant to
 
 ### Core Section
 
-- [Gemma Setup](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/core/gemma-setup.md)
+- [Gemma Setup](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/core/gemma-setup.md)
   - USE FOR: Gemma setup, local models, Gemma installation, local inference, model runtime setup
-- [Index](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/core/index.md)
+- [Index](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/core/index.md)
   - USE FOR: core docs index, core concepts overview, architecture navigation, foundational topics, core entrypoint
-- [Local Model Routing](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/core/local-model-routing.md)
+- [Local Model Routing](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/core/local-model-routing.md)
   - USE FOR: local model routing, on-device routing, provider selection, local fallback, routing configuration
-- [Remote Agents](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/core/remote-agents.md)
+- [Remote Agents](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/core/remote-agents.md)
   - USE FOR: remote agents, distributed agents, A2A connectivity, remote execution, networked agent workflows
-- [Subagents](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/heads/main/docs/core/subagents.md)
+- [Subagents](https://raw.githubusercontent.com/google-gemini/gemini-cli/refs/tags/v0.43.0/docs/core/subagents.md)
   - USE FOR: subagents, delegation strategy, specialized agents, parallel tasks, agent orchestration
 
 ### Repository
