@@ -8,6 +8,10 @@
     }
   },
 
+  "containerEnv": {
+    "EGET_CONFIG": "${containerWorkspaceFolder}/.devcontainer/.eget.toml"
+  },
+
   // Configure tool-specific properties.
   // Note: Keep the list in alphabetical order.
   "customizations": {
