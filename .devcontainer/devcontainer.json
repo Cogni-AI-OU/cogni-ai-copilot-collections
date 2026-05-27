@@ -82,7 +82,7 @@
 
   // @see: <https://github.com/zyedidia/eget>
   "postCreateCommand": {
-    "bat": "eget sharkdp/bat --asset=musl",
+    "bat": "eget sharkdp/bat --asset=x86_64-unknown-linux-musl.tar.gz",
     "btop": "eget aristocratos/btop --asset=btop-x86_64-unknown-linux-musl.tar.gz",
     "duf": "eget muesli/duf --asset=linux_amd64.deb",
     "exa": "eget ogham/exa --asset=linux-x86_64-musl-v",
