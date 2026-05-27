@@ -84,7 +84,7 @@
   "postCreateCommand": {
     "bat": "eget sharkdp/bat --asset=musl",
     "btop": "eget aristocratos/btop --asset=x86_64-linux-musl.tbz",
-    "duf": "eget muesli/duf --asset=linux_amd64",
+    "duf": "eget muesli/duf --asset=linux_amd64.deb",
     "exa": "eget ogham/exa --asset=linux-x86_64-musl-v",
     "fd": "eget sharkdp/fd --asset=x86_64-unknown-linux-musl",
     "jq": "eget -t jq-1.7.1 -a linux64 jqlang/jq",
