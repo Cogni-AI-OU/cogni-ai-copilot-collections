@@ -64,32 +64,39 @@ Create, update, and maintain robust `devcontainer.json` configurations and assoc
   "customizations": {
     "vscode": {
       "extensions": [
-        "bierner.markdown-mermaid",
         "DavidAnson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
         "GitHub.copilot",
         "GitHub.copilot-chat",
         "GitHub.vscode-github-actions",
+        "bierner.markdown-mermaid",
+        "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
+        "github.vscode-pull-request-github",
+        "golang.go",
+        "mads-hartmann.bash-ide-vscode",
         "ms-vscode.vscode-chat-customizations-evaluations",
         "vscodevim.vim",
         "vsls-contrib.codetour",
         "xaver.clang-format"
       ],
       "settings": {
-        "editor.formatOnSave": true,
-        "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
-    "ghcr.io/devcontainers-contrib/features/actionlint:1": {},
-    "ghcr.io/devcontainers-contrib/features/node-asdf:0": {},
+    "ghcr.io/devcontainers-extra/features/actionlint:1": {},
+    "ghcr.io/devcontainers-extra/features/eget:1": { "version": "1.3.4" },
+    "ghcr.io/devcontainers-extra/features/node-asdf:0": {},
     "ghcr.io/devcontainers-extra/features/pipx-package:1": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:3": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/guiyomh/features/vim:0": {},
     "ghcr.io/jungaretti/features/make:1": {},
     "ghcr.io/jungaretti/features/ripgrep:1": {},
+    "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {},
     "ghcr.io/sliekens/devcontainer-features/opencode:1": {}
   },
 
@@ -108,10 +115,22 @@ Create, update, and maintain robust `devcontainer.json` configurations and assoc
 
   "postCreateCommand": "pip install -r requirements.txt || npm install || true",
 
+  // @docs: <https://code.visualstudio.com/remote/advancedcontainers/environment-variables>
+  "remoteEnv": {
+    "GH_TOKEN": "${localEnv:GH_TOKEN}",
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
+  },
+
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode",
+
   // Note: Python dependencies can be added in the `requirements.txt` file.
-  "onCreateCommand": "sudo apt-get update && if [ -f .devcontainer/apt-packages.txt ]; then xargs -a .devcontainer/apt-packages.txt sudo apt-get install -y; fi"
+  "onCreateCommand": "sudo apt-get update && if [ -f .devcontainer/apt-packages.txt ]; then xargs -a .devcontainer/apt-packages.txt sudo apt-get install -y; fi",
+
+  "postCreateCommand": {
+    "jq": "eget -t 1.7.1 -a linux64 --to=/go/bin/ jqlang/jq",
+    "yq": "eget -t v4.45.1 -a ^.tar.gz --to=/go/bin/ mikefarah/yq"
+  }
 }
 ```
 
