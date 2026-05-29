@@ -39,8 +39,8 @@ jobs:
         if: steps.cache-sv.outputs.cache-hit != 'true'
         run: |
           mkdir -p .skill-validator
-          SV_URL_BASE="https://github.com/dotnet/skills/releases/download/skill-validator-nightly"
-          curl -fsSL "$SV_URL_BASE/skill-validator-linux-x64.tar.gz" \
+          SV_URL="https://github.com/dotnet/skills/releases/download/skill-validator-nightly/skill-validator-linux-x64.tar.gz"
+          curl -fsSL "$SV_URL" \
             -o .skill-validator/skill-validator-linux-x64.tar.gz
           tar -xzf .skill-validator/skill-validator-linux-x64.tar.gz -C .skill-validator
           rm .skill-validator/skill-validator-linux-x64.tar.gz
