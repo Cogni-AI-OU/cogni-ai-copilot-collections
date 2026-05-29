@@ -59,37 +59,48 @@ Create, update, and maintain robust `devcontainer.json` configurations and assoc
   //   // "args": { "VARIANT": "ubuntu-22.04" }
   // },
 
+  "containerEnv": {
+    "DEBIAN_FRONTEND": "noninteractive",
+    "EGET_CONFIG": "${containerWorkspaceFolder}/.devcontainer/.eget.toml"
+  },
+
   // Configure tool-specific properties.
   // Note: Keep the list in alphabetical order.
   "customizations": {
     "vscode": {
       "extensions": [
-        "bierner.markdown-mermaid",
         "DavidAnson.vscode-markdownlint",
+        "EditorConfig.EditorConfig",
         "GitHub.copilot",
         "GitHub.copilot-chat",
         "GitHub.vscode-github-actions",
+        "bierner.markdown-mermaid",
+        "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
+        "github.vscode-pull-request-github",
+        "golang.go",
+        "mads-hartmann.bash-ide-vscode",
         "ms-vscode.vscode-chat-customizations-evaluations",
         "vscodevim.vim",
         "vsls-contrib.codetour",
         "xaver.clang-format"
       ],
       "settings": {
-        "editor.formatOnSave": true,
-        "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
-    "ghcr.io/devcontainers-contrib/features/actionlint:1": {},
-    "ghcr.io/devcontainers-contrib/features/node-asdf:0": {},
+    "ghcr.io/devcontainers-extra/features/actionlint:1": {},
+    "ghcr.io/devcontainers-extra/features/eget:1": { "version": "1.3.4" },
+    "ghcr.io/devcontainers-extra/features/node-asdf:0": {},
     "ghcr.io/devcontainers-extra/features/pipx-package:1": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:3": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/python:1": {},
     "ghcr.io/guiyomh/features/vim:0": {},
     "ghcr.io/jungaretti/features/make:1": {},
-    "ghcr.io/jungaretti/features/ripgrep:1": {},
+    "ghcr.io/prulloac/devcontainer-features/pre-commit:1": {},
     "ghcr.io/sliekens/devcontainer-features/opencode:1": {}
   },
 
@@ -101,17 +112,37 @@ Create, update, and maintain robust `devcontainer.json` configurations and assoc
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "uname -a",
+  // "postCreateCommand": "pip install -r requirements.txt || npm install || true",
 
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
 
-  "postCreateCommand": "pip install -r requirements.txt || npm install || true",
+  // @docs: <https://code.visualstudio.com/remote/advancedcontainers/environment-variables>
+  "remoteEnv": {
+    "GH_TOKEN": "${localEnv:GH_TOKEN}",
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
+  },
 
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode",
+
   // Note: Python dependencies can be added in the `requirements.txt` file.
-  "onCreateCommand": "sudo apt-get update && if [ -f .devcontainer/apt-packages.txt ]; then xargs -a .devcontainer/apt-packages.txt sudo apt-get install -y; fi"
+  "onCreateCommand": "sudo apt-get update && if [ -f .devcontainer/apt-packages.txt ]; then xargs -a .devcontainer/apt-packages.txt sudo apt-get install -y; fi",
+
+  // @see: <https://github.com/zyedidia/eget>
+  "postCreateCommand": {
+    "bat": "eget -a x86_64-unknown-linux-gnu -a tar.gz sharkdp/bat",
+    "btop": "eget -a btop-x86_64-unknown-linux-musl.tar.gz aristocratos/btop",
+    "duf": "eget -a linux_x86_64.tar.gz muesli/duf",
+    "exa": "eget -a linux-x86_64 -a ^musl ogham/exa",
+    "fd": "eget -a x86_64-unknown-linux-gnu -a tar.gz sharkdp/fd",
+    "jq": "eget -a linux64 jqlang/jq",
+    "pandoc": "eget -a linux-amd64.tar.gz jgm/pandoc",
+    "rg": "eget -a x86_64-unknown-linux-musl.tar.gz BurntSushi/ripgrep",
+    "tealdeer": "eget -a tealdeer-linux-x86_64-musl -a ^sha256 dbrgn/tealdeer",
+    "vale": "eget -a Linux_64-bit.tar.gz errata-ai/vale",
+    "yq": "eget -a ^.tar.gz mikefarah/yq"
+  }
 }
 ```
 

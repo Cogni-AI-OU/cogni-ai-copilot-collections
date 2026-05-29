@@ -43,6 +43,71 @@
         extra_args: --break-system-packages --user
         state: present
       become: false
+    - name: Check installed Copilot CLI version
+      ansible.builtin.command:
+        argv:
+          - npm
+          - list
+          - -g
+          - '@github/copilot'
+          - --depth=0
+          - --json
+      become: false
+      register: copilot_cli_installed
+      changed_when: false
+      failed_when: copilot_cli_installed.rc not in [0, 1]
+    - name: Check latest Copilot CLI version
+      ansible.builtin.command:
+        argv:
+          - npm
+          - view
+          - '@github/copilot'
+          - version
+      become: false
+      register: copilot_cli_latest
+      changed_when: false
+    - name: Install Copilot CLI
+      ansible.builtin.command:
+        argv:
+          - npm
+          - install
+          - -g
+          - '@github/copilot'
+      become: false
+      register: copilot_cli_install
+      changed_when: copilot_cli_install.rc == 0
+      when: >-
+        copilot_cli_installed.rc != 0 or
+        (((copilot_cli_installed.stdout | from_json).dependencies['@github/copilot'].version | default(''))
+        != (copilot_cli_latest.stdout | trim))
+    - name: Add Cogni AI plugin marketplace
+      ansible.builtin.command:
+        cmd: gh copilot plugin marketplace add Cogni-AI-OU/cogni-ai-agentic-collections
+      become: false
+      register: marketplace_add
+      changed_when: "'already exists' not in (marketplace_add.stdout + marketplace_add.stderr) | lower"
+      failed_when: marketplace_add.rc != 0
+    - name: Install Cogni AI agentic plugins
+      ansible.builtin.shell:
+        cmd: |
+          set -euo pipefail
+          gh copilot plugin install "{{ item }}@cogni-ai-agentic-collections"
+        executable: /bin/bash
+      become: false
+      register: plugin_install
+      changed_when: >-
+        'already installed' not in ((plugin_install.stdout + plugin_install.stderr) | lower)
+      failed_when: plugin_install.rc != 0
+      loop:
+        - cogni-ai-agentic-ops
+        - cogni-ai-architect
+        - cogni-ai-coder
+        - cogni-ai-developer
+        - cogni-ai-dev-ops
+        - cogni-ai-git-ops
+        - cogni-ai-github-ops
+        - cogni-ai-programmer
+        - cogni-ai-tester
     - name: Install pre-commit hooks
       ansible.builtin.command: pre-commit install
       args:

@@ -22,7 +22,6 @@ permissions:
   packages: write
 jobs:
   devcontainer-build:
-    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
     # See: https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows
     uses: Cogni-AI-OU/.github/.github/workflows/devcontainer-ci.yml@main
     secrets: inherit  # pragma: allowlist secret
