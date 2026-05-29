@@ -131,7 +131,7 @@ Create, update, and maintain robust `devcontainer.json` configurations and assoc
 
   // @see: <https://github.com/zyedidia/eget>
   "postCreateCommand": {
-    "exa": "eget ogham/exa",
+    "exa": "-a linux-x86_64 -a ^musl ogham/exa"",
     "fd": "eget sharkdp/fd",
     "jq": "eget -t 1.7.1 -a linux64 jqlang/jq",
     "pandoc": "eget jgm/pandoc",
